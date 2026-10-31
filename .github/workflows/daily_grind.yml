@@ -2,15 +2,10 @@ name: CodeChef Practice Auto-Grinder
 
 on:
   schedule:
-    # 4 Randomized Human Time-Slots per day (IST = UTC + 5:30)
-    # 1. Morning (~10:17 AM IST)
-    - cron: '47 4 * * *'
-    # 2. Afternoon (~02:34 PM IST)
-    - cron: '4 9 * * *'
-    # 3. Evening (~07:18 PM IST)
-    - cron: '48 13 * * *'
-    # 4. Late Night (~11:21 PM IST)
-    - cron: '51 17 * * *'
+    # Sprint mode: every hour at :23 (GitHub may start scheduled runs late).
+    # Up to 25 problems per run x 24 runs, capped at 600/day (~1 submission per minute,
+    # never in bursts). Lower DAILY_TARGET_MAX / MAX_PROBLEMS_PER_RUN to slow down.
+    - cron: '23 * * * *'
   workflow_dispatch: # Allows manual one-click trigger from GitHub Actions
 
 permissions:
@@ -23,6 +18,8 @@ concurrency:
 jobs:
   grind-and-commit:
     runs-on: ubuntu-latest
+    # A run that hangs is killed long before the next hourly run is due.
+    timeout-minutes: 55
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -49,13 +46,15 @@ jobs:
           # Override with a repository variable named CODECHEF_USERNAME if you fork this repo.
           CODECHEF_USERNAME: ${{ vars.CODECHEF_USERNAME || 'reyhaan_s' }}
           VERDICT_TIMEOUT_SECONDS: "120"
+          # Stop starting new problems after 45 min so the run always finishes and commits.
+          MAX_RUNTIME_MINUTES: "45"
           RANDOMIZE_BATCH: "true"
-          MIN_PROBLEMS_PER_RUN: "4"
-          MAX_PROBLEMS_PER_RUN: "6"
-          DAILY_TARGET_MIN: "10"
-          DAILY_TARGET_MAX: "20"
-          MIN_DELAY_SECONDS: "40"
-          MAX_DELAY_SECONDS: "110"
+          MIN_PROBLEMS_PER_RUN: "18"
+          MAX_PROBLEMS_PER_RUN: "25"
+          DAILY_TARGET_MIN: "400"
+          DAILY_TARGET_MAX: "600"
+          MIN_DELAY_SECONDS: "20"
+          MAX_DELAY_SECONDS: "45"
           LANGUAGE: "cpp"
           MIN_DIFFICULTY: "200"
           MAX_DIFFICULTY: "1400"
@@ -73,6 +72,14 @@ jobs:
             date -u +"%Y-%m-%d %H:%M:%S UTC" > data/.keepalive
           fi
 
+      - name: Sync with latest main before committing
+        # If main changed during the run (e.g. a merged pull request), replay this run's
+        # changes on top of it instead of overwriting it.
+        run: |
+          git config user.name "CodeChef Grinder Bot"
+          git config user.email "actions@github.com"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+
       - name: Commit & Push Solved Solutions
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -81,4 +88,3 @@ jobs:
           commit_user_name: "CodeChef Grinder Bot"
           commit_user_email: "actions@github.com"
           commit_author: "CodeChef Grinder Bot <actions@github.com>"
-          push_options: '--force-with-lease'

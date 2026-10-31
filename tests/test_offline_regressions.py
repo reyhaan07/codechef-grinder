@@ -267,3 +267,31 @@ def test_solver_skips_404_models_for_rest_of_run():
     s._generate_with_resilience("p")
     assert first == ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-3.1-flash-lite"]
     assert calls == ["gemini-3.1-flash-lite"]
+
+
+# ---------------------------------------------------------------- sprint-mode safety stops
+def test_gemini_quota_exhaustion_stops_run_without_blacklisting(env, monkeypatch):
+    class QuotaSolver(FakeSolver):
+        def generate_initial_solution(self, details, lang):
+            raise RuntimeError("All Gemini candidate models failed. Last error: 429 RESOURCE_EXHAUSTED")
+
+    probs = [{"code": c, "name": c} for c in ("A", "B", "C")]
+    monkeypatch.setattr(env, "min_problems_per_run", 3)
+    client = FakeClient(probs, [])
+    fetched = []
+    orig = client.fetch_problem_details
+    client.fetch_problem_details = lambda code: fetched.append(code) or orig(code)
+    run_with(monkeypatch, client, QuotaSolver())
+    assert fetched == ["A"], "run must stop at the first quota error"
+    assert read_db(env)["failed_codes"] == []
+
+
+def test_runtime_budget_stops_starting_new_problems(env, monkeypatch):
+    probs = [{"code": c, "name": c} for c in ("A", "B")]
+    monkeypatch.setattr(env, "min_problems_per_run", 2)
+    monkeypatch.setattr(env, "max_runtime_minutes", 1)
+    clock = iter([0, 0, 120, 120, 120])  # start, before A, before B (2 min later)
+    monkeypatch.setattr(runner.time, "monotonic", lambda: next(clock, 120))
+    client = FakeClient(probs, [AC, AC])
+    run_with(monkeypatch, client, FakeSolver())
+    assert read_db(env)["solved_codes"] == ["A"]
