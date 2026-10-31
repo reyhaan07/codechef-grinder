@@ -3,16 +3,16 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Chef has two numbers A and B.
- * We need to find a third number X such that A + B + X = 21.
- * This implies X = 21 - (A + B).
- * The constraint on X is 1 <= X <= 10.
- * If the calculated X satisfies this constraint, we output X.
- * Otherwise, we output -1.
+ * Chef draws two numbers A and B (1 <= A, B <= 10).
+ * We need a third number C (1 <= C <= 10) such that A + B + C = 21.
+ * This implies C = 21 - (A + B).
+ * Since C must be between 1 and 10 inclusive, we check if 1 <= 21 - (A + B) <= 10.
+ * If this condition holds, the answer is 21 - (A + B).
+ * Otherwise, the answer is -1.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -24,11 +24,11 @@ int main() {
         cin >> a >> b;
         
         int sum_ab = a + b;
-        int x = 21 - sum_ab;
+        int c = 21 - sum_ab;
         
         // Check if the required third number is within the valid range [1, 10]
-        if (x >= 1 && x <= 10) {
-            cout << x << "\n";
+        if (c >= 1 && c <= 10) {
+            cout << c << "\n";
         } else {
             cout << -1 << "\n";
         }

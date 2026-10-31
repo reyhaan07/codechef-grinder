@@ -3,19 +3,18 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are given an array of N song lengths and the index K of "Uncle Johny".
- * We need to find the new index of "Uncle Johny" after the array is sorted.
+ * We are given an array of N song lengths and the index K (1-indexed) of "Uncle Johny".
+ * We need to find the new index of "Uncle Johny" after the array is sorted in non-decreasing order.
  * 
  * Approach:
- * 1. Store the length of "Uncle Johny" by accessing the array at index K-1 (since input is 1-indexed).
- * 2. Sort the entire array of song lengths.
- * 3. Find the new position of the stored length in the sorted array.
- * 4. Since the problem guarantees all song lengths are unique, the position is unique.
+ * 1. Store the length of "Uncle Johny" by accessing A[K-1].
+ * 2. Sort the array of lengths.
+ * 3. Find the position of the stored length in the sorted array.
+ * 4. Since the problem guarantees unique lengths, the position is unique.
  * 
  * Complexity:
- * Time: O(T * N log N) where T is the number of test cases and N is the number of songs.
- * Given N <= 100 and T <= 1000, this is well within the 2.5s time limit.
- * Space: O(N) to store the song lengths.
+ * Time: O(T * N log N) where N <= 100. This is well within the 2.5s limit.
+ * Space: O(N) to store the array.
  */
 
 void solve() {
@@ -30,7 +29,7 @@ void solve() {
     int k;
     cin >> k;
     
-    // Store the length of Uncle Johny
+    // Store the length of "Uncle Johny"
     long long uncleJohnyLength = a[k - 1];
     
     // Sort the playlist
@@ -55,6 +54,5 @@ int main() {
     while (t--) {
         solve();
     }
-    
     return 0;
 }

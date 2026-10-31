@@ -3,24 +3,25 @@ using namespace std;
 
 /**
  * Problem: The Ides of March
- * The problem asks to check if the given day N is 15.
- * Constraints: 1 <= N <= 15.
+ * The ides of March is defined as the 15th of March.
+ * We need to check if the input N is equal to 15.
+ * 
  * Time Complexity: O(1) per test case.
  * Space Complexity: O(1).
  */
 
 int main() {
-    // Optimize I/O operations
+    // Optimize standard I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int N;
-    // The problem description implies a single input N per run, 
-    // but standard competitive programming practice handles potential 
-    // multiple test cases if specified. Given the constraints, 
-    // we read N and compare.
-    if (cin >> N) {
-        if (N == 15) {
+    int n;
+    // The problem description implies a single integer input per run,
+    // but standard competitive programming practice often involves 
+    // reading until EOF or a specified number of test cases.
+    // Given the constraints and format, we read N.
+    if (cin >> n) {
+        if (n == 15) {
             cout << "Yes" << "\n";
         } else {
             cout << "No" << "\n";

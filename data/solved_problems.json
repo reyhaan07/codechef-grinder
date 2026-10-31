@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 232,
+  "total_solved": 250,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -234,11 +234,30 @@
     "BUILDINGRACE",
     "COMPRESSVD",
     "CS2023_GIFT",
-    "CHESSDIST"
+    "CHESSDIST",
+    "BLACKJACK",
+    "FLOORS",
+    "IDESM",
+    "CIELRCPT",
+    "SELFDEF",
+    "EXPIRY",
+    "TRANSFORM",
+    "SEATNUMBER",
+    "VALENTINE",
+    "CRICUP",
+    "AORB",
+    "JOHNY",
+    "CYCLICQD",
+    "BULLET",
+    "EMAILREM",
+    "SPEEDTEST",
+    "WATERCOOLER2",
+    "C_RATING"
   ],
   "failed_codes": [
     "SEARCHINARR",
-    "KITCHENCOST"
+    "KITCHENCOST",
+    "ODDSUMPAIR"
   ],
   "pending": [],
   "history": [
@@ -2341,6 +2360,168 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 22:01:14"
+    },
+    {
+      "code": "BLACKJACK",
+      "name": "Blackjack",
+      "status": "Accepted",
+      "solution_id": "1384833926",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:03:44"
+    },
+    {
+      "code": "FLOORS",
+      "name": "Too many Floors",
+      "status": "Accepted",
+      "solution_id": "1384833935",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:04:26"
+    },
+    {
+      "code": "IDESM",
+      "name": "The Ides of March",
+      "status": "Accepted",
+      "solution_id": "1384833943",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:05:17"
+    },
+    {
+      "code": "CIELRCPT",
+      "name": "Ciel and Receipt",
+      "status": "Accepted",
+      "solution_id": "1384833949",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:05:56"
+    },
+    {
+      "code": "SELFDEF",
+      "name": "Self Defence Training",
+      "status": "Accepted",
+      "solution_id": "1384833961",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:06:45"
+    },
+    {
+      "code": "EXPIRY",
+      "name": "Expiring Bread",
+      "status": "Accepted",
+      "solution_id": "1384833968",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:07:24"
+    },
+    {
+      "code": "TRANSFORM",
+      "name": "Mario and Transformation",
+      "status": "Accepted",
+      "solution_id": "1384833976",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:08:00"
+    },
+    {
+      "code": "SEATNUMBER",
+      "name": "Bus  Seat Numbering",
+      "status": "Accepted",
+      "solution_id": "1384833986",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:08:32"
+    },
+    {
+      "code": "VALENTINE",
+      "name": "Valentine is Coming",
+      "status": "Accepted",
+      "solution_id": "1384834002",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:09:20"
+    },
+    {
+      "code": "CRICUP",
+      "name": "Cup Finals",
+      "status": "Accepted",
+      "solution_id": "1384834020",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:10:10"
+    },
+    {
+      "code": "AORB",
+      "name": "A or B",
+      "status": "Accepted",
+      "solution_id": "1384834033",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:10:59"
+    },
+    {
+      "code": "JOHNY",
+      "name": "Uncle Johny",
+      "status": "Accepted",
+      "solution_id": "1384834043",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:11:37"
+    },
+    {
+      "code": "CYCLICQD",
+      "name": "Cyclic Quadrilateral",
+      "status": "Accepted",
+      "solution_id": "1384834065",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:12:57"
+    },
+    {
+      "code": "BULLET",
+      "name": "Mario and Bullet",
+      "status": "Accepted",
+      "solution_id": "1384834070",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:13:27"
+    },
+    {
+      "code": "EMAILREM",
+      "name": "Email Reminders",
+      "status": "Accepted",
+      "solution_id": "1384834088",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:14:16"
+    },
+    {
+      "code": "SPEEDTEST",
+      "name": "Speed Limit Test",
+      "status": "Accepted",
+      "solution_id": "1384834102",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:14:59"
+    },
+    {
+      "code": "WATERCOOLER2",
+      "name": "The Cooler Dilemma 2",
+      "status": "Accepted",
+      "solution_id": "1384834115",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:15:33"
+    },
+    {
+      "code": "C_RATING",
+      "name": "Chess Ratings",
+      "status": "Accepted",
+      "solution_id": "1384834123",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:16:03"
     }
   ]
 }

@@ -28,7 +28,7 @@ int main() {
         cin >> x >> y;
         
         // The maximum number of chocolates is X divided by Y (integer division).
-        // If X < Y, the result of integer division is 0, which is correct.
+        // If X < Y, the result is 0, which is handled correctly by integer division.
         long long max_chocolates = x / y;
         
         cout << max_chocolates << "\n";

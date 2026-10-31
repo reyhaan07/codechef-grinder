@@ -10,17 +10,16 @@ using namespace std;
  * M < Y / X
  * 
  * Since M must be an integer, M = floor((Y - 1) / X).
- * 
- * If Y <= X, then even for M = 1, M * X >= Y.
- * In this case, the condition "strictly less" cannot be satisfied for any M >= 1,
- * so the answer is 0.
+ * If Y <= X, then Y/X is less than 1, so M = 0.
  * 
  * Constraints:
- * X, Y up to 10^9. Calculations fit in long long.
+ * X, Y up to 10^9. The result M will also be at most 10^9.
+ * Using long long is safe to prevent any potential overflow during calculations,
+ * though standard integer division handles this logic correctly.
  */
 
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -30,13 +29,13 @@ int main() {
         long long x, y;
         cin >> x >> y;
 
-        // If renting for 1 month is already >= purchasing, answer is 0.
+        // If renting for 1 month is already >= purchasing, 
+        // Chef should not rent at all.
         if (x >= y) {
             cout << 0 << "\n";
         } else {
-            // We want max M such that M * X < Y.
+            // We want the largest integer M such that M * X < Y.
             // This is equivalent to M = (Y - 1) / X using integer division.
-            // Since we already checked x >= y, we know y > x, so y-1 >= x.
             long long ans = (y - 1) / x;
             cout << ans << "\n";
         }

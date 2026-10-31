@@ -3,16 +3,16 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Mario's transformation cycle:
- * Initial: NORMAL
- * 1 mushroom: HUGE
+ * Mario starts at NORMAL.
+ * The transformation cycle is:
+ * 0 mushrooms: NORMAL
+ * 1 mushroom:  HUGE
  * 2 mushrooms: SMALL
  * 3 mushrooms: NORMAL
  * 4 mushrooms: HUGE
  * 5 mushrooms: SMALL
- * 6 mushrooms: NORMAL
- * 
- * The cycle repeats every 3 mushrooms:
+ * ...
+ * The pattern repeats every 3 mushrooms:
  * X % 3 == 0 -> NORMAL
  * X % 3 == 1 -> HUGE
  * X % 3 == 2 -> SMALL

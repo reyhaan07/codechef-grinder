@@ -3,8 +3,8 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Lower Deck: 1 to 15
- * Upper Deck: 16 to 30
+ * Lower Deck: Seats 1 to 15
+ * Upper Deck: Seats 16 to 30
  * 
  * Lower Deck (1-15):
  * Single: 11, 12, 13, 14, 15
@@ -19,21 +19,26 @@ void solve() {
     int n;
     cin >> n;
 
-    if (n >= 1 && n <= 15) {
-        // Lower Deck
+    string deck = (n <= 15) ? "Lower" : "Upper";
+    string type;
+
+    if (n <= 15) {
+        // Lower deck logic
         if (n >= 1 && n <= 10) {
-            cout << "Lower Double" << "\n";
+            type = "Double";
         } else {
-            cout << "Lower Single" << "\n";
+            type = "Single";
         }
     } else {
-        // Upper Deck
+        // Upper deck logic
         if (n >= 16 && n <= 25) {
-            cout << "Upper Double" << "\n";
+            type = "Double";
         } else {
-            cout << "Upper Single" << "\n";
+            type = "Single";
         }
     }
+
+    cout << deck << " " << type << "\n";
 }
 
 int main() {

@@ -3,17 +3,17 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are given two skill levels X and Y, and a maximum allowed difference D.
- * The condition for the game to be interesting is |X - Y| <= D.
+ * The problem asks us to determine if the absolute difference between two skill levels X and Y
+ * is less than or equal to a given threshold D.
  * 
- * Constraints:
- * T <= 2000
- * 1 <= X, Y <= 100
- * 0 <= D <= 100
+ * Logic:
+ * Calculate |X - Y|.
+ * If |X - Y| <= D, output "YES".
+ * Otherwise, output "NO".
  * 
- * Since the values are small, standard integer types are sufficient.
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * Complexity:
+ * Time Complexity: O(T), where T is the number of test cases.
+ * Space Complexity: O(1), as we only use a few integer variables.
  */
 
 int main() {
@@ -25,13 +25,13 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        int x, y, d;
+        long long x, y, d;
         cin >> x >> y >> d;
         
         // Calculate absolute difference
-        int diff = abs(x - y);
+        long long diff = abs(x - y);
         
-        // Check if difference is within the allowed limit
+        // Check condition
         if (diff <= d) {
             cout << "YES" << "\n";
         } else {

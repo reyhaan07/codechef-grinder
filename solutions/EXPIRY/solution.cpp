@@ -4,14 +4,14 @@ using namespace std;
 /**
  * Problem Analysis:
  * Eikooc has N loaves of bread.
- * They expire in M days.
+ * They expire after M days.
  * She can eat K loaves per day.
- * Total capacity to eat bread before expiration is M * K.
- * If M * K >= N, she can eat all the bread.
+ * Total capacity to eat bread within M days is M * K.
+ * If N <= M * K, she can eat all the bread before or on the day they expire.
  * Otherwise, she cannot.
  * 
  * Constraints: N, M, K <= 100.
- * M * K can be at most 10,000, which fits in a standard integer.
+ * M * K can be up to 10,000, which fits in a standard integer.
  */
 
 int main() {
@@ -25,10 +25,10 @@ int main() {
         long long n, m, k;
         cin >> n >> m >> k;
 
-        // Calculate total loaves she can eat within M days
+        // Calculate total capacity
         // Using long long to prevent any potential overflow, 
-        // though int is sufficient for these constraints.
-        if (m * k >= n) {
+        // though constraints N, M, K <= 100 make int sufficient.
+        if (n <= m * k) {
             cout << "Yes" << "\n";
         } else {
             cout << "No" << "\n";

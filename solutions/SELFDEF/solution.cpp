@@ -3,10 +3,9 @@ using namespace std;
 
 /**
  * Problem: Self Defence Training
- * The condition for eligibility is age A_i such that 10 <= A_i <= 60.
- * We iterate through each age and count how many satisfy this condition.
- * Time Complexity: O(T * N)
- * Space Complexity: O(1)
+ * Logic: Iterate through the list of ages and count how many satisfy 10 <= age <= 60.
+ * Time Complexity: O(T * N), where T is the number of test cases and N is the number of women.
+ * Space Complexity: O(1) auxiliary space beyond input storage.
  */
 
 int main() {
@@ -21,17 +20,18 @@ int main() {
         int n;
         cin >> n;
         
-        int count = 0;
+        int eligible_count = 0;
         for (int i = 0; i < n; ++i) {
             int age;
             cin >> age;
-            // Check if age is within the inclusive range [10, 60]
+            
+            // Check if the age is within the inclusive range [10, 60]
             if (age >= 10 && age <= 60) {
-                count++;
+                eligible_count++;
             }
         }
         
-        cout << count << "\n";
+        cout << eligible_count << "\n";
     }
     
     return 0;
