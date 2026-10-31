@@ -2,9 +2,16 @@
 using namespace std;
 
 /**
- * Problem: DICEGAME2
- * The score is the sum of the two highest rolls.
- * Given 3 rolls, the sum of the two highest is (sum of all three) - (minimum roll).
+ * Problem Analysis:
+ * Each player rolls 3 dice. The score is the sum of the two highest rolls.
+ * To find the sum of the two highest rolls, we can sum all three rolls and subtract the smallest roll.
+ * Alternatively, sort the three rolls and take the sum of the last two.
+ * 
+ * Constraints:
+ * T <= 10^4
+ * Dice values are between 1 and 6.
+ * Time complexity per test case: O(1) (sorting 3 elements is constant time).
+ * Total time complexity: O(T).
  */
 
 void solve() {
@@ -12,15 +19,16 @@ void solve() {
     cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
 
     // Calculate Alice's score
-    int alice_sum = a1 + a2 + a3;
-    int alice_min = min({a1, a2, a3});
-    int alice_score = alice_sum - alice_min;
+    vector<int> alice = {a1, a2, a3};
+    sort(alice.begin(), alice.end());
+    int alice_score = alice[1] + alice[2];
 
     // Calculate Bob's score
-    int bob_sum = b1 + b2 + b3;
-    int bob_min = min({b1, b2, b3});
-    int bob_score = bob_sum - bob_min;
+    vector<int> bob = {b1, b2, b3};
+    sort(bob.begin(), bob.end());
+    int bob_score = bob[1] + bob[2];
 
+    // Determine the winner
     if (alice_score > bob_score) {
         cout << "Alice" << "\n";
     } else if (bob_score > alice_score) {

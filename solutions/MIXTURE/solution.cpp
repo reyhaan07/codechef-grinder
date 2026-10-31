@@ -3,17 +3,14 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Given A (solid) and B (liquid):
- * 1. If A > 0 and B > 0, it is a "Solution".
- * 2. If B == 0, it is a "Solid".
- * 3. If A == 0, it is a "Liquid".
+ * We are given A (solid) and B (liquid).
+ * 1. If A > 0 and B > 0, it's a "Solution".
+ * 2. If B == 0, it's a "Solid".
+ * 3. If A == 0, it's a "Liquid".
  * 
- * Constraints:
- * 0 <= A, B <= 100
- * A + B > 0
- * 
+ * Constraints: 0 <= A, B <= 100, A + B > 0.
  * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1) as we only use a few variables.
+ * Space Complexity: O(1).
  */
 
 int main() {

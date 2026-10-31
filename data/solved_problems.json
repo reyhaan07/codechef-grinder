@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 318,
+  "total_solved": 330,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -320,12 +320,25 @@
     "ELECTIONS",
     "SALE",
     "SWEETSHOP",
-    "MOZZ"
+    "MOZZ",
+    "DIET",
+    "BETDEAL",
+    "DICEGAME2",
+    "ZOOZ",
+    "CCOV",
+    "CANDY123",
+    "MIXTURE",
+    "DIGARR",
+    "FOODBAL",
+    "ADJSUMPAR",
+    "SUPCHEF",
+    "RECTANGL"
   ],
   "failed_codes": [
     "SEARCHINARR",
     "KITCHENCOST",
-    "ODDSUMPAIR"
+    "ODDSUMPAIR",
+    "ICECONE"
   ],
   "pending": [],
   "history": [
@@ -3202,6 +3215,114 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 23:09:34"
+    },
+    {
+      "code": "DIET",
+      "name": "Chef Diet",
+      "status": "Accepted",
+      "solution_id": "1384834829",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:10:01"
+    },
+    {
+      "code": "BETDEAL",
+      "name": "Better Deal",
+      "status": "Accepted",
+      "solution_id": "1384834836",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:10:31"
+    },
+    {
+      "code": "DICEGAME2",
+      "name": "Best of Two",
+      "status": "Accepted",
+      "solution_id": "1384834846",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:11:12"
+    },
+    {
+      "code": "ZOOZ",
+      "name": "Zero Ones Equal One Zeros",
+      "status": "Accepted",
+      "solution_id": "1384834850",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:11:47"
+    },
+    {
+      "code": "CCOV",
+      "name": "Overspeeding",
+      "status": "Accepted",
+      "solution_id": "1384834853",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:13:14"
+    },
+    {
+      "code": "CANDY123",
+      "name": "Bear and Candies 123",
+      "status": "Accepted",
+      "solution_id": "1384834860",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:13:41"
+    },
+    {
+      "code": "MIXTURE",
+      "name": "Which Mixture",
+      "status": "Accepted",
+      "solution_id": "1384834866",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:14:24"
+    },
+    {
+      "code": "DIGARR",
+      "name": "Rearranging digits to get a multiple of 5",
+      "status": "Accepted",
+      "solution_id": "1384834886",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:16:59"
+    },
+    {
+      "code": "FOODBAL",
+      "name": "Food Balance",
+      "status": "Accepted",
+      "solution_id": "1384834892",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:17:32"
+    },
+    {
+      "code": "ADJSUMPAR",
+      "name": "Adjacent Sum Parity",
+      "status": "Accepted",
+      "solution_id": "1384834904",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:18:11"
+    },
+    {
+      "code": "SUPCHEF",
+      "name": "The Preparations",
+      "status": "Accepted",
+      "solution_id": "1384834914",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:18:50"
+    },
+    {
+      "code": "RECTANGL",
+      "name": "Rectangle",
+      "status": "Accepted",
+      "solution_id": "1384834924",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:19:35"
     }
   ]
 }

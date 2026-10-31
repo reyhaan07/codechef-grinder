@@ -4,16 +4,17 @@ using namespace std;
 /**
  * Problem Analysis:
  * Chef has M minutes until the exam.
- * Season-1 has N episodes, each of duration K minutes.
- * Total time required = N * K.
+ * There are N episodes, each of duration K minutes.
+ * Total time required to watch all episodes = N * K.
  * The condition is to finish "strictly before" the exam starts.
- * This means: Total time < M.
+ * This means: (Total time required) < (Time until exam)
+ * i.e., (N * K) < M
  * 
  * Constraints:
  * M <= 10^9
  * N, K <= 10^4
- * N * K can be up to 10^8, which fits in a standard 32-bit integer,
- * but using long long is safer and good practice for competitive programming.
+ * N * K <= 10^8, which fits in a standard 32-bit integer, 
+ * but using long long is safer practice for competitive programming.
  */
 
 int main() {
@@ -28,11 +29,11 @@ int main() {
         long long m, n, k;
         cin >> m >> n >> k;
         
-        // Calculate total duration required
-        long long total_duration = n * k;
+        // Calculate total time required
+        long long total_time = n * k;
         
-        // Check if total duration is strictly less than M
-        if (total_duration < m) {
+        // Check if total time is strictly less than M
+        if (total_time < m) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";
