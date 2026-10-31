@@ -4,7 +4,7 @@ using namespace std;
 /**
  * Problem: BROKENPHONE
  * Logic:
- * Compare the cost of repair (X) and the cost of a new phone (Y).
+ * Compare X (repair cost) and Y (new phone cost).
  * If X < Y, output REPAIR.
  * If X > Y, output NEW PHONE.
  * If X == Y, output ANY.
@@ -13,7 +13,7 @@ using namespace std;
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

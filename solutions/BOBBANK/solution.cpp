@@ -7,14 +7,15 @@ using namespace std;
  * Monthly deposit = X
  * Monthly deduction = Y
  * Net change per month = (X - Y)
- * Total change after Z months = (X - Y) * Z
- * Final balance = W + (X - Y) * Z
+ * After Z months, the total change is Z * (X - Y)
+ * Final balance = W + Z * (X - Y)
  * 
  * Constraints:
  * W, X, Y, Z <= 10^4
- * The result can be negative, and the maximum possible value is 10^4 + (10^4 * 10^4) = 10^8 + 10^4,
- * which fits comfortably within a standard 32-bit signed integer. 
- * However, using 'long long' is a best practice in competitive programming to prevent overflow.
+ * The maximum possible value is 10^4 + 10^4 * 10^4 = 100,010,000
+ * The minimum possible value is 10^4 - 10^4 * 10^4 = -99,990,000
+ * These values fit comfortably within a standard 32-bit signed integer (int),
+ * but using long long is safer and good practice in competitive programming.
  */
 
 int main() {
@@ -30,8 +31,8 @@ int main() {
         cin >> w >> x >> y >> z;
         
         // Calculate final balance
-        // Final = Initial + (Net Monthly Change * Months)
-        long long final_balance = w + (x - y) * z;
+        // Final = Initial + (Months * (Deposit - Deduction))
+        long long final_balance = w + (z * (x - y));
         
         cout << final_balance << "\n";
     }

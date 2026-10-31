@@ -12,27 +12,32 @@ using namespace std;
  * We check this condition for all four companies.
  */
 
+void solve() {
+    long long p, q, r, s;
+    if (!(cin >> p >> q >> r >> s)) return;
+    
+    long long total = p + q + r + s;
+    
+    // Check if any company has a monopoly
+    if ((p > (total - p)) || 
+        (q > (total - q)) || 
+        (r > (total - r)) || 
+        (s > (total - s))) {
+        cout << "YES" << "\n";
+    } else {
+        cout << "NO" << "\n";
+    }
+}
+
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
+    
     int t;
     if (!(cin >> t)) return 0;
     while (t--) {
-        long long p, q, r, s;
-        cin >> p >> q >> r >> s;
-
-        long long total = p + q + r + s;
-
-        // Check if any company has a profit strictly greater than the sum of others
-        // Condition: profit > (total - profit) => 2 * profit > total
-        if ((2 * p > total) || (2 * q > total) || (2 * r > total) || (2 * s > total)) {
-            cout << "YES" << "\n";
-        } else {
-            cout << "NO" << "\n";
-        }
+        solve();
     }
-
     return 0;
 }

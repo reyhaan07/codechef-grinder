@@ -5,21 +5,19 @@ using namespace std;
  * Problem Analysis:
  * The number of trailing zeros in N! is determined by the number of times 
  * the factor 10 appears in the prime factorization of N!.
- * Since 10 = 2 * 5, and there are always more factors of 2 than 5 in any 
- * factorial, the number of trailing zeros is equal to the number of times 
- * the factor 5 appears in the prime factorization of N!.
+ * Since 10 = 2 * 5, and there are always more factors of 2 than 5 in any N!,
+ * the number of trailing zeros is equal to the number of times 5 appears 
+ * as a factor in the prime factorization of N!.
  * 
- * According to Legendre's Formula, the exponent of a prime p in the 
- * prime factorization of N! is given by:
+ * According to Legendre's Formula, the exponent of a prime p in N! is:
  * E_p(N!) = floor(N/p) + floor(N/p^2) + floor(N/p^3) + ...
  * 
- * Here, p = 5. We calculate floor(N/5) + floor(N/25) + floor(N/125) + ...
- * until the power of 5 exceeds N.
+ * For p = 5:
+ * Z(N) = floor(N/5) + floor(N/25) + floor(N/125) + ...
  * 
- * Complexity:
- * For each test case, the loop runs O(log_5(N)) times.
- * With T = 100,000 and N = 10^9, log_5(10^9) is approximately 13.
- * Total complexity: O(T * log_5(N)), which is well within the 8s time limit.
+ * Time Complexity: O(T * log5(N))
+ * Given T = 100,000 and N = 10^9, log5(10^9) is approx 13.
+ * Total operations approx 1.3 * 10^6, which easily fits within the 8s time limit.
  */
 
 void solve() {
@@ -27,16 +25,17 @@ void solve() {
     if (!(cin >> n)) return;
     
     long long count = 0;
-    // Divide n by powers of 5 and add to count
+    // We divide n by powers of 5 (5, 25, 125, ...)
+    // Using long long to prevent overflow, though n <= 10^9 fits in int.
     while (n >= 5) {
+        count += (n / 5);
         n /= 5;
-        count += n;
     }
     cout << count << "\n";
 }
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     

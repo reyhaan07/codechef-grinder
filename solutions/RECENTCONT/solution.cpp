@@ -9,7 +9,7 @@ using namespace std;
  */
 
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

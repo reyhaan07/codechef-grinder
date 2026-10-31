@@ -3,15 +3,14 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Each bike has 2 tyres.
- * Each car has 4 tyres.
- * Total tyres = (N * 2) + (M * 4).
- * Constraints: N, M <= 100. The result will be at most (100*2 + 100*4) = 600.
- * This fits comfortably within a standard 'int'.
+ * Each bike has 2 tyres and each car has 4 tyres.
+ * Given N bikes and M cars, the total number of tyres is (N * 2) + (M * 4).
+ * Constraints: N, M <= 100. The maximum result is (100 * 2) + (100 * 4) = 600.
+ * This fits well within a standard integer type.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -21,7 +20,7 @@ int main() {
     while (t--) {
         long long n, m;
         if (cin >> n >> m) {
-            // Calculate total tyres
+            // Calculate total tyres: 2 tyres per bike, 4 per car
             long long total_tyres = (n * 2) + (m * 4);
             cout << total_tyres << "\n";
         }

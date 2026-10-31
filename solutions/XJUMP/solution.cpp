@@ -7,17 +7,18 @@ using namespace std;
  * To minimize the number of moves, we should use the largest possible move (Y)
  * as many times as possible.
  * 
- * Let 'a' be the number of moves of size Y, and 'b' be the number of moves of size 1.
- * We want to minimize (a + b) such that a*Y + b*1 = X.
+ * Let 'q' be the number of times we use the move of size Y.
+ * q = X / Y (integer division)
+ * The remaining distance is r = X % Y.
+ * Since we can always take steps of size 1, we can cover the remaining 'r'
+ * distance in 'r' moves of size 1.
  * 
- * To minimize the total moves, we maximize 'a'.
- * The maximum number of times we can use move Y is floor(X / Y).
- * Let a = X / Y.
- * The remaining distance is X % Y.
- * Since we can always use moves of size 1 to cover the remainder,
- * the number of moves of size 1 will be exactly X % Y.
+ * Total moves = q + r
+ * Total moves = (X / Y) + (X % Y)
  * 
- * Total moves = (X / Y) + (X % Y).
+ * Complexity:
+ * Time: O(1) per test case, O(T) total.
+ * Space: O(1).
  */
 
 int main() {
@@ -28,17 +29,16 @@ int main() {
     int t;
     if (!(cin >> t)) return 0;
     while (t--) {
-        long long x, y;
+        int x, y;
         cin >> x >> y;
 
-        // Calculate the number of moves of size Y
-        long long moves_y = x / y;
-        
-        // Calculate the remaining distance to be covered by moves of size 1
-        long long moves_1 = x % y;
+        // Calculate number of moves using Y-sized jumps
+        int moves_y = x / y;
+        // Calculate remaining distance to be covered by 1-sized jumps
+        int moves_one = x % y;
 
-        // The total minimum moves is the sum of both
-        long long total_moves = moves_y + moves_1;
+        // Total minimum moves
+        int total_moves = moves_y + moves_one;
 
         cout << total_moves << "\n";
     }

@@ -1,22 +1,22 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
  * - X: Fine per passenger without a ticket.
  * - P: Total number of passengers.
- * - Q: Total number of tickets.
+ * - Q: Total number of tickets present.
  * - Passengers without tickets = P - Q.
  * - Total fine = (P - Q) * X.
  * 
- * Complexity:
- * - Time: O(T), where T is the number of test cases.
- * - Space: O(1).
+ * Constraints:
+ * - T <= 10, X <= 10, Q <= P <= 10.
+ * - The values are small enough that standard 'int' is sufficient, 
+ *   but 'long long' is used for robustness as per instructions.
  */
 
 int main() {
-    // Optimize standard I/O operations for speed
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -25,13 +25,13 @@ int main() {
     
     while (t--) {
         long long x, p, q;
-        if (!(cin >> x >> p >> q)) break;
+        cin >> x >> p >> q;
         
         // Calculate number of passengers without tickets
-        long long passengers_without_tickets = p - q;
+        long long passengers_without_ticket = p - q;
         
         // Calculate total fine
-        long long total_fine = passengers_without_tickets * x;
+        long long total_fine = passengers_without_ticket * x;
         
         // Output the result
         cout << total_fine << "\n";

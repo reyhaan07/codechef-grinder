@@ -2,19 +2,19 @@
 using namespace std;
 
 /**
- * Problem: DNA Storage
- * Approach:
- * The problem asks to map pairs of binary digits to specific characters:
- * "00" -> 'A'
- * "01" -> 'T'
- * "10" -> 'C'
- * "11" -> 'G'
+ * Problem Analysis:
+ * The problem asks us to map pairs of binary digits to specific characters:
+ * 00 -> A
+ * 01 -> T
+ * 10 -> C
+ * 11 -> G
  * 
- * Since N is even, we can iterate through the string with a step of 2,
- * extract the substring of length 2, and map it to the corresponding character.
+ * Since N is even and we process the string from left to right in pairs,
+ * we can iterate through the string with a step of 2.
  * 
  * Time Complexity: O(N) per test case, where N is the length of the string.
- * Space Complexity: O(N) to store the input string and the result.
+ * Total time complexity: O(Sum of N), which is at most 10^3.
+ * Space Complexity: O(1) auxiliary space (excluding the input/output storage).
  */
 
 void solve() {
@@ -22,7 +22,7 @@ void solve() {
     cin >> n;
     string s;
     cin >> s;
-    
+
     string result = "";
     for (int i = 0; i < n; i += 2) {
         string pair = s.substr(i, 2);
@@ -43,9 +43,9 @@ int main() {
     // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
         solve();
     }

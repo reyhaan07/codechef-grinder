@@ -3,16 +3,19 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * 1. Chef has N candies and M friends.
- * 2. Each friend must get an equal number of candies: N must be divisible by M (N % M == 0).
- * 3. Each friend must get an even number of candies: (N / M) % 2 == 0.
+ * Chef has N candies and M friends.
+ * Conditions:
+ * 1. Each friend gets an equal number of candies: N must be divisible by M (N % M == 0).
+ * 2. Each friend gets an even number of candies: (N / M) must be even.
+ * 
+ * Combining these:
+ * If N % M != 0, it's impossible (No).
+ * If N % M == 0, let X = N / M. We need X % 2 == 0.
  * 
  * Constraints:
  * 1 <= T <= 1000
  * 1 <= N, M <= 1000
- * 
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * Since N and M are small, standard integer types are sufficient.
  */
 
 int main() {
@@ -24,14 +27,20 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        long long n, m;
+        int n, m;
         cin >> n >> m;
         
-        // Condition 1: N must be perfectly divisible by M
-        // Condition 2: The quotient (N/M) must be even
-        if ((n % m == 0) && ((n / m) % 2 == 0)) {
-            cout << "Yes" << "\n";
+        // Check if N is divisible by M
+        if (n % m == 0) {
+            // Check if the quotient is even
+            int candies_per_friend = n / m;
+            if (candies_per_friend % 2 == 0) {
+                cout << "Yes" << "\n";
+            } else {
+                cout << "No" << "\n";
+            }
         } else {
+            // Cannot distribute equally
             cout << "No" << "\n";
         }
     }

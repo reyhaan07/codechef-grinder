@@ -2,17 +2,10 @@
 using namespace std;
 
 /**
- * Problem Analysis:
- * We need to check if there exists a contiguous substring of vowels with length > 2.
- * This is equivalent to checking if there are 3 or more consecutive vowels in the string.
- * 
- * Algorithm:
- * 1. Iterate through the string.
- * 2. Maintain a counter for consecutive vowels.
- * 3. If the current character is a vowel, increment the counter.
- * 4. If the current character is not a vowel, reset the counter to 0.
- * 5. If the counter reaches 3 at any point, the string is "Happy".
- * 6. If the loop finishes without the counter reaching 3, the string is "Sad".
+ * Problem: Chef and Happy String
+ * Logic: We need to find if there exists a contiguous substring of vowels 
+ * with length > 2. This is equivalent to checking if there are 3 or more 
+ * consecutive vowels in the string.
  */
 
 bool isVowel(char c) {
@@ -51,9 +44,10 @@ int main() {
     cin.tie(NULL);
     
     int t;
-    if (!(cin >> t)) return 0;
+    cin >> t;
     while (t--) {
         solve();
     }
+    
     return 0;
 }

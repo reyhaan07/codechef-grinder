@@ -2,8 +2,9 @@
 using namespace std;
 
 /**
- * Problem: Christmas Greetings
- * Logic: Check if the input integer X is equal to 25.
+ * Problem: CHRISTGREET
+ * The task is to check if the given day X in December is 25.
+ * Constraints: 1 <= X <= 31.
  * Time Complexity: O(1) per test case.
  * Space Complexity: O(1).
  */
@@ -13,14 +14,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single input X, 
-    // but standard competitive programming practice often involves 
-    // handling a single test case unless specified otherwise.
-    // Given the constraints and format, we read X once.
-    
-    long long X;
+    int X;
     if (!(cin >> X)) return 0;
 
+    // Check if the day is 25
     if (X == 25) {
         cout << "CHRISTMAS" << "\n";
     } else {

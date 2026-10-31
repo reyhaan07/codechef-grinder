@@ -4,25 +4,30 @@ using namespace std;
 /**
  * Problem Analysis:
  * Alice has N questions.
- * She scored K marks, meaning she got K questions correct and (N - K) questions incorrect.
- * Bob marked the opposite of Alice for every question.
- * If Alice was correct on a question, Bob is incorrect.
- * If Alice was incorrect on a question, Bob is correct.
- * Therefore, the number of questions Bob got correct is exactly the number of questions 
- * Alice got incorrect, which is (N - K).
+ * She scored K marks, meaning she answered K questions correctly and (N - K) questions incorrectly.
+ * Bob answered every question opposite to Alice.
+ * - If Alice answered a question correctly, Bob answered it incorrectly.
+ * - If Alice answered a question incorrectly, Bob answered it correctly.
  * 
- * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1) as we only use a few variables.
+ * Therefore, the number of questions Bob answered correctly is equal to the number 
+ * of questions Alice answered incorrectly.
+ * Bob's score = N - K.
+ * 
+ * Constraints:
+ * 1 <= T <= 2000
+ * 1 <= N <= 100
+ * 0 <= K <= N
+ * Time complexity: O(T)
+ * Space complexity: O(1)
  */
 
 int main() {
-    // Optimize standard I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
     if (!(cin >> t)) return 0;
-    
     while (t--) {
         long long n, k;
         cin >> n >> k;

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 160,
+  "total_solved": 185,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -162,7 +162,32 @@
     "BNE_APT",
     "CHEAPFOOD",
     "FLOW008",
-    "ACTEMP"
+    "ACTEMP",
+    "CANDYDIST",
+    "TYRE",
+    "RECENTCONT",
+    "BROKENPHONE",
+    "FINE",
+    "MINCOINSREQ",
+    "COUGAME",
+    "BOBBANK",
+    "CHRISTGREET",
+    "MOVIE2X",
+    "XJUMP",
+    "MINCARS",
+    "MONOPOLY2",
+    "TFPAPER",
+    "COMPLEXITY",
+    "DNASTORAGE",
+    "NIBBLE",
+    "FCTRL",
+    "TCKTFINE",
+    "FINDSHOES",
+    "RATINGINPRAC",
+    "INVESTMENT",
+    "BUDGET_",
+    "LASTLEVELS",
+    "HAPPYSTR"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -1621,6 +1646,231 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 21:04:53"
+    },
+    {
+      "code": "CANDYDIST",
+      "name": "Candy Distribution",
+      "status": "Accepted",
+      "solution_id": "1384832347",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:05:17"
+    },
+    {
+      "code": "TYRE",
+      "name": "Tyre problem",
+      "status": "Accepted",
+      "solution_id": "1384832359",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:05:44"
+    },
+    {
+      "code": "RECENTCONT",
+      "name": "Recent contest problems",
+      "status": "Accepted",
+      "solution_id": "1384832370",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:06:14"
+    },
+    {
+      "code": "BROKENPHONE",
+      "name": "Broken Phone",
+      "status": "Accepted",
+      "solution_id": "1384832380",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:06:38"
+    },
+    {
+      "code": "FINE",
+      "name": "Overspeeding Fine",
+      "status": "Accepted",
+      "solution_id": "1384832397",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:07:12"
+    },
+    {
+      "code": "MINCOINSREQ",
+      "name": "Minimum Coins",
+      "status": "Accepted",
+      "solution_id": "1384832412",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:07:57"
+    },
+    {
+      "code": "COUGAME",
+      "name": "Couple Game",
+      "status": "Accepted",
+      "solution_id": "1384832428",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:08:34"
+    },
+    {
+      "code": "BOBBANK",
+      "name": "Bob at the Bank",
+      "status": "Accepted",
+      "solution_id": "1384832472",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:10:19"
+    },
+    {
+      "code": "CHRISTGREET",
+      "name": "Christmas Greetings",
+      "status": "Accepted",
+      "solution_id": "1384832509",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:11:02"
+    },
+    {
+      "code": "MOVIE2X",
+      "name": "Watching Movies at 2x",
+      "status": "Accepted",
+      "solution_id": "1384832524",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:11:29"
+    },
+    {
+      "code": "XJUMP",
+      "name": "X Jumps",
+      "status": "Accepted",
+      "solution_id": "1384832547",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:12:10"
+    },
+    {
+      "code": "MINCARS",
+      "name": "Minimum Cars required",
+      "status": "Accepted",
+      "solution_id": "1384832566",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:12:53"
+    },
+    {
+      "code": "MONOPOLY2",
+      "name": "Monopoly",
+      "status": "Accepted",
+      "solution_id": "1384832578",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:13:26"
+    },
+    {
+      "code": "TFPAPER",
+      "name": "True and False Paper",
+      "status": "Accepted",
+      "solution_id": "1384832592",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:13:54"
+    },
+    {
+      "code": "COMPLEXITY",
+      "name": "Time Complexity",
+      "status": "Accepted",
+      "solution_id": "1384832802",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:17:35"
+    },
+    {
+      "code": "DNASTORAGE",
+      "name": "DNA Storage",
+      "status": "Accepted",
+      "solution_id": "1384832850",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:19:18"
+    },
+    {
+      "code": "NIBBLE",
+      "name": "Good Program",
+      "status": "Accepted",
+      "solution_id": "1384832863",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:19:49"
+    },
+    {
+      "code": "FCTRL",
+      "name": "Factorial",
+      "status": "Accepted",
+      "solution_id": "1384832872",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:20:22"
+    },
+    {
+      "code": "TCKTFINE",
+      "name": "Ticket Fine",
+      "status": "Accepted",
+      "solution_id": "1384832890",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:21:23"
+    },
+    {
+      "code": "FINDSHOES",
+      "name": "Finding Shoes",
+      "status": "Accepted",
+      "solution_id": "1384832896",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:22:01"
+    },
+    {
+      "code": "RATINGINPRAC",
+      "name": "Difficulty Rating Order",
+      "status": "Accepted",
+      "solution_id": "1384832905",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:22:32"
+    },
+    {
+      "code": "INVESTMENT",
+      "name": "Good Investment or Not",
+      "status": "Accepted",
+      "solution_id": "1384832916",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:23:01"
+    },
+    {
+      "code": "BUDGET_",
+      "name": "Monthly Budget",
+      "status": "Accepted",
+      "solution_id": "1384832934",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:23:41"
+    },
+    {
+      "code": "LASTLEVELS",
+      "name": "The Last Levels",
+      "status": "Accepted",
+      "solution_id": "1384832943",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:24:18"
+    },
+    {
+      "code": "HAPPYSTR",
+      "name": "Chef and Happy String ",
+      "status": "Accepted",
+      "solution_id": "1384832949",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:24:47"
     }
   ]
 }
