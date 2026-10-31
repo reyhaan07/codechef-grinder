@@ -1,39 +1,40 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * N episodes, 1 to N.
- * Even indexed: 2, 4, 6... have duration A.
- * Odd indexed: 1, 3, 5... have duration B.
+ * We have N episodes.
+ * Even indexed episodes (2, 4, 6, ...) have duration A.
+ * Odd indexed episodes (1, 3, 5, ...) have duration B.
  * 
- * Number of even indices in [1, N] is N / 2.
- * Number of odd indices in [1, N] is N - (N / 2).
+ * Number of even indexed episodes: N / 2
+ * Number of odd indexed episodes: N - (N / 2)
  * 
- * Total duration = (even_count * A) + (odd_count * B).
+ * Total duration = (N / 2) * A + (N - N / 2) * B
+ * 
+ * Constraints:
+ * N, A, B <= 60.
+ * The maximum possible duration is 60 * 60 = 3600, which fits in a standard int.
+ * Using long long is safe practice.
  */
 
-void solve() {
-    int N, A, B;
-    if (!(cin >> N >> A >> B)) return;
-
-    int even_count = N / 2;
-    int odd_count = N - even_count;
-
-    int total_duration = (even_count * A) + (odd_count * B);
-    cout << total_duration << "\n";
-}
-
 int main() {
-    // Optimize I/O operations
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
     if (!(cin >> t)) return 0;
     while (t--) {
-        solve();
+        long long n, a, b;
+        cin >> n >> a >> b;
+
+        long long even_count = n / 2;
+        long long odd_count = n - even_count;
+
+        long long total_duration = (even_count * a) + (odd_count * b);
+        cout << total_duration << "\n";
     }
+
     return 0;
 }

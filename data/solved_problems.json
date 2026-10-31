@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 273,
+  "total_solved": 297,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -275,7 +275,31 @@
     "ACPLZ",
     "CHEFAPPS",
     "PASSTHEEXAM",
-    "THALA7"
+    "THALA7",
+    "CODECHEF",
+    "CIELAB",
+    "DPOLY",
+    "CANCHEF",
+    "RCBPLAY",
+    "CHEFEREN",
+    "SPCP2",
+    "CHEFPAROLE",
+    "SHOPCHANGE",
+    "HIGHSCORE",
+    "CHEFSTLT",
+    "WATSCORE",
+    "HDIVISR",
+    "ZCOSCH",
+    "GOLDCOINS",
+    "FIZZBUZZ2303",
+    "FLOW011",
+    "TRISQ",
+    "WTRMIXING",
+    "ONP",
+    "EXAMTIME",
+    "MYSERVE",
+    "KTTABLE",
+    "GLPR"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -2752,6 +2776,222 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 22:34:52"
+    },
+    {
+      "code": "CODECHEF",
+      "name": "Codechef Round",
+      "status": "Accepted",
+      "solution_id": "1384834345",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:35:22"
+    },
+    {
+      "code": "CIELAB",
+      "name": "Ciel and A-B Problem",
+      "status": "Accepted",
+      "solution_id": "1384834356",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:36:11"
+    },
+    {
+      "code": "DPOLY",
+      "name": "Degree of Polynomial",
+      "status": "Accepted",
+      "solution_id": "1384834371",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:36:56"
+    },
+    {
+      "code": "CANCHEF",
+      "name": "Can Chef ",
+      "status": "Accepted",
+      "solution_id": "1384834382",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:37:23"
+    },
+    {
+      "code": "RCBPLAY",
+      "name": "RCB and Playoffs",
+      "status": "Accepted",
+      "solution_id": "1384834394",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:37:50"
+    },
+    {
+      "code": "CHEFEREN",
+      "name": "Chef Eren",
+      "status": "Accepted",
+      "solution_id": "1384834408",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:38:24"
+    },
+    {
+      "code": "SPCP2",
+      "name": "Airlines",
+      "status": "Accepted",
+      "solution_id": "1384834424",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:39:07"
+    },
+    {
+      "code": "CHEFPAROLE",
+      "name": "Chef and Parole",
+      "status": "Accepted",
+      "solution_id": "1384834438",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:39:46"
+    },
+    {
+      "code": "SHOPCHANGE",
+      "name": "Shopping Change",
+      "status": "Accepted",
+      "solution_id": "1384834443",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:41:22"
+    },
+    {
+      "code": "HIGHSCORE",
+      "name": "Score High",
+      "status": "Accepted",
+      "solution_id": "1384834468",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:41:49"
+    },
+    {
+      "code": "CHEFSTLT",
+      "name": "Chef and Two Strings",
+      "status": "Accepted",
+      "solution_id": "1384834482",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:42:19"
+    },
+    {
+      "code": "WATSCORE",
+      "name": "That Is My Score!",
+      "status": "Accepted",
+      "solution_id": "1384834505",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:42:56"
+    },
+    {
+      "code": "HDIVISR",
+      "name": "Highest Divisor",
+      "status": "Accepted",
+      "solution_id": "1384834526",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:43:34"
+    },
+    {
+      "code": "ZCOSCH",
+      "name": "How much Scholarship",
+      "status": "Accepted",
+      "solution_id": "1384834532",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:44:05"
+    },
+    {
+      "code": "GOLDCOINS",
+      "name": "Gold Coins 101",
+      "status": "Accepted",
+      "solution_id": "1384834545",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:44:39"
+    },
+    {
+      "code": "FIZZBUZZ2303",
+      "name": "Chef Fantasy 11",
+      "status": "Accepted",
+      "solution_id": "1384834551",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:45:08"
+    },
+    {
+      "code": "FLOW011",
+      "name": "Gross Salary",
+      "status": "Accepted",
+      "solution_id": "1384834557",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:46:40"
+    },
+    {
+      "code": "TRISQ",
+      "name": "Fit Squares in Triangle",
+      "status": "Accepted",
+      "solution_id": "1384834580",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:47:29"
+    },
+    {
+      "code": "WTRMIXING",
+      "name": "Water Mixing",
+      "status": "Accepted",
+      "solution_id": "1384834583",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:47:54"
+    },
+    {
+      "code": "ONP",
+      "name": "Transform the Expression",
+      "status": "Accepted",
+      "solution_id": "1384834586",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:48:34"
+    },
+    {
+      "code": "EXAMTIME",
+      "name": "TCS Examination",
+      "status": "Accepted",
+      "solution_id": "1384834594",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:49:07"
+    },
+    {
+      "code": "MYSERVE",
+      "name": "It is My Serve",
+      "status": "Accepted",
+      "solution_id": "1384834602",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:49:42"
+    },
+    {
+      "code": "KTTABLE",
+      "name": "Kitchen Timetable",
+      "status": "Accepted",
+      "solution_id": "1384834605",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:50:19"
+    },
+    {
+      "code": "GLPR",
+      "name": "Glass Prices",
+      "status": "Accepted",
+      "solution_id": "1384834612",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:50:51"
     }
   ]
 }

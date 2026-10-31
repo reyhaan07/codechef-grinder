@@ -6,14 +6,17 @@ using namespace std;
  * Chef knows the total count of answers for each option (A, B, C, D).
  * He wants to maximize the marks he can *guarantee*.
  * 
- * If Chef decides to mark all N problems with a specific option (e.g., option A),
- * he is guaranteed to get exactly N_A marks, because there are exactly N_A 
- * problems where the answer is A.
+ * If Chef decides to mark all N problems with option 'A', he is guaranteed 
+ * to get at least N_A marks, because there are exactly N_A problems where 
+ * the answer is 'A'.
  * 
- * Since he wants to maximize his guaranteed marks, he should choose the option 
- * that appears the most frequently in the answer key.
+ * Similarly, if he marks all problems with 'B', he gets N_B marks.
+ * If he marks all with 'C', he gets N_C marks.
+ * If he marks all with 'D', he gets N_D marks.
  * 
- * Therefore, the answer is simply max(N_A, N_B, N_C, N_D).
+ * To guarantee the maximum marks, he should choose the option that appears 
+ * the most frequently in the answer key. Thus, the answer is simply 
+ * max(N_A, N_B, N_C, N_D).
  */
 
 int main() {

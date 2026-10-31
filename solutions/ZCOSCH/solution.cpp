@@ -3,21 +3,17 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The problem asks to determine the scholarship percentage based on rank R.
- * - If 1 <= R <= 50, scholarship is 100%.
- * - If 51 <= R <= 100, scholarship is 50%.
- * - If R > 100, scholarship is 0%.
+ * Rank 1 to 50: 100% scholarship
+ * Rank 51 to 100: 50% scholarship
+ * Rank > 100: 0% scholarship
  * 
- * Constraints:
- * 1 <= R <= 10^9.
- * Since R can be up to 10^9, a standard 32-bit integer (int) is sufficient, 
- * but using long long is safer practice for competitive programming.
- * Time complexity: O(1) per test case.
- * Space complexity: O(1).
+ * Constraints: 1 <= R <= 10^9
+ * Time Complexity: O(1) per test case
+ * Space Complexity: O(1)
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

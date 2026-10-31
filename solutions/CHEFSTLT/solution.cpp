@@ -8,17 +8,17 @@ using namespace std;
  * 
  * Minimal difference:
  * For each position i:
- * - If S1[i] == '?' or S2[i] == '?', we can always make them equal (e.g., if S1[i] == '?', 
- *   set it to S2[i]; if both are '?', set both to 'a').
- * - If both are letters and S1[i] != S2[i], they contribute 1 to the difference.
- * - If both are letters and S1[i] == S2[i], they contribute 0.
+ * - If S1[i] == '?' or S2[i] == '?', we can always make them equal (e.g., replace both with 'a').
+ * - If both are letters and S1[i] != S2[i], they must differ.
+ * - If both are letters and S1[i] == S2[i], they match.
+ * So, min_diff = count of positions where both are letters and S1[i] != S2[i].
  * 
  * Maximal difference:
  * For each position i:
- * - If S1[i] == '?' or S2[i] == '?', we can always make them different (e.g., if S1[i] == '?',
- *   set it to a letter different from S2[i]).
- * - If both are letters and S1[i] != S2[i], they contribute 1.
- * - If both are letters and S1[i] == S2[i], they contribute 0.
+ * - If S1[i] == '?' or S2[i] == '?', we can always make them differ (e.g., if S1[i] is 'a', make S2[i] 'b').
+ * - If both are letters and S1[i] != S2[i], they must differ.
+ * - If both are letters and S1[i] == S2[i], they match.
+ * So, max_diff = count of positions where (S1[i] != S2[i]) OR (S1[i] == '?' OR S2[i] == '?').
  */
 
 void solve() {
@@ -27,15 +27,15 @@ void solve() {
     
     int min_diff = 0;
     int max_diff = 0;
-    int n = s1.length();
     
+    int n = s1.length();
     for (int i = 0; i < n; ++i) {
         if (s1[i] == '?' || s2[i] == '?') {
-            // For min: we can make them equal, so no difference added.
-            // For max: we can make them different, so 1 difference added.
+            // For min_diff, we can match them, so no increment.
+            // For max_diff, we can force them to be different, so increment.
             max_diff++;
         } else {
-            // Both are letters.
+            // Both are characters.
             if (s1[i] != s2[i]) {
                 min_diff++;
                 max_diff++;

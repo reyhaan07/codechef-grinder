@@ -4,22 +4,22 @@ using namespace std;
 /**
  * Problem Analysis:
  * Initial temperature: A
- * Desired temperature: B
+ * Target temperature: B
  * Hot water available: X (increases temp by 1 per litre)
  * Cold water available: Y (decreases temp by 1 per litre)
  * 
  * If A < B:
- * We need to increase the temperature by (B - A).
- * This requires (B - A) litres of hot water.
- * We can achieve this if X >= (B - A).
+ *   We need to increase the temperature by (B - A).
+ *   This requires (B - A) litres of hot water.
+ *   Condition: X >= (B - A)
  * 
  * If A > B:
- * We need to decrease the temperature by (A - B).
- * This requires (A - B) litres of cold water.
- * We can achieve this if Y >= (A - B).
+ *   We need to decrease the temperature by (A - B).
+ *   This requires (A - B) litres of cold water.
+ *   Condition: Y >= (A - B)
  * 
  * If A == B:
- * We need 0 litres of water, which is always possible.
+ *   Temperature is already correct. Condition is always true.
  */
 
 void solve() {
@@ -43,7 +43,7 @@ void solve() {
             cout << "NO" << "\n";
         }
     } else {
-        // A == B, already at desired temperature
+        // A == B, already at target
         cout << "YES" << "\n";
     }
 }

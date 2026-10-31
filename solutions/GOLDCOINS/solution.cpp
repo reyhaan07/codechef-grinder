@@ -2,11 +2,11 @@
 using namespace std;
 
 /**
- * Problem Analysis:
+ * Problem: Gold Coins 101
+ * Logic: 
  * Chef receives A coins if he wins (X > Y).
  * Chef receives B coins if he loses (X < Y).
  * Given X != Y, we simply compare X and Y to determine the outcome.
- * Constraints are small (A, B <= 10), so standard integer types are sufficient.
  */
 
 int main() {
@@ -14,11 +14,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case per run based on the input format.
-    // However, if the platform expects handling multiple test cases, the structure is provided.
-    // Given the problem description "The first and only line of input...", we read once.
-    
-    int A, B, X, Y;
+    // The problem description implies a single test case based on the input format.
+    // However, if the platform expects multiple test cases, the structure is ready.
+    // Given the constraints and description, we read the four integers.
+    long long A, B, X, Y;
     if (cin >> A >> B >> X >> Y) {
         if (X > Y) {
             // Chef wins

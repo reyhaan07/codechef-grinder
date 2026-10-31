@@ -4,7 +4,7 @@ using namespace std;
 /**
  * Problem Analysis:
  * We have 11 problems, but only problems 1 through 8 are scorable.
- * For each scorable problem, we need to find the maximum score achieved.
+ * For each scorable problem, we need to find the maximum score obtained.
  * The total score is the sum of these maximums.
  * 
  * Approach:
@@ -16,20 +16,22 @@ using namespace std;
  * 
  * Complexity:
  * Time: O(N) per test case, where N is the number of submissions.
- * Space: O(1) as we only store scores for 8 problems.
+ * Space: O(1) as we only use a fixed-size array of 9 integers.
  */
 
 void solve() {
     int n;
     cin >> n;
     
-    // max_scores[i] stores the best score for problem i (1-8)
+    // Array to store the maximum score for each of the 8 scorable problems.
+    // Index 0 is unused, indices 1-8 correspond to problems 1-8.
     vector<int> max_scores(9, 0);
     
     for (int i = 0; i < n; ++i) {
         int p, s;
         cin >> p >> s;
-        // Only consider problems 1 through 8
+        
+        // Only consider problems 1 through 8.
         if (p >= 1 && p <= 8) {
             if (s > max_scores[p]) {
                 max_scores[p] = s;
@@ -46,7 +48,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     

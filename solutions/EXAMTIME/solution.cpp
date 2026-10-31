@@ -3,45 +3,42 @@ using namespace std;
 
 /**
  * Problem: TCS Examination
- * Logic:
- * We need to compare two students (Dragon and Sloth) based on a hierarchy of criteria:
- * 1. Total score (DSA + TOC + DM)
+ * The logic follows a hierarchical comparison:
+ * 1. Total score
  * 2. DSA score
  * 3. TOC score
- * 
- * We can represent these criteria as a tuple (Total, DSA, TOC) and compare them lexicographically.
+ * If all are equal, it's a Tie.
  */
 
 void solve() {
-    int d_dsa, d_toc, d_dm;
-    int s_dsa, s_toc, s_dm;
+    int dsaD, tocD, dmD;
+    int dsaS, tocS, dmS;
 
-    cin >> d_dsa >> d_toc >> d_dm;
-    cin >> s_dsa >> s_toc >> s_dm;
+    cin >> dsaD >> tocD >> dmD;
+    cin >> dsaS >> tocS >> dmS;
 
-    int d_total = d_dsa + d_toc + d_dm;
-    int s_total = s_dsa + s_toc + s_dm;
+    int totalD = dsaD + tocD + dmD;
+    int totalS = dsaS + tocS + dmS;
 
-    // Compare based on the criteria provided
-    if (d_total > s_total) {
-        cout << "DRAGON" << "\n";
-    } else if (s_total > d_total) {
-        cout << "SLOTH" << "\n";
+    if (totalD > totalS) {
+        cout << "Dragon" << "\n";
+    } else if (totalS > totalD) {
+        cout << "Sloth" << "\n";
     } else {
         // Total scores are tied, check DSA
-        if (d_dsa > s_dsa) {
-            cout << "DRAGON" << "\n";
-        } else if (s_dsa > d_dsa) {
-            cout << "SLOTH" << "\n";
+        if (dsaD > dsaS) {
+            cout << "Dragon" << "\n";
+        } else if (dsaS > dsaD) {
+            cout << "Sloth" << "\n";
         } else {
             // DSA scores are tied, check TOC
-            if (d_toc > s_toc) {
-                cout << "DRAGON" << "\n";
-            } else if (s_toc > d_toc) {
-                cout << "SLOTH" << "\n";
+            if (tocD > tocS) {
+                cout << "Dragon" << "\n";
+            } else if (tocS > tocD) {
+                cout << "Sloth" << "\n";
             } else {
                 // Everything is tied
-                cout << "TIE" << "\n";
+                cout << "Tie" << "\n";
             }
         }
     }

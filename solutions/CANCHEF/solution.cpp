@@ -1,43 +1,47 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * - Car efficiency: 15 km / 1 liter
- * - Total distance to travel: 2 * Y (round trip)
- * - Petrol available: X liters
- * - Maximum distance possible: 15 * X
- * - Condition: 15 * X >= 2 * Y
+ * Chef's car efficiency: 15 km per 1 liter of petrol.
+ * Total distance to travel: 2 * Y (to DAIICT and back).
+ * Petrol available: X liters.
+ * Total distance the car can cover with X liters: X * 15 km.
+ * 
+ * Condition for success:
+ * X * 15 >= 2 * Y
  * 
  * Constraints:
- * - T <= 1000, X, Y <= 1000
- * - 15 * 1000 = 15000, 2 * 1000 = 2000. 
- * - These values fit comfortably within a standard 32-bit integer.
+ * 1 <= T <= 1000
+ * 1 <= X, Y <= 1000
+ * 
+ * Data types:
+ * X * 15 can be up to 15,000.
+ * 2 * Y can be up to 2,000.
+ * Both fit comfortably within a standard 32-bit integer, but using long long 
+ * is a safe practice in competitive programming to prevent overflow.
  */
 
-void solve() {
-    int X, Y;
-    if (!(cin >> X >> Y)) return;
-    
-    // Total distance required is 2 * Y
-    // Total distance possible is X * 15
-    if (X * 15 >= 2 * Y) {
-        cout << "YES" << endl;
-    } else {
-        cout << "NO" << endl;
-    }
-}
-
 int main() {
-    // Optimize I/O operations
+    // Fast I/O for performance
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    if (!(cin >> T)) return 0;
-    while (T--) {
-        solve();
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x, y;
+        cin >> x >> y;
+        
+        // Total distance required is 2 * Y
+        // Total distance possible is X * 15
+        if (x * 15 >= 2 * y) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
+        }
     }
+    
     return 0;
 }

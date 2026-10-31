@@ -6,10 +6,13 @@ using namespace std;
  * The task is to find the largest integer x in the range [1, 10] such that N % x == 0.
  * Since the range is very small (1 to 10), we can simply iterate backwards from 10 down to 1.
  * The first number we encounter that divides N will be the largest divisor in that range.
+ * 
+ * Time Complexity: O(1) per test case (constant 10 iterations).
+ * Space Complexity: O(1).
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

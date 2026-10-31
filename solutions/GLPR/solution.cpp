@@ -8,8 +8,8 @@ using namespace std;
  * 
  * Constraints:
  * 1 <= X, Y <= 2000
- * Since the maximum value is 2000, 2 * X will be at most 4000.
- * Standard 'int' is sufficient as it handles up to 2*10^9.
+ * Since the maximum value of 2 * X is 4000, standard 'int' is sufficient.
+ * However, using 'long long' is safe practice in competitive programming.
  */
 
 int main() {
@@ -17,14 +17,12 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case per run based on the 
-    // input format description, but standard competitive programming practice 
-    // often involves reading until EOF or a specific count. 
-    // Given the format "The first and only line of input will contain...", 
-    // we process the single line provided.
-    
+    // The problem description implies a single test case per run based on the input format,
+    // but standard competitive programming practice often involves handling multiple test cases.
+    // Given the problem description format, we read X and Y directly.
     long long X, Y;
     if (cin >> X >> Y) {
+        // Condition: Metal if Y <= 2 * X
         if (Y <= 2 * X) {
             cout << "METAL" << "\n";
         } else {

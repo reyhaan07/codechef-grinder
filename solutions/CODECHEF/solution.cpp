@@ -13,25 +13,26 @@ using namespace std;
  * 6: Friday
  * 7: Saturday
  * 
- * Therefore, we need to output "YES" if N == 4, and "NO" otherwise.
+ * We need to output "YES" if N == 4, otherwise "NO".
  * Constraints: 1 <= N <= 7.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n;
-    // The problem description implies a single input N, but standard competitive 
-    // programming practice often involves test cases. Given the constraints 
-    // and format, we read N directly.
-    if (!(cin >> n)) return 0;
-
-    if (n == 4) {
-        cout << "YES" << "\n";
-    } else {
-        cout << "NO" << "\n";
+    int N;
+    // The problem description implies a single input N, 
+    // but standard competitive programming practice often involves 
+    // checking if multiple test cases are provided. 
+    // Given the problem description format, we read N once.
+    if (cin >> N) {
+        if (N == 4) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
+        }
     }
 
     return 0;
