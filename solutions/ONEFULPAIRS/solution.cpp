@@ -1,14 +1,35 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem: Oneful Pairs
+ * A pair (a, b) is a Oneful Pair if a + b + (a * b) == 111.
+ * Constraints: 1 <= a, b <= 1000.
+ * 
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
+ */
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     long long a, b;
-    std::cin >> a >> b;
-    if (a + b + (a * b) == 111) {
-        std::cout << "Yes\n";
-    } else {
-        std::cout << "No\n";
+    // The problem description implies a single pair input per execution 
+    // based on the sample test cases provided.
+    if (cin >> a >> b) {
+        // Calculate the expression a + b + (a * b)
+        // Using long long to prevent any potential overflow, 
+        // though with constraints up to 1000, int would suffice.
+        long long result = a + b + (a * b);
+
+        if (result == 111) {
+            cout << "Yes" << "\n";
+        } else {
+            cout << "No" << "\n";
+        }
     }
+
     return 0;
 }

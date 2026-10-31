@@ -1,33 +1,31 @@
-#include <iostream> // Required for cin, cout
-#include <vector>   // Required for std::vector
-#include <algorithm> // Required for std::sort
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem: Second Max of Three Numbers
+ * Approach: To find the second maximum of three distinct numbers (a, b, c),
+ * we can store them in an array, sort the array, and pick the middle element.
+ * Given the constraints (N <= 6, integers <= 10000), this is highly efficient.
+ */
 
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // This unties cin from cout and disables synchronization with C's stdio.
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    int N; // Declare N to store the number of triples
-    std::cin >> N; // Read the number of triples
+    int n;
+    if (!(cin >> n)) return 0;
 
-    // Loop N times, once for each triple
-    while (N--) {
-        // Declare a vector of 3 integers to store the current triple
-        std::vector<int> nums(3);
-        
-        // Read the three integers into the vector
-        std::cin >> nums[0] >> nums[1] >> nums[2];
+    while (n--) {
+        long long arr[3];
+        cin >> arr[0] >> arr[1] >> arr[2];
 
-        // Sort the vector in ascending order.
-        // After sorting, nums[0] will be the minimum,
-        // nums[1] will be the second minimum (which is the second maximum for 3 distinct numbers),
-        // and nums[2] will be the maximum.
-        std::sort(nums.begin(), nums.end());
+        // Sorting the three numbers
+        sort(arr, arr + 3);
 
-        // Output the second element (index 1) which is the second maximum
-        std::cout << nums[1] << "\n";
+        // The second maximum is the element at index 1 after sorting
+        cout << arr[1] << "\n";
     }
 
-    return 0; // Indicate successful execution
+    return 0;
 }

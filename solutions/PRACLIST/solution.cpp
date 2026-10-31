@@ -1,27 +1,37 @@
-#include <bits/stdc++.h> // Includes all standard libraries
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem Analysis:
+ * The problem asks for the number of unattempted problems given the total number of problems (X)
+ * and the number of attempted problems (Y).
+ * The number of unattempted problems is simply X - Y.
+ * 
+ * Constraints:
+ * 1 <= Y <= X <= 1000
+ * Since the values are small, standard integer types are sufficient.
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // This unties cin/cout from the C standard I/O library and
-    // disables synchronization with C's stdio.
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Optimize standard I/O operations for competitive programming
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    // Declare two integer variables to store the input values.
-    // X: total count of 'All Problems' in the Beginner section.
-    // Y: count of 'Attempted' problems among them.
-    int X, Y;
+    // The problem description implies a single test case per run based on the input format.
+    // However, if the platform expects handling multiple test cases, the structure is:
+    // int t; cin >> t; while(t--) { ... }
+    // Given the specific problem description format, we read X and Y directly.
+    
+    long long X, Y;
+    if (cin >> X >> Y) {
+        // Calculate the difference
+        long long unattempted = X - Y;
+        
+        // Output the result
+        cout << unattempted << "\n";
+    }
 
-    // Read the two space-separated integers from standard input.
-    std::cin >> X >> Y;
-
-    // Calculate the number of 'Un-attempted' problems.
-    // This is simply the total problems minus the attempted problems.
-    int unattempted_problems = X - Y;
-
-    // Print the result to standard output, followed by a newline character.
-    std::cout << unattempted_problems << "\n";
-
-    // Indicate successful execution of the program.
     return 0;
 }

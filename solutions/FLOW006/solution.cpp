@@ -1,41 +1,38 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+/**
+ * Problem: Sum of Digits
+ * Approach: To find the sum of digits of an integer N, we can repeatedly 
+ * take the modulo of N by 10 to get the last digit, add it to a sum variable, 
+ * and then perform integer division by 10 to remove the last digit.
+ * Time Complexity: O(T * log10(N))
+ * Space Complexity: O(1)
+ */
+
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // This unties cin/cout from the C standard streams and prevents flushing
-    // of cout before cin, leading to faster input/output operations.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare an integer T to store the number of test cases.
-    cin >> T; // Read the number of test cases from standard input.
+    int t;
+    if (!(cin >> t)) return 0;
 
-    // Loop T times, once for each test case.
-    while (T--) {
-        int N; // Declare an integer N to store the input number for the current test case.
-        cin >> N; // Read the number N from standard input.
+    while (t--) {
+        long long n;
+        cin >> n;
 
-        int sum_of_digits = 0; // Initialize a variable to store the sum of digits.
+        // Handle negative numbers if they were to occur (though constraints say N >= 1)
+        if (n < 0) n = -n;
 
-        // Loop while N is greater than 0 to process each digit.
-        // For N=0, the sum of digits is 0. The problem constraints state 1 <= N,
-        // so N will always be positive initially.
-        while (N > 0) {
-            // Get the last digit of N using the modulo operator (N % 10).
-            // Add this digit to sum_of_digits.
-            sum_of_digits += N % 10;
-
-            // Remove the last digit from N using integer division (N / 10).
-            // This effectively shifts the number one place to the right.
-            N /= 10;
+        long long sum = 0;
+        while (n > 0) {
+            sum += (n % 10);
+            n /= 10;
         }
 
-        // Print the calculated sum of digits for the current test case,
-        // followed by a newline character as required.
-        cout << sum_of_digits << "\n";
+        cout << sum << "\n";
     }
 
-    return 0; // Indicate successful execution of the program.
+    return 0;
 }

@@ -1,29 +1,33 @@
-#include <bits/stdc++.h> // Includes all standard libraries
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Use standard namespace
+/**
+ * Problem: WATERCONS
+ * Logic: The doctor advises at least 2000 ml.
+ * We need to check if X >= 2000.
+ * Time Complexity: O(T) where T is the number of test cases.
+ * Space Complexity: O(1).
+ */
 
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // This unties cin/cout from C's stdio and prevents flushing cout before cin.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare variable for the number of test cases
-    cin >> T; // Read the number of test cases
-
-    // Loop through each test case
-    while (T--) {
-        int X; // Declare variable for the amount of water Chef drank
-        cin >> X; // Read the amount of water X
-
-        // The doctor advised Chef to drink at least 2000 ml of water.
-        // We check if the amount X Chef drank is greater than or equal to 2000.
-        if (X >= 2000) {
-            cout << "YES\n"; // If Chef drank 2000 ml or more, print YES
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x;
+        cin >> x;
+        
+        // Check if Chef followed the advice
+        if (x >= 2000) {
+            cout << "YES" << "\n";
         } else {
-            cout << "NO\n"; // Otherwise (if Chef drank less than 2000 ml), print NO
+            cout << "NO" << "\n";
         }
     }
-
-    return 0; // Indicate successful execution
+    
+    return 0;
 }

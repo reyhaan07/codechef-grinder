@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 12,
+  "total_solved": 30,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -14,7 +14,25 @@
     "HS08TEST",
     "CCLEARN",
     "INSTNOODLE",
-    "INTEST"
+    "INTEST",
+    "GDTURN",
+    "CBSPEED",
+    "FLOW002",
+    "FLOW006",
+    "WATERCONS",
+    "MARKSTW",
+    "FLOW007",
+    "ONEFULPAIRS",
+    "BIRYANI",
+    "TAXSAVING",
+    "PRACTICEPERF",
+    "AVGPROBLEM",
+    "FCTRL2",
+    "AMR15A",
+    "PRACLIST",
+    "DETSCORE",
+    "TOP10",
+    "SNDMAX"
   ],
   "failed_codes": [],
   "pending": [],
@@ -135,6 +153,168 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 15:19:53"
+    },
+    {
+      "code": "GDTURN",
+      "name": "Good Turn",
+      "status": "Accepted",
+      "solution_id": "1384755107",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:44:09"
+    },
+    {
+      "code": "CBSPEED",
+      "name": "Chef and Brain Speed",
+      "status": "Accepted",
+      "solution_id": "1384755467",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:44:59"
+    },
+    {
+      "code": "FLOW002",
+      "name": "Find Remainder",
+      "status": "Accepted",
+      "solution_id": "1384755831",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:45:42"
+    },
+    {
+      "code": "FLOW006",
+      "name": "Sum of Digits",
+      "status": "Accepted",
+      "solution_id": "1384756142",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:46:34"
+    },
+    {
+      "code": "WATERCONS",
+      "name": "Water Consumption",
+      "status": "Accepted",
+      "solution_id": "1384756458",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:47:17"
+    },
+    {
+      "code": "MARKSTW",
+      "name": "Alice and Marks",
+      "status": "Accepted",
+      "solution_id": "1384756865",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:49:11"
+    },
+    {
+      "code": "FLOW007",
+      "name": "Reverse The Number",
+      "status": "Accepted",
+      "solution_id": "1384757681",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:50:04"
+    },
+    {
+      "code": "ONEFULPAIRS",
+      "name": "Oneful Pairs",
+      "status": "Accepted",
+      "solution_id": "1384757972",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:50:43"
+    },
+    {
+      "code": "BIRYANI",
+      "name": "Biryani classes",
+      "status": "Accepted",
+      "solution_id": "1384761843",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:59:03"
+    },
+    {
+      "code": "TAXSAVING",
+      "name": "Saving Taxes",
+      "status": "Accepted",
+      "solution_id": "1384762375",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:00:13"
+    },
+    {
+      "code": "PRACTICEPERF",
+      "name": "Practice makes us perfect",
+      "status": "Accepted",
+      "solution_id": "1384763240",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:02:03"
+    },
+    {
+      "code": "AVGPROBLEM",
+      "name": "Greater Average",
+      "status": "Accepted",
+      "solution_id": "1384764335",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:05:31"
+    },
+    {
+      "code": "FCTRL2",
+      "name": "Small factorials",
+      "status": "Accepted",
+      "solution_id": "1384765211",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:06:35"
+    },
+    {
+      "code": "AMR15A",
+      "name": "Mahasena",
+      "status": "Accepted",
+      "solution_id": "1384765473",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:07:14"
+    },
+    {
+      "code": "PRACLIST",
+      "name": "How many unattempted problems",
+      "status": "Accepted",
+      "solution_id": "1384765767",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:07:47"
+    },
+    {
+      "code": "DETSCORE",
+      "name": "Determine the Score",
+      "status": "Accepted",
+      "solution_id": "1384766196",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:08:45"
+    },
+    {
+      "code": "TOP10",
+      "name": "Masterchef finals",
+      "status": "Accepted",
+      "solution_id": "1384766491",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:09:22"
+    },
+    {
+      "code": "SNDMAX",
+      "name": "Second Max of Three Numbers",
+      "status": "Accepted",
+      "solution_id": "1384766866",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:10:07"
     }
   ]
 }

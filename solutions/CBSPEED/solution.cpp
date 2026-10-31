@@ -4,23 +4,26 @@ using namespace std;
 /**
  * Problem Analysis:
  * The problem asks us to compare two integers X (threshold) and Y (current speed).
- * If Y > X, Chef is prone to errors (YES).
- * Otherwise, Chef is not prone to errors (NO).
+ * Chef is prone to errors if Y > X.
  * 
- * Constraints: 1 <= X, Y <= 100.
- * Time Complexity: O(1) per test case.
- * Space Complexity: O(1).
+ * Constraints:
+ * 1 <= X, Y <= 100
+ * Time Complexity: O(1) per test case
+ * Space Complexity: O(1)
  */
 
 int main() {
-    // Optimize standard I/O operations for speed
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
+    // The problem description does not explicitly state multiple test cases,
+    // but the instructions suggest handling them. Given the input format 
+    // "The only line of input contains two space separated integers", 
+    // we read X and Y directly.
+    
     int X, Y;
-    // Read the threshold limit X and current speed Y
     if (cin >> X >> Y) {
-        // Check if current speed is strictly greater than the threshold
         if (Y > X) {
             cout << "YES" << "\n";
         } else {
