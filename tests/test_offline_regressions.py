@@ -312,3 +312,31 @@ def test_explanations_can_be_disabled(env, monkeypatch):
     assert "Explanation skipped" in readme
     assert (env.solutions_dir / "A" / "solution.cpp").exists()
     assert read_db(env)["solved_codes"] == ["A"]
+
+
+def test_chain_signal_written_to_github_output(env, monkeypatch, tmp_path):
+    out = tmp_path / "gh_output"
+    monkeypatch.setenv("GITHUB_OUTPUT", str(out))
+    run_with(monkeypatch, FakeClient([{"code": "A", "name": "a"}], [AC]), FakeSolver())
+    assert "continue=true" in out.read_text()
+
+    out.write_text("")
+    run_with(monkeypatch, FakeClient([], []), FakeSolver())  # nothing left to solve
+    assert "continue=false" in out.read_text()
+
+
+def test_solver_retries_overloaded_model_before_giving_up(monkeypatch):
+    calls = []
+
+    class Models:
+        def generate_content(self, model, contents, config):
+            calls.append(model)
+            if len(calls) < 3:
+                raise RuntimeError("503 UNAVAILABLE. model overloaded")
+            return type("R", (), {"text": "```cpp\nok\n```"})()
+
+    monkeypatch.setattr("src.solver.time.sleep", lambda s: None)
+    s = CodeChefSolver(api_key="k", model_name="gemini-3.1-flash-lite")
+    s.client = type("C", (), {"models": Models()})()
+    s._generate_with_resilience("p")
+    assert calls == ["gemini-3.1-flash-lite"] * 3

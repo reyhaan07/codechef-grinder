@@ -15,7 +15,13 @@ class CodeChefSolver:
         "gemini-2.5-flash",
         "gemini-2.5-flash-lite",
         "gemini-3.1-flash-lite",
+        # Google's rolling aliases: used as a fallback when the models above are
+        # overloaded (503). A 404 just marks them unavailable for the run.
+        "gemini-flash-lite-latest",
+        "gemini-flash-latest",
     ]
+    # Overload (503) / rate-limit (429) retries per model, with growing waits.
+    OVERLOAD_BACKOFF_SECONDS = [5, 10, 20]
 
     def __init__(self, api_key: str = "", model_name: str = ""):
         self.api_key = api_key or config.gemini_api_key
@@ -46,9 +52,10 @@ class CodeChefSolver:
         for model in self.candidate_models:
             if model in self.unavailable_models:
                 continue
-            for try_idx in range(2):
+            tries = len(self.OVERLOAD_BACKOFF_SECONDS) + 1
+            for try_idx in range(tries):
                 try:
-                    logger.info(f"Generating solution via model '{model}' (try {try_idx + 1}/2)...")
+                    logger.info(f"Generating solution via model '{model}' (try {try_idx + 1}/{tries})...")
                     response = self.client.models.generate_content(
                         model=model,
                         contents=prompt,
@@ -65,7 +72,8 @@ class CodeChefSolver:
                         self.unavailable_models.add(model)
                         break
                     if "503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str:
-                        time.sleep(3 * (try_idx + 1))
+                        if try_idx < len(self.OVERLOAD_BACKOFF_SECONDS):
+                            time.sleep(self.OVERLOAD_BACKOFF_SECONDS[try_idx])
                     else:
                         break
 

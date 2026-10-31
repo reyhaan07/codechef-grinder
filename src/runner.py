@@ -1,5 +1,6 @@
 import datetime
 import logging
+import os
 import random
 import sys
 import time
@@ -74,6 +75,15 @@ def is_quota_error(err: Exception) -> bool:
     return "RESOURCE_EXHAUSTED" in text or "429" in text or "quota" in text.lower()
 
 
+def emit_continue(flag: bool, reason: str) -> None:
+    """Tell the workflow whether to start another run right away (sprint chaining)."""
+    logger.info(f"Chain next run: {'yes' if flag else 'no'} ({reason})")
+    out = os.getenv("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as f:
+            f.write(f"continue={'true' if flag else 'false'}\n")
+
+
 def run():
     logger.info("=== Starting CodeChef Practice Archive Auto-Grinder ===")
     run_started = time.monotonic()
@@ -137,6 +147,7 @@ def run():
     # Check if daily upper bound is reached
     if today_solved >= config.daily_target_max:
         logger.info(f"Daily quota of {today_solved} problems reached for today! Resting until tomorrow to maintain human-like activity.")
+        emit_continue(False, "daily cap reached")
         return
 
     # 2. Determine Random Session Target
@@ -193,6 +204,7 @@ def run():
 
     if not candidate_problems:
         logger.info("No new candidate problems found in targeted range. All caught up!")
+        emit_continue(False, "no candidates left")
         return
 
     logger.info(f"Selected {len(candidate_problems)} problems to solve in this session:")
@@ -355,6 +367,14 @@ def run():
             time.sleep(pacing_delay)
 
     logger.info(f"\n=== Session Finished: Solved {solved_this_run}/{len(candidate_problems)} problems ===")
+    if config.dry_run:
+        emit_continue(False, "dry run")
+    elif stop_run:
+        emit_continue(False, "Gemini quota exhausted")
+    elif solved_this_run == 0:
+        emit_continue(False, "nothing solved this run")
+    else:
+        emit_continue(True, f"solved {solved_this_run} this run")
     logger.info(f"Total problems accepted on '{account}' recorded by this bot: {db['total_solved']}")
 
 

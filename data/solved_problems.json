@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 30,
+  "total_solved": 33,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -32,7 +32,10 @@
     "PRACLIST",
     "DETSCORE",
     "TOP10",
-    "SNDMAX"
+    "SNDMAX",
+    "FIT",
+    "BESTOFTWO",
+    "FLOW004"
   ],
   "failed_codes": [],
   "pending": [],
@@ -315,6 +318,36 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 16:10:07"
+    },
+    {
+      "code": "FIT",
+      "name": "Fitness",
+      "status": "Accepted",
+      "solution_id": "1384752810",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:39:23",
+      "evidence": "GitHub Actions run 41214753322 log: 'Verdict: accepted' (run was cancelled before it could commit)"
+    },
+    {
+      "code": "BESTOFTWO",
+      "name": "Best of Two",
+      "status": "Accepted",
+      "solution_id": "1384753155",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:40:13",
+      "evidence": "GitHub Actions run 41214753322 log: 'Verdict: accepted' (run was cancelled before it could commit)"
+    },
+    {
+      "code": "FLOW004",
+      "name": "First and Last Digit",
+      "status": "Accepted",
+      "solution_id": "1384753393",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:40:47",
+      "evidence": "GitHub Actions run 41214753322 log: 'Verdict: accepted' (run was cancelled before it could commit)"
     }
   ]
 }
