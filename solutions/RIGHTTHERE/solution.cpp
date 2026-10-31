@@ -1,29 +1,39 @@
-#include <bits/stdc++.h> // Includes most standard libraries
-
-// Using the standard namespace to avoid writing std:: repeatedly
+#include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Problem Analysis:
+ * Chef wants to host N people in a hall with capacity X.
+ * The condition to host the party is that the number of people N 
+ * must be less than or equal to the capacity X (N <= X).
+ * 
+ * Constraints:
+ * 1 <= T <= 100
+ * 1 <= N, X <= 10
+ * 
+ * Time Complexity: O(T) - We process each test case in constant time.
+ * Space Complexity: O(1) - No extra data structures are used.
+ */
+
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // This unties cin/cout from C's stdio and prevents flushing cout before cin.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare variable for the number of test cases
-    cin >> T; // Read the number of test cases
-
-    // Loop through each test case
-    while (T--) {
-        int N, X; // Declare variables for the total number of people (N) and hall capacity (X)
-        cin >> N >> X; // Read N and X for the current test case
-
-        // Chef can host the party if the number of people N is less than or equal to the hall's capacity X.
-        if (N <= X) {
-            cout << "YES\n"; // If N is less than or equal to X, output YES
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long n, x;
+        cin >> n >> x;
+        
+        // Check if the number of people is within the hall capacity
+        if (n <= x) {
+            cout << "YES" << "\n";
         } else {
-            cout << "NO\n"; // Otherwise (if N is greater than X), output NO
+            cout << "NO" << "\n";
         }
     }
-
-    return 0; // Indicate successful execution
+    
+    return 0;
 }

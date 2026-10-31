@@ -1,18 +1,34 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem Analysis:
+ * An account is spam if X > 10 * Y.
+ * Constraints: 1 <= T <= 100, 1 <= X, Y <= 100.
+ * Since X and Y are small, standard integer types are sufficient.
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
+ */
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int t;
-    std::cin >> t;
+    if (!(cin >> t)) return 0;
+    
     while (t--) {
-        int x, y;
-        std::cin >> x >> y;
+        long long x, y;
+        cin >> x >> y;
+        
+        // Check if following count (x) is strictly greater than 10 * follower count (y)
         if (x > 10 * y) {
-            std::cout << "YES\n";
+            cout << "YES" << "\n";
         } else {
-            std::cout << "NO\n";
+            cout << "NO" << "\n";
         }
     }
+    
     return 0;
 }

@@ -1,23 +1,39 @@
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem Analysis:
+ * The 107% rule states that Chef's time Y must be less than or equal to 107% of X.
+ * Mathematically: Y <= 1.07 * X
+ * To avoid floating point precision issues, we can multiply both sides by 100:
+ * 100 * Y <= 107 * X
+ * 
+ * Constraints:
+ * 1 <= X <= Y <= 200
+ * Since X and Y are at most 200, 107 * X will be at most 21400, 
+ * which fits comfortably within a standard 32-bit integer.
+ */
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O for competitive programming
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int t;
-    std::cin >> t;
+    if (!(cin >> t)) return 0;
+    
     while (t--) {
-        int x, y;
-        std::cin >> x >> y;
-        // The 107% rule means Chef's time (Y) must be less than or equal to 107% of the fastest time (X).
-        // Mathematically, this is Y <= X * 1.07
-        // To avoid floating-point precision issues, we can rewrite this as:
-        // Y * 100 <= X * 107
-        if (y * 100 <= x * 107) {
-            std::cout << "YES\n";
+        long long x, y;
+        cin >> x >> y;
+        
+        // Check if Chef's time Y is within 107% of X
+        // Using the derived inequality: 100 * Y <= 107 * X
+        if (100 * y <= 107 * x) {
+            cout << "YES" << "\n";
         } else {
-            std::cout << "NO\n";
+            cout << "NO" << "\n";
         }
     }
+    
     return 0;
 }

@@ -1,29 +1,26 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+/**
+ * Problem: 404 Not Found
+ * Logic: Read the integer X. If X == 404, output "NOT FOUND". Otherwise, output "FOUND".
+ * Time Complexity: O(1)
+ * Space Complexity: O(1)
+ */
+
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // Declare an integer variable X to store the response code.
-    int X;
-
-    // Read the response code from standard input.
-    cin >> X;
-
-    // Check if the response code is 404.
-    if (X == 404) {
-        // If X is 404, print "NOT FOUND" followed by a newline.
-        cout << "NOT FOUND\n";
-    } else {
-        // For any other response code, print "FOUND" followed by a newline.
-        cout << "FOUND\n";
+    long long x;
+    if (cin >> x) {
+        if (x == 404) {
+            cout << "NOT FOUND" << "\n";
+        } else {
+            cout << "FOUND" << "\n";
+        }
     }
 
-    // Return 0 to indicate successful execution of the program.
     return 0;
 }

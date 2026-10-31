@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 102,
+  "total_solved": 120,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -104,7 +104,25 @@
     "CREDCOINS",
     "PASSORFAIL",
     "SIXFRIENDS",
-    "FAIRPASS"
+    "FAIRPASS",
+    "NOTEBOOK",
+    "THREETOPICS",
+    "WATERREQ",
+    "DISCNT",
+    "ERROR404",
+    "F1RULE",
+    "CWIREFRAME",
+    "SALESEASON",
+    "CHEFGAMES",
+    "SUMM",
+    "INSTAGRAM",
+    "POPULATION",
+    "M1ENROL",
+    "RIGHTTHERE",
+    "HELIUM3",
+    "SUGARCANE",
+    "SLEEP",
+    "FBC"
   ],
   "failed_codes": [
     "SEARCHINARR"
@@ -1040,6 +1058,168 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 20:17:52"
+    },
+    {
+      "code": "NOTEBOOK",
+      "name": "Count the Notebooks",
+      "status": "Accepted",
+      "solution_id": "1384829760",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:18:15"
+    },
+    {
+      "code": "THREETOPICS",
+      "name": "The Three Topics",
+      "status": "Accepted",
+      "solution_id": "1384829800",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:18:53"
+    },
+    {
+      "code": "WATERREQ",
+      "name": "Water Requirement",
+      "status": "Accepted",
+      "solution_id": "1384829839",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:19:31"
+    },
+    {
+      "code": "DISCNT",
+      "name": "Discount",
+      "status": "Accepted",
+      "solution_id": "1384829872",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:20:58"
+    },
+    {
+      "code": "ERROR404",
+      "name": "404 Not Found",
+      "status": "Accepted",
+      "solution_id": "1384829983",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:21:38"
+    },
+    {
+      "code": "F1RULE",
+      "name": "Miami GP",
+      "status": "Accepted",
+      "solution_id": "1384830030",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:23:22"
+    },
+    {
+      "code": "CWIREFRAME",
+      "name": "Chef and Wire Frames",
+      "status": "Accepted",
+      "solution_id": "1384830138",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:24:02"
+    },
+    {
+      "code": "SALESEASON",
+      "name": "Sale Season",
+      "status": "Accepted",
+      "solution_id": "1384830181",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:24:36"
+    },
+    {
+      "code": "CHEFGAMES",
+      "name": "Chefland Games",
+      "status": "Accepted",
+      "solution_id": "1384830206",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:26:07"
+    },
+    {
+      "code": "SUMM",
+      "name": "Sum it",
+      "status": "Accepted",
+      "solution_id": "1384830293",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:27:35"
+    },
+    {
+      "code": "INSTAGRAM",
+      "name": "Instagram",
+      "status": "Accepted",
+      "solution_id": "1384830377",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:28:08"
+    },
+    {
+      "code": "POPULATION",
+      "name": "Final Population",
+      "status": "Accepted",
+      "solution_id": "1384830414",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:28:46"
+    },
+    {
+      "code": "M1ENROL",
+      "name": "MATH1 Enrolment",
+      "status": "Accepted",
+      "solution_id": "1384830462",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:29:26"
+    },
+    {
+      "code": "RIGHTTHERE",
+      "name": "Right There",
+      "status": "Accepted",
+      "solution_id": "1384830512",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:30:08"
+    },
+    {
+      "code": "HELIUM3",
+      "name": "Chef and NextGen",
+      "status": "Accepted",
+      "solution_id": "1384830563",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:30:37"
+    },
+    {
+      "code": "SUGARCANE",
+      "name": "Sugarcane Juice Business",
+      "status": "Accepted",
+      "solution_id": "1384830596",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:31:08"
+    },
+    {
+      "code": "SLEEP",
+      "name": "Sleep deprivation",
+      "status": "Accepted",
+      "solution_id": "1384830652",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:32:01"
+    },
+    {
+      "code": "FBC",
+      "name": "Fill the Bucket",
+      "status": "Accepted",
+      "solution_id": "1384830691",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:32:38"
     }
   ]
 }

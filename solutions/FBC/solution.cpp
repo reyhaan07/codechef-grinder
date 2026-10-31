@@ -1,31 +1,39 @@
-#include <bits/stdc++.h> // Includes all standard libraries as requested
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Uses the standard namespace as requested
+/**
+ * Problem Analysis:
+ * The bucket has a total capacity of K liters.
+ * It currently contains X liters of water.
+ * To find the maximum extra water that can be added without overflowing,
+ * we need to calculate the difference between the total capacity and the current amount.
+ * Formula: Extra Water = K - X
+ * 
+ * Constraints:
+ * 1 <= T <= 100
+ * 1 <= X < K <= 1000
+ * Since K and X are small (up to 1000), standard 'int' is sufficient.
+ * Time Complexity: O(T) where T is the number of test cases.
+ * Space Complexity: O(1) as we only use a few variables.
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cout from flushing before cin reads input.
+    // Optimize standard I/O operations for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare an integer variable T for the number of test cases.
-    cin >> T; // Read the number of test cases from standard input.
-
-    // Loop T times, once for each test case.
-    while (T--) {
-        int K, X; // Declare integer variables K and X for bucket capacity and current water.
-        cin >> K >> X; // Read K and X for the current test case.
-
-        // Calculate the maximum amount of extra water that can be filled.
-        // This is simply the difference between the total capacity (K)
-        // and the amount of water already present (X).
-        int extra_water = K - X;
-
-        // Print the calculated extra water followed by a newline character.
-        // The newline character ensures each output is on a separate line as per format.
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        int k, x;
+        cin >> k >> x;
+        
+        // The amount of extra water is the capacity minus the current volume.
+        int extra_water = k - x;
+        
         cout << extra_water << "\n";
     }
-
-    return 0; // Indicate successful program execution.
+    
+    return 0;
 }

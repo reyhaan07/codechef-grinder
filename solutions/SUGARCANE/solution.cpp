@@ -1,31 +1,40 @@
-#include <bits/stdc++.h> // Includes most standard libraries
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Use the standard namespace
+/**
+ * Problem Analysis:
+ * Total Income = N * 50
+ * Expenses:
+ * - Sugarcane: 20% of (N * 50) = 0.20 * 50 * N = 10 * N
+ * - Salt/Mint: 20% of (N * 50) = 0.20 * 50 * N = 10 * N
+ * - Rent: 30% of (N * 50) = 0.30 * 50 * N = 15 * N
+ * 
+ * Total Expenses = 10N + 10N + 15N = 35N
+ * Profit = Total Income - Total Expenses
+ * Profit = 50N - 35N = 15N
+ * 
+ * Constraints:
+ * N <= 10^6, T <= 1000
+ * Max Profit = 15 * 10^6 = 1.5 * 10^7, which fits in a standard 32-bit integer.
+ * Using long long is safe practice.
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    cin >> T; // Read the number of test cases
-
-    while (T--) { // Loop T times, decrementing T in each iteration
-        int N;
-        cin >> N; // Read the number of glasses sold for the current test case
-
-        // Calculate the profit based on the derived formula:
-        // Total income per glass = 50 coins.
-        // Total expenses percentage = 20% (sugarcane) + 20% (salt/mint) + 30% (rent) = 70% of total income.
-        // Profit percentage = 100% (total income) - 70% (total expenses) = 30% of total income.
-        // Profit per glass = 30% of 50 coins = 0.30 * 50 = 15 coins.
-        // Total profit for N glasses = 15 * N.
-        int profit = 15 * N;
-
-        cout << profit << "\n"; // Output the calculated profit followed by a newline
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        long long n;
+        cin >> n;
+        
+        // Profit calculation based on derived formula: 15 * N
+        long long profit = 15 * n;
+        
+        cout << profit << "\n";
     }
-
-    return 0; // Indicate successful execution
+    
+    return 0;
 }
