@@ -2,11 +2,11 @@
 using namespace std;
 
 /**
- * Problem: Smallest Numbers of Notes (FLOW005)
- * Strategy: Greedy approach.
- * Since the denominations are {1, 2, 5, 10, 50, 100}, and each larger denomination
- * is a multiple of smaller ones (or can be formed optimally), we can always
- * pick the largest possible denomination first to minimize the total count.
+ * Problem: Smallest Numbers of Notes
+ * Approach: Greedy Algorithm
+ * Since the denominations are {1, 2, 5, 10, 50, 100}, this is a canonical coin system.
+ * A greedy approach (always taking the largest possible denomination) will yield 
+ * the optimal (smallest) number of notes.
  */
 
 void solve() {
@@ -27,7 +27,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     

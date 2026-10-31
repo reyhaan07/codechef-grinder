@@ -8,7 +8,7 @@ using namespace std;
  * Total capacity = 10 * X.
  * Number of people willing to book = Y.
  * Number of seats actually sold = min(Total capacity, Y).
- * Price per seat = Z.
+ * Cost per seat = Z.
  * Total earnings = min(10 * X, Y) * Z.
  * 
  * Constraints:
@@ -19,7 +19,7 @@ using namespace std;
  */
 
 int main() {
-    // Fast I/O for performance
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

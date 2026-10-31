@@ -8,10 +8,9 @@ using namespace std;
  * Both are happy if (Bob <= 2 * Alice) AND (Alice <= 2 * Bob).
  * 
  * Constraints:
- * N <= 100, T <= 1000.
- * A_i, B_i <= 10^5.
- * Since 2 * 10^5 fits in a standard 32-bit integer, 'int' is sufficient, 
- * but 'long long' is used for safety against potential overflow in intermediate calculations.
+ * T <= 1000, N <= 100, A_i, B_i <= 10^5.
+ * The logic is O(N) per test case, total complexity O(T * N), which is 10^5 operations.
+ * This fits well within the 1s time limit.
  */
 
 void solve() {
@@ -36,7 +35,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

@@ -1,38 +1,19 @@
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
- * Problem: Mutated Minions (CHN15A)
- * Approach:
- * For each minion with characteristic value V, the new value becomes V + K.
- * We count how many minions satisfy (V + K) % 7 == 0.
+ * Problem Analysis:
+ * We are given N minions, each with an initial characteristic value.
+ * A transmogrifier adds K to each value.
+ * A minion is "Wolverine-like" if (initial_value + K) % 7 == 0.
+ * We need to count how many minions satisfy this condition.
  * 
- * Complexity Analysis:
- * Time Complexity: O(T * N), where T is the number of test cases and N is the number of minions.
- * With T=100 and N=100, total operations are ~10^4, well within the 1s time limit.
- * Space Complexity: O(1), as we process each minion value on the fly.
+ * Constraints:
+ * T <= 100, N <= 100, K <= 100, values <= 10^5.
+ * The values will not exceed 10^5 + 100, which fits comfortably in a standard 32-bit integer.
+ * Time complexity per test case: O(N).
+ * Total time complexity: O(T * N), which is at most 10^4 operations, well within the 1s limit.
  */
-
-void solve() {
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return;
-
-    int wolverine_count = 0;
-    for (int i = 0; i < n; ++i) {
-        long long v;
-        cin >> v;
-        
-        // Check if the transmogrified value is divisible by 7
-        if ((v + k) % 7 == 0) {
-            wolverine_count++;
-        }
-    }
-
-    cout << wolverine_count << "\n";
-}
 
 int main() {
     // Optimize standard I/O operations
@@ -41,10 +22,28 @@ int main() {
 
     int t;
     if (!(cin >> t)) return 0;
-
+    
     while (t--) {
-        solve();
+        int n, k;
+        cin >> n >> k;
+        
+        int wolverine_count = 0;
+        for (int i = 0; i < n; ++i) {
+            int val;
+            cin >> val;
+            
+            // Apply the mutation
+            int mutated_val = val + k;
+            
+            // Check if divisible by 7
+            if (mutated_val % 7 == 0) {
+                wolverine_count++;
+            }
+        }
+        
+        // Output the result for the current test case
+        cout << wolverine_count << "\n";
     }
-
+    
     return 0;
 }

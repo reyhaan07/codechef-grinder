@@ -2,24 +2,24 @@
 using namespace std;
 
 /**
- * Problem: Dominant Army
- * Logic: An army is dominant if its size is strictly greater than the sum of the other two.
- * We check this condition for all three kingdoms (A, B, and C).
- * If any of them satisfy the condition, output YES, otherwise NO.
+ * Problem Analysis:
+ * We are given three integers N_A, N_B, and N_C.
+ * An army is dominant if its size is strictly greater than the sum of the other two.
+ * Specifically:
+ * - A is dominant if N_A > N_B + N_C
+ * - B is dominant if N_B > N_A + N_C
+ * - C is dominant if N_C > N_A + N_B
+ * 
+ * We need to output "YES" if any of these conditions are true, otherwise "NO".
+ * Constraints are small (up to 100), so standard integer types are sufficient.
  */
 
 void solve() {
-    long long na, nb, nc;
+    int na, nb, nc;
     if (!(cin >> na >> nb >> nc)) return;
 
-    // Check if A is dominant
-    bool a_dominant = (na > (nb + nc));
-    // Check if B is dominant
-    bool b_dominant = (nb > (na + nc));
-    // Check if C is dominant
-    bool c_dominant = (nc > (na + nb));
-
-    if (a_dominant || b_dominant || c_dominant) {
+    // Check if any army is dominant
+    if (na > (nb + nc) || nb > (na + nc) || nc > (na + nb)) {
         cout << "YES" << "\n";
     } else {
         cout << "NO" << "\n";

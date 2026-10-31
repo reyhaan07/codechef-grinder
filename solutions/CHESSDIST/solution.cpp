@@ -4,10 +4,9 @@ using namespace std;
 /**
  * Problem: Chessboard Distance
  * The distance is defined as max(|X1 - X2|, |Y1 - Y2|).
- * Constraints: 1 <= X, Y <= 10^5.
- * The differences will fit in standard integer types, but using long long 
- * is safe practice for competitive programming to prevent overflow in 
- * arithmetic operations.
+ * Given the constraints (1 <= X, Y <= 10^5), the differences will fit 
+ * comfortably within a standard 32-bit integer, but using long long 
+ * is a safe practice in competitive programming to prevent overflow.
  */
 
 int main() {
@@ -26,10 +25,10 @@ int main() {
         long long diff_x = abs(x1 - x2);
         long long diff_y = abs(y1 - y2);
         
-        // The chessboard distance is the maximum of the two absolute differences
-        long long distance = max(diff_x, diff_y);
+        // The chessboard distance is the maximum of the two differences
+        long long result = max(diff_x, diff_y);
         
-        cout << distance << "\n";
+        cout << result << "\n";
     }
     
     return 0;

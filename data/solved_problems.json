@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 207,
+  "total_solved": 232,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -209,7 +209,32 @@
     "PROINC",
     "WATERFLOW",
     "CHEFBOTTLE",
-    "MINCOINS"
+    "MINCOINS",
+    "CHEFCHOCO",
+    "POLTHIEF",
+    "TASTEDEC",
+    "RUNCOMPARE",
+    "CHN15A",
+    "BATH",
+    "TRICOIN",
+    "DOMINANT",
+    "HORSES",
+    "MANGOES",
+    "FLOW005",
+    "MANGOLASSI",
+    "JENGA",
+    "SONGS",
+    "CGYM",
+    "AIRHOCKEY",
+    "FLIPCARDS",
+    "MAXDIFFMIN",
+    "AIRLINES",
+    "ENSPACE",
+    "APPLORNG",
+    "BUILDINGRACE",
+    "COMPRESSVD",
+    "CS2023_GIFT",
+    "CHESSDIST"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -2091,6 +2116,231 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 21:41:19"
+    },
+    {
+      "code": "CHEFCHOCO",
+      "name": "Chef and Chocolates",
+      "status": "Accepted",
+      "solution_id": "1384833383",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:41:48"
+    },
+    {
+      "code": "POLTHIEF",
+      "name": "Police and Thief",
+      "status": "Accepted",
+      "solution_id": "1384833399",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:42:23"
+    },
+    {
+      "code": "TASTEDEC",
+      "name": "Tasty Decisions",
+      "status": "Accepted",
+      "solution_id": "1384833408",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:42:55"
+    },
+    {
+      "code": "RUNCOMPARE",
+      "name": "Running Comparison",
+      "status": "Accepted",
+      "solution_id": "1384833432",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:43:37"
+    },
+    {
+      "code": "CHN15A",
+      "name": "Mutated Minions",
+      "status": "Accepted",
+      "solution_id": "1384833447",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:44:25"
+    },
+    {
+      "code": "BATH",
+      "name": "Bath in Winters",
+      "status": "Accepted",
+      "solution_id": "1384833462",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:45:12"
+    },
+    {
+      "code": "TRICOIN",
+      "name": "Coins And Triangle",
+      "status": "Accepted",
+      "solution_id": "1384833477",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:45:45"
+    },
+    {
+      "code": "DOMINANT",
+      "name": "Dominant Army",
+      "status": "Accepted",
+      "solution_id": "1384833497",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:46:32"
+    },
+    {
+      "code": "HORSES",
+      "name": "Racing Horses",
+      "status": "Accepted",
+      "solution_id": "1384833531",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:47:15"
+    },
+    {
+      "code": "MANGOES",
+      "name": "The Mango Truck",
+      "status": "Accepted",
+      "solution_id": "1384833547",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:47:46"
+    },
+    {
+      "code": "FLOW005",
+      "name": "Smallest Numbers of Notes",
+      "status": "Accepted",
+      "solution_id": "1384833563",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:48:12"
+    },
+    {
+      "code": "MANGOLASSI",
+      "name": "Summer Time",
+      "status": "Accepted",
+      "solution_id": "1384833576",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:49:35"
+    },
+    {
+      "code": "JENGA",
+      "name": "Jenga Night",
+      "status": "Accepted",
+      "solution_id": "1384833611",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:50:07"
+    },
+    {
+      "code": "SONGS",
+      "name": "Playlist",
+      "status": "Accepted",
+      "solution_id": "1384833622",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:50:31"
+    },
+    {
+      "code": "CGYM",
+      "name": "Chef and Gym",
+      "status": "Accepted",
+      "solution_id": "1384833637",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:51:20"
+    },
+    {
+      "code": "AIRHOCKEY",
+      "name": "Air Hockey",
+      "status": "Accepted",
+      "solution_id": "1384833657",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:53:06"
+    },
+    {
+      "code": "FLIPCARDS",
+      "name": "Flip the cards",
+      "status": "Accepted",
+      "solution_id": "1384833698",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:53:46"
+    },
+    {
+      "code": "MAXDIFFMIN",
+      "name": "Max minus Min",
+      "status": "Accepted",
+      "solution_id": "1384833712",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:54:19"
+    },
+    {
+      "code": "AIRLINES",
+      "name": "Codechef Airlines",
+      "status": "Accepted",
+      "solution_id": "1384833722",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:55:55"
+    },
+    {
+      "code": "ENSPACE",
+      "name": "Enough Space",
+      "status": "Accepted",
+      "solution_id": "1384833743",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:56:35"
+    },
+    {
+      "code": "APPLORNG",
+      "name": "Apples and Oranges",
+      "status": "Accepted",
+      "solution_id": "1384833754",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:58:14"
+    },
+    {
+      "code": "BUILDINGRACE",
+      "name": "Building Race",
+      "status": "Accepted",
+      "solution_id": "1384833794",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:59:04"
+    },
+    {
+      "code": "COMPRESSVD",
+      "name": "Compress the Video",
+      "status": "Accepted",
+      "solution_id": "1384833810",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:59:54"
+    },
+    {
+      "code": "CS2023_GIFT",
+      "name": "The Gift",
+      "status": "Accepted",
+      "solution_id": "1384833827",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:00:34"
+    },
+    {
+      "code": "CHESSDIST",
+      "name": "Chessboard Distance",
+      "status": "Accepted",
+      "solution_id": "1384833840",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:01:14"
     }
   ]
 }

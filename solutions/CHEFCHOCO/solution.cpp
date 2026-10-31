@@ -1,13 +1,12 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
  * Chef needs C chocolates in total.
  * Chef already has X chocolates.
- * Therefore, Chef needs to buy (C - X) chocolates.
- * Each chocolate costs Y rupees.
+ * Number of chocolates to buy = C - X.
+ * Cost per chocolate = Y.
  * Total cost = (C - X) * Y.
  * 
  * Constraints:
@@ -16,34 +15,29 @@ using namespace std;
  * 0 <= X <= C
  * 1 <= Y <= 100
  * 
- * The logic is straightforward:
- * 1. Read T.
- * 2. For each test case, read C, X, Y.
- * 3. Calculate (C - X) * Y.
- * 4. Print the result.
+ * Since the maximum possible cost is (100 - 0) * 100 = 10,000,
+ * standard 'int' is sufficient, but 'long long' is used for safety.
  */
 
 int main() {
-    // Optimize standard I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
     if (!(cin >> t)) return 0;
-    
     while (t--) {
-        int c, x, y;
-        if (!(cin >> c >> x >> y)) break;
+        long long c, x, y;
+        cin >> c >> x >> y;
         
         // Calculate the number of chocolates needed
-        int needed = c - x;
+        long long needed = c - x;
         
         // Calculate total cost
-        // Since C, X, Y <= 100, the result fits in a standard int
-        int cost = needed * y;
+        long long total_cost = needed * y;
         
         // Output the result
-        cout << cost << "\n";
+        cout << total_cost << "\n";
     }
     
     return 0;

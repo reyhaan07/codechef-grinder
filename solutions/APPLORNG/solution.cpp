@@ -2,12 +2,17 @@
 using namespace std;
 
 /**
- * Problem: Apples and Oranges
- * Logic: Bob needs to buy at least 1kg of apples (cost A) and 1kg of oranges (cost B).
- * Total cost = A + B.
- * Bob can afford this if X >= A + B.
- * Constraints: X, A, B <= 10^5. A + B <= 2 * 10^5, which fits in a standard 32-bit integer.
- * Using long long is safe practice to prevent overflow in similar problems.
+ * Problem Analysis:
+ * Bob has X rupees.
+ * Cost of 1kg apples = A.
+ * Cost of 1kg oranges = B.
+ * Total cost for 1kg of each = A + B.
+ * Bob can buy if X >= A + B.
+ * 
+ * Constraints:
+ * 1 <= X, A, B <= 10^5.
+ * The sum A + B will be at most 2 * 10^5, which fits in a standard 32-bit integer.
+ * However, using long long is a safe practice in competitive programming.
  */
 
 int main() {
@@ -15,13 +20,13 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    long long X;
-    if (!(cin >> X)) return 0;
+    long long X, A, B;
     
-    long long A, B;
-    cin >> A >> B;
+    // Reading input
+    if (!(cin >> X)) return 0;
+    if (!(cin >> A >> B)) return 0;
 
-    // Check if the total cost is less than or equal to the money Bob has
+    // Logic: Check if total cost is less than or equal to available money
     if (X >= (A + B)) {
         cout << "Yes" << "\n";
     } else {

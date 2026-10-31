@@ -7,9 +7,9 @@ using namespace std;
  * Current scores are A and B.
  * Alice needs (7 - A) points to win.
  * Bob needs (7 - B) points to win.
- * The game will end when the first person reaches 7 points.
- * Therefore, the minimum number of points remaining to be scored is
- * the minimum of the points needed by Alice and the points needed by Bob.
+ * The game ends as soon as one of them reaches 7.
+ * Therefore, the minimum number of points remaining is the minimum of the points
+ * needed by Alice and the points needed by Bob.
  * 
  * Points needed by Alice = 7 - A
  * Points needed by Bob = 7 - B
@@ -28,12 +28,12 @@ int main() {
         cin >> a >> b;
         
         // Calculate points needed for each player to reach 7
-        int points_needed_alice = 7 - a;
-        int points_needed_bob = 7 - b;
+        int alice_needed = 7 - a;
+        int bob_needed = 7 - b;
         
         // The game ends when the first person reaches 7, 
         // so we take the minimum of the two.
-        int result = min(points_needed_alice, points_needed_bob);
+        int result = min(alice_needed, bob_needed);
         
         cout << result << "\n";
     }

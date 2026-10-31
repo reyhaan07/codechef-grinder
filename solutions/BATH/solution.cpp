@@ -11,10 +11,9 @@ using namespace std;
  * Constraints:
  * - 1 <= T <= 1000
  * - 1 <= X, Y <= 100
- * 
- * Since X and Y are small, standard integer division will work perfectly.
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * - Since X and Y are small, standard integer division is sufficient.
+ * - Time complexity per test case: O(1)
+ * - Space complexity: O(1)
  */
 
 int main() {
@@ -26,15 +25,15 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        long long x, y;
+        int x, y;
         cin >> x >> y;
         
         // Each person needs 2 * y litres of water.
-        // The number of people is the total capacity divided by the requirement per person.
-        long long water_per_person = 2 * y;
+        // The number of people is the total water divided by water per person.
+        int water_per_person = 2 * y;
         
-        // Using integer division to get the floor value
-        long long max_people = x / water_per_person;
+        // Integer division automatically performs the floor operation.
+        int max_people = x / water_per_person;
         
         cout << max_people << "\n";
     }

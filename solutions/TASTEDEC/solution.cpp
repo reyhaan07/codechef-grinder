@@ -6,7 +6,7 @@ using namespace std;
  * Logic:
  * - Chocolate packet contains 2 bars of tastiness X: Total = 2 * X
  * - Candy packet contains 5 pieces of tastiness Y: Total = 5 * Y
- * - Compare 2*X and 5*Y and output the result accordingly.
+ * - Compare 2*X and 5*Y and output the result.
  * 
  * Time Complexity: O(T) where T is the number of test cases.
  * Space Complexity: O(1) as we only use a few variables.

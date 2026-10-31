@@ -7,16 +7,11 @@ using namespace std;
  * In each round, every person takes 1 tile.
  * This means in one round, N tiles are consumed.
  * For the game to be valid:
- * 1. All tiles must be used (X must be divisible by N).
- * 2. All players must have a tile in each round (X must be >= N).
+ * 1. All players must have a tile in each round (X must be at least N).
+ * 2. All tiles must be used at the end (X must be perfectly divisible by N).
  * 
- * Combining these, the condition is simply:
- * (X % N == 0)
- * 
- * Constraints:
- * 1 <= T <= 10^4
- * 1 <= N, X <= 1000
- * Since N and X are small, standard integer types are sufficient.
+ * Mathematically, this is equivalent to:
+ * X >= N AND X % N == 0.
  */
 
 int main() {
@@ -27,15 +22,11 @@ int main() {
     int t;
     if (!(cin >> t)) return 0;
     while (t--) {
-        int n, x;
+        long long n, x;
         cin >> n >> x;
 
-        // The game is valid if the total number of tiles X is a multiple of N.
-        // If X % N == 0, it implies X = k * N for some integer k >= 1.
-        // This satisfies both conditions:
-        // 1. All tiles are used (X / N rounds).
-        // 2. Each round uses exactly N tiles, so everyone gets one.
-        if (x % n == 0) {
+        // Check if X is divisible by N and X is at least N
+        if (x >= n && x % n == 0) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

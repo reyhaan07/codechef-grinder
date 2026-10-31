@@ -3,19 +3,19 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have N cards total.
+ * We have N cards in total.
  * X cards are face-up.
  * (N - X) cards are face-down.
  * 
- * To make all cards face-up, we must flip all (N - X) face-down cards.
- * To make all cards face-down, we must flip all X face-up cards.
+ * To make all cards face-up, we need to flip all (N - X) face-down cards.
+ * To make all cards face-down, we need to flip all X face-up cards.
  * 
- * The goal is to find the minimum number of operations, which is simply:
- * min(X, N - X)
+ * The minimum number of operations is the minimum of these two values:
+ * min(X, N - X).
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -25,9 +25,9 @@ int main() {
         int n, x;
         cin >> n >> x;
         
-        // The number of operations to make all face-up is (n - x)
-        // The number of operations to make all face-down is x
-        // We take the minimum of these two values.
+        // Calculate the two possibilities:
+        // 1. Flip all face-up cards to make them all face-down (cost = x)
+        // 2. Flip all face-down cards to make them all face-up (cost = n - x)
         int result = min(x, n - x);
         
         cout << result << "\n";

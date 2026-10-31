@@ -4,18 +4,17 @@ using namespace std;
 /**
  * Problem Analysis:
  * We are given N horses with skill levels S[i]. We need to find the minimum 
- * difference between the skill levels of any two horses.
+ * difference between any two horses' skills.
  * 
  * Approach:
- * 1. If we sort the array of skill levels, the minimum difference between any 
- *    two horses must occur between adjacent elements in the sorted array.
+ * 1. If we sort the array of skills, the minimum difference must exist between 
+ *    two adjacent elements in the sorted array.
  * 2. Sorting takes O(N log N) time.
- * 3. After sorting, we iterate through the array once to find the minimum 
- *    difference between adjacent elements, which takes O(N) time.
+ * 3. Iterating through the sorted array to find the minimum difference takes O(N) time.
  * 4. Total time complexity per test case: O(N log N).
- * 5. Given N <= 5000 and T <= 10, this approach is well within the 1.5s time limit.
- * 6. Skill values can be up to 10^9, so the difference fits in a standard 
- *    integer, but using long long is safer for general practice.
+ * 5. Given N <= 5000 and T <= 10, O(T * N log N) is well within the 1.5s time limit.
+ * 6. Skills can be up to 10^9, so the difference fits in a standard 32-bit integer, 
+ *    but using long long is safer for general competitive programming practices.
  */
 
 void solve() {
@@ -27,11 +26,11 @@ void solve() {
         cin >> s[i];
     }
     
-    // Sort the skill levels to bring close values together
+    // Sort the skills to bring the closest values next to each other
     sort(s.begin(), s.end());
     
     // Initialize min_diff with a large value
-    long long min_diff = LLONG_MAX;
+    long long min_diff = 2000000000; // Max possible difference is 10^9
     
     // Compare adjacent elements
     for (int i = 0; i < n - 1; ++i) {
@@ -45,7 +44,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
