@@ -2,9 +2,9 @@
 using namespace std;
 
 /**
- * Problem: Puppy and Sum
+ * Problem Analysis:
  * The function sum(N) is defined as the sum of integers from 1 to N, which is N*(N+1)/2.
- * The function sum(D, N) applies this operation D times.
+ * The function sum(D, N) is defined as applying sum(N) D times.
  * Given the constraints D, N <= 4, the values will be very small, 
  * so standard integer types are sufficient.
  */

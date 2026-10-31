@@ -7,8 +7,7 @@ using namespace std;
  * - If H < 8, output LESS
  * - If H == 8, output PERFECT
  * - If H > 8, output MORE
- * 
- * Time Complexity: O(1) per test case
+ * Time Complexity: O(1)
  * Space Complexity: O(1)
  */
 
@@ -18,6 +17,10 @@ int main() {
     cin.tie(NULL);
 
     int H;
+    // The problem description implies a single input H per run, 
+    // but standard competitive programming practice often involves 
+    // checking if multiple test cases are provided. 
+    // Given the constraints and format, we read H once.
     if (!(cin >> H)) return 0;
 
     if (H < 8) {

@@ -3,20 +3,20 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * A valid phone number consists of exactly 5 digits with no leading zeros.
+ * A valid phone number has exactly 5 digits and no leading zeros.
  * This means the number must be in the range [10000, 99999].
  * 
  * Given N items at cost X, the total bill is B = N * X.
- * Constraints: 1 <= N, X <= 1000.
- * Max B = 1000 * 1000 = 1,000,000.
- * Since the max value fits in a standard 32-bit integer, 'long long' is safe.
+ * We need to check if 10000 <= B <= 99999.
  * 
- * Logic:
- * Check if 10000 <= B <= 99999.
+ * Constraints:
+ * 1 <= N, X <= 1000
+ * Max B = 1000 * 1000 = 1,000,000.
+ * Using long long is safe, though int is sufficient here as 1,000,000 fits in a 32-bit int.
  */
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -26,10 +26,11 @@ int main() {
         long long n, x;
         cin >> n >> x;
         
-        long long total_bill = n * x;
+        long long bill = n * x;
         
-        // A 5-digit number with no leading zeros is exactly in [10000, 99999]
-        if (total_bill >= 10000 && total_bill <= 99999) {
+        // Check if the bill is a 5-digit number (10000 to 99999)
+        // A 5-digit number has no leading zeros by definition if it is >= 10000.
+        if (bill >= 10000 && bill <= 99999) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

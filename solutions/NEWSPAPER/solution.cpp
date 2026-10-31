@@ -1,27 +1,29 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
 /**
  * Problem Analysis:
  * The newspaper has 10 pages (1 to 10).
  * The last 3 pages are 8, 9, and 10.
- * Given 1 <= X <= 10, the condition "last 3 pages" is satisfied if X >= 8.
- * 
- * Time Complexity: O(1)
- * Space Complexity: O(1)
+ * We need to check if a given page X is in the set {8, 9, 10}.
+ * This is equivalent to checking if X >= 8.
  */
 
 int main() {
-    // Optimize standard I/O operations
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
     int X;
-    if (std::cin >> X) {
-        // Check if the page is 8, 9, or 10
-        if (X >= 8) {
-            std::cout << "YES" << std::endl;
+    // The problem description implies a single input X per run based on the format,
+    // but standard competitive programming practice often involves handling 
+    // test cases if specified. The problem description says "The first and only 
+    // line of input consists of a single integer X".
+    if (cin >> X) {
+        if (X >= 8 && X <= 10) {
+            cout << "YES" << "\n";
         } else {
-            std::cout << "NO" << std::endl;
+            cout << "NO" << "\n";
         }
     }
 

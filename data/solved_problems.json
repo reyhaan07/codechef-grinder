@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 250,
+  "total_solved": 273,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -252,7 +252,30 @@
     "EMAILREM",
     "SPEEDTEST",
     "WATERCOOLER2",
-    "C_RATING"
+    "C_RATING",
+    "ADVANCE",
+    "SEVENRINGS",
+    "DIFFCONSEC",
+    "CNDY",
+    "NEWSPAPER",
+    "PPSUM",
+    "T20MCH",
+    "FOOTCUP",
+    "HEALSE",
+    "LAZYCHF",
+    "AIRLINE",
+    "CHEFRACES",
+    "DNASTRAND",
+    "WCC",
+    "ADVITIYA1",
+    "POLYBAGS",
+    "FILLCANDIES",
+    "REMISS",
+    "COCONUT",
+    "ACPLZ",
+    "CHEFAPPS",
+    "PASSTHEEXAM",
+    "THALA7"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -2522,6 +2545,213 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 22:16:03"
+    },
+    {
+      "code": "ADVANCE",
+      "name": "Rating Improvement",
+      "status": "Accepted",
+      "solution_id": "1384834130",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:16:32"
+    },
+    {
+      "code": "SEVENRINGS",
+      "name": "7 Rings",
+      "status": "Accepted",
+      "solution_id": "1384834142",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:17:28"
+    },
+    {
+      "code": "DIFFCONSEC",
+      "name": "Different Consecutive Characters ",
+      "status": "Accepted",
+      "solution_id": "1384834150",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:19:12"
+    },
+    {
+      "code": "CNDY",
+      "name": "Candies",
+      "status": "Accepted",
+      "solution_id": "1384834168",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:19:50"
+    },
+    {
+      "code": "NEWSPAPER",
+      "name": "Sports Section",
+      "status": "Accepted",
+      "solution_id": "1384834172",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:20:33"
+    },
+    {
+      "code": "PPSUM",
+      "name": "Puppy and Sum",
+      "status": "Accepted",
+      "solution_id": "1384834179",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:21:16"
+    },
+    {
+      "code": "T20MCH",
+      "name": "Possible Victory",
+      "status": "Accepted",
+      "solution_id": "1384834186",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:22:01"
+    },
+    {
+      "code": "FOOTCUP",
+      "name": "Football Cup",
+      "status": "Accepted",
+      "solution_id": "1384834198",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:22:39"
+    },
+    {
+      "code": "HEALSE",
+      "name": "Healthy Sleep",
+      "status": "Accepted",
+      "solution_id": "1384834208",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:23:27"
+    },
+    {
+      "code": "LAZYCHF",
+      "name": "Lazy Chef",
+      "status": "Accepted",
+      "solution_id": "1384834213",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:23:52"
+    },
+    {
+      "code": "AIRLINE",
+      "name": "Airline Restrictions",
+      "status": "Accepted",
+      "solution_id": "1384834217",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:25:22"
+    },
+    {
+      "code": "CHEFRACES",
+      "name": "Chef and Races",
+      "status": "Accepted",
+      "solution_id": "1384834235",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:25:58"
+    },
+    {
+      "code": "DNASTRAND",
+      "name": "Complementary Strand in a DNA",
+      "status": "Accepted",
+      "solution_id": "1384834243",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:26:32"
+    },
+    {
+      "code": "WCC",
+      "name": "World Chess Championship",
+      "status": "Accepted",
+      "solution_id": "1384834248",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:27:01"
+    },
+    {
+      "code": "ADVITIYA1",
+      "name": "Advitiya",
+      "status": "Accepted",
+      "solution_id": "1384834259",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:27:48"
+    },
+    {
+      "code": "POLYBAGS",
+      "name": "Too many items",
+      "status": "Accepted",
+      "solution_id": "1384834267",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:28:38"
+    },
+    {
+      "code": "FILLCANDIES",
+      "name": "Fill Candies",
+      "status": "Accepted",
+      "solution_id": "1384834272",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:29:28"
+    },
+    {
+      "code": "REMISS",
+      "name": "Chef and Remissness",
+      "status": "Accepted",
+      "solution_id": "1384834282",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:30:14"
+    },
+    {
+      "code": "COCONUT",
+      "name": "Summer Heat",
+      "status": "Accepted",
+      "solution_id": "1384834287",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:30:43"
+    },
+    {
+      "code": "ACPLZ",
+      "name": "AC Please",
+      "status": "Accepted",
+      "solution_id": "1384834295",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:31:19"
+    },
+    {
+      "code": "CHEFAPPS",
+      "name": "Chef and his Apps",
+      "status": "Accepted",
+      "solution_id": "1384834301",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:31:56"
+    },
+    {
+      "code": "PASSTHEEXAM",
+      "name": "Pass the Exam",
+      "status": "Accepted",
+      "solution_id": "1384834307",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:33:24"
+    },
+    {
+      "code": "THALA7",
+      "name": "Thala For A Reason",
+      "status": "Accepted",
+      "solution_id": "1384834319",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:34:52"
     }
   ]
 }

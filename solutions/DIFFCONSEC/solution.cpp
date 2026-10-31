@@ -3,18 +3,20 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are given a binary string S and we want to ensure no two consecutive characters are the same.
- * We can insert characters to break sequences of identical characters.
+ * We are given a binary string S of length N. We want to ensure no two 
+ * consecutive characters are the same by inserting characters.
  * 
- * If we have a sequence of identical characters like "00", we must insert a character
- * between them to make it "010". This takes 1 operation.
- * If we have "000", we need to break the first pair (0100) and then the second pair (01010).
- * Essentially, for every index i from 0 to N-2, if S[i] == S[i+1], we must perform 
- * an insertion to separate them.
+ * If we have two identical adjacent characters (e.g., "00" or "11"), 
+ * we must insert a character between them to break the sequence.
+ * For example, "00" becomes "010" or "00" -> "010".
  * 
- * Each time we find S[i] == S[i+1], we increment our operation count.
- * This is optimal because each insertion can fix exactly one pair of identical 
- * consecutive characters.
+ * If we iterate through the string and find S[i] == S[i+1], we must 
+ * perform one insertion to separate them. Since we can insert any character,
+ * one insertion is always sufficient to fix a pair of identical adjacent 
+ * characters.
+ * 
+ * The total number of operations is simply the count of indices i 
+ * such that S[i] == S[i+1].
  */
 
 void solve() {
@@ -24,7 +26,7 @@ void solve() {
     cin >> S;
 
     int operations = 0;
-    // Iterate through the string and check adjacent characters
+    // Iterate through the string and check adjacent pairs
     for (int i = 0; i < N - 1; ++i) {
         if (S[i] == S[i + 1]) {
             operations++;
@@ -39,7 +41,7 @@ int main() {
     cin.tie(NULL);
 
     int T;
-    if (!(cin >> T)) return 0;
+    cin >> T;
     while (T--) {
         solve();
     }

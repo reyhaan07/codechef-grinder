@@ -2,9 +2,8 @@
 using namespace std;
 
 /**
- * Problem: Complementary Strand in a DNA
- * Approach: Iterate through the string and map each character to its complement.
- * A -> T, T -> A, C -> G, G -> C.
+ * Problem: DNASTRAND
+ * Logic: Iterate through the string and replace each character with its complement.
  * Time Complexity: O(N) per test case, where N is the length of the string.
  * Space Complexity: O(N) to store the string.
  */

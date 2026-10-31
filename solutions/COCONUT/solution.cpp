@@ -4,14 +4,14 @@ using namespace std;
 /**
  * Problem Analysis:
  * We are given:
- * x_a: water per type A coconut
- * x_b: pulp per type B coconut
- * X_a: total water required
- * X_b: total pulp required
+ * xa: water per type A coconut
+ * xb: pulp per type B coconut
+ * Xa: total water required
+ * Xb: total pulp required
  * 
- * Since x_a divides X_a and x_b divides X_b, the number of coconuts 
- * of type A is X_a / x_a and type B is X_b / x_b.
- * The total number of coconuts is (X_a / x_a) + (X_b / x_b).
+ * Since xa divides Xa and xb divides Xb, the number of coconuts of type A is Xa / xa,
+ * and the number of coconuts of type B is Xb / xb.
+ * The total number of coconuts is (Xa / xa) + (Xb / xb).
  * 
  * Constraints:
  * T <= 15000
@@ -21,7 +21,7 @@ using namespace std;
  */
 
 int main() {
-    // Fast I/O for performance
+    // Fast I/O for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

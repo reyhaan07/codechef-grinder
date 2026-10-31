@@ -5,15 +5,14 @@ using namespace std;
  * Problem Analysis:
  * Chef likes a match if:
  * 1. The match ends in a draw (X == Y).
- * 2. At least one goal has been scored (X > 0 or Y > 0).
+ * 2. At least one goal has been scored (X > 0 and Y > 0).
  * 
- * Combining these, the condition is: (X == Y) AND (X > 0).
- * Since X == Y, if X > 0, then Y must also be > 0.
- * Thus, the condition simplifies to: (X == Y) && (X > 0).
+ * Combining these, Chef likes the match if X == Y and X > 0.
+ * Since X == Y, if X > 0, then Y is automatically > 0.
  */
 
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

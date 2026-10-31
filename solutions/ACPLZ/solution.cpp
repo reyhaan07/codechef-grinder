@@ -3,14 +3,14 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The problem asks us to determine if the temperature T is strictly greater than 30.
+ * The problem asks us to determine if the room temperature T is strictly greater than 30.
  * If T > 30, output "YES".
  * Otherwise, output "NO".
  * 
  * Constraints:
  * 1 <= T <= 50
- * Time Complexity: O(1)
- * Space Complexity: O(1)
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
  */
 
 int main() {
@@ -18,15 +18,17 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    // Reading the input temperature
-    if (!(cin >> t)) return 0;
-
-    // Logic: Check if temperature is strictly greater than 30
-    if (t > 30) {
-        cout << "YES" << "\n";
-    } else {
-        cout << "NO" << "\n";
+    int T;
+    // The problem description implies a single input T per run based on the 
+    // "The only line of input will contain a single integer T" description.
+    // However, standard competitive programming practice often involves multiple 
+    // test cases. Given the constraints and the prompt instructions, we read T.
+    if (cin >> T) {
+        if (T > 30) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
+        }
     }
 
     return 0;

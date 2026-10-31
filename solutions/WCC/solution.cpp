@@ -2,34 +2,31 @@
 using namespace std;
 
 /**
- * Problem Analysis:
- * - 14 games total.
- * - Carlsen (C) wins: 2 points.
- * - Chef (N) wins: 0 points for Carlsen.
- * - Draw (D): 1 point for Carlsen.
- * - Carlsen's total points = (count of 'C' * 2) + (count of 'D' * 1).
- * - Chef's total points = (count of 'N' * 2) + (count of 'D' * 1).
+ * Problem: World Chess Championship
+ * Logic:
+ * - Carlsen's points: 2 for 'C', 1 for 'D', 0 for 'N'.
+ * - Chef's points: 2 for 'N', 1 for 'D', 0 for 'C'.
+ * - Total games = 14.
+ * - If Carlsen's points > Chef's points: Carlsen gets 60 * X.
+ * - If Carlsen's points <= Chef's points: Carlsen is champion (tie-break rule), gets 55 * X.
  * 
- * Prize logic:
- * - If Carlsen points > Chef points: Carlsen gets 60 * X.
- * - If Carlsen points == Chef points: Carlsen gets 55 * X.
- * - If Carlsen points < Chef points: Carlsen gets 40 * X.
- * 
- * Constraints:
- * - X up to 10^6, so prize money can be 60 * 10^6 = 60,000,000.
- * - This fits in a standard 32-bit signed integer, but using long long is safer.
+ * Note: The problem states "If the total points are tied, then the defending champion Carlsen is declared the winner."
+ * This implies if Carlsen's points >= Chef's points, he wins.
+ * If Carlsen > Chef, he gets 60*X.
+ * If Carlsen == Chef, he gets 55*X.
+ * If Carlsen < Chef, Chef wins, Carlsen gets 40*X.
  */
 
 void solve() {
     long long X;
     cin >> X;
-    string s;
-    cin >> s;
+    string S;
+    cin >> S;
 
-    int carlsen_points = 0;
-    int chef_points = 0;
+    long long carlsen_points = 0;
+    long long chef_points = 0;
 
-    for (char c : s) {
+    for (char c : S) {
         if (c == 'C') {
             carlsen_points += 2;
         } else if (c == 'N') {

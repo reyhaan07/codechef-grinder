@@ -6,7 +6,7 @@ using namespace std;
  * Each bag has K pockets.
  * Each pocket can hold at most M candies.
  * Therefore, one bag can hold at most (K * M) candies.
- * To find the minimum number of bags needed for N candies,
+ * To find the minimum number of bags required for N candies,
  * we need to calculate ceil(N / (K * M)).
  * 
  * Using integer arithmetic, ceil(a / b) can be calculated as (a + b - 1) / b.
@@ -26,11 +26,11 @@ int main() {
         // Capacity of one bag
         long long capacity_per_bag = k * m;
 
-        // Calculate minimum bags needed using integer ceiling division
-        // bags = (n + capacity_per_bag - 1) / capacity_per_bag
-        long long bags = (n + capacity_per_bag - 1) / capacity_per_bag;
+        // Number of bags needed = ceil(n / capacity_per_bag)
+        // Using integer division: (n + capacity_per_bag - 1) / capacity_per_bag
+        long long bags_needed = (n + capacity_per_bag - 1) / capacity_per_bag;
 
-        cout << bags << "\n";
+        cout << bags_needed << "\n";
     }
 
     return 0;

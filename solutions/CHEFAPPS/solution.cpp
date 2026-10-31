@@ -8,28 +8,32 @@ using namespace std;
  * Free storage = S - (X + Y)
  * Required storage = Z
  * 
- * Logic:
- * 1. If Free storage >= Z, we need to delete 0 apps.
- * 2. If Free storage < Z, we check if deleting one app (the larger one, Y) is enough:
- *    (Free storage + Y) >= Z. If yes, delete 1.
- * 3. If still not enough, we must delete both apps:
- *    (Free storage + X + Y) >= Z. Since X + Y <= S, this is always true if Z <= S.
- *    So, delete 2.
+ * If Free storage >= Z, we need to delete 0 apps.
+ * Else if (Free storage + X >= Z) OR (Free storage + Y >= Z), we need to delete 1 app.
+ * Else (Free storage + X + Y >= Z), we need to delete 2 apps.
+ * 
+ * Constraints:
+ * S <= 500, X, Y, Z <= 500.
+ * Time complexity: O(1) per test case.
+ * Space complexity: O(1).
  */
 
 void solve() {
-    long long S, X, Y, Z;
-    if (!(cin >> S >> X >> Y >> Z)) return;
+    int S, X, Y, Z;
+    cin >> S >> X >> Y >> Z;
 
-    long long free_storage = S - (X + Y);
+    int free_memory = S - (X + Y);
 
-    if (free_storage >= Z) {
+    // Check if we can install without deleting any apps
+    if (free_memory >= Z) {
         cout << 0 << "\n";
-    } else if (free_storage + X >= Z || free_storage + Y >= Z) {
-        // We check both X and Y, but since Y >= X, if free + X >= Z, 
-        // then free + Y is definitely >= Z.
+    } 
+    // Check if we can install by deleting one app
+    else if (free_memory + X >= Z || free_memory + Y >= Z) {
         cout << 1 << "\n";
-    } else {
+    } 
+    // Otherwise, we must delete both apps
+    else {
         cout << 2 << "\n";
     }
 }
@@ -40,7 +44,7 @@ int main() {
     cin.tie(NULL);
 
     int t;
-    if (!(cin >> t)) return 0;
+    cin >> t;
     while (t--) {
         solve();
     }

@@ -5,13 +5,12 @@ using namespace std;
  * Problem Analysis:
  * Chef participates in two races: X and Y.
  * The rival participates in two races: A and B.
- * Chef can win a race if the rival is not participating in that specific race.
- * 
- * We need to count how many of {X, Y} are NOT in {A, B}.
+ * Chef wins a gold medal in a race if the rival is not participating in that race.
+ * We need to count how many of {X, Y} are not in {A, B}.
  * 
  * Complexity:
- * Time: O(1) per test case, O(T) total.
- * Space: O(1).
+ * Time: O(T) where T is the number of test cases.
+ * Space: O(1) as we only use a few integer variables.
  */
 
 void solve() {
@@ -21,11 +20,13 @@ void solve() {
     int gold_medals = 0;
 
     // Check if Chef wins race X
+    // Chef wins X if the rival is not in X (i.e., X != A and X != B)
     if (X != A && X != B) {
         gold_medals++;
     }
 
     // Check if Chef wins race Y
+    // Chef wins Y if the rival is not in Y (i.e., Y != A and Y != B)
     if (Y != A && Y != B) {
         gold_medals++;
     }

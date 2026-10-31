@@ -3,15 +3,13 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Each polybag holds at most 10 items.
+ * Each polybag can hold at most 10 items.
  * To find the minimum number of polybags for N items, we need to calculate ceil(N / 10).
  * Using integer arithmetic, ceil(N / 10) can be calculated as (N + 9) / 10.
  * 
  * Constraints:
- * 1 <= T <= 1000
- * 1 <= N <= 1000
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * T <= 1000, N <= 1000.
+ * The result will fit in a standard integer.
  */
 
 int main() {
@@ -23,14 +21,14 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        long long n;
+        int n;
         cin >> n;
         
-        // Calculate minimum polybags using integer division ceiling formula
-        // (n + 10 - 1) / 10
-        long long result = (n + 9) / 10;
+        // Calculate minimum polybags using integer ceiling division
+        // (n + 10 - 1) / 10 is the standard formula for ceil(n / 10)
+        int polybags = (n + 9) / 10;
         
-        cout << result << "\n";
+        cout << polybags << "\n";
     }
     
     return 0;
