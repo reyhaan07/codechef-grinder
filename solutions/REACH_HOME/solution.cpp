@@ -5,13 +5,13 @@ using namespace std;
  * Problem Analysis:
  * Chef has X litres of fuel.
  * The motorcycle travels 5 km per 1 litre of fuel.
- * Maximum distance Chef can travel = X * 5 km.
+ * Total distance Chef can travel = X * 5 km.
  * Chef can reach home if (X * 5) >= Y.
  * 
  * Constraints:
  * 1 <= T <= 100
  * 1 <= X, Y <= 1000
- * X * 5 will be at most 5000, which fits in a standard integer.
+ * X * 5 will be at most 5000, which fits comfortably in a standard integer.
  */
 
 int main() {
@@ -26,10 +26,10 @@ int main() {
         long long x, y;
         cin >> x >> y;
         
-        // Calculate maximum distance possible with current fuel
+        // Calculate maximum distance possible
         long long max_distance = x * 5;
         
-        // Check if the distance to home is reachable
+        // Check if distance to home is reachable
         if (max_distance >= y) {
             cout << "YES" << "\n";
         } else {

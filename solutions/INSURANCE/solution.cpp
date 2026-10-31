@@ -5,12 +5,11 @@ using namespace std;
  * Problem Analysis:
  * The insurance policy states:
  * - Maximum rebate is X.
- * - If damage Y <= X, rebate is Y.
- * - If damage Y > X, rebate is X.
- * This is equivalent to finding the minimum of X and Y: min(X, Y).
+ * - If repair cost Y <= X, rebate is Y.
+ * - If repair cost Y > X, rebate is X.
  * 
- * Constraints: 1 <= X, Y <= 30.
- * Time Complexity: O(1) per test case.
+ * This is equivalent to finding the minimum of X and Y.
+ * Time Complexity: O(T), where T is the number of test cases.
  * Space Complexity: O(1).
  */
 
@@ -26,7 +25,8 @@ int main() {
         long long x, y;
         cin >> x >> y;
         
-        // The rebate is the smaller of the repair cost (y) and the cap (x)
+        // The rebated amount is the minimum of the repair cost (y) 
+        // and the maximum coverage (x).
         if (y <= x) {
             cout << y << "\n";
         } else {

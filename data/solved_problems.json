@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 141,
+  "total_solved": 160,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -143,7 +143,26 @@
     "SPECIALITY",
     "TVDISC",
     "LARGESECOND",
-    "DISCUS"
+    "DISCUS",
+    "HEIGHTRATION",
+    "FAVOURITENUM",
+    "MVR",
+    "DIFFSUM",
+    "PARTY2",
+    "KNGTOR",
+    "LAPIN",
+    "INTRDSGN",
+    "NEARESTEXIT",
+    "INSURANCE",
+    "REACH_HOME",
+    "CREDS",
+    "NETFLIX",
+    "AIRINDEX",
+    "CANDYSTORE",
+    "BNE_APT",
+    "CHEAPFOOD",
+    "FLOW008",
+    "ACTEMP"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -1431,6 +1450,177 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 20:49:59"
+    },
+    {
+      "code": "HEIGHTRATION",
+      "name": "Height of Rationals",
+      "status": "Accepted",
+      "solution_id": "1384831879",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:52:18"
+    },
+    {
+      "code": "FAVOURITENUM",
+      "name": "Favourite Numbers",
+      "status": "Accepted",
+      "solution_id": "1384831897",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:52:46"
+    },
+    {
+      "code": "MVR",
+      "name": "Messi vs Ronaldo",
+      "status": "Accepted",
+      "solution_id": "1384831937",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:54:26"
+    },
+    {
+      "code": "DIFFSUM",
+      "name": "Sum OR Difference",
+      "status": "Accepted",
+      "solution_id": "1384831998",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:54:55"
+    },
+    {
+      "code": "PARTY2",
+      "name": "Chef gives Party",
+      "status": "Accepted",
+      "solution_id": "1384832028",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:55:38"
+    },
+    {
+      "code": "KNGTOR",
+      "name": "Tour of King",
+      "status": "Accepted",
+      "solution_id": "1384832063",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:56:26"
+    },
+    {
+      "code": "LAPIN",
+      "name": "Lapindromes",
+      "status": "Accepted",
+      "solution_id": "1384832086",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:57:10"
+    },
+    {
+      "code": "INTRDSGN",
+      "name": "Interior Design",
+      "status": "Accepted",
+      "solution_id": "1384832103",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:57:48"
+    },
+    {
+      "code": "NEARESTEXIT",
+      "name": "Nearest Exit",
+      "status": "Accepted",
+      "solution_id": "1384832118",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:58:27"
+    },
+    {
+      "code": "INSURANCE",
+      "name": "Insurance",
+      "status": "Accepted",
+      "solution_id": "1384832145",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:59:17"
+    },
+    {
+      "code": "REACH_HOME",
+      "name": "Reach Home",
+      "status": "Accepted",
+      "solution_id": "1384832175",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:00:03"
+    },
+    {
+      "code": "CREDS",
+      "name": "Number of Credits",
+      "status": "Accepted",
+      "solution_id": "1384832194",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:00:35"
+    },
+    {
+      "code": "NETFLIX",
+      "name": "Netflix",
+      "status": "Accepted",
+      "solution_id": "1384832240",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:01:24"
+    },
+    {
+      "code": "AIRINDEX",
+      "name": "Air Quality Index",
+      "status": "Accepted",
+      "solution_id": "1384832253",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:01:58"
+    },
+    {
+      "code": "CANDYSTORE",
+      "name": "Candy Store",
+      "status": "Accepted",
+      "solution_id": "1384832274",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:02:43"
+    },
+    {
+      "code": "BNE_APT",
+      "name": "Bone Appetit",
+      "status": "Accepted",
+      "solution_id": "1384832293",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:03:18"
+    },
+    {
+      "code": "CHEAPFOOD",
+      "name": "Best Coupon",
+      "status": "Accepted",
+      "solution_id": "1384832314",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:03:59"
+    },
+    {
+      "code": "FLOW008",
+      "name": "Helping Chef",
+      "status": "Accepted",
+      "solution_id": "1384832324",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:04:25"
+    },
+    {
+      "code": "ACTEMP",
+      "name": "Air Conditioner Temperature",
+      "status": "Accepted",
+      "solution_id": "1384832339",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:04:53"
     }
   ]
 }

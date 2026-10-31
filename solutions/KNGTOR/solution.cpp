@@ -1,21 +1,22 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * The problem asks for the total capacity of N cars (5 seats each) 
- * and M cars (7 seats each).
- * Total capacity = (N * 5) + (M * 7).
+ * We are given N cars with 5 seats each and M cars with 7 seats each.
+ * The total capacity is simply the sum of the capacities of all cars.
+ * Total = (N * 5) + (M * 7).
  * 
  * Constraints:
  * T <= 100
  * 0 <= N, M <= 100
- * Max capacity = 1200, which fits in a standard 32-bit integer.
+ * The maximum possible value is (100 * 5) + (100 * 7) = 1200.
+ * This fits comfortably within a standard 32-bit integer, but using long long
+ * is a safe practice in competitive programming to prevent overflow in larger problems.
  */
 
 int main() {
-    // Optimize standard I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -23,10 +24,12 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        int n, m;
+        long long n, m;
         if (cin >> n >> m) {
-            // Calculate total capacity: 5 seats per N-car, 7 seats per M-car
-            int total_capacity = (n * 5) + (m * 7);
+            // Calculate total capacity
+            long long total_capacity = (n * 5) + (m * 7);
+            
+            // Output the result
             cout << total_capacity << "\n";
         }
     }

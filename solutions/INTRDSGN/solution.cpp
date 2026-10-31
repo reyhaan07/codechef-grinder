@@ -3,15 +3,18 @@ using namespace std;
 
 /**
  * Problem: Interior Design
- * The task is to compare the sum of two pairs of integers (X1 + Y1) and (X2 + Y2)
- * and output the minimum of the two sums.
+ * The task is to compare the total cost of two interior design styles.
+ * Style 1 cost = X1 + Y1
+ * Style 2 cost = X2 + Y2
+ * Chef pays the minimum of these two values.
  * 
- * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1) as we only use a few variables.
+ * Constraints: 1 <= X1, Y1, X2, Y2 <= 100
+ * The maximum possible sum is 200, which fits comfortably in an integer.
+ * Using long long is safe practice for competitive programming.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -26,7 +29,7 @@ int main() {
         long long cost2 = x2 + y2;
         
         // Output the minimum of the two costs
-        if (cost1 < cost2) {
+        if (cost1 <= cost2) {
             cout << cost1 << "\n";
         } else {
             cout << cost2 << "\n";

@@ -3,41 +3,39 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are given three amounts A, B, and C, and a target cost X.
- * We need to check if any pair of the three can sum up to at least X.
- * The possible pairs are:
- * 1. Alice + Bob (A + B)
- * 2. Alice + Charlie (A + C)
- * 3. Bob + Charlie (B + C)
+ * We are given three amounts A, B, and C and a cost X.
+ * We need to check if any pair of (A, B), (B, C), or (A, C) sums up to at least X.
  * 
- * If any of these sums are >= X, the answer is YES, otherwise NO.
+ * Logic:
+ * Check if (A + B >= X) OR (B + C >= X) OR (A + C >= X).
+ * If any of these conditions are true, output YES, otherwise output NO.
  * 
  * Constraints:
  * A, B, C, X are between 1 and 100.
  * The sum of any two will not exceed 200, so standard 'int' is sufficient.
+ * Time complexity per test case: O(1).
+ * Total time complexity: O(T).
  */
 
-void solve() {
-    int A, B, C, X;
-    if (!(cin >> A >> B >> C >> X)) return;
-
-    // Check all three possible combinations
-    if ((A + B >= X) || (A + C >= X) || (B + C >= X)) {
-        cout << "YES" << "\n";
-    } else {
-        cout << "NO" << "\n";
-    }
-}
-
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
     if (!(cin >> t)) return 0;
+    
     while (t--) {
-        solve();
+        int a, b, c, x;
+        cin >> a >> b >> c >> x;
+        
+        // Check all possible pairs
+        if ((a + b >= x) || (b + c >= x) || (a + c >= x)) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
+        }
     }
+    
     return 0;
 }
