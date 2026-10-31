@@ -1,26 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Problem Analysis:
+ * Chef earns X coins per bill.
+ * Chef pays Y bills.
+ * Total coins earned = X * Y.
+ * Each bag costs 100 coins.
+ * Maximum bags = Total coins / 100 (integer division).
+ * 
+ * Constraints:
+ * 1 <= T <= 100
+ * 1 <= X, Y <= 1000
+ * Max total coins = 1000 * 1000 = 1,000,000.
+ * This fits within a standard 32-bit integer, but using long long is safe practice.
+ */
+
 int main() {
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
+    
     while (t--) {
         long long x, y;
         cin >> x >> y;
-
-        // Total CRED coins earned = coins per bill * number of bills
+        
+        // Calculate total coins earned
         long long total_coins = x * y;
-
-        // Each bag costs 100 CRED coins.
-        // To find the maximum number of bags, we divide the total coins by 100
-        // and take the integer part (floor division).
-        long long max_bags = total_coins / 100;
-
-        cout << max_bags << "\n";
+        
+        // Calculate number of bags (integer division by 100)
+        long long bags = total_coins / 100;
+        
+        cout << bags << "\n";
     }
-
+    
     return 0;
 }

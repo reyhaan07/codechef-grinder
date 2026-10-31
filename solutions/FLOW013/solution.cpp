@@ -3,13 +3,14 @@ using namespace std;
 
 /**
  * Problem: Valid Triangles
- * Logic: A triangle is valid if and only if the sum of its three interior angles is exactly 180 degrees.
- * Time Complexity: O(T), where T is the number of test cases.
- * Space Complexity: O(1), as we only use a few integer variables.
+ * A triangle is valid if the sum of its three angles is exactly 180 degrees.
+ * Constraints: 1 <= T <= 1000, 1 <= A, B, C <= 180.
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
  */
 
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -20,8 +21,10 @@ int main() {
         long long a, b, c;
         cin >> a >> b >> c;
 
-        // Check if the sum of angles equals 180
-        if (a + b + c == 180) {
+        // A triangle is valid if the sum of its angles is exactly 180.
+        // Given constraints 1 <= A, B, C <= 180, the sum will fit in a standard integer,
+        // but long long is used as per instructions.
+        if ((a + b + c) == 180) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

@@ -1,29 +1,33 @@
-#include <bits/stdc++.h> // Include all standard libraries
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Use the standard namespace
+/**
+ * Problem Analysis:
+ * Chef's current IQ is X.
+ * After learning a musical instrument, Chef's IQ becomes X + 7.
+ * Einstein's IQ is 170.
+ * We need to check if (X + 7) > 170.
+ * 
+ * Constraints: 100 <= X <= 169.
+ * Since X is at most 169, X + 7 is at most 176.
+ * The values fit well within a standard 32-bit integer.
+ */
 
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int X; // Declare an integer variable X to store Chef's current IQ.
-    cin >> X; // Read Chef's current IQ from standard input.
-
-    // Calculate Chef's IQ after learning a musical instrument.
-    // The problem states that playing an instrument increases IQ by 7 points.
-    int final_iq = X + 7;
-
-    // Determine if Chef's final IQ is strictly greater than Einstein's IQ (170).
-    if (final_iq > 170) {
-        // If Chef's final IQ is strictly greater than 170, print "Yes".
-        cout << "Yes\n";
-    } else {
-        // Otherwise, print "No".
-        cout << "No\n";
+    int X;
+    // The problem description implies a single input X per run based on the format,
+    // but standard competitive programming practice handles potential input streams.
+    if (cin >> X) {
+        if (X + 7 > 170) {
+            cout << "Yes" << "\n";
+        } else {
+            cout << "No" << "\n";
+        }
     }
 
-    return 0; // Indicate successful execution of the program.
+    return 0;
 }

@@ -1,29 +1,53 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <numeric>
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem: ATM Machine
+ * Logic:
+ * We maintain the current balance K in the ATM.
+ * For each person i with requested amount A_i:
+ * 1. If K >= A_i, the person gets the money, and we update K = K - A_i.
+ *    We record '1' for this person.
+ * 2. If K < A_i, the person gets nothing.
+ *    We record '0' for this person.
+ * 
+ * Time Complexity: O(N) per test case.
+ * Space Complexity: O(N) to store the result string.
+ */
+
+void solve() {
+    int N;
+    long long K;
+    if (!(cin >> N >> K)) return;
+    
+    vector<long long> A(N);
+    for (int i = 0; i < N; ++i) {
+        cin >> A[i];
+    }
+    
+    string result = "";
+    for (int i = 0; i < N; ++i) {
+        if (K >= A[i]) {
+            result += '1';
+            K -= A[i];
+        } else {
+            result += '0';
+        }
+    }
+    
+    cout << result << "\n";
+}
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
     int t;
-    std::cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
-        int n;
-        long long k;
-        std::cin >> n >> k;
-        std::vector<long long> a(n);
-        std::string result = "";
-        for (int i = 0; i < n; ++i) {
-            std::cin >> a[i];
-            if (k >= a[i]) {
-                k -= a[i];
-                result += '1';
-            } else {
-                result += '0';
-            }
-        }
-        std::cout << result << "\n";
+        solve();
     }
+    
     return 0;
 }

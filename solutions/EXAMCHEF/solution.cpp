@@ -6,13 +6,14 @@ using namespace std;
  * Total students = X * Y
  * Passed students = Z
  * Condition: Z > 50% of (X * Y)
- * Mathematically: Z > (X * Y) / 2
+ * Which is equivalent to: Z > (X * Y) / 2.0
  * To avoid floating point issues, we can multiply both sides by 2:
  * 2 * Z > X * Y
  * 
  * Constraints:
  * X <= 5, Y <= 50, Z <= X*Y
- * Max value of X*Y is 250, so standard 'int' is sufficient.
+ * Max value of X*Y is 250.
+ * Integer types (int) are sufficient as 2*Z will be at most 500.
  */
 
 int main() {
@@ -29,8 +30,9 @@ int main() {
         
         long long total_students = x * y;
         
-        // We need to check if z / total_students > 0.5
-        // Which is equivalent to 2 * z > total_students
+        // We need to check if (z / total_students) > 0.5
+        // This is equivalent to z > total_students / 2.0
+        // Or 2 * z > total_students
         if (2 * z > total_students) {
             cout << "YES" << "\n";
         } else {

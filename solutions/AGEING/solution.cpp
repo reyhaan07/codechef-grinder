@@ -1,34 +1,36 @@
-#include <bits/stdc++.h> // Includes all standard libraries for convenience
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Allows using standard library elements without the std:: prefix
+/**
+ * Problem Analysis:
+ * Chef's current age = 20
+ * Chefina's current age = 10
+ * The age difference is 20 - 10 = 10 years.
+ * Since they age at the same rate, the difference remains constant.
+ * When Chef is X years old, Chefina's age will be X - 10.
+ * 
+ * Constraints:
+ * 25 <= X <= 50
+ * The result will always be positive and fit within a standard integer.
+ */
 
 int main() {
-    // Optimize C++ standard streams for competitive programming.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams,
-    // which can speed up I/O operations.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation,
-    // further speeding up I/O.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare an integer variable T to store the number of test cases.
-    cin >> T; // Read the number of test cases from standard input.
-
-    // Loop T times, processing one test case in each iteration.
-    while (T--) {
-        int X; // Declare an integer variable X to store Chef's age.
-        cin >> X; // Read Chef's age for the current test case.
-
-        // Chef's current age is 20, and Chefina's current age is 10.
-        // This means Chef is 20 - 10 = 10 years older than Chefina.
-        // Since their age difference remains constant, when Chef is X years old,
-        // Chefina will be X - 10 years old.
-        int chefina_age = X - 10;
-
-        // Output Chefina's calculated age, followed by a newline character.
-        // The newline character ensures each output is on a separate line as required.
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x;
+        cin >> x;
+        
+        // Chefina is always 10 years younger than Chef
+        long long chefina_age = x - 10;
+        
         cout << chefina_age << "\n";
     }
 
-    return 0; // Indicate successful program execution.
+    return 0;
 }

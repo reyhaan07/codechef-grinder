@@ -1,33 +1,44 @@
-#include <iostream> // Required for cin and cout
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem Analysis:
+ * Total questions = N
+ * Correct answers = X
+ * Incorrect answers = N - X
+ * Marks for correct = 3
+ * Penalty for incorrect = -1
+ * Total Score = (X * 3) + ((N - X) * -1)
+ *             = 3X - N + X
+ *             = 4X - N
+ * Chef passes if Total Score >= P
+ * 
+ * Constraints:
+ * N <= 100, X <= N, P <= 3*N
+ * The score will fit in a standard integer, but using long long is safe practice.
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // This unties cin from cout and prevents synchronization with C's stdio.
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Optimize I/O operations
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    int T; // Number of testcases
-    std::cin >> T; // Read the number of testcases
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        long long n, x, p;
+        cin >> n >> x >> p;
 
-    while (T--) { // Loop T times for each testcase
-        int N, X, P; // Declare variables for total questions, correct answers, and passing marks
-        std::cin >> N >> X >> P; // Read N, X, P for the current testcase
+        // Calculate score based on the formula derived: 4*X - N
+        long long score = (4 * x) - n;
 
-        // Calculate Chef's total score
-        // Score from correct answers: X * 3
-        // Score from incorrect answers: (N - X) * (-1)
-        // Total Score = (X * 3) + ((N - X) * -1)
-        // Simplified: Total Score = 3X - N + X = 4X - N
-        int chef_score = (X * 3) - ((N - X) * 1); 
-        // Alternatively, using the simplified formula: int chef_score = (4 * X) - N;
-
-        // Check if Chef's score is greater than or equal to the passing marks P
-        if (chef_score >= P) {
-            std::cout << "PASS\n"; // If score is sufficient, print PASS
+        // Check if score meets the passing criteria
+        if (score >= p) {
+            cout << "PASS" << "\n";
         } else {
-            std::cout << "FAIL\n"; // Otherwise, print FAIL
+            cout << "FAIL" << "\n";
         }
     }
 
-    return 0; // Indicate successful execution
+    return 0;
 }

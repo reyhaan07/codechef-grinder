@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 80,
+  "total_solved": 102,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -82,7 +82,29 @@
     "OFFBY1",
     "DECINC",
     "TAXES",
-    "CREDSCORE"
+    "CREDSCORE",
+    "CCHOCOLATES",
+    "BATTERYLOW",
+    "LTIME",
+    "BULLBEAR",
+    "EXAMCHEF",
+    "ATM2",
+    "HOTCOLD",
+    "FLOW018",
+    "SCALENE",
+    "INCRIQ",
+    "FLOW013",
+    "READPAGES",
+    "CHESSTIME",
+    "AUCTION",
+    "AGEING",
+    "RIP2000",
+    "ONEMORE",
+    "MINPIZZA",
+    "CREDCOINS",
+    "PASSORFAIL",
+    "SIXFRIENDS",
+    "FAIRPASS"
   ],
   "failed_codes": [
     "SEARCHINARR"
@@ -820,6 +842,204 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 17:41:38"
+    },
+    {
+      "code": "CCHOCOLATES",
+      "name": "Chef and Chocolates",
+      "status": "Accepted",
+      "solution_id": "1384828574",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:03:31"
+    },
+    {
+      "code": "BATTERYLOW",
+      "name": "Battery Low",
+      "status": "Accepted",
+      "solution_id": "1384828706",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:04:31"
+    },
+    {
+      "code": "LTIME",
+      "name": "Lunchtime",
+      "status": "Accepted",
+      "solution_id": "1384828755",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:05:21"
+    },
+    {
+      "code": "BULLBEAR",
+      "name": "Bull or Bear",
+      "status": "Accepted",
+      "solution_id": "1384828806",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:06:00"
+    },
+    {
+      "code": "EXAMCHEF",
+      "name": "Exams",
+      "status": "Accepted",
+      "solution_id": "1384828850",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:06:44"
+    },
+    {
+      "code": "ATM2",
+      "name": "ATM Machine",
+      "status": "Accepted",
+      "solution_id": "1384828943",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:07:16"
+    },
+    {
+      "code": "HOTCOLD",
+      "name": "Is it hot or cold",
+      "status": "Accepted",
+      "solution_id": "1384829031",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:08:02"
+    },
+    {
+      "code": "FLOW018",
+      "name": "Small Factorial",
+      "status": "Accepted",
+      "solution_id": "1384829078",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:08:45"
+    },
+    {
+      "code": "SCALENE",
+      "name": "Scalene Triangle",
+      "status": "Accepted",
+      "solution_id": "1384829105",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:09:16"
+    },
+    {
+      "code": "INCRIQ",
+      "name": "Increase IQ",
+      "status": "Accepted",
+      "solution_id": "1384829144",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:09:51"
+    },
+    {
+      "code": "FLOW013",
+      "name": "Valid Triangles",
+      "status": "Accepted",
+      "solution_id": "1384829172",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:10:24"
+    },
+    {
+      "code": "READPAGES",
+      "name": "Read Pages",
+      "status": "Accepted",
+      "solution_id": "1384829214",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:11:05"
+    },
+    {
+      "code": "CHESSTIME",
+      "name": "Chess Time",
+      "status": "Accepted",
+      "solution_id": "1384829247",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:11:38"
+    },
+    {
+      "code": "AUCTION",
+      "name": "Bidding",
+      "status": "Accepted",
+      "solution_id": "1384829277",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:12:06"
+    },
+    {
+      "code": "AGEING",
+      "name": "Ageing",
+      "status": "Accepted",
+      "solution_id": "1384829315",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:12:37"
+    },
+    {
+      "code": "RIP2000",
+      "name": "2000",
+      "status": "Accepted",
+      "solution_id": "1384829397",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:13:05"
+    },
+    {
+      "code": "ONEMORE",
+      "name": "Just One More Episode",
+      "status": "Accepted",
+      "solution_id": "1384829426",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:14:35"
+    },
+    {
+      "code": "MINPIZZA",
+      "name": "Minimum Pizzas",
+      "status": "Accepted",
+      "solution_id": "1384829518",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:15:07"
+    },
+    {
+      "code": "CREDCOINS",
+      "name": "CRED Coins",
+      "status": "Accepted",
+      "solution_id": "1384829607",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:15:45"
+    },
+    {
+      "code": "PASSORFAIL",
+      "name": "Pass or Fail",
+      "status": "Accepted",
+      "solution_id": "1384829650",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:16:34"
+    },
+    {
+      "code": "SIXFRIENDS",
+      "name": "Six Friends",
+      "status": "Accepted",
+      "solution_id": "1384829693",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:17:17"
+    },
+    {
+      "code": "FAIRPASS",
+      "name": "Passes for Fair",
+      "status": "Accepted",
+      "solution_id": "1384829725",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:17:52"
     }
   ]
 }

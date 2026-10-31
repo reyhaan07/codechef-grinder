@@ -1,27 +1,42 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem Analysis:
+ * There are 6 friends.
+ * Option 1: 3 double rooms. Cost = 3 * X.
+ * Option 2: 2 triple rooms. Cost = 2 * Y.
+ * We need to find the minimum of (3 * X) and (2 * Y).
+ * 
+ * Constraints:
+ * 1 <= T <= 100
+ * 1 <= X < Y <= 100
+ * Since X and Y are small, the result will fit in a standard integer,
+ * but using long long is good practice for competitive programming.
+ */
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int t;
-    std::cin >> t;
+    if (!(cin >> t)) return 0;
+    
     while (t--) {
         long long x, y;
-        std::cin >> x >> y;
-        // Option 1: Three double rooms. Each double room accommodates 2 people.
-        // To accommodate 6 people, we need 6 / 2 = 3 double rooms.
-        // Total cost = 3 * X
-        long long cost_double_rooms = 3 * x;
-
-        // Option 2: Two triple rooms. Each triple room accommodates 3 people.
-        // To accommodate 6 people, we need 6 / 3 = 2 triple rooms.
-        // Total cost = 2 * Y
-        long long cost_triple_rooms = 2 * y;
-
-        // The minimum amount is the minimum of these two options.
-        long long min_cost = std::min(cost_double_rooms, cost_triple_rooms);
-        std::cout << min_cost << "\n";
+        cin >> x >> y;
+        
+        long long cost_double = 3 * x;
+        long long cost_triple = 2 * y;
+        
+        // Output the minimum of the two options
+        if (cost_double < cost_triple) {
+            cout << cost_double << "\n";
+        } else {
+            cout << cost_triple << "\n";
+        }
     }
+    
     return 0;
 }
