@@ -1,34 +1,39 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-void solve() {
-    int X;
-    cin >> X; // Read the duration of the lecture
-
-    // The meeting platform supports a meeting of maximum 30 minutes without subscription.
-    // If Chef needs a meeting of duration X, and X is greater than 30 minutes,
-    // then a subscription is required. Otherwise, it's not.
-    if (X > 30) {
-        cout << "YES\n"; // Chef needs to take a subscription
-    } else {
-        cout << "NO\n";  // Chef does not need to take a subscription
-    }
-}
+/**
+ * Problem Analysis:
+ * The platform allows a maximum of 30 minutes without a subscription.
+ * If the required duration X is greater than 30, Chef needs a subscription.
+ * Otherwise, he does not.
+ * 
+ * Logic:
+ * If X > 30, print "YES".
+ * Else, print "NO".
+ * 
+ * Time Complexity: O(T) where T is the number of test cases.
+ * Space Complexity: O(1) as we only use a single integer variable.
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // This is a common practice in competitive programming.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    cin >> T; // Read the number of test cases
-
-    // Loop through each test case
-    while (T--) {
-        solve(); // Call the solve function for the current test case
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x;
+        cin >> x;
+        
+        // Check if the duration exceeds the 30-minute limit
+        if (x > 30) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
+        }
     }
-
-    return 0; // Indicate successful execution
+    
+    return 0;
 }

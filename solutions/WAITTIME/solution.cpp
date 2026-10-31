@@ -2,19 +2,20 @@
 using namespace std;
 
 int main() {
+    // Optimize standard I/O operations for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+
     int t;
     cin >> t;
     while (t--) {
         int k, x;
         cin >> k >> x;
-        // Total days to wait is k weeks, which is k * 7 days.
-        // Chef has already waited x days.
-        // Remaining days = Total days - Days already waited.
-        int total_days = k * 7;
-        int remaining_days = total_days - x;
-        cout << remaining_days << "\n";
+        // Total days to wait = K weeks * 7 days/week = 7 * K days.
+        // Remaining days = Total days - days already passed (X).
+        int total_days = 7 * k;
+        cout << total_days - x << "\n";
     }
+
     return 0;
 }

@@ -3,8 +3,8 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The employee works for X hours from Monday to Thursday (4 days).
- * The employee works for Y hours on Friday (1 day).
+ * The employee works X hours for 4 days (Monday to Thursday).
+ * The employee works Y hours for 1 day (Friday).
  * Total hours = (4 * X) + Y.
  * 
  * Constraints:
@@ -12,9 +12,8 @@ using namespace std;
  * 2 <= X <= 12
  * 1 <= Y < X
  * 
- * Since X and Y are small, the result will fit in a standard integer.
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * The maximum possible value is (4 * 12) + 11 = 59, which fits well within a standard integer.
+ * Using long long is safe practice for competitive programming.
  */
 
 int main() {

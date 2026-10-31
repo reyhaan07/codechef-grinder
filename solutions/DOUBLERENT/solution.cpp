@@ -1,29 +1,29 @@
-#include <bits/stdc++.h> // Include all standard libraries
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Use standard namespace
+/**
+ * Problem: DOUBLERENT
+ * The task is to calculate the doubled rent given an initial rent X.
+ * Since the constraints are small (1 <= X <= 10), a simple multiplication
+ * by 2 is sufficient. Using long long is good practice to prevent overflow
+ * in competitive programming, though int suffices here.
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // Declare an integer variable X to store the initial rent.
-    // Constraints: 1 <= X <= 10, so 'int' is sufficient.
-    int X;
+    // The problem description implies a single input X per run based on the 
+    // sample cases provided. However, standard competitive programming 
+    // practice often involves reading until EOF or a specific count.
+    // Given the problem description format, we read X directly.
+    
+    long long X;
+    if (cin >> X) {
+        long long final_rent = X * 2;
+        cout << final_rent << "\n";
+    }
 
-    // Read the initial rent X from standard input.
-    cin >> X;
-
-    // Calculate the final rent.
-    // The problem states the owner decided to "double" the rent.
-    // So, the final rent is 2 times the initial rent X.
-    int final_rent = 2 * X;
-
-    // Output the final rent to standard output, followed by a newline character.
-    cout << final_rent << "\n";
-
-    // Return 0 to indicate successful execution of the program.
     return 0;
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 55,
+  "total_solved": 74,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -57,7 +57,26 @@
     "SUBSCRIBE_",
     "UWCOI20A",
     "CHEFONDATE",
-    "BURGERS"
+    "BURGERS",
+    "DOUBLERENT",
+    "BTRYHLTH",
+    "JASSIGNMENTS",
+    "IPLTRSH",
+    "CNTWRD",
+    "TLG",
+    "CHAIRS_",
+    "CHOPRT",
+    "WORDLE",
+    "FLOW017",
+    "CANDIVIDE",
+    "JERRYCHASE",
+    "OFFICE",
+    "WAITTIME",
+    "PUZHUNT",
+    "DONDRIVE",
+    "MANIPULATE",
+    "SUBSCRIBE",
+    "COURSEREG"
   ],
   "failed_codes": [
     "SEARCHINARR"
@@ -570,6 +589,177 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 17:11:25"
+    },
+    {
+      "code": "DOUBLERENT",
+      "name": "Double Rent",
+      "status": "Accepted",
+      "solution_id": "1384792953",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:12:22"
+    },
+    {
+      "code": "BTRYHLTH",
+      "name": "Battery Health",
+      "status": "Accepted",
+      "solution_id": "1384793120",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:12:54"
+    },
+    {
+      "code": "JASSIGNMENTS",
+      "name": "Janmansh and Assignments",
+      "status": "Accepted",
+      "solution_id": "1384793316",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:13:29"
+    },
+    {
+      "code": "IPLTRSH",
+      "name": "IPL Ticket Rush",
+      "status": "Accepted",
+      "solution_id": "1384793656",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:15:12"
+    },
+    {
+      "code": "CNTWRD",
+      "name": "Counting Words",
+      "status": "Accepted",
+      "solution_id": "1384794283",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:15:50"
+    },
+    {
+      "code": "TLG",
+      "name": "The Lead Game",
+      "status": "Accepted",
+      "solution_id": "1384794578",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:16:35"
+    },
+    {
+      "code": "CHAIRS_",
+      "name": "Chairs Requirement",
+      "status": "Accepted",
+      "solution_id": "1384794801",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:17:07"
+    },
+    {
+      "code": "CHOPRT",
+      "name": "Chef And Operators",
+      "status": "Accepted",
+      "solution_id": "1384795672",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:19:25"
+    },
+    {
+      "code": "WORDLE",
+      "name": "Wordle",
+      "status": "Accepted",
+      "solution_id": "1384796053",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:20:22"
+    },
+    {
+      "code": "FLOW017",
+      "name": "Second Largest",
+      "status": "Accepted",
+      "solution_id": "1384796353",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:21:09"
+    },
+    {
+      "code": "CANDIVIDE",
+      "name": "Candy Division",
+      "status": "Accepted",
+      "solution_id": "1384796604",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:21:47"
+    },
+    {
+      "code": "JERRYCHASE",
+      "name": "Tom and Jerry Chase",
+      "status": "Accepted",
+      "solution_id": "1384797620",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:24:35"
+    },
+    {
+      "code": "OFFICE",
+      "name": "Chef in his Office",
+      "status": "Accepted",
+      "solution_id": "1384797968",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:25:31"
+    },
+    {
+      "code": "WAITTIME",
+      "name": "Waiting Time",
+      "status": "Accepted",
+      "solution_id": "1384798675",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:27:19"
+    },
+    {
+      "code": "PUZHUNT",
+      "name": "Puzzle Hunt",
+      "status": "Accepted",
+      "solution_id": "1384799122",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:28:44"
+    },
+    {
+      "code": "DONDRIVE",
+      "name": "Donation Drive",
+      "status": "Accepted",
+      "solution_id": "1384799695",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:30:22"
+    },
+    {
+      "code": "MANIPULATE",
+      "name": "Ezio and Guards",
+      "status": "Accepted",
+      "solution_id": "1384799887",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:30:56"
+    },
+    {
+      "code": "SUBSCRIBE",
+      "name": "Get Subscription",
+      "status": "Accepted",
+      "solution_id": "1384800260",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:31:49"
+    },
+    {
+      "code": "COURSEREG",
+      "name": "Course Registration",
+      "status": "Accepted",
+      "solution_id": "1384800530",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:32:30"
     }
   ]
 }
