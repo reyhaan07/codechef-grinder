@@ -1,14 +1,20 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 6,
+  "total_solved": 12,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
     "STOCKMARKET",
     "RECNDSTR",
     "XOR_PAL",
-    "TEMPLELA"
+    "TEMPLELA",
+    "START01",
+    "FLOW001",
+    "HS08TEST",
+    "CCLEARN",
+    "INSTNOODLE",
+    "INTEST"
   ],
   "failed_codes": [],
   "pending": [],
@@ -75,6 +81,60 @@
       "account": "reyhaan_s",
       "time": "2026-10-31 13:49:15",
       "evidence": "GitHub Actions run 41206549748 log: 'Verdict: accepted'"
+    },
+    {
+      "code": "START01",
+      "name": "Number Mirror",
+      "status": "Accepted",
+      "solution_id": "1384741361",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:11:45"
+    },
+    {
+      "code": "FLOW001",
+      "name": "Add Two Numbers",
+      "status": "Accepted",
+      "solution_id": "1384741940",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:13:15"
+    },
+    {
+      "code": "HS08TEST",
+      "name": "ATM",
+      "status": "Accepted",
+      "solution_id": "1384742566",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:15:02"
+    },
+    {
+      "code": "CCLEARN",
+      "name": "CodeChef Learn Problem Solving",
+      "status": "Accepted",
+      "solution_id": "1384743111",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:16:32"
+    },
+    {
+      "code": "INSTNOODLE",
+      "name": "Chef and Instant Noodles",
+      "status": "Accepted",
+      "solution_id": "1384743510",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:18:24"
+    },
+    {
+      "code": "INTEST",
+      "name": "Enormous Input Test",
+      "status": "Accepted",
+      "solution_id": "1384744393",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 15:19:53"
     }
   ]
 }
