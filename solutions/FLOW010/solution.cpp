@@ -3,8 +3,9 @@ using namespace std;
 
 /**
  * Problem: Id and Ship (FLOW010)
+ * Logic: Read the character ID and map it to the corresponding ship class.
  * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1) as we only store a single character.
+ * Space Complexity: O(1) as we only store a single character per test case.
  */
 
 int main() {
@@ -19,8 +20,6 @@ int main() {
         char id;
         cin >> id;
 
-        // Check the ID and print the corresponding Ship Class
-        // Using if-else to handle both uppercase and lowercase inputs
         if (id == 'B' || id == 'b') {
             cout << "BattleShip" << "\n";
         } else if (id == 'C' || id == 'c') {

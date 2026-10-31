@@ -1,40 +1,44 @@
-#include <bits/stdc++.h> // Includes most standard libraries like iostream
+#include <bits/stdc++.h>
+using namespace std;
 
-// Using namespace std; is common in competitive programming to avoid typing std::
-using namespace std; 
+/**
+ * Problem Analysis:
+ * Disposable masks: Cost X per day. For 100 days, total cost = X * 100.
+ * Cloth masks: Cost Y for 10 days. For 100 days, we need 100/10 = 10 masks.
+ * Total cost for cloth masks = Y * 10.
+ * 
+ * Decision logic:
+ * If (Y * 10) <= (X * 100), Chef chooses CLOTH (due to eco-friendly tie-break).
+ * Otherwise, Chef chooses DISPOSABLE.
+ * 
+ * Constraints:
+ * T <= 5000
+ * 1 <= X < Y <= 100
+ * Calculations will fit within standard integer types, but long long is used for safety.
+ */
 
 int main() {
-    // Enable fast I/O operations.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    cin >> T; // Read the number of test cases
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        long long x, y;
+        cin >> x >> y;
 
-    while (T--) { // Loop T times, decrementing T in each iteration
-        int X, Y;
-        cin >> X >> Y; // Read the cost of disposable (X) and cloth (Y) masks
+        long long cost_disposable = x * 100;
+        long long cost_cloth = y * 10;
 
-        // Calculate the total cost for disposable masks for 100 days.
-        // Each disposable mask lasts 1 day, so 100 masks are needed.
-        int cost_disposable = 100 * X;
-
-        // Calculate the total cost for cloth masks for 100 days.
-        // Each cloth mask lasts 10 days, so 100 / 10 = 10 masks are needed.
-        int cost_cloth = 10 * Y;
-
-        // Apply Chef's decision logic:
-        // Chef chooses the masks which cost him the least.
-        // In case of a tie, Chef chooses cloth masks (eco-friendly).
-        // This means Chef chooses CLOTH if its cost is less than or equal to DISPOSABLE's cost.
+        // If cloth cost is less than or equal to disposable, choose CLOTH.
+        // The problem states: "In case there is a tie... choose the cloth masks."
         if (cost_cloth <= cost_disposable) {
-            cout << "CLOTH\n"; // Print "CLOTH" if cloth masks are cheaper or equal in cost
+            cout << "CLOTH" << "\n";
         } else {
-            cout << "DISPOSABLE\n"; // Otherwise, print "DISPOSABLE"
+            cout << "DISPOSABLE" << "\n";
         }
     }
 
-    return 0; // Indicate successful execution
+    return 0;
 }

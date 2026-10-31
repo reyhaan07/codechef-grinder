@@ -1,25 +1,22 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
 /**
  * Problem Analysis:
- * We are given N dolls, where every type of doll appears in pairs except for one.
- * We need to find the type of the doll that does not have a pair.
+ * We are given N dolls, where N is odd. Every type of doll comes in pairs, 
+ * except for one type which has an odd count (specifically 1, since only one is missing).
  * 
- * Mathematical Property:
- * The XOR operation (^) has the following properties:
+ * Property of XOR:
  * 1. a ^ a = 0
  * 2. a ^ 0 = a
  * 3. XOR is commutative and associative.
  * 
- * If we XOR all the doll types together, all pairs will cancel each other out (x ^ x = 0),
- * leaving only the doll type that appears an odd number of times.
+ * If we XOR all the doll types together, all pairs will cancel each other out 
+ * (x ^ x = 0), leaving only the doll type that appears an odd number of times.
  * 
  * Time Complexity: O(N) per test case.
- * Space Complexity: O(1) as we only need to store the running XOR sum.
+ * Space Complexity: O(1) auxiliary space.
  */
-
-using namespace std;
 
 int main() {
     // Fast I/O for competitive programming
@@ -31,13 +28,13 @@ int main() {
     
     while (t--) {
         int n;
-        if (!(cin >> n)) break;
+        cin >> n;
         
-        int result = 0;
+        long long result = 0;
         for (int i = 0; i < n; ++i) {
-            int doll_type;
+            long long doll_type;
             cin >> doll_type;
-            // XORing all inputs will leave the single element
+            // XORing all inputs will result in the missing doll type
             result ^= doll_type;
         }
         

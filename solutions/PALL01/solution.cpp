@@ -5,11 +5,11 @@ using namespace std;
  * Problem: The Block Game (PALL01)
  * Approach: 
  * To check if a number is a palindrome, we can either:
- * 1. Convert the integer to a string and check if the string is equal to its reverse.
+ * 1. Read the number as a string and check if it reads the same forwards and backwards.
  * 2. Reverse the integer mathematically and compare it with the original.
  * 
- * Given the constraints and the nature of the problem, string manipulation 
- * is efficient and easy to implement.
+ * Given the constraints and the nature of the problem, reading as a string 
+ * is efficient and handles potential integer overflow issues easily.
  */
 
 void solve() {
@@ -27,7 +27,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     

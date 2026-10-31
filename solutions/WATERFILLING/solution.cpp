@@ -6,15 +6,14 @@ using namespace std;
  * We are given three integers B1, B2, B3 representing the state of three bottles.
  * 0 = empty, 1 = full.
  * Condition for "Water filling time": At least two bottles are empty.
- * This means the count of zeros must be >= 2.
- * Equivalently, the sum of B1, B2, and B3 must be <= 1 (since 0+0+1 = 1, 0+0+0 = 0).
+ * This means the count of 0s in the input must be >= 2.
  * 
- * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1) as we only use a few integer variables.
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
  */
 
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -31,7 +30,7 @@ int main() {
         if (b2 == 0) empty_count++;
         if (b3 == 0) empty_count++;
         
-        // If at least two are empty, it's water filling time
+        // Check condition: at least two bottles are empty
         if (empty_count >= 2) {
             cout << "Water filling time" << "\n";
         } else {

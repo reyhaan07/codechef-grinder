@@ -1,21 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Problem Analysis:
+ * - LIGHT: X < 3
+ * - MODERATE: 3 <= X < 7
+ * - HEAVY: X >= 7
+ * 
+ * Constraints:
+ * - 1 <= T <= 20
+ * - 1 <= X <= 20
+ * 
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
+ */
+
 int main() {
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
+
     while (t--) {
         int x;
         cin >> x;
+
         if (x < 3) {
-            cout << "LIGHT\n";
+            cout << "LIGHT" << "\n";
         } else if (x >= 3 && x < 7) {
-            cout << "MODERATE\n";
-        } else { // x >= 7
-            cout << "HEAVY\n";
+            cout << "MODERATE" << "\n";
+        } else {
+            cout << "HEAVY" << "\n";
         }
     }
+
     return 0;
 }

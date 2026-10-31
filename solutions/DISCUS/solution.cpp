@@ -9,7 +9,7 @@ using namespace std;
  */
 
 int main() {
-    // Optimize standard I/O operations for competitive programming
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -20,7 +20,7 @@ int main() {
         long long a, b, c;
         cin >> a >> b >> c;
         
-        // Use max() function to find the largest of the three distances.
+        // Use std::max to find the largest of the three values.
         // Since we need the max of three, we can nest max() or use an initializer list.
         long long result = max({a, b, c});
         

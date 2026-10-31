@@ -1,31 +1,37 @@
-#include <bits/stdc++.h> // Includes most standard libraries
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Allows using standard library elements without the std:: prefix
+/**
+ * Problem Analysis:
+ * Chef earns X, Chefina earns Y, where Y > X.
+ * They want to end up with the same amount by donating the difference.
+ * The difference is simply Y - X.
+ * 
+ * Constraints:
+ * 1 <= T <= 100
+ * 1 <= X < Y <= 10
+ * Since the values are very small, standard integer types are sufficient.
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare an integer variable T to store the number of test cases.
-    cin >> T; // Read the number of test cases from standard input.
-
-    // Loop T times, once for each test case.
-    while (T--) {
-        int X, Y; // Declare two integer variables X and Y for Chef's and Chefina's income.
-        cin >> X >> Y; // Read X and Y for the current test case.
-
-        // The problem states that Chefina earns Y rupees and Chef earns X rupees, with Y > X.
-        // To end up with exactly the same amount, they donate the difference between their income.
-        // The difference is Y - X. If Chefina donates this amount, she will have Y - (Y - X) = X rupees,
-        // which is the same as Chef's income.
-        int donation_amount = Y - X;
-
-        // Output the calculated donation amount, followed by a newline character.
-        cout << donation_amount << "\n";
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x, y;
+        cin >> x >> y;
+        
+        // The amount to donate is the difference between their incomes
+        long long donation = y - x;
+        
+        cout << donation << "\n";
     }
-
-    return 0; // Indicate successful program execution.
+    
+    return 0;
 }

@@ -3,22 +3,22 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Chefario has Y mana points and each special attack costs X mana points.
- * To find the maximum number of attacks, we need to find the largest integer k
- * such that k * X <= Y.
- * This is equivalent to the integer division of Y by X: floor(Y / X).
+ * Chefario has Y mana points and each attack costs X mana points.
+ * The maximum number of attacks he can perform is the floor of Y divided by X.
+ * Mathematically, this is floor(Y / X).
  * 
  * Constraints:
  * T <= 10^5
  * X <= 100
  * Y <= 1000
- * Since Y/X will not exceed 1000, standard 'int' is sufficient.
+ * Since Y and X are small, integer division in C++ will naturally perform
+ * the floor operation, which is exactly what we need.
  * Time Complexity: O(T)
  * Space Complexity: O(1)
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -26,12 +26,12 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        int x, y;
+        long long x, y;
         cin >> x >> y;
         
-        // The maximum number of attacks is simply the quotient of Y divided by X.
-        // If Y < X, the result is 0, which is correctly handled by integer division.
-        int max_attacks = y / x;
+        // The maximum number of attacks is Y / X.
+        // If Y < X, the result is 0, which is handled correctly by integer division.
+        long long max_attacks = y / x;
         
         cout << max_attacks << "\n";
     }

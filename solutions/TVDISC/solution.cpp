@@ -1,38 +1,40 @@
-#include <iostream> // Required for input/output operations
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem: TVDISC
+ * The problem asks us to compare the final prices of two TVs after applying their respective discounts.
+ * Final price of TV 1 = A - C
+ * Final price of TV 2 = B - D
+ * We compare these two values and output "First", "Second", or "Any".
+ * 
+ * Time Complexity: O(T) where T is the number of test cases.
+ * Space Complexity: O(1) as we only use a few integer variables.
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // This unties cin/cout from the C standard streams and disables synchronization.
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O setup
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    int T; // Declare an integer variable T to store the number of test cases.
-    std::cin >> T; // Read the number of test cases from standard input.
-
-    // Loop T times, once for each test case.
-    while (T--) {
-        int A, B, C, D; // Declare integer variables for prices and discounts.
-        // Read the marked price of the first TV (A), second TV (B),
-        // discount for the first TV (C), and discount for the second TV (D).
-        std::cin >> A >> B >> C >> D;
-
-        // Calculate the final price of the first TV after discount.
-        int final_price_A = A - C;
-        // Calculate the final price of the second TV after discount.
-        int final_price_B = B - D;
-
-        // Compare the final prices to determine which TV is cheaper.
-        if (final_price_A < final_price_B) {
-            // If the first TV is cheaper, print "First".
-            std::cout << "First\n";
-        } else if (final_price_B < final_price_A) {
-            // If the second TV is cheaper, print "Second".
-            std::cout << "Second\n";
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long a, b, c, d;
+        cin >> a >> b >> c >> d;
+        
+        long long price1 = a - c;
+        long long price2 = b - d;
+        
+        if (price1 < price2) {
+            cout << "First" << "\n";
+        } else if (price2 < price1) {
+            cout << "Second" << "\n";
         } else {
-            // If both TVs cost the same, print "Any".
-            std::cout << "Any\n";
+            cout << "Any" << "\n";
         }
     }
-
-    return 0; // Indicate successful program execution.
+    
+    return 0;
 }

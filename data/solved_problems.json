@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 120,
+  "total_solved": 141,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -122,10 +122,32 @@
     "HELIUM3",
     "SUGARCANE",
     "SLEEP",
-    "FBC"
+    "FBC",
+    "SEMCOURSES",
+    "RAINFALL1",
+    "CHEFCAND",
+    "TRUESCORE",
+    "DNATION",
+    "MUFFINS3",
+    "CARTRIP",
+    "EXPERT",
+    "MANAPTS",
+    "PALL01",
+    "MISSP",
+    "FOURTICKETS",
+    "FLOW010",
+    "WATERFILLING",
+    "PRB01",
+    "CMASKS",
+    "MAXIMUMSUBS",
+    "SPECIALITY",
+    "TVDISC",
+    "LARGESECOND",
+    "DISCUS"
   ],
   "failed_codes": [
-    "SEARCHINARR"
+    "SEARCHINARR",
+    "KITCHENCOST"
   ],
   "pending": [],
   "history": [
@@ -1220,6 +1242,195 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 20:32:38"
+    },
+    {
+      "code": "SEMCOURSES",
+      "name": "Chef and Chapters",
+      "status": "Accepted",
+      "solution_id": "1384830711",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:33:04"
+    },
+    {
+      "code": "RAINFALL1",
+      "name": "Rain in Chefland",
+      "status": "Accepted",
+      "solution_id": "1384830749",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:34:44"
+    },
+    {
+      "code": "CHEFCAND",
+      "name": "Chef and Candies",
+      "status": "Accepted",
+      "solution_id": "1384830832",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:35:27"
+    },
+    {
+      "code": "TRUESCORE",
+      "name": "Is the Score Consistent",
+      "status": "Accepted",
+      "solution_id": "1384830875",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:36:09"
+    },
+    {
+      "code": "DNATION",
+      "name": "Chef and Donation",
+      "status": "Accepted",
+      "solution_id": "1384830945",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:36:55"
+    },
+    {
+      "code": "MUFFINS3",
+      "name": "Packaging Cupcakes",
+      "status": "Accepted",
+      "solution_id": "1384830992",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:37:36"
+    },
+    {
+      "code": "CARTRIP",
+      "name": "Car Trip",
+      "status": "Accepted",
+      "solution_id": "1384831038",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:38:24"
+    },
+    {
+      "code": "EXPERT",
+      "name": "Expert Setter",
+      "status": "Accepted",
+      "solution_id": "1384831087",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:40:10"
+    },
+    {
+      "code": "MANAPTS",
+      "name": "Mana Points",
+      "status": "Accepted",
+      "solution_id": "1384831169",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:40:45"
+    },
+    {
+      "code": "PALL01",
+      "name": "The Block Game",
+      "status": "Accepted",
+      "solution_id": "1384831203",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:41:18"
+    },
+    {
+      "code": "MISSP",
+      "name": "Chef and Dolls",
+      "status": "Accepted",
+      "solution_id": "1384831233",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:41:52"
+    },
+    {
+      "code": "FOURTICKETS",
+      "name": "Four Tickets",
+      "status": "Accepted",
+      "solution_id": "1384831299",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:42:40"
+    },
+    {
+      "code": "FLOW010",
+      "name": "Id and Ship",
+      "status": "Accepted",
+      "solution_id": "1384831321",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:43:11"
+    },
+    {
+      "code": "WATERFILLING",
+      "name": "Water Filling",
+      "status": "Accepted",
+      "solution_id": "1384831350",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:43:47"
+    },
+    {
+      "code": "PRB01",
+      "name": "Primality Test",
+      "status": "Accepted",
+      "solution_id": "1384831385",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:44:31"
+    },
+    {
+      "code": "CMASKS",
+      "name": "Chef and Masks",
+      "status": "Accepted",
+      "solution_id": "1384831419",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:46:13"
+    },
+    {
+      "code": "MAXIMUMSUBS",
+      "name": "Maximum Submissions",
+      "status": "Accepted",
+      "solution_id": "1384831564",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:47:30"
+    },
+    {
+      "code": "SPECIALITY",
+      "name": "Speciality",
+      "status": "Accepted",
+      "solution_id": "1384831608",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:48:06"
+    },
+    {
+      "code": "TVDISC",
+      "name": "TV Discount",
+      "status": "Accepted",
+      "solution_id": "1384831655",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:48:52"
+    },
+    {
+      "code": "LARGESECOND",
+      "name": "Largest and Second Largest",
+      "status": "Accepted",
+      "solution_id": "1384831701",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:49:29"
+    },
+    {
+      "code": "DISCUS",
+      "name": "Discus Throw",
+      "status": "Accepted",
+      "solution_id": "1384831728",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 20:49:59"
     }
   ]
 }
