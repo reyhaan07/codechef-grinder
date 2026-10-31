@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 74,
+  "total_solved": 80,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -76,7 +76,13 @@
     "DONDRIVE",
     "MANIPULATE",
     "SUBSCRIBE",
-    "COURSEREG"
+    "COURSEREG",
+    "EZSPEAK",
+    "FEVER",
+    "OFFBY1",
+    "DECINC",
+    "TAXES",
+    "CREDSCORE"
   ],
   "failed_codes": [
     "SEARCHINARR"
@@ -760,6 +766,60 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 17:32:30"
+    },
+    {
+      "code": "EZSPEAK",
+      "name": "Easy Pronunciation",
+      "status": "Accepted",
+      "solution_id": "1384800679",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:32:55"
+    },
+    {
+      "code": "FEVER",
+      "name": "Fever",
+      "status": "Accepted",
+      "solution_id": "1384800979",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:33:40"
+    },
+    {
+      "code": "OFFBY1",
+      "name": "Off By One",
+      "status": "Accepted",
+      "solution_id": "1384802002",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:36:32"
+    },
+    {
+      "code": "DECINC",
+      "name": "Decrement OR Increment",
+      "status": "Accepted",
+      "solution_id": "1384802734",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:39:13"
+    },
+    {
+      "code": "TAXES",
+      "name": "Tax in Chefland",
+      "status": "Accepted",
+      "solution_id": "1384803561",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:40:40"
+    },
+    {
+      "code": "CREDSCORE",
+      "name": "Credit score",
+      "status": "Accepted",
+      "solution_id": "1384803844",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:41:38"
     }
   ]
 }

@@ -1,29 +1,31 @@
-#include <bits/stdc++.h> // Include all standard libraries
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std; // Use the standard namespace
+/**
+ * Problem: CREDSCORE
+ * Logic: Check if the given credit score X is greater than or equal to 750.
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
+ */
 
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int X; // Declare an integer variable X to store the credit score.
+    // The problem description implies a single integer input X.
+    // Even though the problem doesn't explicitly mention multiple test cases,
+    // the template instructions suggest handling them if necessary.
+    // Given the constraints and problem type, we read X directly.
     
-    // Read the credit score X from standard input.
-    cin >> X;
-
-    // Check if the credit score X is 750 or more.
-    // According to the problem statement, a score of 750 or more is required
-    // to access CRED programs.
-    if (X >= 750) {
-        // If the condition is met, print "YES" followed by a newline.
-        cout << "YES\n";
-    } else {
-        // Otherwise (if X is less than 750), print "NO" followed by a newline.
-        cout << "NO\n";
+    long long X;
+    if (cin >> X) {
+        if (X >= 750) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
+        }
     }
 
-    return 0; // Indicate successful program execution.
+    return 0;
 }
