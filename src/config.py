@@ -29,6 +29,10 @@ class BotConfig(BaseModel):
     min_delay_seconds: int = Field(default_factory=lambda: int(os.getenv("MIN_DELAY_SECONDS", "40")))
     max_delay_seconds: int = Field(default_factory=lambda: int(os.getenv("MAX_DELAY_SECONDS", "110")))
 
+    # Stop starting new problems after this many minutes (0 = no limit). Keeps each
+    # run well inside the workflow timeout so progress is always committed.
+    max_runtime_minutes: int = Field(default_factory=lambda: int(os.getenv("MAX_RUNTIME_MINUTES", "0")))
+
     # Difficulty Range (Ladder Progression)
     min_difficulty: int = Field(default_factory=lambda: int(os.getenv("MIN_DIFFICULTY", "200")))
     max_difficulty: int = Field(default_factory=lambda: int(os.getenv("MAX_DIFFICULTY", "1400")))

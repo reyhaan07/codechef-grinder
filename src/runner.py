@@ -68,8 +68,14 @@ def reconcile_pending(client: CodeChefClient, db: dict) -> None:
             dbm.clear_pending(db, code)
 
 
+def is_quota_error(err: Exception) -> bool:
+    text = str(err)
+    return "RESOURCE_EXHAUSTED" in text or "429" in text or "quota" in text.lower()
+
+
 def run():
     logger.info("=== Starting CodeChef Practice Archive Auto-Grinder ===")
+    run_started = time.monotonic()
 
     client = CodeChefClient()
     solver = CodeChefSolver()
@@ -196,7 +202,19 @@ def run():
     solved_this_run = 0
     max_infra_errors = 2
 
+    stop_run = False
+
     for idx, p_meta in enumerate(candidate_problems, 1):
+        if stop_run:
+            break
+        elapsed_min = (time.monotonic() - run_started) / 60
+        if config.max_runtime_minutes and elapsed_min >= config.max_runtime_minutes:
+            logger.info(
+                f"Run time budget of {config.max_runtime_minutes} min reached ({elapsed_min:.1f} min). "
+                "Stopping here so progress is committed; the next run continues."
+            )
+            break
+
         code = p_meta.get("code")
         name = p_meta.get("name")
         logger.info(f"\n[{idx}/{len(candidate_problems)}] Processing Problem: {code} ({name})...")
@@ -241,6 +259,13 @@ def run():
             except Exception as gen_err:
                 infra_errors += 1
                 logger.error(f"Solution generation failed for {code}: {gen_err}")
+                if is_quota_error(gen_err):
+                    logger.warning(
+                        "Gemini quota / rate limit exhausted on all models. Ending this run early; "
+                        "no problem is blacklisted and the next run will continue."
+                    )
+                    stop_run = True
+                    break
                 time.sleep(10)
                 continue
 
@@ -320,7 +345,7 @@ def run():
             )
 
         # Human-like randomized delay between different problems
-        if outcome in ("accepted", "pending", "rejected") and idx < len(candidate_problems) and not config.dry_run:
+        if outcome in ("accepted", "pending", "rejected") and idx < len(candidate_problems) and not config.dry_run and not stop_run:
             pacing_delay = random.randint(config.min_delay_seconds, config.max_delay_seconds)
             logger.info(f"Waiting {pacing_delay}s before starting next problem (human randomized pacing)...")
             time.sleep(pacing_delay)
