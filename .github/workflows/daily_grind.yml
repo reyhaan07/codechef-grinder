@@ -48,6 +48,9 @@ jobs:
           VERDICT_TIMEOUT_SECONDS: "120"
           # Stop starting new problems after 45 min so the run always finishes and commits.
           MAX_RUNTIME_MINUTES: "45"
+          # Skip the Gemini-written README per problem (halves Gemini requests during the sprint).
+          # Set back to "true" afterwards to get full explanations again.
+          GENERATE_EXPLANATIONS: "false"
           RANDOMIZE_BATCH: "true"
           MIN_PROBLEMS_PER_RUN: "18"
           MAX_PROBLEMS_PER_RUN: "25"

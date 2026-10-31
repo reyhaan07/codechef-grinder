@@ -29,6 +29,10 @@ class BotConfig(BaseModel):
     min_delay_seconds: int = Field(default_factory=lambda: int(os.getenv("MIN_DELAY_SECONDS", "40")))
     max_delay_seconds: int = Field(default_factory=lambda: int(os.getenv("MAX_DELAY_SECONDS", "110")))
 
+    # Ask Gemini for a README explanation after each accepted problem. Turning this off
+    # roughly halves Gemini requests; a short README is written without calling Gemini.
+    generate_explanations: bool = Field(default_factory=lambda: os.getenv("GENERATE_EXPLANATIONS", "true").lower() in ("true", "1", "yes"))
+
     # Stop starting new problems after this many minutes (0 = no limit). Keeps each
     # run well inside the workflow timeout so progress is always committed.
     max_runtime_minutes: int = Field(default_factory=lambda: int(os.getenv("MAX_RUNTIME_MINUTES", "0")))

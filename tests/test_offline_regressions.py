@@ -295,3 +295,20 @@ def test_runtime_budget_stops_starting_new_problems(env, monkeypatch):
     client = FakeClient(probs, [AC, AC])
     run_with(monkeypatch, client, FakeSolver())
     assert read_db(env)["solved_codes"] == ["A"]
+
+
+def test_explanations_can_be_disabled(env, monkeypatch):
+    class CountingSolver(FakeSolver):
+        doc_calls = 0
+
+        def generate_explanation_doc(self, *a, **kw):
+            CountingSolver.doc_calls += 1
+            return "# doc"
+
+    monkeypatch.setattr(env, "generate_explanations", False)
+    run_with(monkeypatch, FakeClient([{"code": "A", "name": "a"}], [AC]), CountingSolver())
+    assert CountingSolver.doc_calls == 0
+    readme = (env.solutions_dir / "A" / "README.md").read_text()
+    assert "Explanation skipped" in readme
+    assert (env.solutions_dir / "A" / "solution.cpp").exists()
+    assert read_db(env)["solved_codes"] == ["A"]

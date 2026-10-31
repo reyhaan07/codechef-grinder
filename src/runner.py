@@ -41,14 +41,15 @@ def save_solution_files(
     logger.info(f"Saved problem solution files at: {target_dir}")
 
 
-def fallback_doc(details: dict, attempts: int) -> str:
+def fallback_doc(details: dict, attempts: int, generated: bool = True) -> str:
     code = details.get("problem_code", "")
     name = details.get("problem_name", code)
     return (
         f"# [{name} ({code})](https://www.codechef.com/problems/{code})\n\n"
         f"- **Difficulty Rating**: {details.get('difficulty_rating', 'Unrated')}\n"
         f"- **Solved in**: {attempts} attempt(s)\n\n"
-        "_Explanation could not be generated automatically for this problem._\n"
+        + ("_Explanation could not be generated automatically for this problem._\n" if generated
+           else "_Explanation skipped (GENERATE_EXPLANATIONS=false) to save Gemini quota._\n")
     )
 
 
@@ -316,11 +317,14 @@ def run():
                 solved_this_run += 1
                 outcome = "accepted"
 
-                try:
-                    doc = solver.generate_explanation_doc(details, sol_code, attempts=attempt, language=config.language)
-                except Exception as doc_err:
-                    logger.warning(f"Explanation generation failed for {code} ({doc_err}); writing a minimal README.")
-                    doc = fallback_doc(details, attempt)
+                if config.generate_explanations:
+                    try:
+                        doc = solver.generate_explanation_doc(details, sol_code, attempts=attempt, language=config.language)
+                    except Exception as doc_err:
+                        logger.warning(f"Explanation generation failed for {code} ({doc_err}); writing a minimal README.")
+                        doc = fallback_doc(details, attempt)
+                else:
+                    doc = fallback_doc(details, attempt, generated=False)
                 save_solution_files(config.solutions_dir, code, sol_code, doc, config.language)
                 break
 
