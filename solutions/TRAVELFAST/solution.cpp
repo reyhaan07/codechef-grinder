@@ -4,7 +4,7 @@ using namespace std;
 /**
  * Problem Analysis:
  * We are given two integers X (time for BIKE) and Y (time for CAR).
- * We need to compare X and Y:
+ * We need to determine which is smaller:
  * - If X < Y, BIKE is faster.
  * - If Y < X, CAR is faster.
  * - If X == Y, they take the same time.

@@ -2,12 +2,11 @@
 using namespace std;
 
 /**
- * Problem: October Marathon
+ * Problem: OCTATHON
  * Logic:
  * - If X < 3: GOLD
  * - If 3 <= X < 6: SILVER
  * - If X >= 6: BRONZE
- * 
  * Time Complexity: O(1) per test case
  * Space Complexity: O(1)
  */
@@ -18,8 +17,8 @@ int main() {
     cin.tie(NULL);
 
     // The problem description implies a single input X per run based on the 
-    // sample format, but standard competitive programming practice often 
-    // involves a test case count. Given the constraints and format:
+    // sample format, but standard competitive programming practice handles 
+    // single inputs directly.
     int X;
     if (!(cin >> X)) return 0;
 

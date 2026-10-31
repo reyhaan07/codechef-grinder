@@ -4,10 +4,10 @@ using namespace std;
 /**
  * Problem Analysis:
  * Gi-Hun and Ali have height K.
- * A player is in the line of sight if their height H_i > K.
- * If H_i > K, the player blocks the view and must be shot.
- * If H_i <= K, the player does not block the view.
- * We need to count how many players have H_i > K.
+ * A player is visible if their height H_i <= K.
+ * If a player has height H_i > K, they block the line of sight.
+ * Therefore, we need to count how many players have height H_i > K.
+ * These are the players who must be removed (shot).
  * 
  * Time Complexity: O(N) per test case, O(sum of N) total.
  * Space Complexity: O(1) auxiliary space (excluding input storage).
@@ -20,25 +20,23 @@ int main() {
 
     int t;
     if (!(cin >> t)) return 0;
-    
     while (t--) {
         int n;
         long long k;
         cin >> n >> k;
-        
+
         int count = 0;
         for (int i = 0; i < n; ++i) {
             long long h;
             cin >> h;
             // If the player's height is strictly greater than K, 
-            // they block the line of sight.
+            // they block the line of sight and must be removed.
             if (h > k) {
                 count++;
             }
         }
-        
         cout << count << "\n";
     }
-    
+
     return 0;
 }

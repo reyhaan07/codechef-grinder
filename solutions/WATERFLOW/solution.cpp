@@ -16,9 +16,9 @@ using namespace std;
  * 
  * Constraints:
  * W, X, Y, Z <= 1000
- * Max possible value = 1000 + (1000 * 1000) = 1,001,000
- * This fits well within a standard 32-bit signed integer, 
- * but using long long is safer practice in competitive programming.
+ * W + Y * Z <= 1000 + 1000 * 1000 = 1,001,000
+ * This fits comfortably within a standard 32-bit integer, 
+ * but using long long is good practice to prevent overflow in similar problems.
  */
 
 int main() {

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 185,
+  "total_solved": 207,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -187,7 +187,29 @@
     "INVESTMENT",
     "BUDGET_",
     "LASTLEVELS",
-    "HAPPYSTR"
+    "HAPPYSTR",
+    "DOLL",
+    "WGHTS",
+    "TRAVELFAST",
+    "PARLIAMENT",
+    "TABLETS",
+    "EQUALDIST",
+    "ELECTN",
+    "KITCHENSPICE",
+    "CHEFSCORE",
+    "NUM239",
+    "MONOPOLY",
+    "SST",
+    "QUALIFY",
+    "PODIUM",
+    "DOREWARD",
+    "OCTATHON",
+    "MAXTASTE",
+    "ASSIGNMNT",
+    "PROINC",
+    "WATERFLOW",
+    "CHEFBOTTLE",
+    "MINCOINS"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -1871,6 +1893,204 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 21:24:47"
+    },
+    {
+      "code": "DOLL",
+      "name": "Red Light, Green Light",
+      "status": "Accepted",
+      "solution_id": "1384832954",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:25:15"
+    },
+    {
+      "code": "WGHTS",
+      "name": "Weights",
+      "status": "Accepted",
+      "solution_id": "1384832967",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:26:03"
+    },
+    {
+      "code": "TRAVELFAST",
+      "name": "Car or Bike",
+      "status": "Accepted",
+      "solution_id": "1384832977",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:26:43"
+    },
+    {
+      "code": "PARLIAMENT",
+      "name": "Parliament",
+      "status": "Accepted",
+      "solution_id": "1384832997",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:27:32"
+    },
+    {
+      "code": "TABLETS",
+      "name": "Multivitamin Tablets",
+      "status": "Accepted",
+      "solution_id": "1384833018",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:28:23"
+    },
+    {
+      "code": "EQUALDIST",
+      "name": "Equal Distribution",
+      "status": "Accepted",
+      "solution_id": "1384833035",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:29:09"
+    },
+    {
+      "code": "ELECTN",
+      "name": "Elections in Chefland",
+      "status": "Accepted",
+      "solution_id": "1384833051",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:29:47"
+    },
+    {
+      "code": "KITCHENSPICE",
+      "name": "Spice Level",
+      "status": "Accepted",
+      "solution_id": "1384833065",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:30:27"
+    },
+    {
+      "code": "CHEFSCORE",
+      "name": "Test Score",
+      "status": "Accepted",
+      "solution_id": "1384833083",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:31:14"
+    },
+    {
+      "code": "NUM239",
+      "name": "Counting Pretty Numbers",
+      "status": "Accepted",
+      "solution_id": "1384833106",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:31:57"
+    },
+    {
+      "code": "MONOPOLY",
+      "name": "Monopoly in Chefland",
+      "status": "Accepted",
+      "solution_id": "1384833116",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:32:21"
+    },
+    {
+      "code": "SST",
+      "name": "Sasta Shark Tank",
+      "status": "Accepted",
+      "solution_id": "1384833142",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:33:09"
+    },
+    {
+      "code": "QUALIFY",
+      "name": "Qualify the round",
+      "status": "Accepted",
+      "solution_id": "1384833155",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:33:34"
+    },
+    {
+      "code": "PODIUM",
+      "name": "Podium Finish",
+      "status": "Accepted",
+      "solution_id": "1384833177",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:35:13"
+    },
+    {
+      "code": "DOREWARD",
+      "name": "Donation Rewards",
+      "status": "Accepted",
+      "solution_id": "1384833233",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:36:01"
+    },
+    {
+      "code": "OCTATHON",
+      "name": "October Marathon",
+      "status": "Accepted",
+      "solution_id": "1384833246",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:36:36"
+    },
+    {
+      "code": "MAXTASTE",
+      "name": "Maximise the Tastiness",
+      "status": "Accepted",
+      "solution_id": "1384833262",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:37:20"
+    },
+    {
+      "code": "ASSIGNMNT",
+      "name": "Pending Assignments",
+      "status": "Accepted",
+      "solution_id": "1384833274",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:37:49"
+    },
+    {
+      "code": "PROINC",
+      "name": "Profit Increment",
+      "status": "Accepted",
+      "solution_id": "1384833283",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:38:17"
+    },
+    {
+      "code": "WATERFLOW",
+      "name": "Bucket and Water Flow ",
+      "status": "Accepted",
+      "solution_id": "1384833298",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:38:55"
+    },
+    {
+      "code": "CHEFBOTTLE",
+      "name": "Chef and Water Bottles",
+      "status": "Accepted",
+      "solution_id": "1384833326",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:39:41"
+    },
+    {
+      "code": "MINCOINS",
+      "name": "Minimum number of coins",
+      "status": "Accepted",
+      "solution_id": "1384833350",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 21:41:19"
     }
   ]
 }

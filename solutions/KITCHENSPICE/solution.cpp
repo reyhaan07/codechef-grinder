@@ -8,11 +8,11 @@ using namespace std;
  * - MEDIUM: 4 <= X < 7
  * - HOT: X >= 7
  * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1)
+ * Space Complexity: O(1) as we only use a few variables.
  */
 
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -25,7 +25,7 @@ int main() {
         
         if (x < 4) {
             cout << "MILD" << "\n";
-        } else if (x >= 4 && x < 7) {
+        } else if (x < 7) {
             cout << "MEDIUM" << "\n";
         } else {
             cout << "HOT" << "\n";

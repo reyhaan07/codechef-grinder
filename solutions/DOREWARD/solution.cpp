@@ -8,13 +8,12 @@ using namespace std;
  * - If 3 < X <= 6: SILVER
  * - If X > 6: GOLD
  * 
- * Complexity:
- * - Time: O(T), where T is the number of test cases.
- * - Space: O(1), as we only use a few variables.
+ * Time Complexity: O(T) where T is the number of test cases.
+ * Space Complexity: O(1) as we only use a few variables.
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O for competitive programming
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
