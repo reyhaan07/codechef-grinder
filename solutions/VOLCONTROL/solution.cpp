@@ -1,32 +1,35 @@
-#include <iostream> // Required for standard input/output operations (cin, cout)
-#include <cmath>    // Required for the std::abs function to calculate absolute difference
-
-// Using the standard namespace to avoid repeatedly writing std::
+#include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Problem Analysis:
+ * The problem asks for the minimum number of button presses to change volume from X to Y.
+ * Each press changes the volume by exactly 1.
+ * Therefore, the minimum number of presses is the absolute difference between X and Y.
+ * |X - Y| gives the distance between the two values, which corresponds to the 
+ * number of +1 or -1 operations required.
+ * 
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
+ */
+
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // This unties cin from cout and disables synchronization with C's stdio.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare an integer variable T to store the number of test cases.
-    cin >> T; // Read the number of test cases from standard input.
-
-    // Loop T times, once for each test case.
-    while (T--) {
-        int X, Y; // Declare integer variables X and Y for initial and final volume.
-        cin >> X >> Y; // Read X and Y for the current test case.
-
-        // Calculate the minimum number of button presses.
-        // This is simply the absolute difference between the initial and final volume.
-        // std::abs() function returns the absolute value of its argument.
-        int presses = abs(X - Y);
-
-        // Output the calculated number of presses, followed by a newline character.
-        // The newline ensures that each test case's output is on a separate line.
-        cout << presses << "\n";
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x, y;
+        cin >> x >> y;
+        
+        // The minimum number of button presses is the absolute difference
+        long long result = abs(x - y);
+        
+        cout << result << "\n";
     }
-
-    return 0; // Indicate successful program execution.
+    
+    return 0;
 }

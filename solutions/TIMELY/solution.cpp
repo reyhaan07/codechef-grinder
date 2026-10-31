@@ -3,18 +3,20 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Chef needs 30 minutes to reach the office.
+ * Chef takes 30 minutes to reach the office.
  * Chef leaves X minutes before the deadline.
- * If X >= 30, Chef reaches on time or early (YES).
- * If X < 30, Chef reaches late (NO).
+ * If X >= 30, Chef reaches on time (or early).
+ * If X < 30, Chef reaches late.
  * 
- * Constraints: 1 <= T <= 60, 1 <= X <= 60.
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * Constraints:
+ * 1 <= T <= 60
+ * 1 <= X <= 60
+ * Time complexity: O(T)
+ * Space complexity: O(1)
  */
 
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -25,8 +27,8 @@ int main() {
         int x;
         cin >> x;
         
-        // Check if the time taken (30 minutes) is less than or equal to 
-        // the time available (X minutes).
+        // Chef reaches on time if the time he leaves (X) 
+        // is greater than or equal to the commute time (30).
         if (x >= 30) {
             cout << "YES" << "\n";
         } else {

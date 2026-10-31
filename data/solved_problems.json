@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 33,
+  "total_solved": 55,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -35,9 +35,33 @@
     "SNDMAX",
     "FIT",
     "BESTOFTWO",
-    "FLOW004"
+    "FLOW004",
+    "TEST",
+    "CWC23QUALIF",
+    "LUDO",
+    "LUCKYSEVEN",
+    "CABS",
+    "TSORT",
+    "TALLER",
+    "CLEARDAY",
+    "AUDIBLE",
+    "KITCHENTIME",
+    "TIMELY",
+    "PRIZEPOOL",
+    "REACHTARGET",
+    "MINHEIGHT",
+    "TODOLIST",
+    "FSQRT",
+    "PAR2",
+    "VOLCONTROL",
+    "SUBSCRIBE_",
+    "UWCOI20A",
+    "CHEFONDATE",
+    "BURGERS"
   ],
-  "failed_codes": [],
+  "failed_codes": [
+    "SEARCHINARR"
+  ],
   "pending": [],
   "history": [
     {
@@ -348,6 +372,204 @@
       "account": "reyhaan_s",
       "time": "2026-10-31 15:40:47",
       "evidence": "GitHub Actions run 41214753322 log: 'Verdict: accepted' (run was cancelled before it could commit)"
+    },
+    {
+      "code": "TEST",
+      "name": "Life, the Universe, and Everything",
+      "status": "Accepted",
+      "solution_id": "1384781743",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:43:24"
+    },
+    {
+      "code": "CWC23QUALIF",
+      "name": "Cricket World Cup Qualifier",
+      "status": "Accepted",
+      "solution_id": "1384781967",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:43:52"
+    },
+    {
+      "code": "LUDO",
+      "name": "Chef Plays Ludo",
+      "status": "Accepted",
+      "solution_id": "1384782268",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:44:24"
+    },
+    {
+      "code": "LUCKYSEVEN",
+      "name": "Lucky Seven",
+      "status": "Accepted",
+      "solution_id": "1384782526",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:44:58"
+    },
+    {
+      "code": "CABS",
+      "name": "The Cheaper Cab",
+      "status": "Accepted",
+      "solution_id": "1384782817",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:45:40"
+    },
+    {
+      "code": "TSORT",
+      "name": "Simple Sorting",
+      "status": "Accepted",
+      "solution_id": "1384783167",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:46:33"
+    },
+    {
+      "code": "TALLER",
+      "name": "Who is taller!",
+      "status": "Accepted",
+      "solution_id": "1384785680",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:52:12"
+    },
+    {
+      "code": "CLEARDAY",
+      "name": "Clear Day",
+      "status": "Accepted",
+      "solution_id": "1384786206",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:54:23"
+    },
+    {
+      "code": "AUDIBLE",
+      "name": "Audible Range",
+      "status": "Accepted",
+      "solution_id": "1384786839",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:54:56"
+    },
+    {
+      "code": "KITCHENTIME",
+      "name": "Kitchen Timings",
+      "status": "Accepted",
+      "solution_id": "1384787199",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:55:40"
+    },
+    {
+      "code": "TIMELY",
+      "name": "Reach on Time",
+      "status": "Accepted",
+      "solution_id": "1384787560",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:56:35"
+    },
+    {
+      "code": "PRIZEPOOL",
+      "name": "Total Prize Money",
+      "status": "Accepted",
+      "solution_id": "1384788122",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 16:58:10"
+    },
+    {
+      "code": "REACHTARGET",
+      "name": "Reach the Target",
+      "status": "Accepted",
+      "solution_id": "1384788916",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:01:10"
+    },
+    {
+      "code": "MINHEIGHT",
+      "name": "Roller Coaster",
+      "status": "Accepted",
+      "solution_id": "1384789487",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:01:57"
+    },
+    {
+      "code": "TODOLIST",
+      "name": "Problems in your to-do list",
+      "status": "Accepted",
+      "solution_id": "1384789686",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:02:35"
+    },
+    {
+      "code": "FSQRT",
+      "name": "Finding Square Roots",
+      "status": "Accepted",
+      "solution_id": "1384789880",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:03:03"
+    },
+    {
+      "code": "PAR2",
+      "name": "Parity",
+      "status": "Accepted",
+      "solution_id": "1384790192",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:03:45"
+    },
+    {
+      "code": "VOLCONTROL",
+      "name": "Volume Control",
+      "status": "Accepted",
+      "solution_id": "1384790485",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:04:35"
+    },
+    {
+      "code": "SUBSCRIBE_",
+      "name": "Subscriptions",
+      "status": "Accepted",
+      "solution_id": "1384790690",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:05:14"
+    },
+    {
+      "code": "UWCOI20A",
+      "name": "Find maximum in an Array",
+      "status": "Accepted",
+      "solution_id": "1384791211",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:06:55"
+    },
+    {
+      "code": "CHEFONDATE",
+      "name": "Chef On Date",
+      "status": "Accepted",
+      "solution_id": "1384791635",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:08:05"
+    },
+    {
+      "code": "BURGERS",
+      "name": "Burgers",
+      "status": "Accepted",
+      "solution_id": "1384792366",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 17:11:25"
     }
   ]
 }

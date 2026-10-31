@@ -1,27 +1,44 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Problem Analysis:
+ * Chef wants to keep problems with difficulty rating < 1000.
+ * We need to count how many problems have a difficulty rating >= 1000.
+ * These are the problems that must be removed.
+ * 
+ * Constraints:
+ * T <= 1000, N <= 1000.
+ * Total operations per test case: O(N).
+ * Total time complexity: O(T * N), which is 10^6 operations, well within the 4s limit.
+ * Space complexity: O(1) auxiliary space if we process input on the fly.
+ */
 
 int main() {
-    // Fast I/O
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Fast I/O for competitive programming
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
     int t;
-    std::cin >> t; // Read the number of test cases
+    if (!(cin >> t)) return 0;
+
     while (t--) {
         int n;
-        std::cin >> n; // Read the number of problems
-        int problems_to_remove = 0;
+        cin >> n;
+        
+        int remove_count = 0;
         for (int i = 0; i < n; ++i) {
             int difficulty;
-            std::cin >> difficulty; // Read the difficulty of each problem
-            // If the difficulty is 1000 or greater, it needs to be removed
+            cin >> difficulty;
+            
+            // If the difficulty is 1000 or greater, it must be removed.
             if (difficulty >= 1000) {
-                problems_to_remove++;
+                remove_count++;
             }
         }
-        std::cout << problems_to_remove << "\n"; // Output the count of problems to remove
+        
+        cout << remove_count << "\n";
     }
+
     return 0;
 }

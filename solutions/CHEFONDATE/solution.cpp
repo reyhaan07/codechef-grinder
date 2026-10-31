@@ -1,18 +1,22 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    // Optimize standard I/O operations for competitive programming
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int t;
-    std::cin >> t;
+    cin >> t;
     while (t--) {
-        int x, y;
-        std::cin >> x >> y;
+        long long x, y;
+        cin >> x >> y;
         if (x >= y) {
-            std::cout << "YES\n";
+            cout << "YES\n";
         } else {
-            std::cout << "NO\n";
+            cout << "NO\n";
         }
     }
+
     return 0;
 }

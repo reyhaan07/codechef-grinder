@@ -1,37 +1,40 @@
-#include <bits/stdc++.h> // Includes all standard libraries
-
-// Using the standard namespace to avoid writing std::
+#include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Problem Analysis:
+ * - Top 10 participants receive X each. Total = 10 * X.
+ * - Participants 11 to 100 (inclusive) receive Y each.
+ *   The number of participants from 11 to 100 is 100 - 11 + 1 = 90.
+ *   Total = 90 * Y.
+ * - Total Prize Money = 10 * X + 90 * Y.
+ * 
+ * Constraints:
+ * - T <= 1000
+ * - 1 <= Y <= X <= 1000
+ * - Max possible value: 10 * 1000 + 90 * 1000 = 100,000.
+ * - This fits well within a standard 32-bit integer, but using long long 
+ *   is good practice for competitive programming to prevent overflow.
+ */
+
 int main() {
-    // Optimize C++ standard streams for faster input/output.
-    // ios_base::sync_with_stdio(false) unties C++ streams from C standard streams.
-    // cin.tie(NULL) prevents cin from flushing cout before each input operation.
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T; // Declare an integer variable T to store the number of test cases.
-    cin >> T; // Read the number of test cases from standard input.
-
-    // Loop T times, once for each test case.
-    while (T--) {
-        int X, Y; // Declare integer variables X and Y to store the prize amounts.
-        cin >> X >> Y; // Read X and Y for the current test case.
-
-        // Calculate the total prize money.
-        // Top 10 participants receive X rupees each. Total for this group: 10 * X.
-        // Participants with rank 11 to 100 (which are 100 - 11 + 1 = 90 participants)
-        // receive Y rupees each. Total for this group: 90 * Y.
-        // The total prize money is the sum of these two amounts.
-        // Since X and Y are at most 1000, the maximum total prize money is
-        // (10 * 1000) + (90 * 1000) = 10000 + 90000 = 100000.
-        // This value fits comfortably within a standard 'int' type.
-        int total_prize_money = (10 * X) + (90 * Y);
-
-        // Output the calculated total prize money for the current test case,
-        // followed by a newline character as required.
-        cout << total_prize_money << "\n";
+    int t;
+    if (!(cin >> t)) return 0;
+    
+    while (t--) {
+        long long x, y;
+        cin >> x >> y;
+        
+        // Calculate total prize money
+        long long total_prize = (10 * x) + (90 * y);
+        
+        // Output the result
+        cout << total_prize << "\n";
     }
-
-    return 0; // Indicate successful program execution.
+    
+    return 0;
 }
