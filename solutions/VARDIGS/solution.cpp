@@ -1,33 +1,31 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
  * We are given a 2-digit integer X (10 <= X <= 99).
- * We need to determine if the tens digit and the units digit are different.
- * 
- * Logic:
- * Tens digit = X / 10
- * Units digit = X % 10
- * If (tens != units), output "Yes", else "No".
+ * A 2-digit integer is varied if its tens digit is different from its units digit.
+ * Let the number be represented as 10*a + b, where a is the tens digit and b is the units digit.
+ * We need to check if a != b.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int X;
     if (!(cin >> X)) return 0;
 
+    // Extract digits
     int tens = X / 10;
     int units = X % 10;
 
+    // Check if digits are different
     if (tens != units) {
-        cout << "Yes" << endl;
+        cout << "Yes" << "\n";
     } else {
-        cout << "No" << endl;
+        cout << "No" << "\n";
     }
 
     return 0;

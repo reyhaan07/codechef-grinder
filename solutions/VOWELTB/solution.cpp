@@ -3,10 +3,8 @@ using namespace std;
 
 /**
  * Problem: Is it a VOWEL or CONSONANT
- * The problem asks to identify if a given uppercase English alphabet is a vowel.
+ * The problem asks to identify if a given uppercase English alphabet is a vowel or consonant.
  * Vowels are defined as 'A', 'E', 'I', 'O', 'U'.
- * Time Complexity: O(1) per character
- * Space Complexity: O(1)
  */
 
 int main() {
@@ -17,7 +15,7 @@ int main() {
     char c;
     if (!(cin >> c)) return 0;
 
-    // Check if the character is one of the vowels
+    // Check if the character is one of the defined vowels
     if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
         cout << "Vowel" << "\n";
     } else {

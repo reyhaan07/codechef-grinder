@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 297,
+  "total_solved": 318,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -299,7 +299,28 @@
     "EXAMTIME",
     "MYSERVE",
     "KTTABLE",
-    "GLPR"
+    "GLPR",
+    "EQUALELE",
+    "CS2023_STK",
+    "MINWAGE",
+    "VOWELTB",
+    "AIANALYSE",
+    "ALGOFINALS",
+    "FLOW009",
+    "TYRES",
+    "MINFLIPS",
+    "WATERCOOLER1",
+    "PRESENTS",
+    "FLOW014",
+    "SUMTRIAN",
+    "PERFECTTRIO",
+    "BIN_BAT",
+    "IOI2024",
+    "VARDIGS",
+    "ELECTIONS",
+    "SALE",
+    "SWEETSHOP",
+    "MOZZ"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -2992,6 +3013,195 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-10-31 22:50:51"
+    },
+    {
+      "code": "EQUALELE",
+      "name": "Equal Elements",
+      "status": "Accepted",
+      "solution_id": "1384834617",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:51:18"
+    },
+    {
+      "code": "CS2023_STK",
+      "name": "CodeChef Streak",
+      "status": "Accepted",
+      "solution_id": "1384834620",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:51:45"
+    },
+    {
+      "code": "MINWAGE",
+      "name": "Minimum Wage",
+      "status": "Accepted",
+      "solution_id": "1384834628",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:52:26"
+    },
+    {
+      "code": "VOWELTB",
+      "name": "Is it a VOWEL or CONSONANT",
+      "status": "Accepted",
+      "solution_id": "1384834638",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:53:18"
+    },
+    {
+      "code": "AIANALYSE",
+      "name": "AI Analysing Code",
+      "status": "Accepted",
+      "solution_id": "1384834651",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:55:05"
+    },
+    {
+      "code": "ALGOFINALS",
+      "name": "Algomaniac Finals",
+      "status": "Accepted",
+      "solution_id": "1384834667",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:55:48"
+    },
+    {
+      "code": "FLOW009",
+      "name": "Total Expenses",
+      "status": "Accepted",
+      "solution_id": "1384834675",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:57:15"
+    },
+    {
+      "code": "TYRES",
+      "name": "Cars and Bikes",
+      "status": "Accepted",
+      "solution_id": "1384834703",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:58:01"
+    },
+    {
+      "code": "MINFLIPS",
+      "name": "Minimum number of Flips",
+      "status": "Accepted",
+      "solution_id": "1384834712",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:58:35"
+    },
+    {
+      "code": "WATERCOOLER1",
+      "name": "The Cooler Dilemma 1",
+      "status": "Accepted",
+      "solution_id": "1384834722",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 22:59:13"
+    },
+    {
+      "code": "PRESENTS",
+      "name": "Presents for Cheffina",
+      "status": "Accepted",
+      "solution_id": "1384834731",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:00:56"
+    },
+    {
+      "code": "FLOW014",
+      "name": "Grade The Steel",
+      "status": "Accepted",
+      "solution_id": "1384834750",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:02:13"
+    },
+    {
+      "code": "SUMTRIAN",
+      "name": "Sums in a Triangle",
+      "status": "Accepted",
+      "solution_id": "1384834758",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:02:47"
+    },
+    {
+      "code": "PERFECTTRIO",
+      "name": "Perfect Trio",
+      "status": "Accepted",
+      "solution_id": "1384834765",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:03:24"
+    },
+    {
+      "code": "BIN_BAT",
+      "name": "Binary Battles",
+      "status": "Accepted",
+      "solution_id": "1384834776",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:03:57"
+    },
+    {
+      "code": "IOI2024",
+      "name": "IOI 2024",
+      "status": "Accepted",
+      "solution_id": "1384834785",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:05:38"
+    },
+    {
+      "code": "VARDIGS",
+      "name": "Varied Digits",
+      "status": "Accepted",
+      "solution_id": "1384834801",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:06:02"
+    },
+    {
+      "code": "ELECTIONS",
+      "name": "Elections in Chefland",
+      "status": "Accepted",
+      "solution_id": "1384834806",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:06:29"
+    },
+    {
+      "code": "SALE",
+      "name": "Get Lowest Free",
+      "status": "Accepted",
+      "solution_id": "1384834808",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:07:13"
+    },
+    {
+      "code": "SWEETSHOP",
+      "name": "Sweets Shop",
+      "status": "Accepted",
+      "solution_id": "1384834811",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:07:54"
+    },
+    {
+      "code": "MOZZ",
+      "name": "Endless Appetizers",
+      "status": "Accepted",
+      "solution_id": "1384834816",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-10-31 23:09:34"
     }
   ]
 }

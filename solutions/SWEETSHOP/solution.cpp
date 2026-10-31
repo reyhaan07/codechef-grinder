@@ -9,7 +9,7 @@ using namespace std;
  * - Cost of one jalebi: 20
  * 
  * Calculation:
- * 1. Total cost of laddus = 10 * N
+ * 1. Money spent on laddus = 10 * N
  * 2. Remaining money = X - (10 * N)
  * 3. Number of jalebis = Remaining money / 20 (integer division)
  * 
@@ -18,26 +18,23 @@ using namespace std;
  * 1 <= N <= 10
  * 10 * N <= X
  * 
- * Time Complexity: O(1) per test case
- * Space Complexity: O(1)
+ * Since the problem statement implies a single test case per run based on the 
+ * input format description, but asks to handle multiple test cases if provided,
+ * we will implement the standard competitive programming structure.
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case structure based on the 
-    // sample input format, but standard competitive programming practice 
-    // often involves reading until EOF or a specified number of test cases.
-    // Given the prompt asks to "Handle multiple test cases", we implement the loop.
-    
+    // The problem description mentions "For each test case", 
+    // implying we should check if there are multiple inputs.
+    // Given the constraints and format, we read X and N.
     int X, N;
-    // Reading input until EOF to handle multiple test cases if provided
     while (cin >> X >> N) {
-        long long remaining_money = (long long)X - (10LL * N);
-        long long jalebis = remaining_money / 20LL;
-        
+        int remaining_money = X - (10 * N);
+        int jalebis = remaining_money / 20;
         cout << jalebis << "\n";
     }
 

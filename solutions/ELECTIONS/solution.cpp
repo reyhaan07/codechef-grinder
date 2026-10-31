@@ -4,21 +4,20 @@ using namespace std;
 /**
  * Problem Analysis:
  * There are 101 citizens. A party wins if they receive strictly more than 50 votes.
- * Since 50 * 2 = 100, and the total is 101, it is mathematically impossible for 
- * two parties to have > 50 votes simultaneously.
- * We simply check if X_A > 50, X_B > 50, or X_C > 50.
- * If none satisfy this, output NOTA.
+ * Since the total number of votes is 101, at most one party can have > 50 votes.
+ * We simply check each party's vote count against the condition > 50.
+ * If none satisfy the condition, output "NOTA".
  */
 
 void solve() {
-    long long XA, XB, XC;
-    if (!(cin >> XA >> XB >> XC)) return;
+    int xa, xb, xc;
+    if (!(cin >> xa >> xb >> xc)) return;
 
-    if (XA > 50) {
+    if (xa > 50) {
         cout << "A" << "\n";
-    } else if (XB > 50) {
+    } else if (xb > 50) {
         cout << "B" << "\n";
-    } else if (XC > 50) {
+    } else if (xc > 50) {
         cout << "C" << "\n";
     } else {
         cout << "NOTA" << "\n";

@@ -2,26 +2,21 @@
 using namespace std;
 
 /**
- * Problem Analysis:
- * This is a classic dynamic programming problem. We are given a triangle of numbers
- * and need to find the path from top to bottom that maximizes the sum.
+ * Problem: Sums in a Triangle
+ * Approach: Dynamic Programming
+ * We can solve this by working backwards from the second-to-last row to the top.
+ * For each element at (i, j), the maximum path sum starting from this position
+ * is the value at (i, j) plus the maximum of the path sums starting from 
+ * (i+1, j) and (i+1, j+1).
  * 
- * Let dp[i][j] be the maximum path sum starting from the top to the element at row i, column j.
- * The recurrence relation is:
- * dp[i][j] = a[i][j] + max(dp[i-1][j-1], dp[i-1][j])
- * 
- * Alternatively, we can solve it bottom-up to save space and simplify logic:
- * Let dp[i][j] be the maximum path sum from (i, j) to the base.
- * dp[i][j] = a[i][j] + max(dp[i+1][j], dp[i+1][j+1])
- * 
- * Given N < 100, an O(N^2) approach per test case is perfectly efficient.
+ * Time Complexity: O(N^2) per test case, where N is the number of rows.
+ * Space Complexity: O(N^2) to store the triangle.
  */
 
 void solve() {
     int N;
     if (!(cin >> N)) return;
 
-    // Using a 2D vector to store the triangle
     vector<vector<int>> triangle(N, vector<int>(N));
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j <= i; ++j) {
@@ -29,21 +24,21 @@ void solve() {
         }
     }
 
-    // Bottom-up DP approach
-    // We modify the triangle in-place to store the max path sums
     // Start from the second to last row and move upwards
     for (int i = N - 2; i >= 0; --i) {
         for (int j = 0; j <= i; ++j) {
+            // The value at (i, j) is updated to be the max path sum
+            // from this point to the bottom.
             triangle[i][j] += max(triangle[i + 1][j], triangle[i + 1][j + 1]);
         }
     }
 
-    // The result is at the top of the triangle
+    // The result is stored at the top of the triangle
     cout << triangle[0][0] << "\n";
 }
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O for large input/output data
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

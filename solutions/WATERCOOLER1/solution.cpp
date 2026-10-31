@@ -3,18 +3,19 @@ using namespace std;
 
 /**
  * Problem Analysis:
+ * Renting cost = X * M
+ * Purchasing cost = Y
  * Chef rents if (X * M) < Y.
- * Otherwise, he purchases (NO).
  * 
  * Constraints:
- * X, M <= 10^4, Y <= 10^8.
- * X * M can be up to 10^8, which fits in a standard 32-bit signed integer.
- * However, using long long is safer practice in competitive programming to prevent
- * potential overflow if constraints were slightly larger.
+ * X, M <= 10^4, so X * M <= 10^8.
+ * Y <= 10^8.
+ * Using long long for the calculation is safe to prevent any potential overflow,
+ * although standard 32-bit int would technically suffice for 10^8.
  */
 
 int main() {
-    // Fast I/O for performance
+    // Optimize standard I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -25,11 +26,11 @@ int main() {
         long long x, y, m;
         cin >> x >> y >> m;
         
-        // Calculate total cost of renting
-        long long rent_cost = x * m;
+        // Calculate total renting cost
+        long long total_renting_cost = x * m;
         
-        // Check if renting is strictly less than purchasing
-        if (rent_cost < y) {
+        // Check if renting is strictly cheaper than purchasing
+        if (total_renting_cost < y) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

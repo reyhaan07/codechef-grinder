@@ -1,48 +1,55 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
- * Function to calculate the maximum streak of days with > 0 problems solved.
+ * Problem: CodeChef Streak (CS2023_STK)
+ * Approach:
+ * For each person, we iterate through their daily problem counts.
+ * We maintain a 'current_streak' counter that resets to 0 whenever a day has 0 problems.
+ * We maintain a 'max_streak' variable to track the highest streak encountered.
+ * Finally, we compare the max_streak of Om and Addy.
+ * 
+ * Time Complexity: O(N) per test case, where N is the number of days.
+ * Space Complexity: O(N) to store the input arrays (or O(1) if processed on the fly).
  */
-long long getMaxStreak(int n, const vector<long long>& problems) {
-    long long max_streak = 0;
-    long long current_streak = 0;
+
+int get_max_streak(int n, const vector<int>& arr) {
+    int max_s = 0;
+    int current_s = 0;
     for (int i = 0; i < n; ++i) {
-        if (problems[i] > 0) {
-            current_streak++;
+        if (arr[i] > 0) {
+            current_s++;
+            if (current_s > max_s) {
+                max_s = current_s;
+            }
         } else {
-            max_streak = max(max_streak, current_streak);
-            current_streak = 0;
+            current_s = 0;
         }
     }
-    max_streak = max(max_streak, current_streak);
-    return max_streak;
+    return max_s;
 }
 
 void solve() {
     int n;
     cin >> n;
-    vector<long long> om(n), addy(n);
+    vector<int> om(n), addy(n);
     for (int i = 0; i < n; ++i) cin >> om[i];
     for (int i = 0; i < n; ++i) cin >> addy[i];
 
-    long long om_max = getMaxStreak(n, om);
-    long long addy_max = getMaxStreak(n, addy);
+    int om_max = get_max_streak(n, om);
+    int addy_max = get_max_streak(n, addy);
 
     if (om_max > addy_max) {
-        cout << "Om" << endl;
+        cout << "Om" << "\n";
     } else if (addy_max > om_max) {
-        cout << "Addy" << endl;
+        cout << "Addy" << "\n";
     } else {
-        cout << "Draw" << endl;
+        cout << "Draw" << "\n";
     }
 }
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

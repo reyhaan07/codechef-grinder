@@ -2,22 +2,23 @@
 using namespace std;
 
 /**
- * Problem: Grade The Steel
- * Logic:
- * Condition 1: Hardness > 50
- * Condition 2: Carbon < 0.7
- * Condition 3: Tensile > 5600
+ * Problem Analysis:
+ * Conditions:
+ * C1: Hardness > 50
+ * C2: Carbon content < 0.7
+ * C3: Tensile strength > 5600
  * 
- * Grade 10: All 3 met
- * Grade 9: (1) and (2) met
- * Grade 8: (2) and (3) met
- * Grade 7: (1) and (3) met
- * Grade 6: Only 1 met
- * Grade 5: None met
+ * Grading:
+ * Grade 10: C1, C2, and C3 are true.
+ * Grade 9: C1 and C2 are true.
+ * Grade 8: C2 and C3 are true.
+ * Grade 7: C1 and C3 are true.
+ * Grade 6: Only one condition is true.
+ * Grade 5: None of the conditions are true.
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -28,19 +29,19 @@ int main() {
         double h, c, ts;
         cin >> h >> c >> ts;
 
-        bool cond1 = (h > 50);
-        bool cond2 = (c < 0.7);
-        bool cond3 = (ts > 5600);
+        bool c1 = (h > 50);
+        bool c2 = (c < 0.7);
+        bool c3 = (ts > 5600);
 
-        int count = (cond1 ? 1 : 0) + (cond2 ? 1 : 0) + (cond3 ? 1 : 0);
+        int count = (c1 ? 1 : 0) + (c2 ? 1 : 0) + (c3 ? 1 : 0);
 
-        if (cond1 && cond2 && cond3) {
+        if (c1 && c2 && c3) {
             cout << 10 << "\n";
-        } else if (cond1 && cond2) {
+        } else if (c1 && c2) {
             cout << 9 << "\n";
-        } else if (cond2 && cond3) {
+        } else if (c2 && c3) {
             cout << 8 << "\n";
-        } else if (cond1 && cond3) {
+        } else if (c1 && c3) {
             cout << 7 << "\n";
         } else if (count == 1) {
             cout << 6 << "\n";

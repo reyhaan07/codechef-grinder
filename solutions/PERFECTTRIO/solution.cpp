@@ -8,12 +8,13 @@ using namespace std;
  * 2. B = A + C
  * 3. C = A + B
  * 
- * Since the constraints are small (1 <= A, B, C <= 100), standard integer types
- * are sufficient. We check these three conditions for each test case.
+ * Given the constraints (1 <= A, B, C <= 100), standard integer types are sufficient.
+ * Time Complexity: O(T) where T is the number of test cases.
+ * Space Complexity: O(1) as we only use a few variables.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -24,7 +25,7 @@ int main() {
         long long a, b, c;
         cin >> a >> b >> c;
         
-        // Check if any one age is the sum of the other two
+        // Check the three conditions for a perfect group
         if ((a == b + c) || (b == a + c) || (c == a + b)) {
             cout << "YES" << "\n";
         } else {
