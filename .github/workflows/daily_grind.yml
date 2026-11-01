@@ -2,15 +2,19 @@ name: CodeChef Practice Auto-Grinder
 
 on:
   schedule:
-    # Sprint mode: every hour at :23 (GitHub may start scheduled runs late).
-    # Up to 25 problems per run x 24 runs, capped at 600/day (~1 submission per minute,
-    # never in bursts). Lower DAILY_TARGET_MAX / MAX_PROBLEMS_PER_RUN to slow down.
-    - cron: '23 * * * *'
+    # 4 runs per day (IST = UTC + 5:30). No run ever starts another run.
+    # 1. Morning (~10:17 AM IST)
+    - cron: '47 4 * * *'
+    # 2. Afternoon (~02:34 PM IST)
+    - cron: '4 9 * * *'
+    # 3. Evening (~07:18 PM IST)
+    - cron: '48 13 * * *'
+    # 4. Late Night (~11:21 PM IST)
+    - cron: '51 17 * * *'
   workflow_dispatch: # Allows manual one-click trigger from GitHub Actions
 
 permissions:
   contents: write
-  actions: write   # lets a finished run start the next one (sprint chaining)
 
 concurrency:
   group: grind-and-commit
@@ -19,8 +23,8 @@ concurrency:
 jobs:
   grind-and-commit:
     runs-on: ubuntu-latest
-    # A run that hangs is killed long before the next hourly run is due.
-    timeout-minutes: 55
+    # Every run is kept under 30 minutes.
+    timeout-minutes: 30
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -48,18 +52,18 @@ jobs:
           # Override with a repository variable named CODECHEF_USERNAME if you fork this repo.
           CODECHEF_USERNAME: ${{ vars.CODECHEF_USERNAME || 'reyhaan_s' }}
           VERDICT_TIMEOUT_SECONDS: "120"
-          # Stop starting new problems after 45 min so the run always finishes and commits.
-          MAX_RUNTIME_MINUTES: "45"
+          # Stop starting new problems after 22 min so the run always finishes and commits.
+          MAX_RUNTIME_MINUTES: "22"
           # Skip the Gemini-written README per problem (halves Gemini requests during the sprint).
           # Set back to "true" afterwards to get full explanations again.
           GENERATE_EXPLANATIONS: "false"
           RANDOMIZE_BATCH: "true"
-          MIN_PROBLEMS_PER_RUN: "18"
-          MAX_PROBLEMS_PER_RUN: "25"
-          DAILY_TARGET_MIN: "400"
-          DAILY_TARGET_MAX: "600"
-          MIN_DELAY_SECONDS: "20"
-          MAX_DELAY_SECONDS: "45"
+          MIN_PROBLEMS_PER_RUN: "15"
+          MAX_PROBLEMS_PER_RUN: "20"
+          DAILY_TARGET_MIN: "60"
+          DAILY_TARGET_MAX: "80"
+          MIN_DELAY_SECONDS: "25"
+          MAX_DELAY_SECONDS: "50"
           LANGUAGE: "cpp"
           MIN_DIFFICULTY: "200"
           MAX_DIFFICULTY: "1400"
@@ -97,13 +101,3 @@ jobs:
           commit_user_name: "CodeChef Grinder Bot"
           commit_user_email: "actions@github.com"
           commit_author: "CodeChef Grinder Bot <actions@github.com>"
-
-      - name: Start the next run (sprint chaining)
-        # Starts another run immediately while problems are being solved, instead of
-        # waiting for the hourly schedule. Stops by itself when the daily cap is hit,
-        # nothing was solved, or Gemini quota ran out. Set the repository variable
-        # SPRINT_CHAIN to "false" to switch this off.
-        if: success() && steps.grind.outputs.continue == 'true' && vars.SPRINT_CHAIN != 'false'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run daily_grind.yml --repo "${GITHUB_REPOSITORY}" --ref "${GITHUB_REF_NAME}"

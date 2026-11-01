@@ -340,3 +340,31 @@ def test_solver_retries_overloaded_model_before_giving_up(monkeypatch):
     s.client = type("C", (), {"models": Models()})()
     s._generate_with_resilience("p")
     assert calls == ["gemini-3.1-flash-lite"] * 3
+
+
+def test_problem_with_submissions_disabled_is_skipped_not_fatal(env, monkeypatch):
+    from src.codechef_client import SubmissionsDisabled
+    probs = [{"code": "ANSLEAK", "name": "x"}, {"code": "B", "name": "b"}]
+    monkeypatch.setattr(env, "min_problems_per_run", 2)
+    client = FakeClient(probs, [SubmissionsDisabled("temporarily disabled"), AC])
+    run_with(monkeypatch, client, FakeSolver())  # must not sys.exit
+    db = read_db(env)
+    assert db["solved_codes"] == ["B"]
+    assert "ANSLEAK" not in db["failed_codes"]
+
+
+def test_submit_403_disabled_vs_auth(monkeypatch):
+    from src.codechef_client import SubmissionsDisabled
+
+    class Resp:
+        def __init__(self, code, text):
+            self.status_code, self.text = code, text
+
+    c = CodeChefClient(session_cookie="a=b")
+    monkeypatch.setattr(c, "get_csrf_token", lambda code: "t")
+    monkeypatch.setattr(c.http, "post", lambda *a, **k: Resp(403, '{"status":"error","message":"Submissions on this problem are temporarily disabled"}'))
+    with pytest.raises(SubmissionsDisabled):
+        c.submit_solution("ANSLEAK", "x")
+    monkeypatch.setattr(c.http, "post", lambda *a, **k: Resp(403, "Forbidden"))
+    with pytest.raises(CodeChefAuthError):
+        c.submit_solution("ANSLEAK", "x")

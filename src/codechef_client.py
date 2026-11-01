@@ -27,6 +27,10 @@ class VerdictTimeout(TimeoutError):
         self.solution_id = solution_id
 
 
+class SubmissionsDisabled(RuntimeError):
+    """CodeChef has temporarily disabled submissions for this one problem."""
+
+
 _AUTH_HINTS = ("login", "log in", "logged in", "sign in", "unauthori", "session expired")
 
 
@@ -175,8 +179,12 @@ class CodeChefClient:
 
         response = self.http.post(self.API_SUBMIT, data=payload, headers=headers, timeout=20)
         if response.status_code in (401, 403):
+            body = response.text[:300]
+            # e.g. 403 {"status":"error","message":"Submissions on this problem are temporarily disabled"}
+            if "disabled" in body.lower() and "problem" in body.lower():
+                raise SubmissionsDisabled(f"{problem_code}: {body}")
             raise CodeChefAuthError(
-                f"CodeChef rejected the session [HTTP {response.status_code}]: {response.text[:200]}"
+                f"CodeChef rejected the session [HTTP {response.status_code}]: {body}"
             )
         if response.status_code != 200:
             raise RuntimeError(f"Submission failed [HTTP {response.status_code}]: {response.text[:300]}")
