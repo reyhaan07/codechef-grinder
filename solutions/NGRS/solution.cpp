@@ -3,14 +3,13 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The grading logic is defined as follows:
- * 1. If attendance (X) < 50, grade is 'Z'.
- * 2. Else if marks (Y) < 50, grade is 'F'.
- * 3. Otherwise, grade is 'A'.
+ * - Grade Z: Attendance (X) < 50
+ * - Grade F: Attendance (X) >= 50 AND Marks (Y) < 50
+ * - Grade A: Otherwise (Attendance >= 50 AND Marks >= 50)
  * 
- * Constraints: 1 <= X, Y <= 100.
- * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1).
+ * Constraints: 1 <= T <= 10^4, 1 <= X, Y <= 100
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
  */
 
 int main() {

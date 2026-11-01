@@ -6,9 +6,10 @@ using namespace std;
  * Logic:
  * Area = L * B
  * Perimeter = 2 * (L + B)
- * Compare Area and Perimeter and output accordingly.
- * Constraints: L, B <= 1000. Area and Perimeter will fit in standard int,
- * but using long long is safe practice for competitive programming.
+ * Compare Area and Perimeter and output the result accordingly.
+ * Constraints: 1 <= L, B <= 1000.
+ * Max Area = 1,000,000. Max Perimeter = 4,000.
+ * Standard 'int' is sufficient, but 'long long' is used for safety.
  */
 
 int main() {
@@ -17,10 +18,6 @@ int main() {
     cin.tie(NULL);
 
     long long L, B;
-    
-    // The problem description implies reading L and B.
-    // Based on standard CodeChef patterns for this specific problem, 
-    // it reads L and B directly.
     if (!(cin >> L >> B)) return 0;
 
     long long area = L * B;
@@ -33,7 +30,7 @@ int main() {
         cout << "Peri" << "\n";
         cout << peri << "\n";
     } else {
-        // If equal, print "Eq" and the value (either area or peri)
+        // If equal, print "Eq" and the value
         cout << "Eq" << "\n";
         cout << area << "\n";
     }

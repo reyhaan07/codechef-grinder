@@ -13,19 +13,18 @@ using namespace std;
  */
 
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int A, B, C;
-    // The problem description implies a single test case input format,
-    // but we structure it to handle the input as specified.
-    if (cin >> A >> B >> C) {
-        if (A == B || A == C || B == C) {
-            cout << "YES" << "\n";
-        } else {
-            cout << "NO" << "\n";
-        }
+    int a, b, c;
+    if (!(cin >> a >> b >> c)) return 0;
+
+    // Check if any two socks have the same color
+    if (a == b || a == c || b == c) {
+        cout << "YES" << "\n";
+    } else {
+        cout << "NO" << "\n";
     }
 
     return 0;

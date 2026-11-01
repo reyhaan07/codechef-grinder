@@ -4,30 +4,41 @@ using namespace std;
 /**
  * Problem Analysis:
  * We have three problems with points A, B, and C.
- * All three problems must be solved.
- * A draw occurs if the sum of points for one player equals the sum of points for the other.
- * Let the total sum be S = A + B + C.
+ * A draw occurs if the sum of points of one player equals the sum of points of the other.
+ * Since all problems must be solved, the total sum of points is S = A + B + C.
  * For a draw to occur, one player must have S/2 points.
- * This implies:
- * 1. S must be even (S % 2 == 0).
- * 2. It must be possible to form S/2 using a subset of {A, B, C}.
+ * This is only possible if S is even and there exists a subset of {A, B, C} that sums to S/2.
  * 
- * Since there are only three numbers, the possible subsets are:
- * - One number: A, B, or C
- * - Two numbers: A+B, A+C, or B+C
+ * Let the three values be sorted such that x <= y <= z.
+ * The possible sums for one player are:
+ * 1. x
+ * 2. y
+ * 3. z
+ * 4. x + y
+ * 5. x + z
+ * 6. y + z
  * 
- * If any of these equal S/2, then the remaining numbers will also sum to S/2, resulting in a draw.
- * Mathematically, if A + B = C, then A + B = S/2.
- * Similarly, if A + C = B or B + C = A, a draw is possible.
+ * A draw occurs if any of these equal the remaining sum.
+ * Specifically:
+ * - x + y = z
+ * - x + z = y (impossible since x, y, z > 0 and x <= y <= z)
+ * - y + z = x (impossible since x, y, z > 0 and x <= y <= z)
+ * 
+ * Thus, the condition for a draw is simply that the sum of the two smaller numbers 
+ * equals the largest number, or any combination where one subset equals the sum of the others.
+ * Mathematically, this is equivalent to checking if:
+ * A + B == C OR A + C == B OR B + C == A.
  */
 
 void solve() {
-    long long a, b, c;
-    if (!(cin >> a >> b >> c)) return;
-
-    // Check if any single problem is equal to the sum of the other two.
-    // This is equivalent to checking if the largest number equals the sum of the other two.
-    if ((a + b == c) || (a + c == b) || (b + c == a)) {
+    long long arr[3];
+    cin >> arr[0] >> arr[1] >> arr[2];
+    
+    sort(arr, arr + 3);
+    
+    // If the sum of the two smaller problems equals the largest, 
+    // one player can take the two smaller ones and the other takes the largest.
+    if (arr[0] + arr[1] == arr[2]) {
         cout << "YES" << "\n";
     } else {
         cout << "NO" << "\n";
@@ -38,9 +49,9 @@ int main() {
     // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
+    
     int t;
-    if (!(cin >> t)) return 0;
+    cin >> t;
     while (t--) {
         solve();
     }

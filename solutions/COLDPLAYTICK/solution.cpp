@@ -3,7 +3,7 @@ using namespace std;
 
 /**
  * Problem: Coldplay Tickets
- * Logic: You are buying tickets for yourself and N friends.
+ * Logic: You need to buy tickets for yourself (1 person) and N friends.
  * Total people = N + 1.
  * Cost per ticket = 5000.
  * Total cost = (N + 1) * 5000.
@@ -19,9 +19,9 @@ int main() {
 
     int n;
     // The problem description implies a single input N, 
-    // but standard competitive programming practice often involves 
-    // reading until EOF or handling a specific number of test cases.
-    // Based on the provided sample, we read N and output the result.
+    // but standard competitive programming practice handles 
+    // potential test cases if specified. Given the constraints, 
+    // we read N and calculate the result.
     if (cin >> n) {
         long long total_people = (long long)n + 1;
         long long total_cost = total_people * 5000;

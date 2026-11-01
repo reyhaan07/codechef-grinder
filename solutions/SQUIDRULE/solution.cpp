@@ -3,53 +3,48 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * There are N players. When player i is eliminated, A_i is added to the pool.
- * If we choose player k to be the winner, they are NOT eliminated.
- * Therefore, the prize pool will contain the sum of all A_i except A_k.
- * To maximize the prize pool, we need to choose k such that the sum of all A_i 
- * excluding A_k is maximized.
- * This is equivalent to (Total Sum of all A_i) - (Minimum A_i).
+ * There are N players. When player i is eliminated, A_i is added to the prize pool.
+ * If we choose player k to be the winner, all other players (N-1 players) must be eliminated.
+ * The prize pool will be the sum of A_i for all i except k.
+ * Prize(k) = (Sum of all A_i) - A_k.
+ * To maximize the prize, we need to minimize A_k.
+ * Therefore, the maximum prize is (Sum of all A_i) - (Minimum value in A).
  * 
- * Complexity:
- * Time: O(N) per test case, O(sum of N) total.
- * Space: O(1) auxiliary space (excluding input storage).
+ * Constraints:
+ * N <= 10^5, Sum of N <= 10^6.
+ * A_i <= 10^4.
+ * The total sum can be up to 10^5 * 10^4 = 10^9, which fits in a 32-bit signed integer,
+ * but using long long is safer and good practice for competitive programming.
  */
 
 void solve() {
-    int N;
-    cin >> N;
+    int n;
+    cin >> n;
     
-    long long total_sum = 0;
-    long long min_val = -1;
+    long long sum = 0;
+    int min_val = 20000; // Larger than max possible A_i (10^4)
     
-    for (int i = 0; i < N; ++i) {
-        long long val;
-        cin >> val;
-        total_sum += val;
-        
-        if (i == 0) {
-            min_val = val;
-        } else {
-            if (val < min_val) {
-                min_val = val;
-            }
+    for (int i = 0; i < n; ++i) {
+        int a;
+        cin >> a;
+        sum += a;
+        if (a < min_val) {
+            min_val = a;
         }
     }
     
-    // The winner gets the sum of all A_i except the one that would have been 
-    // added if the winner were eliminated. To maximize the prize, we exclude 
-    // the smallest value.
-    cout << (total_sum - min_val) << "\n";
+    // The winner gets the sum of all A_i excluding the minimum A_i
+    cout << (sum - min_val) << "\n";
 }
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int T;
-    cin >> T;
-    while (T--) {
+    int t;
+    cin >> t;
+    while (t--) {
         solve();
     }
     

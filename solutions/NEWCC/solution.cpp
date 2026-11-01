@@ -3,11 +3,10 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are given two integers X and Y representing the runtime on the old and new systems respectively.
- * A smaller runtime indicates a faster system.
- * - If X < Y, the old system is faster (Old).
- * - If X > Y, the new system is faster (New).
- * - If X == Y, they are equally fast (Same).
+ * We are given two integers X (old runtime) and Y (new runtime).
+ * - If X < Y, the old system is faster (smaller time means faster).
+ * - If Y < X, the new system is faster.
+ * - If X == Y, they are the same.
  * 
  * Constraints: 1 <= X, Y <= 3000.
  * Time Complexity: O(1) per test case.
@@ -19,9 +18,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int X, Y;
     // The problem description implies a single test case based on the input format,
-    // but standard competitive programming practice is to handle input as provided.
+    // but standard competitive programming practice often involves handling multiple
+    // test cases if specified. Given the constraints and format:
+    int X, Y;
     if (cin >> X >> Y) {
         if (X < Y) {
             cout << "Old" << "\n";

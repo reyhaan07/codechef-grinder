@@ -3,28 +3,24 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * There are 10 problems total.
+ * There are 10 problems in total.
  * Each problem is worth either 1 or 100 points.
- * Let x be the number of problems worth 100 points.
- * Let y be the number of problems worth 1 point.
+ * Let 'x' be the number of problems worth 100 points.
+ * Let 'y' be the number of problems worth 1 point.
  * Total problems: x + y <= 10
- * Total score: 100*x + 1*y = P
+ * Total score: P = 100 * x + 1 * y
  * 
  * From the equations:
- * y = P - 100*x
- * Substituting into the first:
- * x + (P - 100*x) <= 10
- * P - 99*x <= 10
- * P - 10 <= 99*x
  * x = P / 100 (integer division)
+ * y = P % 100
  * 
- * We need to check if this x satisfies the conditions:
- * 1. 0 <= x <= 10
- * 2. y = P - 100*x
- * 3. 0 <= y <= 10 - x
+ * Constraints:
+ * 1. x + y <= 10
+ * 2. x >= 0, y >= 0
+ * 3. Since there are only 10 problems, x can be at most 10.
  * 
- * If these hold, the total problems solved is x + y.
- * Otherwise, it is impossible, so output -1.
+ * If x + y <= 10, then the number of problems solved is x + y.
+ * Otherwise, the score is invalid, output -1.
  */
 
 int main() {
@@ -35,13 +31,13 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int P;
-        cin >> P;
+        int p;
+        cin >> p;
 
-        int x = P / 100;
-        int y = P % 100;
+        int x = p / 100; // Number of 100-point problems
+        int y = p % 100; // Number of 1-point problems
 
-        // Check if the number of problems solved is within the limit of 10
+        // Check if the total number of problems solved is within the limit of 10
         if (x + y <= 10) {
             cout << (x + y) << "\n";
         } else {

@@ -4,20 +4,20 @@ using namespace std;
 /**
  * Problem Analysis:
  * We need to find the number of pairs (A, B) such that 1 <= A, B <= N and A + B is odd.
- * A + B is odd if and only if one of the numbers is even and the other is odd.
+ * A + B is odd if and only if one number is even and the other is odd.
  * 
  * In the range [1, N]:
- * - Number of odd integers: ceil(N / 2) = (N + 1) / 2
- * - Number of even integers: floor(N / 2) = N / 2
+ * - Number of odd integers (count_odd) = ceil(N / 2.0) = (N + 1) / 2
+ * - Number of even integers (count_even) = floor(N / 2.0) = N / 2
  * 
- * Let 'odd_count' be the number of odd integers and 'even_count' be the number of even integers.
  * A pair (A, B) has an odd sum if:
- * 1. A is odd and B is even: There are (odd_count * even_count) such pairs.
- * 2. A is even and B is odd: There are (even_count * odd_count) such pairs.
+ * 1. A is odd and B is even: count_odd * count_even pairs
+ * 2. A is even and B is odd: count_even * count_odd pairs
  * 
- * Total pairs = 2 * (odd_count * even_count)
+ * Total pairs = 2 * (count_odd * count_even)
  * 
- * Constraints: N <= 10^9, so N*N can exceed 2^31-1. We must use long long.
+ * Constraints: N <= 10^9, so the result can be up to 2 * (5*10^8 * 5*10^8) = 5*10^17.
+ * This fits in a 64-bit integer (long long).
  */
 
 int main() {
@@ -31,11 +31,11 @@ int main() {
         long long n;
         cin >> n;
 
-        long long odd_count = (n + 1) / 2;
-        long long even_count = n / 2;
+        long long count_odd = (n + 1) / 2;
+        long long count_even = n / 2;
 
-        // The number of pairs is 2 * (odd * even)
-        long long result = 2 * odd_count * even_count;
+        // Total pairs = (odd, even) + (even, odd)
+        long long result = 2 * count_odd * count_even;
 
         cout << result << "\n";
     }

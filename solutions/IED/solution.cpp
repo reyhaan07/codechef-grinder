@@ -2,29 +2,32 @@
 using namespace std;
 
 /**
- * Problem: International Education Day!
- * The problem asks us to calculate the total sales for Chef (A * C) and Chefina (B * C)
- * and output the maximum of the two.
+ * Problem Analysis:
+ * Chef sells C items at price A, total = A * C.
+ * Chefina sells C items at price B, total = B * C.
+ * We need to find max(A * C, B * C).
+ * Since C is positive, this is equivalent to C * max(A, B).
  * 
- * Time Complexity: O(1) per test case.
- * Space Complexity: O(1).
+ * Constraints: 1 <= A, B, C <= 10.
+ * The maximum possible value is 10 * 10 = 100, which fits in a standard integer.
+ * Using long long is safe practice for competitive programming.
  */
 
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case based on the input format,
-    // but standard competitive programming practice often involves handling multiple 
-    // test cases if specified. Given the constraints and format, we read A, B, and C.
+    // The problem description implies a single test case based on the format,
+    // but standard competitive programming practice often involves reading 
+    // until EOF or a specific number of test cases. 
+    // Given the input format description, we read A, B, and C once.
     
     long long A, B, C;
     if (cin >> A >> B >> C) {
         long long chef_sales = A * C;
         long long chefina_sales = B * C;
         
-        // Output the maximum of the two sales
         cout << max(chef_sales, chefina_sales) << "\n";
     }
 
