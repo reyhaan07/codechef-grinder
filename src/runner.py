@@ -7,7 +7,7 @@ import time
 from pathlib import Path
 
 from src.config import config
-from src.codechef_client import CodeChefAuthError, CodeChefClient, VerdictTimeout
+from src.codechef_client import CodeChefAuthError, CodeChefClient, SubmissionsDisabled, VerdictTimeout
 from src.solver import CodeChefSolver
 from src import database as dbm
 
@@ -292,6 +292,9 @@ def run():
             try:
                 logger.info("Submitting to CodeChef IDE...")
                 solution_id = client.submit_solution(code, sol_code, config.language)
+            except SubmissionsDisabled as e:
+                logger.warning(f"Submissions are temporarily disabled for {code}; skipping it for now (not blacklisted): {e}")
+                break
             except CodeChefAuthError as e:
                 logger.error(f"CRITICAL: CodeChef session is not valid, aborting run without blacklisting anything: {e}")
                 dbm.save_database(config.data_file, db)
