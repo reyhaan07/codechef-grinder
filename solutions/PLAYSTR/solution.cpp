@@ -4,11 +4,13 @@ using namespace std;
 /**
  * Problem Analysis:
  * The operation allowed is swapping any two characters in string S.
- * Swapping characters allows us to rearrange the characters of S in any order.
- * Therefore, string S can be transformed into string R if and only if 
- * S and R contain the same number of '0's and the same number of '1's.
- * Since the strings are binary and have the same length N, we only need to 
- * check if the count of '1's in S is equal to the count of '1's in R.
+ * Swapping characters allows us to rearrange the string S into any permutation
+ * of its original characters.
+ * 
+ * Therefore, string S can be transformed into string R if and only if
+ * S and R have the same number of '0's and the same number of '1's.
+ * Since the strings are binary and have the same length N, checking if the
+ * count of '1's in S is equal to the count of '1's in R is sufficient.
  * 
  * Time Complexity: O(N) per test case.
  * Space Complexity: O(N) to store the strings.
@@ -39,7 +41,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

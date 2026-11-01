@@ -4,21 +4,21 @@ using namespace std;
 /**
  * Problem Analysis:
  * Chef starts with an income of 2^X.
- * For each expense i (from 1 to N), he spends 50% of the remaining amount.
- * This means after each expense, the remaining amount is halved.
+ * For each expense i (from 1 to N):
+ * - He spends 50% of the current remaining amount.
+ * - This is equivalent to dividing the current amount by 2.
  * 
- * Initial amount: 2^X
- * After 1st expense: (2^X) / 2 = 2^(X-1)
- * After 2nd expense: (2^(X-1)) / 2 = 2^(X-2)
- * ...
- * After Nth expense: 2^(X-N)
+ * After N expenses, the remaining amount will be:
+ * (2^X) / (2^N) = 2^(X - N)
  * 
- * Since N < X, the result will always be a positive integer.
- * We can compute 2^(X-N) using bitwise shift: 1 << (X - N).
+ * Constraints:
+ * 1 <= N < X <= 20
+ * Since X is at most 20, 2^20 is approximately 10^6, which fits in a standard integer.
+ * Using long long is safe and good practice.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -28,10 +28,12 @@ int main() {
         int n, x;
         cin >> n >> x;
 
-        // The remaining amount after N expenses is 2^X / 2^N = 2^(X-N)
-        // Using long long to ensure no overflow, though constraints (X <= 20) 
-        // fit within a standard 32-bit integer.
-        long long savings = (1LL << (x - n));
+        // The initial income is 2^X.
+        // After each expense, the remaining amount is halved.
+        // After N expenses, the remaining amount is 2^X / 2^N = 2^(X-N).
+        
+        // Calculate 2^(X-N) using bitwise shift
+        long long savings = 1LL << (x - n);
         
         cout << savings << "\n";
     }

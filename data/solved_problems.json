@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 347,
+  "total_solved": 363,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -349,7 +349,23 @@
     "OLYRANK",
     "HARDBET",
     "JCOINS",
-    "CHOLY"
+    "CHOLY",
+    "FIZZBUZZ2301",
+    "LUCLO",
+    "PRIMEREVERSE",
+    "CHEAT",
+    "CRICKETUDYAM",
+    "PRIMEDICE",
+    "P1149",
+    "CUTPAPER",
+    "DISTINCTCOL",
+    "PLAYSTR",
+    "ELHP",
+    "CUTOFF",
+    "BALLBOX",
+    "EXPENSES",
+    "WEIGHTLIFT",
+    "ICECONE6"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -3493,6 +3509,150 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-01 13:19:10"
+    },
+    {
+      "code": "FIZZBUZZ2301",
+      "name": "Fan Poll",
+      "status": "Accepted",
+      "solution_id": "1385149894",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:31:26"
+    },
+    {
+      "code": "LUCLO",
+      "name": "Lucky Clover",
+      "status": "Accepted",
+      "solution_id": "1385150018",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:32:06"
+    },
+    {
+      "code": "PRIMEREVERSE",
+      "name": "Prime Reversal",
+      "status": "Accepted",
+      "solution_id": "1385150179",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:32:52"
+    },
+    {
+      "code": "CHEAT",
+      "name": "Dracula Eats",
+      "status": "Accepted",
+      "solution_id": "1385150677",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:35:21"
+    },
+    {
+      "code": "CRICKETUDYAM",
+      "name": "Cricket Tournament",
+      "status": "Accepted",
+      "solution_id": "1385150935",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:37:31"
+    },
+    {
+      "code": "PRIMEDICE",
+      "name": "Hackerman",
+      "status": "Accepted",
+      "solution_id": "1385151285",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:38:20"
+    },
+    {
+      "code": "P1149",
+      "name": "Approximate Answer",
+      "status": "Accepted",
+      "solution_id": "1385151516",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:39:24"
+    },
+    {
+      "code": "CUTPAPER",
+      "name": "Paper Cutting",
+      "status": "Accepted",
+      "solution_id": "1385151728",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:40:19"
+    },
+    {
+      "code": "DISTINCTCOL",
+      "name": "Distinct Colors",
+      "status": "Accepted",
+      "solution_id": "1385151906",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:41:13"
+    },
+    {
+      "code": "PLAYSTR",
+      "name": "Playing with Strings",
+      "status": "Accepted",
+      "solution_id": "1385152079",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:42:07"
+    },
+    {
+      "code": "ELHP",
+      "name": "Election Hopes",
+      "status": "Accepted",
+      "solution_id": "1385152219",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:42:50"
+    },
+    {
+      "code": "CUTOFF",
+      "name": "Passing Marks",
+      "status": "Accepted",
+      "solution_id": "1385152321",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:43:28"
+    },
+    {
+      "code": "BALLBOX",
+      "name": "Balls and Boxes",
+      "status": "Accepted",
+      "solution_id": "1385152582",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:44:43"
+    },
+    {
+      "code": "EXPENSES",
+      "name": "Expense List",
+      "status": "Accepted",
+      "solution_id": "1385152747",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:45:37"
+    },
+    {
+      "code": "WEIGHTLIFT",
+      "name": "Weightlifting",
+      "status": "Accepted",
+      "solution_id": "1385152982",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:46:46"
+    },
+    {
+      "code": "ICECONE6",
+      "name": "IceCream Cones",
+      "status": "Accepted",
+      "solution_id": "1385153158",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-01 18:47:38"
     }
   ]
 }

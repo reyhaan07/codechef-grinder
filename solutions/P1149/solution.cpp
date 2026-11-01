@@ -10,20 +10,17 @@ using namespace std;
  */
 
 int main() {
-    // Fast I/O setup
+    // Optimize standard I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single line of input per test case.
-    // Although the prompt mentions "Handle multiple test cases", the problem 
-    // description provided only specifies one line of input. 
-    // We will read X, Y, and K and output the result.
-    
     long long X, Y, K;
+    // The problem description implies a single line of input for one test case.
+    // If there were multiple test cases, we would wrap this in a loop.
     if (cin >> X >> Y >> K) {
         // Calculate absolute difference
         long long diff = abs(X - Y);
-        
+
         // Check condition |X - Y| <= K
         if (diff <= K) {
             cout << "Yes" << "\n";

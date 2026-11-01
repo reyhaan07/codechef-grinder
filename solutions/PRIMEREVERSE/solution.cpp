@@ -7,46 +7,43 @@ using namespace std;
  * 
  * Key Insight:
  * 1. If we can reverse a substring of length 2, we can swap any two adjacent elements.
- *    (Since 2 is prime).
- * 2. If we can swap any two adjacent elements, we can perform any permutation of the string.
- * 3. However, we only have prime lengths. Can we swap any two adjacent elements?
- *    - If we have a substring of length 2, we can swap A[i] and A[i+1].
- *    - If we have a substring of length 3, we can reverse A[i...i+2].
- *      Reversing A[i...i+2] is equivalent to swapping A[i] and A[i+2].
+ *    Proof: To swap A[i] and A[i+1], we can use a sequence of operations.
+ *    Actually, we don't even need that. Note that if we can reverse a substring of length 2,
+ *    we can swap adjacent elements. If we can swap adjacent elements, we can achieve any 
+ *    permutation of the string.
+ * 2. Can we always swap adjacent elements?
+ *    - If we have a prime X=2, we can swap adjacent elements.
+ *    - If we have a prime X=3, we can reverse A[i...i+2].
+ *    - Even if we only have larger primes, we can swap any two elements.
+ *    - Specifically, any permutation can be reached if we can swap adjacent elements.
+ *    - With prime lengths, we can swap any two elements because we can effectively move 
+ *      elements around.
+ * 3. Therefore, the only invariant is the count of '0's and '1's in the string.
+ *    If string A has the same number of '0's and '1's as string B, we can transform A to B.
  * 
- * Since we can swap adjacent elements (using length 2) and swap elements at distance 2 (using length 3),
- * we can effectively move any '1' to any position and any '0' to any position.
- * 
- * Wait, is length 2 always available? 
- * If N >= 2, we can use 2. If N=1, we can't do anything.
- * Actually, the problem implies we can perform these operations any number of times.
- * With prime lengths 2 and 3, we can generate any permutation of the string because 
- * the greatest common divisor of (2, 3) is 1.
- * 
- * Therefore, the condition for A to be transformable into B is simply that 
- * both strings must have the same number of '1's and the same number of '0's.
+ * Complexity:
+ * Time: O(N) per test case to count the characters.
+ * Space: O(N) to store the strings.
  */
 
 void solve() {
-    int n;
-    cin >> n;
-    string a, b;
-    cin >> a >> b;
+    int N;
+    cin >> N;
+    string A, B;
+    cin >> A >> B;
 
-    int countA1 = 0, countA0 = 0;
-    int countB1 = 0, countB0 = 0;
+    int countA0 = 0, countA1 = 0;
+    int countB0 = 0, countB1 = 0;
 
-    for (char c : a) {
-        if (c == '1') countA1++;
-        else countA0++;
+    for (int i = 0; i < N; ++i) {
+        if (A[i] == '0') countA0++;
+        else countA1++;
+
+        if (B[i] == '0') countB0++;
+        else countB1++;
     }
 
-    for (char c : b) {
-        if (c == '1') countB1++;
-        else countB0++;
-    }
-
-    if (countA1 == countB1 && countA0 == countB0) {
+    if (countA0 == countB0 && countA1 == countB1) {
         cout << "YES" << "\n";
     } else {
         cout << "NO" << "\n";
@@ -58,9 +55,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--) {
+    int T;
+    cin >> T;
+    while (T--) {
         solve();
     }
     return 0;

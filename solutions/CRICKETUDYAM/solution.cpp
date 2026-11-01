@@ -3,20 +3,23 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * In a knockout tournament with N teams, every match results in exactly one team being knocked out.
- * To declare a winner, N-1 teams must be knocked out.
- * Since each match eliminates exactly one team, the total number of matches played 
- * in any knockout tournament with N teams is always exactly N - 1.
+ * In a knockout tournament with N teams, each match eliminates exactly one team.
+ * To declare a winner, N-1 teams must be eliminated.
+ * Therefore, every knockout tournament with N teams will result in exactly N-1 matches.
  * 
- * The problem asks if it is possible for the tournament to be "interesting", 
- * meaning at least M matches are played.
- * Since the number of matches is fixed at N - 1, the condition is:
- * Is (N - 1) >= M?
+ * The problem asks if it is possible for the tournament to have AT LEAST M matches.
+ * Since every tournament with N teams results in exactly N-1 matches, the number of matches 
+ * is fixed at N-1.
+ * 
+ * Thus, the condition "at least M matches" is satisfied if and only if:
+ * N - 1 >= M
  * 
  * Constraints:
+ * 1 <= T <= 10^4
  * 1 <= N, M <= 100
- * Time Complexity: O(1) per test case.
- * Space Complexity: O(1).
+ * 
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
  */
 
 int main() {
@@ -30,9 +33,9 @@ int main() {
         long long n, m;
         cin >> n >> m;
 
-        // The total number of matches in a knockout tournament with N teams is always N - 1.
-        // We need to check if N - 1 >= M.
-        if ((n - 1) >= m) {
+        // The number of matches in a knockout tournament with N teams is always N-1.
+        // We check if N-1 >= M.
+        if (n - 1 >= m) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

@@ -10,13 +10,17 @@ using namespace std;
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
+    // The problem description implies a single test case based on the input format,
+    // but standard competitive programming practice often involves reading until EOF
+    // or handling a specific number of test cases. Given the description:
+    // "The only line of input contains two space-separated integers X and Y"
+    
     long long X, Y;
     if (cin >> X >> Y) {
-        // Check if Chef's votes are at least double Chefu's votes
         if (X >= 2 * Y) {
             cout << "Yes" << "\n";
         } else {

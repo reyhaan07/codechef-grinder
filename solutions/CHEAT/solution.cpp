@@ -5,21 +5,39 @@ using namespace std;
  * Problem Analysis:
  * Today is Monday (Day 1).
  * Tuesday is Day 2.
- * Tuesdays occur on days 2, 9, 16, 23, ...
- * This is an arithmetic progression: a_k = 2 + (k-1) * 7.
- * We need to find the largest k such that 2 + (k-1) * 7 <= N.
- * (k-1) * 7 <= N - 2
- * k - 1 <= (N - 2) / 7
- * k <= (N - 2) / 7 + 1
+ * The cycle of Tuesdays occurs every 7 days:
+ * Day 2, Day 9, Day 16, Day 23, ...
+ * 
+ * We want to find how many Tuesdays occur in the range [1, N].
+ * This is equivalent to finding how many integers k >= 0 exist such that:
+ * 2 + 7*k <= N
+ * 7*k <= N - 2
+ * k <= (N - 2) / 7
+ * 
+ * Since k starts from 0, the number of Tuesdays is the count of such k values,
+ * which is floor((N - 2) / 7) + 1, provided N >= 2.
+ * If N < 2, the answer is 0.
+ * 
+ * Alternatively, a simple way to calculate this is (N - 1) / 7.
+ * Let's verify:
+ * N=1: (1-1)/7 = 0
+ * N=2: (2-1)/7 = 0 (Wait, this formula gives 0, but answer should be 1)
+ * Let's re-evaluate:
+ * N=1: 0
+ * N=2: 1
+ * N=8: 1
+ * N=9: 2
+ * The formula is floor((N - 2) / 7) + 1 for N >= 2.
+ * Or more simply: (N - 2) / 7 + 1 if N >= 2 else 0.
  */
 
 int main() {
-    // Optimize standard I/O operations
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
-    if (!(cin >> t)) return 0;
+    cin >> t;
     while (t--) {
         int n;
         cin >> n;
@@ -27,11 +45,11 @@ int main() {
         if (n < 2) {
             cout << 0 << "\n";
         } else {
-            // Using integer division, (n - 2) / 7 gives the number of full 7-day 
-            // cycles after the first Tuesday. Adding 1 accounts for the first Tuesday.
+            // The first Tuesday is on day 2.
+            // Subsequent Tuesdays are on 2+7, 2+14, etc.
+            // Number of Tuesdays = 1 + (N - 2) / 7
             cout << (n - 2) / 7 + 1 << "\n";
         }
     }
-    
     return 0;
 }

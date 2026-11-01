@@ -4,17 +4,14 @@ using namespace std;
 /**
  * Problem Analysis:
  * Chef has N clovers.
- * Exactly one is a four-leaf clover.
- * The remaining (N - 1) are three-leaf clovers.
- * Total leaves = (1 * 4) + ((N - 1) * 3)
- * Total leaves = 4 + 3N - 3
- * Total leaves = 3N + 1
+ * Exactly one clover has 4 leaves.
+ * The remaining (N - 1) clovers have 3 leaves each.
+ * Total leaves = 4 + (N - 1) * 3
  * 
- * Constraints: 1 <= N <= 10.
- * The formula 3N + 1 works for all N >= 1.
- * For N=1: 3(1) + 1 = 4. Correct.
- * For N=5: 3(5) + 1 = 16. Correct.
- * For N=10: 3(10) + 1 = 31. Correct.
+ * Constraints: 1 <= N <= 10
+ * The formula works for N=1: 4 + (1-1)*3 = 4 + 0 = 4. Correct.
+ * Time Complexity: O(1) per test case.
+ * Space Complexity: O(1).
  */
 
 int main() {
@@ -22,14 +19,14 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int N;
-    // The problem description implies a single input N per run, 
-    // but standard competitive programming practice often involves 
-    // reading until EOF or handling a single case. 
-    // Based on the prompt "The only line of input will contain a single integer N",
-    // we read N once.
+    // The problem description implies a single integer N per input.
+    // While the prompt mentions "Handle multiple test cases", the problem 
+    // description says "The only line of input will contain a single integer N".
+    // I will implement it to read N directly as per the problem description.
+    
+    long long N;
     if (cin >> N) {
-        long long total_leaves = 3LL * N + 1;
+        long long total_leaves = 4 + (N - 1) * 3;
         cout << total_leaves << "\n";
     }
 

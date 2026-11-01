@@ -3,11 +3,12 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Alice and Bob roll dice with values A and B (1 <= A, B <= 6).
- * The sum S = A + B ranges from 2 to 12.
+ * Alice and Bob roll a die (1-6).
+ * Sum S = A + B.
+ * Range of S is [2, 12].
  * Alice wins if S is prime.
- * Prime numbers in the range [2, 12] are: 2, 3, 5, 7, 11.
- * We can simply check if the sum is one of these values.
+ * Prime numbers in range [2, 12] are: 2, 3, 5, 7, 11.
+ * Bob wins otherwise (S = 4, 6, 8, 9, 10, 12).
  */
 
 bool is_prime(int n) {
@@ -19,7 +20,7 @@ bool is_prime(int n) {
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

@@ -4,25 +4,22 @@ using namespace std;
 /**
  * Problem Analysis:
  * We have N types of colors, with A_i balls of color i.
- * We need to place these balls into boxes such that no box contains two balls of the same color.
+ * We need to place balls into boxes such that no box contains two balls of the same color.
+ * This means for any color i, all A_i balls must be placed in distinct boxes.
+ * Therefore, if we have A_i balls of color i, we need at least A_i boxes.
+ * Since this must hold for all colors, the minimum number of boxes required is 
+ * the maximum value among all A_i. 
  * 
- * Let M be the maximum number of balls of any single color, i.e., M = max(A_1, A_2, ..., A_N).
- * If we have M balls of a specific color, we must have at least M boxes to ensure that 
- * each of those M balls is in a different box.
- * 
- * Conversely, if we have M boxes, we can always distribute the balls such that no box 
- * contains two balls of the same color. We can do this by placing the balls of each color 
- * into distinct boxes. Since no color has more than M balls, we will never run out of 
- * boxes for any color.
- * 
- * Therefore, the minimum number of boxes required is exactly the maximum value among A_i.
+ * If we have max(A_i) boxes, we can distribute the balls such that no box 
+ * contains two balls of the same color by using a cyclic assignment or 
+ * simply filling boxes greedily.
  * 
  * Time Complexity: O(N) per test case.
  * Space Complexity: O(1) auxiliary space (excluding input storage).
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -32,16 +29,16 @@ int main() {
         int n;
         cin >> n;
         
-        long long max_balls = 0;
+        long long max_val = 0;
         for (int i = 0; i < n; ++i) {
             long long a;
             cin >> a;
-            if (a > max_balls) {
-                max_balls = a;
+            if (a > max_val) {
+                max_val = a;
             }
         }
         
-        cout << max_balls << "\n";
+        cout << max_val << "\n";
     }
     
     return 0;

@@ -3,22 +3,20 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have N students with distinct scores A_i.
+ * We have N students with distinct scores.
  * Exactly X students pass the test.
  * A student passes if their score > passing_mark.
- * We want the maximum possible passing_mark.
+ * To maximize the passing_mark, we need to find the X-th highest score.
+ * Let the sorted scores in descending order be S_1 > S_2 > ... > S_N.
+ * If X students pass, the students with scores S_1, S_2, ..., S_X pass.
+ * The student with the lowest passing score among these is S_X.
+ * For this student to pass, the passing_mark must be strictly less than S_X.
+ * To maximize the passing_mark, we set it to S_X - 1.
  * 
- * To have exactly X students pass, we need the X students with the highest 
- * scores to be the ones who pass.
- * If we sort the scores in descending order: S_1 > S_2 > ... > S_N.
- * The students who pass are the ones with scores S_1, S_2, ..., S_X.
- * The student who barely passed is the one with the X-th highest score (S_X).
- * Any score P such that S_X > P >= S_{X+1} (if X < N) would result in exactly X students passing.
- * To maximize P, we choose P = S_X - 1.
- * 
- * If X = N, all students pass. The condition is that all scores must be > P.
- * The smallest score is S_N. So we need S_N > P. The maximum P is S_N - 1.
- * Since the problem constraints say A_i >= 1, if S_N = 1, P could be 0.
+ * Example 2: 4 students, 1 passes. Scores: 5, 1, 7, 4.
+ * Sorted descending: 7, 5, 4, 1.
+ * X=1, so the top student (7) passes.
+ * Passing mark must be < 7. Max integer is 6.
  */
 
 void solve() {
@@ -29,17 +27,13 @@ void solve() {
         cin >> A[i];
     }
 
-    // Sort in descending order to easily pick the X-th highest score
+    // Sort in descending order
     sort(A.begin(), A.end(), greater<int>());
 
-    // The X-th student (index X-1) is the one with the lowest score among those who passed.
-    // Let this score be S_X.
-    // To have exactly X students pass, the passing mark P must satisfy:
-    // P < S_X AND P >= S_{X+1} (if X < N).
-    // The maximum such integer P is S_X - 1.
-    
-    int passing_mark = A[X - 1] - 1;
-    cout << passing_mark << "\n";
+    // The X-th student (index X-1) is the one with the lowest score among those who pass.
+    // The passing mark must be strictly less than this score.
+    // Therefore, max passing mark = A[X-1] - 1.
+    cout << A[X - 1] - 1 << "\n";
 }
 
 int main() {

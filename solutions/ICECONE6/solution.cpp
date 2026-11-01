@@ -3,17 +3,13 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Initial amount of ice cream = X
- * Melting rate = Y grams per minute
- * Time elapsed = N minutes
- * Total melted = Y * N
- * Remaining ice cream = X - (Y * N)
- * 
- * Constraint: If the calculated remaining amount is less than 0, 
- * it means the ice cream has completely melted, so the result should be 0.
- * 
- * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1) as we only use a few variables.
+ * Initial ice cream: X
+ * Melting rate: Y grams per minute
+ * Time elapsed: N minutes
+ * Total melted: Y * N
+ * Remaining ice cream: X - (Y * N)
+ * Constraint: If X - (Y * N) < 0, the ice cream is gone, so the result is 0.
+ * Therefore, the result is max(0, X - Y * N).
  */
 
 int main() {
@@ -23,23 +19,23 @@ int main() {
 
     int t;
     if (!(cin >> t)) return 0;
-    
     while (t--) {
         long long x, y, n;
         cin >> x >> y >> n;
-        
+
         // Calculate total melted amount
         long long melted = y * n;
         
-        // Remaining amount is X - melted, but cannot be less than 0
+        // Calculate remaining amount
         long long remaining = x - melted;
-        
+
+        // If remaining is negative, it means all ice cream melted
         if (remaining < 0) {
             cout << 0 << "\n";
         } else {
             cout << remaining << "\n";
         }
     }
-    
+
     return 0;
 }
