@@ -3,13 +3,12 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The problem defines the "hardest" problem as the one with the minimum number of successful submissions.
- * We are given S_A, S_B, and S_C.
- * - If S_C is the minimum, Alice wins.
- * - If S_B is the minimum, Bob wins.
- * - If S_A is the minimum, it's a Draw.
+ * The "hardest" problem is defined as the one with the minimum number of successful submissions.
+ * We are given S_A, S_B, S_C.
+ * - If min(S_A, S_B, S_C) == S_C, Alice wins.
+ * - If min(S_A, S_B, S_C) == S_B, Bob wins.
+ * - If min(S_A, S_B, S_C) == S_A, it's a Draw.
  * 
- * Constraints: 1 <= S_A, S_B, S_C <= 100, all distinct.
  * Time Complexity: O(1) per test case.
  * Space Complexity: O(1).
  */

@@ -4,40 +4,43 @@ using namespace std;
 /**
  * Problem Analysis:
  * Tuzik has N coins and can choose between 1 and K people.
- * When he chooses 'i' people, the coins are divided equally among them.
- * The number of coins each person gets is floor(N / i).
- * The number of coins left for Tuzik is N % i.
- * We need to find the maximum value of (N % i) for all i in the range [1, K].
+ * When he chooses 'i' people, the coins are divided equally, and the remainder
+ * is N % i. Tuzik gets the remainder.
+ * We need to find the maximum value of (N % i) for all 1 <= i <= K.
  * 
- * Constraints:
- * T <= 50
- * N, K <= 10^5
+ * Mathematical Insight:
+ * For a fixed N, we want to maximize N % i where 1 <= i <= K.
+ * If K >= N, then choosing i = N results in N % N = 0.
+ * However, choosing i = N+1 is not possible, but choosing i such that 
+ * i > N/2 allows for remainders. Specifically, for any i > N/2, 
+ * N % i = N - i. To maximize N - i, we need the smallest i in the range 
+ * (N/2, K].
  * 
- * Complexity:
- * For each test case, we can iterate from 1 to K and calculate N % i.
- * Total complexity: O(T * K), which is 50 * 10^5 = 5 * 10^6 operations.
- * This is well within the 1s time limit.
+ * Actually, the simplest approach is to iterate through all possible values of i 
+ * from 1 to K and keep track of the maximum remainder. Given the constraints 
+ * N, K <= 10^5 and T <= 50, an O(T * K) solution is well within the 1s time limit.
  */
 
 void solve() {
     long long N, K;
     if (!(cin >> N >> K)) return;
 
-    long long max_coins = 0;
+    long long max_remainder = 0;
     
-    // We want to maximize N % i for 1 <= i <= K
+    // We iterate through all possible number of people from 1 to K.
+    // The remainder Tuzik gets is N % i.
     for (long long i = 1; i <= K; ++i) {
-        long long remainder = N % i;
-        if (remainder > max_coins) {
-            max_coins = remainder;
+        long long current_remainder = N % i;
+        if (current_remainder > max_remainder) {
+            max_remainder = current_remainder;
         }
     }
     
-    cout << max_coins << "\n";
+    cout << max_remainder << "\n";
 }
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

@@ -5,38 +5,40 @@ using namespace std;
  * Problem Analysis:
  * Chef is at A, Chefina is at B.
  * In one step, Chef can move at most K units.
- * The distance between them is |A - B|.
- * To minimize the number of steps, Chef should always move K units 
- * towards Chefina until the remaining distance is <= K.
+ * The distance to cover is |A - B|.
+ * Since each step covers at most K units, the minimum number of steps
+ * required is ceil(|A - B| / K).
  * 
- * If distance D = |A - B|, the number of steps is ceil(D / K).
- * Using integer arithmetic, ceil(D / K) can be calculated as (D + K - 1) / K.
+ * Using integer arithmetic, ceil(x / y) can be calculated as (x + y - 1) / y.
  */
 
+void solve() {
+    long long A, B, K;
+    cin >> A >> B >> K;
+    
+    long long distance = abs(A - B);
+    
+    // If distance is 0, steps required is 0.
+    if (distance == 0) {
+        cout << 0 << "\n";
+        return;
+    }
+    
+    // Calculate ceil(distance / K)
+    long long steps = (distance + K - 1) / K;
+    cout << steps << "\n";
+}
+
 int main() {
-    // Optimize I/O operations
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
+    
     int t;
-    if (!(cin >> t)) return 0;
+    cin >> t;
     while (t--) {
-        long long a, b, k;
-        cin >> a >> b >> k;
-
-        // Calculate absolute distance
-        long long dist = abs(a - b);
-
-        // If distance is 0, 0 steps are needed
-        if (dist == 0) {
-            cout << 0 << "\n";
-        } else {
-            // Calculate ceil(dist / k)
-            // Using integer division: (dist + k - 1) / k
-            long long steps = (dist + k - 1) / k;
-            cout << steps << "\n";
-        }
+        solve();
     }
-
+    
     return 0;
 }

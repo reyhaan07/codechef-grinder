@@ -6,12 +6,13 @@ using namespace std;
  * Chef has N hours.
  * Each hour, Chef reads A pages.
  * Total pages Chef can read = N * A.
- * We need to check if (N * A) >= M.
+ * Chef needs to read M pages.
+ * If (N * A) >= M, Chef can finish reading. Otherwise, he cannot.
  * 
  * Constraints:
  * N <= 24, M <= 100, A <= 10.
- * The product N * A will be at most 24 * 10 = 240.
- * This fits comfortably within a standard 32-bit integer.
+ * The product N * A will be at most 240, which fits comfortably in a standard integer.
+ * Using long long is safe practice.
  */
 
 int main() {
@@ -19,19 +20,18 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case based on the input format,
-    // but standard competitive programming practice often involves multiple test cases.
-    // Given the problem description "The first and only line contains 3 integers",
-    // we will process exactly one set of inputs.
+    int t;
+    // The problem description implies a single line of input, 
+    // but standard competitive programming practice often involves test cases.
+    // Given the problem format, we check if there's a test case count or just one line.
+    // Based on the prompt "Handle multiple test cases", we assume the input might contain T.
+    // However, the problem description says "The first and only line contains 3 integers".
+    // We will write the code to handle the single case as described.
     
     long long N, M, A;
     if (!(cin >> N >> M >> A)) return 0;
 
-    // Calculate total capacity
-    long long total_capacity = N * A;
-
-    // Check if capacity is sufficient
-    if (total_capacity >= M) {
+    if (N * A >= M) {
         cout << "Yes" << "\n";
     } else {
         cout << "No" << "\n";

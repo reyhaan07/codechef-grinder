@@ -3,29 +3,32 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Chef has two options:
- * 1. Use only normal attacks:
- *    The number of attacks required is ceil(H / X).
- *    In integer arithmetic, this is (H + X - 1) / X.
+ * The boss has health H.
+ * Normal attack deals X damage.
+ * Special attack deals Y damage (can be used at most once).
  * 
- * 2. Use the special attack once, then normal attacks:
- *    The special attack reduces health by Y.
- *    Remaining health = H - Y.
- *    If H - Y <= 0, the total attacks needed is 1.
- *    Otherwise, the number of normal attacks needed is ceil((H - Y) / X).
- *    Total attacks = 1 + ceil((H - Y) / X).
+ * Strategy:
+ * 1. Option 1: Use only normal attacks.
+ *    Number of attacks = ceil(H / X).
+ *    Using integer arithmetic: (H + X - 1) / X.
  * 
- * We want the minimum of these two options.
+ * 2. Option 2: Use the special attack once, then normal attacks for the remainder.
+ *    Remaining health after special attack = H - Y.
+ *    If H - Y <= 0, total attacks = 1.
+ *    Otherwise, total attacks = 1 + ceil((H - Y) / X).
+ *    Using integer arithmetic: 1 + (H - Y + X - 1) / X.
+ * 
+ * Since we want the minimum number of attacks, we take the minimum of these two options.
  */
 
 void solve() {
     long long H, X, Y;
-    cin >> H >> X >> Y;
+    if (!(cin >> H >> X >> Y)) return;
 
     // Option 1: Only normal attacks
     long long attacks_only_normal = (H + X - 1) / X;
 
-    // Option 2: Special attack once + normal attacks
+    // Option 2: Special attack + normal attacks
     long long attacks_with_special;
     if (H <= Y) {
         attacks_with_special = 1;
@@ -43,7 +46,7 @@ int main() {
     cin.tie(NULL);
 
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
         solve();
     }

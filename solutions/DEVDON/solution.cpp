@@ -3,17 +3,15 @@ using namespace std;
 
 /**
  * Problem: Devouring Donuts
- * The problem asks to calculate the total calories consumed by multiplying 
- * the number of donuts (X) by the calories per donut (Y).
+ * The problem asks to calculate the total calories consumed, which is the product of 
+ * the number of donuts (X) and the calories per donut (Y).
  * 
  * Constraints:
  * 1 <= X <= 10
  * 200 <= Y <= 300
  * 
- * The maximum possible result is 10 * 300 = 3000, which fits easily 
- * within a standard 32-bit integer. However, using long long is 
- * good practice for competitive programming to prevent overflow in 
- * similar problems.
+ * The maximum possible value is 10 * 300 = 3000, which fits well within a standard 
+ * 32-bit integer. However, using long long is good practice for competitive programming.
  */
 
 int main() {
@@ -22,9 +20,9 @@ int main() {
     cin.tie(NULL);
 
     // The problem description does not explicitly state multiple test cases,
-    // but the instructions mention handling them if requested. 
-    // Based on the input format "The only line of input contains...", 
-    // we read X and Y once.
+    // but the instructions request handling them if necessary.
+    // Given the input format "The only line of input contains...", 
+    // we read X and Y directly.
     
     long long X, Y;
     if (cin >> X >> Y) {

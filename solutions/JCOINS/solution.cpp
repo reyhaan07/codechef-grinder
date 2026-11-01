@@ -3,13 +3,13 @@ using namespace std;
 
 /**
  * Problem: Janmansh and Coins
- * Logic: Total money = (X * 10) + (Y * 5)
+ * Logic: Total money = (Number of 10 rupee coins * 10) + (Number of 5 rupee coins * 5)
  * Constraints: X, Y <= 100. The maximum possible value is (100 * 10) + (100 * 5) = 1500.
  * This fits well within a standard 32-bit integer, but using long long is safe practice.
  */
 
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

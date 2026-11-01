@@ -3,12 +3,19 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have a string of 'x' (girls) and 'y' (boys).
- * We want to form the maximum number of pairs (boy, girl) where the students are adjacent.
+ * We are given a string of 'x' (girls) and 'y' (boys).
+ * We need to form pairs of adjacent students (i, i+1) such that one is 'x' and the other is 'y'.
+ * Each student can be in at most one pair.
+ * 
  * This is a classic greedy problem. We iterate through the string from left to right.
- * If we find an adjacent pair (S[i], S[i+1]) such that one is 'x' and the other is 'y',
- * we form a pair and skip both students (move to i+2).
- * If they are not a pair, we move to the next student (i+1).
+ * If we find a pair (S[i], S[i+1]) that consists of different characters, we pair them up
+ * and skip the next index (i+1) because those students are now occupied.
+ * 
+ * Greedy Strategy:
+ * Iterate i from 0 to N-2:
+ *   If S[i] != S[i+1]:
+ *     Increment count
+ *     i++ (skip the next student)
  * 
  * Time Complexity: O(N) per test case, where N is the length of the string.
  * Space Complexity: O(N) to store the string.
@@ -20,15 +27,10 @@ void solve() {
     int n = s.length();
     int pairs = 0;
     
-    // Iterate through the string, checking adjacent pairs
-    for (int i = 0; i < n - 1; ) {
-        // Check if current student and next student are different
+    for (int i = 0; i < n - 1; ++i) {
         if (s[i] != s[i + 1]) {
             pairs++;
-            // Both students are now paired, move to the next available student
-            i += 2;
-        } else {
-            // Cannot pair these two, move to the next student
+            // Skip the next student as they are now paired
             i++;
         }
     }
