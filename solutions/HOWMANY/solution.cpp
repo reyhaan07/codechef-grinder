@@ -3,9 +3,13 @@ using namespace std;
 
 /**
  * Problem: HOW MANY DIGITS DO I HAVE
- * Approach: Read the input as a string to easily determine the number of digits,
- * or read as an integer and check ranges. Since the constraint is up to 1,000,000,
- * reading as a string is robust and handles the digit count logic efficiently.
+ * The problem asks to categorize a number N (0 <= N <= 1000000) based on its digit count.
+ * 
+ * Logic:
+ * - 0-9: 1 digit
+ * - 10-99: 2 digits
+ * - 100-999: 3 digits
+ * - 1000+: More than 3 digits
  */
 
 int main() {

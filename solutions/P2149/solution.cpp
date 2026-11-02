@@ -4,41 +4,47 @@ using namespace std;
 /**
  * Problem Analysis:
  * We have a red rectangle (A x B) and a blue square (X x X).
- * We want Area(Rectangle) <= Area(Square), i.e., A * B <= X * X.
- * Each change of a dimension (A or B) costs 1 unit.
- * Since we want to minimize cost, we check:
- * 0 moves: If A * B <= X * X, cost is 0.
- * 1 move: If we can change A to A' or B to B' such that A' * B <= X * X or A * B' <= X * X.
- *         Since we want to minimize the area, we can change a dimension to 1.
- *         If A * 1 <= X * X or 1 * B <= X * X, cost is 1.
- * 2 moves: If neither 0 nor 1 move works, we can change both dimensions to 1.
- *          1 * 1 <= X * X is always true since X >= 1. So cost is 2.
+ * Area of rectangle = A * B
+ * Area of square = X * X
+ * We want A * B <= X * X.
+ * Each change of a dimension (A or B) costs 1.
+ * Since we want to minimize cost:
+ * 1. If A * B <= X * X, cost is 0.
+ * 2. If we change one dimension (e.g., change A to 1), the new area is 1 * B = B.
+ *    If B <= X * X, cost is 1.
+ * 3. If we change both dimensions (e.g., change A to 1 and B to 1), the new area is 1 * 1 = 1.
+ *    Since X >= 1, 1 <= X * X is always true, so cost is 2.
+ * 
+ * Given the constraints A, B, X <= 10, we can simply check:
+ * - If A * B <= X * X: cost = 0
+ * - Else if min(A, B) <= X * X or (1 * B <= X * X) or (A * 1 <= X * X): cost = 1
+ *   Actually, the simplest way to get cost 1 is to change one dimension to 1.
+ *   If we change A to 1, area becomes B. If B <= X*X, cost is 1.
+ *   If we change B to 1, area becomes A. If A <= X*X, cost is 1.
+ * - Else: cost = 2 (change both to 1, area becomes 1, which is <= X*X).
  */
 
 void solve() {
     int A, B, X;
     cin >> A >> B >> X;
 
-    long long rectArea = (long long)A * B;
-    long long squareArea = (long long)X * X;
+    long long rect_area = (long long)A * B;
+    long long square_area = (long long)X * X;
 
-    // Case 0: Already satisfied
-    if (rectArea <= squareArea) {
+    if (rect_area <= square_area) {
         cout << 0 << "\n";
-        return;
+    } else {
+        // Try changing one dimension to 1.
+        // If we change A to 1, area becomes B.
+        // If we change B to 1, area becomes A.
+        // If either B <= square_area or A <= square_area, cost is 1.
+        if (A <= square_area || B <= square_area) {
+            cout << 1 << "\n";
+        } else {
+            // Otherwise, we must change both to 1.
+            cout << 2 << "\n";
+        }
     }
-
-    // Case 1: Can we satisfy by changing one dimension?
-    // We can change A to 1 or B to 1.
-    // New area would be 1 * B or A * 1.
-    if (B <= squareArea || A <= squareArea) {
-        cout << 1 << "\n";
-        return;
-    }
-
-    // Case 2: Change both dimensions to 1.
-    // 1 * 1 = 1, and since X >= 1, 1 <= X*X is always true.
-    cout << 2 << "\n";
 }
 
 int main() {

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 410,
+  "total_solved": 425,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -412,13 +412,29 @@
     "FOODPLAN",
     "R5S",
     "CRICMATCH",
-    "CHSFORMT"
+    "CHSFORMT",
+    "DOMINANT2",
+    "CONN",
+    "CASHBACK",
+    "EVENTUAL",
+    "LUCKYFR",
+    "SOLBLTY",
+    "P2149",
+    "ADVITIYA2",
+    "RELATIVE",
+    "ROOMALLOC",
+    "MODULO3",
+    "LUCKYNUM",
+    "JUSTICE",
+    "NOTIME",
+    "HOWMANY"
   ],
   "failed_codes": [
     "SEARCHINARR",
     "KITCHENCOST",
     "ODDSUMPAIR",
-    "ICECONE"
+    "ICECONE",
+    "QNOT"
   ],
   "pending": [],
   "history": [
@@ -4123,6 +4139,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-02 19:32:23"
+    },
+    {
+      "code": "DOMINANT2",
+      "name": "Dominant Element",
+      "status": "Accepted",
+      "solution_id": "1385719924",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:30:51"
+    },
+    {
+      "code": "CONN",
+      "name": "Construct N",
+      "status": "Accepted",
+      "solution_id": "1385719954",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:32:00"
+    },
+    {
+      "code": "CASHBACK",
+      "name": "Cashback",
+      "status": "Accepted",
+      "solution_id": "1385720026",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:34:04"
+    },
+    {
+      "code": "EVENTUAL",
+      "name": "Even-tual Reduction",
+      "status": "Accepted",
+      "solution_id": "1385720079",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:35:36"
+    },
+    {
+      "code": "LUCKYFR",
+      "name": "Lucky Four",
+      "status": "Accepted",
+      "solution_id": "1385720153",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:38:13"
+    },
+    {
+      "code": "SOLBLTY",
+      "name": "Solubility",
+      "status": "Accepted",
+      "solution_id": "1385720251",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:41:35"
+    },
+    {
+      "code": "P2149",
+      "name": "Magical World",
+      "status": "Accepted",
+      "solution_id": "1385720277",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:42:33"
+    },
+    {
+      "code": "ADVITIYA2",
+      "name": "Judged",
+      "status": "Accepted",
+      "solution_id": "1385720290",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:43:09"
+    },
+    {
+      "code": "RELATIVE",
+      "name": "Relativity",
+      "status": "Accepted",
+      "solution_id": "1385720309",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:43:55"
+    },
+    {
+      "code": "ROOMALLOC",
+      "name": "Room Allocation",
+      "status": "Accepted",
+      "solution_id": "1385720319",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:44:34"
+    },
+    {
+      "code": "MODULO3",
+      "name": "Divisible by 3",
+      "status": "Accepted",
+      "solution_id": "1385720375",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:46:45"
+    },
+    {
+      "code": "LUCKYNUM",
+      "name": "Lucky Number",
+      "status": "Accepted",
+      "solution_id": "1385720389",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:47:25"
+    },
+    {
+      "code": "JUSTICE",
+      "name": "International Justice Day",
+      "status": "Accepted",
+      "solution_id": "1385720412",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:48:14"
+    },
+    {
+      "code": "NOTIME",
+      "name": "No Time to Wait",
+      "status": "Accepted",
+      "solution_id": "1385720431",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:49:57"
+    },
+    {
+      "code": "HOWMANY",
+      "name": "HOW MANY DIGITS DO I HAVE",
+      "status": "Accepted",
+      "solution_id": "1385720489",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 22:51:42"
     }
   ]
 }

@@ -17,6 +17,7 @@ int main() {
     // but standard competitive programming practice often involves handling 
     // potential multiple test cases if specified. Given the constraints and 
     // description, we read X and Y.
+    
     long long X, Y;
     if (cin >> X >> Y) {
         if (X >= Y) {

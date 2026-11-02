@@ -3,42 +3,46 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We need to find non-negative integers X and Y such that 2X + 7Y = N.
- * This is a variation of the Frobenius Coin Problem (or Change-making problem).
- * Since we have 2 and 7, we can represent any number N as long as N is not 
- * too small or specifically impossible.
+ * We need to determine if N = 2*X + 7*Y for non-negative integers X, Y.
+ * This is a variation of the Frobenius Coin Problem.
+ * Since we can use any number of 2s, we can represent any even number.
+ * If N is even, we can always represent it as 2*X (with Y=0).
+ * If N is odd, we need at least one 7.
+ * If N = 7 + (N - 7), then N - 7 must be even and non-negative.
+ * So, if N is odd, we check if (N - 7) >= 0 and (N - 7) is even.
  * 
- * Specifically:
- * - If N is odd, we must use at least one 7 (since 2X is always even).
- *   If we use one 7, we need (N - 7) to be non-negative and even.
- * - If N is even, we can always represent it as 2X (using only 2s) 
- *   provided N >= 0.
- * 
- * So, for any N:
- * 1. If N < 0, impossible.
- * 2. If N is even, it's always possible (N = 2 * (N/2)).
- * 3. If N is odd, we check if (N - 7) is non-negative and even.
- *    (N - 7) >= 0 implies N >= 7.
- *    If N >= 7 and N is odd, then (N - 7) is even, so it can be represented by 2s.
- * 
- * Combining these:
- * - N = 1: NO
- * - N = 3: NO
- * - N = 5: NO
- * - All other N are YES.
+ * General approach:
+ * Iterate through possible values of Y (number of 7s).
+ * Since 2*X = N - 7*Y, we need N - 7*Y >= 0 and (N - 7*Y) % 2 == 0.
+ * We only need to check Y such that 7*Y <= N.
+ * Actually, we only need to check Y values such that 7*Y has the same parity as N.
+ * If N is even, Y=0 works. If N is odd, Y=1 works if N >= 7.
+ * If N < 7 and N is odd, it's impossible.
  */
 
 void solve() {
     long long N;
     cin >> N;
 
-    // Based on the logic:
-    // 1, 3, 5 are impossible.
-    // 2, 4, 6, 7, 8, 9, 10, 11... are possible.
-    if (N == 1 || N == 3 || N == 5) {
-        cout << "NO" << "\n";
-    } else {
+    // We can iterate through possible counts of 7s.
+    // Since 2*X = N - 7*Y, we need N - 7*Y to be non-negative and even.
+    // We only need to check a few values of Y because if we have 
+    // two 7s (14), that can be replaced by seven 2s (14).
+    // So we only need to check Y = 0, 1, 2.
+    
+    bool possible = false;
+    for (int y = 0; y <= 2; ++y) {
+        long long remainder = N - 7LL * y;
+        if (remainder >= 0 && remainder % 2 == 0) {
+            possible = true;
+            break;
+        }
+    }
+
+    if (possible) {
         cout << "YES" << "\n";
+    } else {
+        cout << "NO" << "\n";
     }
 }
 

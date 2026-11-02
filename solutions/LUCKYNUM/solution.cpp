@@ -3,10 +3,9 @@ using namespace std;
 
 /**
  * Problem: LUCKYNUM
- * The task is to check if at least one of the three given digits (A, B, C) is equal to 7.
- * Constraints: 0 <= A, B, C <= 9, 1 <= T <= 1000.
+ * Logic: Check if any of the three input integers A, B, or C is equal to 7.
  * Time Complexity: O(T) where T is the number of test cases.
- * Space Complexity: O(1).
+ * Space Complexity: O(1) as we only use a few integer variables.
  */
 
 int main() {
