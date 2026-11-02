@@ -1,58 +1,61 @@
-#include <iostream>
-#include <string>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * We need to form the smallest palindrome using X ones and Y twos.
- * Since X and Y are even, we can split them into two equal halves.
- * To minimize the number, we place all available 1s before the 2s in the first half.
+ * We are given X ones and Y twos, both X and Y are even.
+ * We need to form the smallest palindrome using all these digits.
  * 
- * Example: X=2, Y=2
- * Half: 1s = 2/2 = 1, 2s = 2/2 = 1.
- * First half: "12"
- * Full palindrome: "12" + "21" = "1221".
+ * A palindrome reads the same forwards and backwards.
+ * To make a number as small as possible, we want the smallest digits 
+ * at the most significant positions (the beginning).
+ * 
+ * Since we have X ones and Y twos, and we must use all of them:
+ * 1. We should place as many 1s as possible at the start.
+ * 2. Since it must be a palindrome, if we place 'k' ones at the start, 
+ *    we must place 'k' ones at the end.
+ * 3. To minimize the number, we fill the outer layers with 1s, then 2s, 
+ *    then 2s, then 1s, etc.
+ * 
+ * Given X and Y are even:
+ * We can place all X/2 ones at the beginning, then all Y/2 twos, 
+ * then all Y/2 twos, then all X/2 ones.
+ * This results in the sequence: (X/2 ones) (Y/2 twos) (Y/2 twos) (X/2 ones).
+ * Example: X=2, Y=2 -> 1, 2, 2, 1 -> 1221.
+ * Example: X=4, Y=0 -> 11, 11 -> 1111.
  */
 
 void solve() {
     int X, Y;
     cin >> X >> Y;
 
-    int half_ones = X / 2;
-    int half_twos = Y / 2;
-
-    string first_half = "";
-    // To make the number smallest, put all 1s first, then all 2s
-    for (int i = 0; i < half_ones; ++i) {
-        first_half += '1';
+    // Print X/2 ones
+    for (int i = 0; i < X / 2; ++i) {
+        cout << 1;
     }
-    for (int i = 0; i < half_twos; ++i) {
-        first_half += '2';
+    // Print Y/2 twos
+    for (int i = 0; i < Y / 2; ++i) {
+        cout << 2;
     }
-
-    string second_half = first_half;
-    // Reverse the second half to complete the palindrome
-    for (int i = 0; i < (int)first_half.length() / 2; ++i) {
-        swap(second_half[i], second_half[second_half.length() - 1 - i]);
+    // Print Y/2 twos
+    for (int i = 0; i < Y / 2; ++i) {
+        cout << 2;
     }
-    
-    // Actually, simply reversing the string is easier:
-    string result = first_half;
-    string rev = first_half;
-    for(int i = 0; i < (int)rev.length() / 2; ++i) swap(rev[i], rev[rev.length()-1-i]);
-    
-    cout << first_half << rev << endl;
+    // Print X/2 ones
+    for (int i = 0; i < X / 2; ++i) {
+        cout << 1;
+    }
+    cout << "\n";
 }
 
 int main() {
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    cin >> T;
-    while (T--) {
+    int t;
+    cin >> t;
+    while (t--) {
         solve();
     }
     return 0;

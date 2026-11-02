@@ -3,17 +3,21 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are allowed to delete at most two elements from an array of size N.
- * To minimize (max - min), we should sort the array first.
- * Let the sorted array be A[0], A[1], ..., A[N-1].
- * After deleting two elements, we have three optimal strategies to minimize the range:
- * 1. Delete the two smallest elements: The new range is A[N-1] - A[2].
- * 2. Delete the two largest elements: The new range is A[N-3] - A[0].
- * 3. Delete the smallest and the largest element: The new range is A[N-2] - A[1].
+ * We are given an array A of size N and can delete at most two elements.
+ * We want to minimize (max(A) - min(A)).
  * 
- * Since we can delete "at most" two elements, these strategies cover all cases
- * because deleting fewer elements would result in a range at least as large as 
- * these options.
+ * To minimize the range, we should sort the array first.
+ * Let the sorted array be A[0], A[1], ..., A[N-1].
+ * After deleting at most two elements, the remaining elements will be a contiguous 
+ * subarray of the sorted array if we remove elements from the ends.
+ * Specifically, we have three strategies to remove two elements:
+ * 1. Remove the two smallest elements: The range is A[N-1] - A[2].
+ * 2. Remove the two largest elements: The range is A[N-3] - A[0].
+ * 3. Remove one smallest and one largest element: The range is A[N-2] - A[1].
+ * 
+ * Since we can delete "at most" two, these strategies cover the optimal cases.
+ * Time Complexity: O(N log N) per test case due to sorting.
+ * Space Complexity: O(N) to store the array.
  */
 
 void solve() {
@@ -31,14 +35,14 @@ void solve() {
 
     sort(A.begin(), A.end());
 
-    // Option 1: Delete two smallest
-    long long opt1 = A[N - 1] - A[2];
-    // Option 2: Delete two largest
-    long long opt2 = A[N - 3] - A[0];
-    // Option 3: Delete one smallest and one largest
-    long long opt3 = A[N - 2] - A[1];
+    // Strategy 1: Remove two smallest
+    long long res1 = A[N - 1] - A[2];
+    // Strategy 2: Remove two largest
+    long long res2 = A[N - 3] - A[0];
+    // Strategy 3: Remove one smallest and one largest
+    long long res3 = A[N - 2] - A[1];
 
-    long long ans = min({opt1, opt2, opt3});
+    long long ans = min({res1, res2, res3});
     cout << ans << "\n";
 }
 

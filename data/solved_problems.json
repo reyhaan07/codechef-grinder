@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 397,
+  "total_solved": 410,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -399,7 +399,20 @@
     "CLEARANCE",
     "NONNEGPROD",
     "INCAT",
-    "PAYSC"
+    "PAYSC",
+    "RCBCSK",
+    "WECNITK",
+    "PETSTORE",
+    "MNR",
+    "YOGADAY",
+    "HEATWAVE",
+    "SMLPAL",
+    "LECANDY",
+    "MOVPR",
+    "FOODPLAN",
+    "R5S",
+    "CRICMATCH",
+    "CHSFORMT"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -3993,6 +4006,123 @@
       "attempts": 2,
       "account": "reyhaan_s",
       "time": "2026-11-02 13:16:27"
+    },
+    {
+      "code": "RCBCSK",
+      "name": "RCB vs CSK ",
+      "status": "Accepted",
+      "solution_id": "1385704442",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:12:51"
+    },
+    {
+      "code": "WECNITK",
+      "name": "Access Code Equality",
+      "status": "Accepted",
+      "solution_id": "1385704997",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:15:41"
+    },
+    {
+      "code": "PETSTORE",
+      "name": "Pet Store",
+      "status": "Accepted",
+      "solution_id": "1385705470",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:18:38"
+    },
+    {
+      "code": "MNR",
+      "name": "Range Minimize",
+      "status": "Accepted",
+      "solution_id": "1385705605",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:19:34"
+    },
+    {
+      "code": "YOGADAY",
+      "name": "Yoga Day",
+      "status": "Accepted",
+      "solution_id": "1385705736",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:20:20"
+    },
+    {
+      "code": "HEATWAVE",
+      "name": "Heat Wave",
+      "status": "Accepted",
+      "solution_id": "1385705937",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:21:19"
+    },
+    {
+      "code": "SMLPAL",
+      "name": "Small Palindrome",
+      "status": "Accepted",
+      "solution_id": "1385706093",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:22:15"
+    },
+    {
+      "code": "LECANDY",
+      "name": "Little Elephant and Candies",
+      "status": "Accepted",
+      "solution_id": "1385706183",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:23:00"
+    },
+    {
+      "code": "MOVPR",
+      "name": "Movie Snacks",
+      "status": "Accepted",
+      "solution_id": "1385706538",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:25:12"
+    },
+    {
+      "code": "FOODPLAN",
+      "name": "Online or Offline",
+      "status": "Accepted",
+      "solution_id": "1385706751",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:26:41"
+    },
+    {
+      "code": "R5S",
+      "name": "Reach 5 Star",
+      "status": "Accepted",
+      "solution_id": "1385707033",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:28:11"
+    },
+    {
+      "code": "CRICMATCH",
+      "name": "Cricket Match",
+      "status": "Accepted",
+      "solution_id": "1385707516",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:31:11"
+    },
+    {
+      "code": "CHSFORMT",
+      "name": "Chess Format",
+      "status": "Accepted",
+      "solution_id": "1385707698",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 19:32:23"
     }
   ]
 }

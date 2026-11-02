@@ -3,8 +3,8 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Each round of Surya Namaskar consists of 12 yoga poses.
- * Given N total poses, the number of complete rounds is the integer division of N by 12.
+ * Each round of Surya Namaskar consists of 12 poses.
+ * Given N total poses, the number of completed rounds is the integer division of N by 12.
  * 
  * Constraints:
  * 1 <= N <= 100
@@ -17,16 +17,17 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single input N per run, 
-    // but standard competitive programming practice often involves 
-    // handling test cases if specified. Given the constraints and format,
-    // we read N and output the result of integer division.
-    
+    // The problem description implies a single input N per run based on the sample format,
+    // but standard competitive programming practice often involves a test case count.
+    // Given the problem description format, we read N directly.
     int N;
-    if (cin >> N) {
-        int rounds = N / 12;
-        cout << rounds << "\n";
-    }
+    if (!(cin >> N)) return 0;
+
+    // Calculate completed rounds using integer division
+    int rounds = N / 12;
+
+    // Output the result
+    cout << rounds << "\n";
 
     return 0;
 }

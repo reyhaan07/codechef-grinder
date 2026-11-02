@@ -1,37 +1,33 @@
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
  * Alice and Bob must end up with the exact same multiset of animals.
- * Let the total count of animal type 'x' be C(x).
- * If Alice takes k_x animals of type 'x', Bob must take C(x) - k_x animals.
- * For their multisets to be identical, Alice and Bob must have the same number 
- * of each animal type: k_x = C(x) - k_x, which implies 2 * k_x = C(x).
- * Therefore, C(x) must be even for all types 'x'.
+ * This means the total count of each animal type in the store must be divisible by 2.
+ * If the total count of any animal type is odd, it is impossible to split them
+ * equally between Alice and Bob.
+ * If the total count of every animal type is even, we can simply give half of 
+ * each type to Alice and the other half to Bob, satisfying the condition.
  * 
  * Complexity:
- * Time: O(N) per test case to count frequencies.
- * Space: O(1) as the frequency array size is fixed at 101.
+ * Time: O(N) per test case to count frequencies, O(1) to check counts (since A_i <= 100).
+ * Space: O(1) auxiliary space (fixed size array of 101).
  */
 
 void solve() {
     int n;
-    if (!(cin >> n)) return;
+    cin >> n;
     
-    // Since A_i is small (1 to 100), a frequency array is optimal.
-    vector<int> counts(101, 0);
+    // Constraints say A_i <= 100, so we can use a frequency array
+    int counts[101] = {0};
     for (int i = 0; i < n; ++i) {
         int a;
         cin >> a;
-        if (a >= 1 && a <= 100) {
-            counts[a]++;
-        }
+        counts[a]++;
     }
     
-    // Check if every animal type has an even count.
+    // Check if every animal type has an even count
     bool possible = true;
     for (int i = 1; i <= 100; ++i) {
         if (counts[i] % 2 != 0) {
@@ -48,12 +44,12 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O for competitive programming
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
     int t;
-    if (!(cin >> t)) return 0;
+    cin >> t;
     while (t--) {
         solve();
     }
