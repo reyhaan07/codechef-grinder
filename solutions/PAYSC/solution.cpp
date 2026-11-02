@@ -7,16 +7,14 @@ using namespace std;
  * Problem Analysis:
  * Scheme 1: 100 + 4 * X
  * Scheme 2: 300
- * We need to find the minimum of these two values.
+ * We need to find min(100 + 4 * X, 300).
  * 
- * Input Format:
- * The input contains a single integer X.
- * 
- * Constraints: 1 <= X <= 100.
+ * Correction: The problem input consists of a single integer X, 
+ * not a number of test cases T.
  */
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

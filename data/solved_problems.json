@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 382,
+  "total_solved": 397,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -384,7 +384,22 @@
     "ACS",
     "RURT",
     "ODDPAIRS",
-    "ENCMSG"
+    "ENCMSG",
+    "MOVEMENT",
+    "CHANGEPOS",
+    "GOODWEAT",
+    "ACCURACY",
+    "BLITZ3_2",
+    "LEGSP",
+    "SNCKYEAR",
+    "CHEFSTR1",
+    "COVID19",
+    "CCISLAND",
+    "PBREV",
+    "CLEARANCE",
+    "NONNEGPROD",
+    "INCAT",
+    "PAYSC"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -3843,6 +3858,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-01 21:41:48"
+    },
+    {
+      "code": "MOVEMENT",
+      "name": "Move Grid",
+      "status": "Accepted",
+      "solution_id": "1385495372",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:01:47"
+    },
+    {
+      "code": "CHANGEPOS",
+      "name": "Change Row and Column Both",
+      "status": "Accepted",
+      "solution_id": "1385495680",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:02:19"
+    },
+    {
+      "code": "GOODWEAT",
+      "name": "Good Weather",
+      "status": "Accepted",
+      "solution_id": "1385495984",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:02:54"
+    },
+    {
+      "code": "ACCURACY",
+      "name": "High Accuracy",
+      "status": "Accepted",
+      "solution_id": "1385496405",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:03:40"
+    },
+    {
+      "code": "BLITZ3_2",
+      "name": "Chess Match",
+      "status": "Accepted",
+      "solution_id": "1385496738",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:05:15"
+    },
+    {
+      "code": "LEGSP",
+      "name": "Leg Space",
+      "status": "Accepted",
+      "solution_id": "1385497800",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:06:10"
+    },
+    {
+      "code": "SNCKYEAR",
+      "name": "Chef and SnackDown",
+      "status": "Accepted",
+      "solution_id": "1385498305",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:06:53"
+    },
+    {
+      "code": "CHEFSTR1",
+      "name": "Chef and Strings",
+      "status": "Accepted",
+      "solution_id": "1385498614",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:07:28"
+    },
+    {
+      "code": "COVID19",
+      "name": "Coronavirus Spread",
+      "status": "Accepted",
+      "solution_id": "1385499670",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:09:24"
+    },
+    {
+      "code": "CCISLAND",
+      "name": "Chef On Island",
+      "status": "Accepted",
+      "solution_id": "1385500282",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:10:35"
+    },
+    {
+      "code": "PBREV",
+      "name": "Problem Reviews",
+      "status": "Accepted",
+      "solution_id": "1385500671",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:11:21"
+    },
+    {
+      "code": "CLEARANCE",
+      "name": "Clearance Sale",
+      "status": "Accepted",
+      "solution_id": "1385501222",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:12:23"
+    },
+    {
+      "code": "NONNEGPROD",
+      "name": "Non-Negative Product",
+      "status": "Accepted",
+      "solution_id": "1385501714",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:13:16"
+    },
+    {
+      "code": "INCAT",
+      "name": "Make Cat",
+      "status": "Accepted",
+      "solution_id": "1385502270",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:14:22"
+    },
+    {
+      "code": "PAYSC",
+      "name": "Payment Scheme",
+      "status": "Accepted",
+      "solution_id": "1385502887",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-02 13:16:27"
     }
   ]
 }
