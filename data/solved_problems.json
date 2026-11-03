@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 454,
+  "total_solved": 473,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -456,7 +456,26 @@
     "EQUALIZEAB",
     "SLOOP",
     "MILEAGE",
-    "ALJMP"
+    "ALJMP",
+    "CHN09",
+    "CREDITS",
+    "ALTERADD",
+    "CRCK",
+    "TABLET",
+    "AVG",
+    "GIANT",
+    "MATCH_ALK",
+    "SUNDAY",
+    "NAME2",
+    "CPRIVAL",
+    "ALLZR",
+    "COVID_19",
+    "VAL142",
+    "BOMBTHEBASE",
+    "JGAMES",
+    "BIG",
+    "BUYPLSE",
+    "P1BAR"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -4565,6 +4584,177 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-03 12:45:35"
+    },
+    {
+      "code": "CHN09",
+      "name": "Malvika is peculiar about color of balloons",
+      "status": "Accepted",
+      "solution_id": "1386255470",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:50:07"
+    },
+    {
+      "code": "CREDITS",
+      "name": "Complete the credits",
+      "status": "Accepted",
+      "solution_id": "1386256160",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:51:58"
+    },
+    {
+      "code": "ALTERADD",
+      "name": "Alternate Additions",
+      "status": "Accepted",
+      "solution_id": "1386257294",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:52:32"
+    },
+    {
+      "code": "CRCK",
+      "name": "Christmas Cake",
+      "status": "Accepted",
+      "solution_id": "1386258140",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:53:37"
+    },
+    {
+      "code": "TABLET",
+      "name": "Buying New Tablet",
+      "status": "Accepted",
+      "solution_id": "1386258937",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:54:40"
+    },
+    {
+      "code": "AVG",
+      "name": "Average Number",
+      "status": "Accepted",
+      "solution_id": "1386260706",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:57:15"
+    },
+    {
+      "code": "GIANT",
+      "name": "Giant Wheel",
+      "status": "Accepted",
+      "solution_id": "1386261555",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:58:24"
+    },
+    {
+      "code": "MATCH_ALK",
+      "name": "Man of the Match",
+      "status": "Accepted",
+      "solution_id": "1386262523",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 16:59:52"
+    },
+    {
+      "code": "SUNDAY",
+      "name": "Count the Holidays",
+      "status": "Accepted",
+      "solution_id": "1386263456",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:01:03"
+    },
+    {
+      "code": "NAME2",
+      "name": "Your Name is Mine",
+      "status": "Accepted",
+      "solution_id": "1386264595",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:02:37"
+    },
+    {
+      "code": "CPRIVAL",
+      "name": "Rivalry",
+      "status": "Accepted",
+      "solution_id": "1386265830",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:04:15"
+    },
+    {
+      "code": "ALLZR",
+      "name": "All Zero",
+      "status": "Accepted",
+      "solution_id": "1386266860",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:05:44"
+    },
+    {
+      "code": "COVID_19",
+      "name": "Covid and Theatre Tickets",
+      "status": "Accepted",
+      "solution_id": "1386267275",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:06:25"
+    },
+    {
+      "code": "VAL142",
+      "name": "Valentine Gifts",
+      "status": "Accepted",
+      "solution_id": "1386267653",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:07:01"
+    },
+    {
+      "code": "BOMBTHEBASE",
+      "name": "Bomb the base",
+      "status": "Accepted",
+      "solution_id": "1386268074",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:08:38"
+    },
+    {
+      "code": "JGAMES",
+      "name": "Janmansh and Games",
+      "status": "Accepted",
+      "solution_id": "1386269515",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:09:26"
+    },
+    {
+      "code": "BIG",
+      "name": "Big Achiever",
+      "status": "Accepted",
+      "solution_id": "1386270445",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:10:17"
+    },
+    {
+      "code": "BUYPLSE",
+      "name": "Buy Please",
+      "status": "Accepted",
+      "solution_id": "1386270867",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:10:56"
+    },
+    {
+      "code": "P1BAR",
+      "name": "Basketball Score",
+      "status": "Accepted",
+      "solution_id": "1386272346",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 17:13:50"
     }
   ]
 }

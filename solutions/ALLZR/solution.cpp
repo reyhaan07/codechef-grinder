@@ -10,40 +10,47 @@ using namespace std;
  * Type 1: A -> A-1, B -> B-2
  * Type 2: B -> B-1, C -> C-3
  * 
- * To make A, B, C all zero:
- * 1. A - x = 0  => x = A
- * 2. C - 3y = 0 => y = C / 3 (must be an integer, so C must be divisible by 3)
- * 3. B - 2x - y = 0
+ * To make A, B, C zero:
+ * A - x = 0  => x = A
+ * C - 3y = 0 => y = C / 3
  * 
- * Substituting x and y into the third equation:
- * B - 2(A) - (C/3) = 0
- * B = 2A + C/3
+ * For these to be valid:
+ * 1. x must be equal to A (since A starts at A and only Type 1 affects it).
+ * 2. y must be equal to C/3 (since C starts at C and only Type 2 affects it).
+ * 3. C must be divisible by 3 (since Type 2 subtracts 3 from C).
+ * 4. After performing x operations of Type 1 and y operations of Type 2, B must be 0.
+ *    Initial B - 2x - y = 0
+ *    Substituting x = A and y = C/3:
+ *    B - 2A - (C/3) = 0
+ *    B = 2A + C/3
  * 
- * Conditions for "Yes":
- * 1. C must be divisible by 3 (C % 3 == 0).
- * 2. B must equal 2A + (C/3).
- * 3. Since we cannot perform a negative number of operations, A, B, C must be >= 0.
- *    Given the constraints 1 <= A, B, C <= 20, we just need to check the equality.
+ * Constraints:
+ * A, B, C >= 1.
+ * Since x and y represent counts of operations, they must be non-negative.
+ * Since A, B, C >= 1, x = A >= 1 and y = C/3 >= 0.
+ * The condition C % 3 == 0 is necessary.
  */
 
 void solve() {
-    int A, B, C;
+    long long A, B, C;
     cin >> A >> B >> C;
 
-    if (C % 3 == 0) {
-        int y = C / 3;
-        if (B == 2 * A + y) {
-            cout << "Yes" << "\n";
-        } else {
-            cout << "No" << "\n";
-        }
+    if (C % 3 != 0) {
+        cout << "No" << "\n";
+        return;
+    }
+
+    long long x = A;
+    long long y = C / 3;
+
+    if (B == 2 * x + y) {
+        cout << "Yes" << "\n";
     } else {
         cout << "No" << "\n";
     }
 }
 
 int main() {
-    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

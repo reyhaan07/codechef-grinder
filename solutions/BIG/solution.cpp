@@ -9,10 +9,8 @@ using namespace std;
  * so they are always happy).
  * 
  * We can maintain a running maximum of the scores seen so far.
- * For each student i:
- * 1. If i == 0, they are happy.
- * 2. If A[i] > current_max, they are happy and we update current_max.
- * 3. Otherwise, they are not happy.
+ * For each student, if their score is greater than the current maximum, 
+ * they are happy, and we update the maximum.
  * 
  * Time Complexity: O(N) per test case.
  * Space Complexity: O(N) to store the array, or O(1) if processed on the fly.

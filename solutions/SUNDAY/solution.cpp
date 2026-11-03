@@ -5,40 +5,40 @@ using namespace std;
  * Problem Analysis:
  * The month has 30 days.
  * Day 1 is Monday.
- * Days are numbered 1 to 30.
- * A day 'd' is a Saturday if d % 7 == 6.
- * A day 'd' is a Sunday if d % 7 == 0.
- * Holidays are:
- * 1. All Saturdays (6, 13, 20, 27)
- * 2. All Sundays (7, 14, 21, 28)
- * 3. Given festival days A_i.
+ * Weekdays:
+ * Mon: 1, 8, 15, 22, 29
+ * Tue: 2, 9, 16, 23, 30
+ * Wed: 3, 10, 17, 24
+ * Thu: 4, 11, 18, 25
+ * Fri: 5, 12, 19, 26
+ * Sat: 6, 13, 20, 27
+ * Sun: 7, 14, 21, 28
  * 
- * We need to count the number of unique days that are holidays.
- * Using a boolean array of size 31 to mark holidays is efficient.
+ * Holidays are Saturdays (6, 13, 20, 27), Sundays (7, 14, 21, 28),
+ * and the given N festival days.
+ * We need to count the size of the union of these sets.
  */
 
 void solve() {
-    int n;
-    cin >> n;
+    int N;
+    cin >> N;
     
-    // Use a boolean array to track holidays. 
-    // Index 1 to 30 represents the days of the month.
+    // Use a boolean array to track holidays (days 1 to 30)
     vector<bool> is_holiday(31, false);
     
-    // Mark all Saturdays and Sundays as holidays
-    // Saturday: 6, 13, 20, 27
-    // Sunday: 7, 14, 21, 28
-    for (int i = 1; i <= 30; ++i) {
-        if (i % 7 == 6 || i % 7 == 0) {
-            is_holiday[i] = true;
-        }
+    // Mark Saturdays and Sundays
+    // Saturdays: 6, 13, 20, 27
+    // Sundays: 7, 14, 21, 28
+    int weekends[] = {6, 13, 20, 27, 7, 14, 21, 28};
+    for (int day : weekends) {
+        is_holiday[day] = true;
     }
     
-    // Mark festival days as holidays
-    for (int i = 0; i < n; ++i) {
-        int day;
-        cin >> day;
-        is_holiday[day] = true;
+    // Mark festival days
+    for (int i = 0; i < N; ++i) {
+        int festival_day;
+        cin >> festival_day;
+        is_holiday[festival_day] = true;
     }
     
     // Count total true values in the array
@@ -57,9 +57,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int t;
-    cin >> t;
-    while (t--) {
+    int T;
+    cin >> T;
+    while (T--) {
         solve();
     }
     return 0;

@@ -4,10 +4,11 @@ using namespace std;
 /**
  * Problem: Buying New Tablet
  * Approach:
- * For each test case, iterate through all N tablets.
- * Check if the price P_i is less than or equal to the budget B.
- * If it is, calculate the area (W_i * H_i) and keep track of the maximum area found so far.
- * If no tablet is affordable, output "no tablet".
+ * 1. Iterate through each test case.
+ * 2. For each tablet, check if its price P_i is less than or equal to the budget B.
+ * 3. If it is affordable, calculate the area (W_i * H_i).
+ * 4. Keep track of the maximum area found among all affordable tablets.
+ * 5. If no tablet is affordable, output "no tablet".
  * 
  * Time Complexity: O(T * N)
  * Space Complexity: O(1)
@@ -47,7 +48,7 @@ int main() {
     cin.tie(NULL);
 
     int T;
-    cin >> T;
+    if (!(cin >> T)) return 0;
     while (T--) {
         solve();
     }

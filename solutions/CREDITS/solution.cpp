@@ -24,7 +24,7 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        int x;
+        long long x;
         cin >> x;
         
         if (x > 65) {

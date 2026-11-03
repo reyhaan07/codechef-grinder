@@ -3,11 +3,14 @@ using namespace std;
 
 /**
  * Problem: Buy Please
- * The problem asks to calculate the total cost: (a * x) + (b * y).
- * Constraints: 1 <= a, b, x, y <= 10^3.
- * Maximum possible value: (10^3 * 10^3) + (10^3 * 10^3) = 2 * 10^6.
- * This fits comfortably within a standard 32-bit integer, but using long long 
- * is a safe practice in competitive programming to prevent overflow.
+ * The problem asks to calculate the total cost of 'a' pens at 'x' cost each
+ * and 'b' pencils at 'y' cost each.
+ * Total cost = (a * x) + (b * y)
+ * 
+ * Constraints: 1 <= a, b, x, y <= 10^3
+ * Max possible value = (10^3 * 10^3) + (10^3 * 10^3) = 2 * 10^6
+ * This fits comfortably within a standard 32-bit signed integer, 
+ * but using long long is a safe practice in competitive programming.
  */
 
 int main() {
