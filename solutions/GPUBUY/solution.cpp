@@ -13,15 +13,17 @@ using namespace std;
  * n * Z - n * Y >= X
  * n * (Z - Y) >= X
  * 
- * Case 1: If Z > Y, then n >= X / (Z - Y).
+ * Case 1: If Z > Y:
+ * n >= X / (Z - Y)
  * Since n must be an integer, n = ceil(X / (Z - Y)).
  * Using integer arithmetic, ceil(a / b) = (a + b - 1) / b.
  * 
- * Case 2: If Z <= Y, then n * (Z - Y) <= 0.
- * Since X > 0, the inequality n * (Z - Y) >= X can never be satisfied
- * because the left side is <= 0 and the right side is > 0.
- * Exception: If Z == Y, the inequality is 0 >= X, which is impossible for X >= 1.
- * Thus, if Z <= Y, output -1.
+ * Case 2: If Z <= Y:
+ * If Z <= Y, the inequality n * (Z - Y) >= X can only be satisfied if X <= 0,
+ * but constraints say X >= 1.
+ * If Z == Y, then 0 >= X, which is impossible since X >= 1.
+ * If Z < Y, then n * (negative) >= X, which is impossible for positive n.
+ * Therefore, if Z <= Y, it is impossible to buy the GPU, output -1.
  */
 
 void solve() {

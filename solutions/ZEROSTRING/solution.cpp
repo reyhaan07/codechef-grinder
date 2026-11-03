@@ -3,35 +3,33 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Let 'ones' be the number of 1s in the string and 'zeros' be the number of 0s.
- * We want to reach a state where the string contains only 0s.
+ * We want to make all characters in the string '0'.
+ * Let 'ones' be the count of '1's in the string.
+ * Let 'zeros' be the count of '0's in the string.
+ * N = ones + zeros.
  * 
- * Strategy 1: Delete all 1s.
- * Cost = 'ones'.
+ * Strategy:
+ * 1. We can delete all '1's. This takes 'ones' operations.
+ * 2. We can flip the string and then delete the remaining '1's.
+ *    If we flip, the string becomes (zeros '1's and ones '0's).
+ *    Then we need to delete the new '1's (which were originally '0's).
+ *    Total operations = 1 (flip) + zeros.
  * 
- * Strategy 2: Flip the string, then delete the remaining 1s.
- * If we flip, the 0s become 1s and the 1s become 0s.
- * After flipping, we have 'zeros' number of 1s.
- * Cost = 1 (for flip) + 'zeros' (to delete the new 1s).
+ * Comparing these two strategies:
+ * - Option A: Delete all '1's -> cost = ones
+ * - Option B: Flip + Delete all '0's -> cost = 1 + zeros
  * 
- * Strategy 3: Delete all 1s, then flip (if beneficial).
- * Actually, the flip operation affects the whole string. If we flip, we change 
- * the count of 1s and 0s.
+ * However, we can also combine these. If we have a string, we can delete some characters
+ * and then flip, or flip then delete.
+ * Actually, the minimum operations will be min(ones, zeros + 1).
+ * Why?
+ * - If we just delete all '1's, cost is 'ones'.
+ * - If we flip first, we have 'zeros' ones, then we delete them, cost is 'zeros + 1'.
+ * - Can we do better? If we delete some '1's first, say we delete 'k' ones, 
+ *   the cost is k + min(ones - k, zeros + 1).
+ *   This simplifies to min(ones, k + zeros + 1). Since k >= 0, this is always >= min(ones, zeros + 1).
  * 
- * Comparing the two main approaches:
- * 1. Just delete all 1s: Cost = ones
- * 2. Flip once, then delete the resulting 1s: Cost = 1 + zeros
- * 
- * We can also combine these. If we flip, we get 'zeros' number of 1s. 
- * We can then delete those 'zeros' 1s. The total cost is 1 + zeros.
- * 
- * Is there any other way? 
- * If we delete some characters first, then flip, then delete more?
- * Deleting a character before a flip is equivalent to deleting it after a flip 
- * (in terms of count). The order doesn't change the total number of operations 
- * needed to reach the target state.
- * 
- * Thus, the minimum operations is min(ones, zeros + 1).
+ * Therefore, the answer is min(ones, zeros + 1).
  */
 
 void solve() {
@@ -43,17 +41,13 @@ void solve() {
     int ones = 0;
     int zeros = 0;
     for (char c : s) {
-        if (c == '1') {
-            ones++;
-        } else {
-            zeros++;
-        }
+        if (c == '1') ones++;
+        else zeros++;
     }
 
-    // Option 1: Delete all ones
-    // Option 2: Flip (1 op) + delete all zeros (which became ones)
+    // The minimum operations is either deleting all ones, 
+    // or flipping the string (1 op) and deleting the resulting ones (which were zeros).
     int ans = min(ones, zeros + 1);
-
     cout << ans << "\n";
 }
 

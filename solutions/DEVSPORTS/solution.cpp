@@ -1,45 +1,47 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * Devendra has Z total money and has already spent Y.
- * Remaining money = Z - Y.
- * He needs to spend A + B + C on sports.
- * Condition: (Z - Y) >= (A + B + C).
+ * Devendra starts with Z amount and has already spent Y.
+ * Remaining budget = Z - Y.
+ * He needs to spend A + B + C on the three water sports.
+ * He can afford them if (Z - Y) >= (A + B + C).
  * 
  * Constraints:
- * Z, Y, A, B, C fit within standard integer types (max 10^5).
- * Time Complexity: O(T)
- * Space Complexity: O(1)
+ * Z <= 10^5, Y <= 10^5, A, B, C <= 5000.
+ * The sum A + B + C <= 15000.
+ * All values fit within a standard 32-bit integer, but using long long 
+ * is a safe practice in competitive programming to prevent overflow.
  */
 
 void solve() {
-    int Z, Y, A, B, C;
+    long long Z, Y, A, B, C;
     if (!(cin >> Z >> Y >> A >> B >> C)) return;
 
-    int remaining = Z - Y;
-    int total_cost = A + B + C;
+    // Calculate remaining money after initial expenses
+    long long remaining_budget = Z - Y;
+    
+    // Calculate total cost of the three sports
+    long long total_sports_cost = A + B + C;
 
-    if (remaining >= total_cost) {
-        cout << "YES" << endl;
+    // Check if he has enough money
+    if (remaining_budget >= total_sports_cost) {
+        cout << "YES" << "\n";
     } else {
-        cout << "NO" << endl;
+        cout << "NO" << "\n";
     }
 }
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    if (cin >> T) {
-        while (T--) {
-            solve();
-        }
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        solve();
     }
-
     return 0;
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 438,
+  "total_solved": 454,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -440,7 +440,23 @@
     "FACEDIR",
     "CABLE",
     "AP",
-    "BROKPHON"
+    "BROKPHON",
+    "SUBAADDB",
+    "VIDEOWORTH",
+    "KEPLERSLAW",
+    "LONGQUEUE",
+    "BIRDFARM",
+    "GPUBUY",
+    "ALLEV",
+    "UTKPLC",
+    "ZEROSTRING",
+    "WRITINGSPEED",
+    "COLORB",
+    "DEVSPORTS",
+    "EQUALIZEAB",
+    "SLOOP",
+    "MILEAGE",
+    "ALJMP"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -4405,6 +4421,150 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-03 00:26:17"
+    },
+    {
+      "code": "SUBAADDB",
+      "name": "Sub A Add B",
+      "status": "Accepted",
+      "solution_id": "1386093622",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:28:02"
+    },
+    {
+      "code": "VIDEOWORTH",
+      "name": "Worth of a Video",
+      "status": "Accepted",
+      "solution_id": "1386094338",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:29:31"
+    },
+    {
+      "code": "KEPLERSLAW",
+      "name": "Keplers Law",
+      "status": "Accepted",
+      "solution_id": "1386095155",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:31:10"
+    },
+    {
+      "code": "LONGQUEUE",
+      "name": "Long Queue",
+      "status": "Accepted",
+      "solution_id": "1386096492",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:34:03"
+    },
+    {
+      "code": "BIRDFARM",
+      "name": "Chef and Bird farm",
+      "status": "Accepted",
+      "solution_id": "1386097035",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:35:19"
+    },
+    {
+      "code": "GPUBUY",
+      "name": "Buying GPU",
+      "status": "Accepted",
+      "solution_id": "1386097350",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:35:54"
+    },
+    {
+      "code": "ALLEV",
+      "name": "All Even",
+      "status": "Accepted",
+      "solution_id": "1386097591",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:36:31"
+    },
+    {
+      "code": "UTKPLC",
+      "name": "Utkarsh and Placement tests",
+      "status": "Accepted",
+      "solution_id": "1386097982",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:37:10"
+    },
+    {
+      "code": "ZEROSTRING",
+      "name": "Zero String",
+      "status": "Accepted",
+      "solution_id": "1386098390",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:38:54"
+    },
+    {
+      "code": "WRITINGSPEED",
+      "name": "Writing Speed",
+      "status": "Accepted",
+      "solution_id": "1386099238",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:39:30"
+    },
+    {
+      "code": "COLORB",
+      "name": "Coloured Orbs",
+      "status": "Accepted",
+      "solution_id": "1386099499",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:40:04"
+    },
+    {
+      "code": "DEVSPORTS",
+      "name": "Devendra and Water Sports",
+      "status": "Accepted",
+      "solution_id": "1386099774",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:40:37"
+    },
+    {
+      "code": "EQUALIZEAB",
+      "name": "Equalize AB",
+      "status": "Accepted",
+      "solution_id": "1386100116",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:42:22"
+    },
+    {
+      "code": "SLOOP",
+      "name": "Coldplay",
+      "status": "Accepted",
+      "solution_id": "1386101012",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:42:59"
+    },
+    {
+      "code": "MILEAGE",
+      "name": "Mileage matters",
+      "status": "Accepted",
+      "solution_id": "1386101314",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:43:38"
+    },
+    {
+      "code": "ALJMP",
+      "name": "Alternate Jumps",
+      "status": "Accepted",
+      "solution_id": "1386102175",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 12:45:35"
     }
   ]
 }

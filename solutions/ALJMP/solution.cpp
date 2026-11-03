@@ -4,37 +4,36 @@ using namespace std;
 /**
  * Problem Analysis:
  * The frog starts at position N.
- * It makes N-1 jumps.
- * Jump i (1 <= i <= N-1):
- * If i is odd: X = X - (N - i)
- * If i is even: X = X + (N - i)
+ * Jump 1 (odd): Left by (N-1) -> Pos = N - (N-1) = 1
+ * Jump 2 (even): Right by (N-2) -> Pos = 1 + (N-2) = N-1
+ * Jump 3 (odd): Left by (N-3) -> Pos = (N-1) - (N-3) = 2
+ * Jump 4 (even): Right by (N-4) -> Pos = 2 + (N-4) = N-2
+ * Jump 5 (odd): Left by (N-5) -> Pos = (N-2) - (N-5) = 3
+ * Jump 6 (even): Right by (N-6) -> Pos = 3 + (N-6) = N-3
  * 
- * Let's trace for small N:
- * N=2: Start 2. Jump 1 (odd): 2 - (2-1) = 1. Final: 1.
- * N=3: Start 3. Jump 1 (odd): 3 - (3-1) = 1. Jump 2 (even): 1 + (3-2) = 2. Final: 2.
- * N=4: Start 4. Jump 1: 4 - 3 = 1. Jump 2: 1 + 2 = 3. Jump 3: 3 - 1 = 2. Final: 2.
- * N=5: Start 5. Jump 1: 5 - 4 = 1. Jump 2: 1 + 3 = 4. Jump 3: 4 - 2 = 2. Jump 4: 2 + 1 = 3. Final: 3.
- * N=6: Start 6. Jump 1: 6 - 5 = 1. Jump 2: 1 + 4 = 5. Jump 3: 5 - 3 = 2. Jump 4: 2 + 2 = 4. Jump 5: 4 - 1 = 3. Final: 3.
+ * Pattern observation:
+ * After 1 jump: 1
+ * After 2 jumps: N-1
+ * After 3 jumps: 2
+ * After 4 jumps: N-2
+ * After 5 jumps: 3
+ * After 6 jumps: N-3
  * 
- * Sequence of results:
- * N=2 -> 1
- * N=3 -> 2
- * N=4 -> 2
- * N=5 -> 3
- * N=6 -> 3
- * N=7 -> 4
- * N=8 -> 4
+ * Let k be the number of jumps.
+ * If k is odd, position = (k+1)/2
+ * If k is even, position = N - (k/2)
  * 
- * Pattern: The result is ceil(N / 2).
+ * Total jumps = N-1.
+ * If N-1 is odd (N is even):
+ *   Final position = ((N-1)+1)/2 = N/2
+ * If N-1 is even (N is odd):
+ *   Final position = N - ((N-1)/2) = (2N - N + 1) / 2 = (N+1)/2
+ * 
+ * Summary:
+ * If N is even, result is N/2.
+ * If N is odd, result is (N+1)/2.
+ * This can be simplified to (N + 1) / 2 using integer division.
  */
-
-void solve() {
-    long long N;
-    cin >> N;
-    // The pattern observed is ceil(N / 2.0)
-    // Using integer arithmetic: (N + 1) / 2
-    cout << (N + 1) / 2 << "\n";
-}
 
 int main() {
     // Fast I/O
@@ -42,9 +41,20 @@ int main() {
     cin.tie(NULL);
 
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
-        solve();
+        long long n;
+        cin >> n;
+        
+        // Based on the derived formula:
+        // For N=2: (2+1)/2 = 1
+        // For N=3: (3+1)/2 = 2
+        // For N=5: (5+1)/2 = 3
+        // For N=6: (6+1)/2 = 3
+        // The formula (N + 1) / 2 holds for all N >= 2.
+        
+        long long ans = (n + 1) / 2;
+        cout << ans << "\n";
     }
     return 0;
 }

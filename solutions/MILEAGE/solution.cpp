@@ -4,39 +4,40 @@ using namespace std;
 /**
  * Problem Analysis:
  * Distance to travel: N
- * Petrol: Price X, Mileage A km/litre.
- * Amount of petrol needed = N / A litres.
- * Cost of petrol = (N / A) * X.
+ * Petrol: Price X per litre, Mileage A km/litre.
+ * Diesel: Price Y per litre, Mileage B km/litre.
  * 
- * Diesel: Price Y, Mileage B km/litre.
- * Amount of diesel needed = N / B litres.
- * Cost of diesel = (N / B) * Y.
+ * Litres of petrol needed = N / A
+ * Cost of petrol = (N / A) * X
+ * 
+ * Litres of diesel needed = N / B
+ * Cost of diesel = (N / B) * Y
  * 
  * To compare (N * X) / A and (N * Y) / B:
- * We can multiply both sides by (A * B) to avoid floating point precision issues:
- * Cost_Petrol_Scaled = N * X * B
- * Cost_Diesel_Scaled = N * Y * A
+ * Since N > 0, we can compare X/A and Y/B.
+ * Multiplying both sides by (A * B) to avoid floating point issues:
+ * Compare (X * B) and (Y * A).
  * 
- * Since N > 0, we can compare (X * B) and (Y * A).
+ * If (X * B) < (Y * A) -> PETROL is cheaper.
+ * If (X * B) > (Y * A) -> DIESEL is cheaper.
+ * If (X * B) == (Y * A) -> ANY.
  */
 
 void solve() {
     long long N, X, Y, A, B;
     if (!(cin >> N >> X >> Y >> A >> B)) return;
 
-    // Using double for direct calculation is safe given constraints (100),
-    // but cross-multiplication with long long is robust.
-    double cost_petrol = (double)N * X / A;
-    double cost_diesel = (double)N * Y / B;
+    // Using long long to prevent any potential overflow, 
+    // though constraints (100) are small enough for int.
+    long long petrol_cost_factor = X * B;
+    long long diesel_cost_factor = Y * A;
 
-    // Use a small epsilon for floating point comparison, 
-    // though with these constraints, direct comparison is usually fine.
-    if (abs(cost_petrol - cost_diesel) < 1e-9) {
-        cout << "ANY" << "\n";
-    } else if (cost_petrol < cost_diesel) {
+    if (petrol_cost_factor < diesel_cost_factor) {
         cout << "PETROL" << "\n";
-    } else {
+    } else if (diesel_cost_factor < petrol_cost_factor) {
         cout << "DIESEL" << "\n";
+    } else {
+        cout << "ANY" << "\n";
     }
 }
 

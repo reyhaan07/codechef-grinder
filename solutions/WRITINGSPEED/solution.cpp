@@ -3,34 +3,37 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Rahul has 5 pages to write.
- * He has a total of 60 minutes.
- * He takes X minutes per page.
- * Total time taken = 5 * X.
- * Condition: 5 * X <= 60.
- * Simplifying: X <= 12.
+ * Rahul needs to write 5 pages.
+ * Time taken per page = X minutes.
+ * Total time required = 5 * X minutes.
+ * Time limit = 60 minutes.
+ * Rahul can complete the assignment if 5 * X <= 60.
  * 
  * Constraints: 1 <= X <= 1000.
- * Time Complexity: O(1) per test case.
- * Space Complexity: O(1).
+ * 5 * 1000 = 5000, which fits in a standard 32-bit integer.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int X;
-    // The problem description implies a single input X, 
+    // The problem description implies a single input X per test case,
     // but standard competitive programming practice often involves 
-    // reading until EOF or a specific number of test cases.
-    // Given the problem format, we read X directly.
-    if (cin >> X) {
-        if (5 * X <= 60) {
-            cout << "YES" << "\n";
-        } else {
-            cout << "NO" << "\n";
-        }
+    // handling a single input as per the problem statement.
+    // Given the constraints and format, we read X once.
+    
+    int X;
+    if (!(cin >> X)) return 0;
+
+    // Calculate total time needed
+    long long total_time = 5LL * X;
+
+    // Check against the 60-minute limit
+    if (total_time <= 60) {
+        cout << "YES" << "\n";
+    } else {
+        cout << "NO" << "\n";
     }
 
     return 0;

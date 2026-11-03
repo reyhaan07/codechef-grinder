@@ -6,9 +6,9 @@ using namespace std;
  * We have R red orbs and B blue orbs.
  * Cost of 1 green orb = 1 red + 1 blue.
  * Skill values:
- * Red = 1
- * Blue = 2
- * Green = 5
+ * Red: 1
+ * Blue: 2
+ * Green: 5
  * 
  * Let k be the number of green orbs we create.
  * k can range from 0 to min(R, B).
@@ -40,12 +40,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    // The problem description implies a single test case per run based on 
-    // "The first and only line of input contains 2 integers".
-    // However, the instructions mention "Handle multiple test cases properly".
-    // Given the constraints and format, we will check if there's a test case count 
-    // or just process the single line provided.
-    
+    // The problem description implies a single test case based on the format,
+    // but standard competitive programming practice often involves multiple test cases.
+    // Given the constraints and description, we handle the single input provided.
     solve();
     
     return 0;

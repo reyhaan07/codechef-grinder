@@ -1,52 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/**
- * Problem Analysis:
- * Sushil is at the N-th position (index N-1 in 0-indexed array).
- * His wealth is A[N-1].
- * He can bully the person directly in front of him if that person's wealth 
- * is <= (Sushil's wealth / 2).
- * Since he only bullies the person directly in front of him, we check from 
- * the person at index N-2 down to 0.
- * As soon as he encounters someone he cannot bully, he stops moving forward.
- */
-
 void solve() {
-    int N;
-    cin >> N;
-    vector<int> A(N);
-    for (int i = 0; i < N; ++i) {
-        cin >> A[i];
+    int n;
+    cin >> n;
+    vector<long long> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
     }
 
-    int sushil_wealth = A[N - 1];
-    int current_pos = N; // 1-based position
+    long long sushil_wealth = a[n - 1];
+    int pos = n;
 
-    // Check people from the one directly in front of Sushil backwards
-    for (int i = N - 2; i >= 0; --i) {
-        // Condition: wealth <= sushil_wealth / 2
-        // Using integer division as per problem statement (A_i <= X/2)
-        if (A[i] <= (sushil_wealth / 2)) {
-            current_pos--;
+    // We only need to check people immediately in front of Sushil.
+    // Sushil is currently at index n-1. The person directly in front is at index n-2, then n-3, and so on.
+    // Sushil can bully person at index i if a[i] <= sushil_wealth / 2.
+    // Wait, let's read carefully: "Everytime Sushil sees that the person directly in front of him has a wealth less than or equal to half of his own wealth, Sushil will bully him out of the line"
+    // Since Sushil moves forward, the set of people he can bully are those contiguous from the end (n-2 downwards) that satisfy the condition.
+    // The moment he encounters a person he cannot bully (i.e., wealth > sushil_wealth / 2), he stops completely because he can only bully the person *directly* in front of him.
+    
+    for (int i = n - 2; i >= 0; i--) {
+        if (a[i] <= sushil_wealth / 2) {
+            pos--;
         } else {
-            // Cannot bully this person, stop moving forward
             break;
         }
     }
 
-    cout << current_pos << "\n";
+    cout << pos << "\n";
 }
 
 int main() {
-    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    cin >> T;
-    while (T--) {
+    int t;
+    cin >> t;
+    while (t--) {
         solve();
     }
+
     return 0;
 }
