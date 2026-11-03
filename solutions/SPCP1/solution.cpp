@@ -6,12 +6,15 @@ using namespace std;
  * Chef's weight = 60 kg
  * Chef's height = 130 cm
  * 
- * Condition for entry:
+ * Condition to enter:
  * 1. Weight <= W
  * 2. Height >= H
  * 
- * Given constraints: 1 <= W, H <= 1000
- * Since the values are small, standard 'int' is sufficient.
+ * Given:
+ * 60 <= W
+ * 130 >= H
+ * 
+ * If both conditions are true, output YES, otherwise NO.
  */
 
 int main() {
@@ -21,16 +24,10 @@ int main() {
 
     int W, H;
     // The problem description implies a single test case based on the input format,
-    // but standard competitive programming practice often involves reading until EOF
-    // or handling a specific number of test cases. Given the problem description:
-    // "The first and only line of input will contain two space-separated integers W and H."
+    // but standard competitive programming practice often involves reading until EOF 
+    // or handling a specific number of test cases. Given the constraints and format:
     if (cin >> W >> H) {
-        // Chef's stats
-        int chefWeight = 60;
-        int chefHeight = 130;
-
-        // Check conditions
-        if (chefWeight <= W && chefHeight >= H) {
+        if (60 <= W && 130 >= H) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

@@ -13,14 +13,12 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case based on the input format description.
-    // However, standard competitive programming practice often involves handling multiple test cases.
-    // Given the constraints and description, we read A, X, and Y.
-    
+    // The problem description implies a single test case based on the input format,
+    // but we structure it to handle the logic correctly.
     long long A, X, Y;
     if (cin >> A >> X >> Y) {
-        // Check if total money (X + Y) is sufficient to cover cost A
-        if (X + Y >= A) {
+        // Check if total money (X + Y) is at least A
+        if ((X + Y) >= A) {
             cout << "YES" << "\n";
         } else {
             cout << "NO" << "\n";

@@ -11,11 +11,7 @@ using namespace std;
  * 2: South
  * 3: West
  * 
- * After X seconds, the direction is determined by X % 4.
- * 0 % 4 = 0 -> North
- * 1 % 4 = 1 -> East
- * 2 % 4 = 2 -> South
- * 3 % 4 = 3 -> West
+ * After X seconds, the direction is (X % 4).
  */
 
 int main() {
@@ -27,18 +23,19 @@ int main() {
     if (!(cin >> t)) return 0;
     
     while (t--) {
-        long long x;
+        int x;
         cin >> x;
         
-        int remainder = x % 4;
+        // Calculate the remainder to find the direction index
+        int direction = x % 4;
         
-        if (remainder == 0) {
+        if (direction == 0) {
             cout << "North" << "\n";
-        } else if (remainder == 1) {
+        } else if (direction == 1) {
             cout << "East" << "\n";
-        } else if (remainder == 2) {
+        } else if (direction == 2) {
             cout << "South" << "\n";
-        } else {
+        } else if (direction == 3) {
             cout << "West" << "\n";
         }
     }

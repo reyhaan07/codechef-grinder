@@ -3,40 +3,35 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We are given X, Y, Z. We want to check if they form an AP: Y - X = Z - Y,
- * which is equivalent to 2*Y = X + Z.
+ * We are given three integers X, Y, Z.
+ * An arithmetic progression (AP) satisfies the condition: Y - X = Z - Y,
+ * which simplifies to 2 * Y = X + Z.
+ * 
+ * We want to find the minimum number of operations (changing one of X, Y, or Z)
+ * to satisfy this condition.
  * 
  * Possible outcomes:
- * 0 operations: If 2*Y == X + Z, it is already an AP.
- * 1 operation: 
- *    - Change X: We need X = 2*Y - Z. Since we can change X to any integer, 
- *      this is always possible in 1 move.
- *    - Change Y: We need Y = (X + Z) / 2. If (X + Z) is even, we can change Y 
- *      to (X + Z) / 2 in 1 move.
- *    - Change Z: We need Z = 2*Y - X. Since we can change Z to any integer, 
- *      this is always possible in 1 move.
+ * 0 operations: If 2 * Y == X + Z, the sequence is already an AP.
+ * 1 operation: If we can change one variable to satisfy the condition.
+ *    - Change X: New X = 2 * Y - Z. Since we can change to any integer, this is always possible.
+ *    - Change Y: New Y = (X + Z) / 2. This is possible if (X + Z) is even.
+ *    - Change Z: New Z = 2 * Y - X. This is always possible.
+ * 2 operations: If we cannot satisfy it in 0 or 1, we can always satisfy it in 1 operation 
+ *    (as shown above, changing X or Z always works).
  * 
- * Therefore:
- * - If 2*Y == X + Z, answer is 0.
- * - Else if (X + Z) % 2 == 0, answer is 1 (we can change Y to (X+Z)/2).
- * - Else, answer is 1 (we can change X or Z to satisfy the condition).
- * 
- * Wait, let's re-verify:
- * If 2*Y == X + Z, 0 moves.
- * If 2*Y != X + Z, can we always do it in 1 move?
- * Yes. We can change X to (2*Y - Z), or change Z to (2*Y - X).
- * So the answer is either 0 or 1.
+ * Therefore, the answer is 0 if 2*Y == X + Z, 1 otherwise.
  */
 
 void solve() {
     long long X, Y, Z;
     cin >> X >> Y >> Z;
 
+    // Check if it is already an AP
     if (2 * Y == X + Z) {
         cout << 0 << "\n";
     } else {
-        // We can always change one of the numbers to make it an AP.
-        // For example, change X to (2*Y - Z).
+        // We can always change one number (X, Y, or Z) to make it an AP.
+        // For example, change Z to (2*Y - X).
         cout << 1 << "\n";
     }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 425,
+  "total_solved": 438,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -427,14 +427,28 @@
     "LUCKYNUM",
     "JUSTICE",
     "NOTIME",
-    "HOWMANY"
+    "HOWMANY",
+    "WINNERR",
+    "BOX2",
+    "GENE01",
+    "EQLZING",
+    "LINCHESS",
+    "MINBOTTLES",
+    "CHEFSOCKS",
+    "SPCP1",
+    "CHEFPAGES",
+    "FACEDIR",
+    "CABLE",
+    "AP",
+    "BROKPHON"
   ],
   "failed_codes": [
     "SEARCHINARR",
     "KITCHENCOST",
     "ODDSUMPAIR",
     "ICECONE",
-    "QNOT"
+    "QNOT",
+    "INPL"
   ],
   "pending": [],
   "history": [
@@ -4274,6 +4288,123 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-02 22:51:42"
+    },
+    {
+      "code": "WINNERR",
+      "name": "Determine the Winner",
+      "status": "Accepted",
+      "solution_id": "1385722331",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:07:12"
+    },
+    {
+      "code": "BOX2",
+      "name": "2 Boxes",
+      "status": "Accepted",
+      "solution_id": "1385722378",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:08:07"
+    },
+    {
+      "code": "GENE01",
+      "name": "Genes",
+      "status": "Accepted",
+      "solution_id": "1385722405",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:08:49"
+    },
+    {
+      "code": "EQLZING",
+      "name": "Equalizing Numbers",
+      "status": "Accepted",
+      "solution_id": "1385722440",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:10:44"
+    },
+    {
+      "code": "LINCHESS",
+      "name": "Chef and Linear Chess",
+      "status": "Accepted",
+      "solution_id": "1385722496",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:11:28"
+    },
+    {
+      "code": "MINBOTTLES",
+      "name": "Minimum Bottles",
+      "status": "Accepted",
+      "solution_id": "1385722529",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:12:22"
+    },
+    {
+      "code": "CHEFSOCKS",
+      "name": "Chef and Socks",
+      "status": "Accepted",
+      "solution_id": "1385722566",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:13:14"
+    },
+    {
+      "code": "SPCP1",
+      "name": "Water Park",
+      "status": "Accepted",
+      "solution_id": "1385722816",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:19:26"
+    },
+    {
+      "code": "CHEFPAGES",
+      "name": "Important Pages on CodeChef",
+      "status": "Accepted",
+      "solution_id": "1385722889",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:21:20"
+    },
+    {
+      "code": "FACEDIR",
+      "name": "Find the Direction",
+      "status": "Accepted",
+      "solution_id": "1385722908",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:21:53"
+    },
+    {
+      "code": "CABLE",
+      "name": "Volume Comparison",
+      "status": "Accepted",
+      "solution_id": "1385722943",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:22:39"
+    },
+    {
+      "code": "AP",
+      "name": "Make Arithmetic Progression",
+      "status": "Accepted",
+      "solution_id": "1385723048",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:25:31"
+    },
+    {
+      "code": "BROKPHON",
+      "name": "Broken Telephone",
+      "status": "Accepted",
+      "solution_id": "1385723063",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 00:26:17"
     }
   ]
 }

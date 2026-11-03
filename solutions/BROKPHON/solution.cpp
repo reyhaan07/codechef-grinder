@@ -3,35 +3,37 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * A player i (1-indexed) mishears or whispers wrongly if the message they 
- * received (A[i]) is different from the message the previous player (i-1) 
- * whispered (A[i-1]), OR if the message they whispered (A[i]) is different 
- * from the message the next player (i+1) received (A[i+1]).
+ * A player i (1-indexed) is involved in a "wrong" message transmission if:
+ * 1. The message they received (A[i]) is different from the message the previous player (A[i-1]) sent.
+ * 2. The message they sent (A[i]) is different from the message the next player (A[i+1]) received.
  * 
- * Essentially, if A[i] != A[i+1], then either player i whispered it wrong 
- * or player i+1 misheard it. Both players are involved in the discrepancy.
- * We need to count all unique indices i such that A[i] != A[i+1] or A[i] != A[i-1].
+ * Essentially, if A[i] != A[i+1], then either player i whispered it wrong, 
+ * or player i+1 misheard it. Both players are "suspect".
+ * We need to count the total number of unique players who are part of any 
+ * mismatch (A[i] != A[i+1]).
  */
 
 void solve() {
-    int n;
-    cin >> n;
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+    int N;
+    cin >> N;
+    vector<long long> A(N);
+    for (int i = 0; i < N; ++i) {
+        cin >> A[i];
     }
 
-    // Use a boolean array to mark players involved in a discrepancy
-    vector<bool> is_wrong(n, false);
-    for (int i = 0; i < n - 1; ++i) {
-        if (a[i] != a[i + 1]) {
+    // Use a boolean array to mark players who are involved in a mismatch.
+    // A mismatch between A[i] and A[i+1] means both player i and player i+1
+    // are potentially at fault.
+    vector<bool> is_wrong(N, false);
+    for (int i = 0; i < N - 1; ++i) {
+        if (A[i] != A[i + 1]) {
             is_wrong[i] = true;
             is_wrong[i + 1] = true;
         }
     }
 
     int count = 0;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < N; ++i) {
         if (is_wrong[i]) {
             count++;
         }
@@ -45,7 +47,7 @@ int main() {
     cin.tie(NULL);
 
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
         solve();
     }

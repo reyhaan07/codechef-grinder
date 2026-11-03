@@ -3,13 +3,18 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The problem states that brown (R) is the most common, blue (B) is next, 
- * and green (G) is the rarest.
- * The child's eye color is the most common of the two parents' eye colors.
+ * The problem states:
+ * 1. Brown (R) is the most common.
+ * 2. Blue (B) is the second most common.
+ * 3. Green (G) is the rarest.
  * 
- * Hierarchy: R > B > G
- * If we assign values: R = 3, B = 2, G = 1
- * The child's color will be the maximum of the two parents' values.
+ * The child's eye color is the most common of the two parents.
+ * Hierarchy: R > B > G.
+ * 
+ * Logic:
+ * If either parent is 'R', the child is 'R'.
+ * Else if either parent is 'B', the child is 'B'.
+ * Else (both are 'G'), the child is 'G'.
  */
 
 int main() {
@@ -20,23 +25,13 @@ int main() {
     char p1, p2;
     if (!(cin >> p1 >> p2)) return 0;
 
-    // Map characters to priority values
-    auto get_val = [](char c) {
-        if (c == 'R') return 3;
-        if (c == 'B') return 2;
-        return 1; // G
-    };
-
-    int v1 = get_val(p1);
-    int v2 = get_val(p2);
-
-    int result_val = max(v1, v2);
-
-    if (result_val == 3) {
+    // Determine the dominant color based on the hierarchy R > B > G
+    if (p1 == 'R' || p2 == 'R') {
         cout << "R" << "\n";
-    } else if (result_val == 2) {
+    } else if (p1 == 'B' || p2 == 'B') {
         cout << "B" << "\n";
     } else {
+        // Both must be 'G'
         cout << "G" << "\n";
     }
 
