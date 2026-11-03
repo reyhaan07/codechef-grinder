@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 486,
+  "total_solved": 502,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -488,7 +488,23 @@
     "EPISODES",
     "EITA",
     "CAKEHALF",
-    "APPLEORANGE"
+    "APPLEORANGE",
+    "CRDGAME",
+    "CARRYGOLD",
+    "BFLY",
+    "BANKGLITCH",
+    "SURPLUS",
+    "CUTESTR",
+    "CARDGAME1",
+    "HOLES",
+    "BRKSTICK",
+    "CHEFBAKES77",
+    "ADVITIYA",
+    "NEARESTCOURT",
+    "CALLIM",
+    "INDEPENDENCE",
+    "QTOO_2523",
+    "TTENIS"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -496,7 +512,8 @@
     "ODDSUMPAIR",
     "ICECONE",
     "QNOT",
-    "INPL"
+    "INPL",
+    "STREAK"
   ],
   "pending": [],
   "history": [
@@ -4885,6 +4902,150 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-03 20:39:06"
+    },
+    {
+      "code": "CRDGAME",
+      "name": "Chef and Card Game",
+      "status": "Accepted",
+      "solution_id": "1386340187",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:36:42"
+    },
+    {
+      "code": "CARRYGOLD",
+      "name": "Gold Mining",
+      "status": "Accepted",
+      "solution_id": "1386340197",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:37:50"
+    },
+    {
+      "code": "BFLY",
+      "name": "Butterfly",
+      "status": "Accepted",
+      "solution_id": "1386340202",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:39:23"
+    },
+    {
+      "code": "BANKGLITCH",
+      "name": "Bank Glitch",
+      "status": "Accepted",
+      "solution_id": "1386340215",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:41:12"
+    },
+    {
+      "code": "SURPLUS",
+      "name": "Trade Surplus",
+      "status": "Accepted",
+      "solution_id": "1386340225",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:42:06"
+    },
+    {
+      "code": "CUTESTR",
+      "name": "Cute Strings",
+      "status": "Accepted",
+      "solution_id": "1386340233",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:42:41"
+    },
+    {
+      "code": "CARDGAME1",
+      "name": "Card Game",
+      "status": "Accepted",
+      "solution_id": "1386340251",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:43:40"
+    },
+    {
+      "code": "HOLES",
+      "name": "Holes in the text",
+      "status": "Accepted",
+      "solution_id": "1386340267",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:44:20"
+    },
+    {
+      "code": "BRKSTICK",
+      "name": "Breaking Sticks",
+      "status": "Accepted",
+      "solution_id": "1386340277",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:45:14"
+    },
+    {
+      "code": "CHEFBAKES77",
+      "name": "Chef Bakes Cake",
+      "status": "Accepted",
+      "solution_id": "1386340286",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:45:45"
+    },
+    {
+      "code": "ADVITIYA",
+      "name": "Advitiya",
+      "status": "Accepted",
+      "solution_id": "1386340299",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:46:14"
+    },
+    {
+      "code": "NEARESTCOURT",
+      "name": "Nearest Court",
+      "status": "Accepted",
+      "solution_id": "1386340352",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:50:30"
+    },
+    {
+      "code": "CALLIM",
+      "name": "Calorie Limit",
+      "status": "Accepted",
+      "solution_id": "1386340369",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:52:09"
+    },
+    {
+      "code": "INDEPENDENCE",
+      "name": "Independence Day 101",
+      "status": "Accepted",
+      "solution_id": "1386340391",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:53:37"
+    },
+    {
+      "code": "QTOO_2523",
+      "name": "Bi_lindrome!",
+      "status": "Accepted",
+      "solution_id": "1386340424",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:56:18"
+    },
+    {
+      "code": "TTENIS",
+      "name": "Chef and Table Tennis",
+      "status": "Accepted",
+      "solution_id": "1386340435",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 22:57:28"
     }
   ]
 }
