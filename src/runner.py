@@ -164,7 +164,7 @@ def run():
     candidate_problems = []
     seen = set()
     page = 0
-    while len(candidate_problems) < target_this_run and page < 50:
+    while len(candidate_problems) < target_this_run and page < config.max_discovery_pages:
         try:
             problems = client.fetch_practice_problems(
                 page=page,
