@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 473,
+  "total_solved": 486,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -475,7 +475,20 @@
     "JGAMES",
     "BIG",
     "BUYPLSE",
-    "P1BAR"
+    "P1BAR",
+    "CAKEMAKE",
+    "CARCHOICE",
+    "BMI",
+    "DRUNKALK",
+    "TSTROBOT",
+    "VISA",
+    "MESSI",
+    "FINDK3",
+    "JMARKET",
+    "EPISODES",
+    "EITA",
+    "CAKEHALF",
+    "APPLEORANGE"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -4755,6 +4768,123 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-03 17:13:50"
+    },
+    {
+      "code": "CAKEMAKE",
+      "name": "Cake Making",
+      "status": "Accepted",
+      "solution_id": "1386335340",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:20:14"
+    },
+    {
+      "code": "CARCHOICE",
+      "name": "Car Choice",
+      "status": "Accepted",
+      "solution_id": "1386335518",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:22:17"
+    },
+    {
+      "code": "BMI",
+      "name": "Body Mass Index",
+      "status": "Accepted",
+      "solution_id": "1386335677",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:23:37"
+    },
+    {
+      "code": "DRUNKALK",
+      "name": "Drunk Alcoholic",
+      "status": "Accepted",
+      "solution_id": "1386335750",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:24:33"
+    },
+    {
+      "code": "TSTROBOT",
+      "name": "Testing Robot",
+      "status": "Accepted",
+      "solution_id": "1386336200",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:29:07"
+    },
+    {
+      "code": "VISA",
+      "name": "Chefland Visa",
+      "status": "Accepted",
+      "solution_id": "1386336334",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:31:39"
+    },
+    {
+      "code": "MESSI",
+      "name": "Football Training",
+      "status": "Accepted",
+      "solution_id": "1386336468",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:32:31"
+    },
+    {
+      "code": "FINDK3",
+      "name": "FIND A and B",
+      "status": "Accepted",
+      "solution_id": "1386336559",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:33:44"
+    },
+    {
+      "code": "JMARKET",
+      "name": "Janmansh at Fruit Market",
+      "status": "Accepted",
+      "solution_id": "1386336626",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:34:34"
+    },
+    {
+      "code": "EPISODES",
+      "name": "Episodes",
+      "status": "Accepted",
+      "solution_id": "1386336697",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:35:31"
+    },
+    {
+      "code": "EITA",
+      "name": "Maximum Production",
+      "status": "Accepted",
+      "solution_id": "1386336839",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:37:35"
+    },
+    {
+      "code": "CAKEHALF",
+      "name": "Let Me Eat Cake!",
+      "status": "Accepted",
+      "solution_id": "1386336906",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:38:31"
+    },
+    {
+      "code": "APPLEORANGE",
+      "name": "Apples and oranges",
+      "status": "Accepted",
+      "solution_id": "1386336941",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-03 20:39:06"
     }
   ]
 }
