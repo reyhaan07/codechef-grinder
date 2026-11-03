@@ -57,16 +57,19 @@ jobs:
           # Skip the Gemini-written README per problem (halves Gemini requests during the sprint).
           # Set back to "true" afterwards to get full explanations again.
           GENERATE_EXPLANATIONS: "false"
+          # SPRINT MODE switch: repository variable SPRINT_MODE = "true" -> up to 100 problems/day
+          # (about 25 per run). Anything else (or unset) -> 5 problems/day (1-2 per run).
+          MAX_DISCOVERY_PAGES: "100"   # scan up to 3000 practice problems (enough for 1000+)
           RANDOMIZE_BATCH: "true"
-          MIN_PROBLEMS_PER_RUN: "15"
-          MAX_PROBLEMS_PER_RUN: "20"
-          DAILY_TARGET_MIN: "60"
-          DAILY_TARGET_MAX: "80"
+          MIN_PROBLEMS_PER_RUN: ${{ vars.SPRINT_MODE == 'true' && '22' || '1' }}
+          MAX_PROBLEMS_PER_RUN: ${{ vars.SPRINT_MODE == 'true' && '25' || '2' }}
+          DAILY_TARGET_MIN: ${{ vars.SPRINT_MODE == 'true' && '100' || '5' }}
+          DAILY_TARGET_MAX: ${{ vars.SPRINT_MODE == 'true' && '100' || '5' }}
           MIN_DELAY_SECONDS: "25"
           MAX_DELAY_SECONDS: "50"
           LANGUAGE: "cpp"
           MIN_DIFFICULTY: "200"
-          MAX_DIFFICULTY: "1400"
+          MAX_DIFFICULTY: "2000"
         run: |
           python -m src.runner
 
