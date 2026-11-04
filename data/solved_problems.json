@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 519,
+  "total_solved": 534,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -521,7 +521,22 @@
     "BOP2",
     "LOOP",
     "PSGRADE",
-    "RECTSQ"
+    "RECTSQ",
+    "RCTGLD",
+    "MODTEMP",
+    "TV",
+    "PASSINGGR",
+    "ADVITIYA3",
+    "MATPAN",
+    "NEIREM",
+    "PIZZA_BURGER",
+    "CARDSWIPE",
+    "TOYS",
+    "BESTOFTENNIS",
+    "RETURNCHANGE",
+    "CHEFWARS",
+    "POTATOES",
+    "SELLCOIN"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -5217,6 +5232,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-04 12:52:23"
+    },
+    {
+      "code": "RCTGLD",
+      "name": "Rectangled",
+      "status": "Accepted",
+      "solution_id": "1386894797",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 16:50:53"
+    },
+    {
+      "code": "MODTEMP",
+      "name": "Moderate Temperatures",
+      "status": "Accepted",
+      "solution_id": "1386896487",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 16:52:59"
+    },
+    {
+      "code": "TV",
+      "name": "Television Channels",
+      "status": "Accepted",
+      "solution_id": "1386898333",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 16:55:27"
+    },
+    {
+      "code": "PASSINGGR",
+      "name": "Passing Grade",
+      "status": "Accepted",
+      "solution_id": "1386900657",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 16:58:37"
+    },
+    {
+      "code": "ADVITIYA3",
+      "name": "Cookie Day",
+      "status": "Accepted",
+      "solution_id": "1386901292",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 16:59:21"
+    },
+    {
+      "code": "MATPAN",
+      "name": "Mathison and pangrams",
+      "status": "Accepted",
+      "solution_id": "1386901848",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:00:11"
+    },
+    {
+      "code": "NEIREM",
+      "name": "Remaining Neighborhoods",
+      "status": "Accepted",
+      "solution_id": "1386902424",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:01:02"
+    },
+    {
+      "code": "PIZZA_BURGER",
+      "name": "Hungry Ashish",
+      "status": "Accepted",
+      "solution_id": "1386902979",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:02:48"
+    },
+    {
+      "code": "CARDSWIPE",
+      "name": "Card Swipe",
+      "status": "Accepted",
+      "solution_id": "1386904154",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:04:28"
+    },
+    {
+      "code": "TOYS",
+      "name": "Playing with Toys",
+      "status": "Accepted",
+      "solution_id": "1386905456",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:05:32"
+    },
+    {
+      "code": "BESTOFTENNIS",
+      "name": "Best of N Sets",
+      "status": "Accepted",
+      "solution_id": "1386906351",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:06:59"
+    },
+    {
+      "code": "RETURNCHANGE",
+      "name": "Return the Change",
+      "status": "Accepted",
+      "solution_id": "1386907095",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:07:56"
+    },
+    {
+      "code": "CHEFWARS",
+      "name": "Chef Wars - Return of the Jedi",
+      "status": "Accepted",
+      "solution_id": "1386907642",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:09:43"
+    },
+    {
+      "code": "POTATOES",
+      "name": "Farmer Feb",
+      "status": "Accepted",
+      "solution_id": "1386908657",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:10:35"
+    },
+    {
+      "code": "SELLCOIN",
+      "name": "Selling Coins",
+      "status": "Accepted",
+      "solution_id": "1386909907",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 17:12:42"
     }
   ]
 }
