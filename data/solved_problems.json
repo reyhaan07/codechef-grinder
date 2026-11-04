@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 552,
+  "total_solved": 567,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -554,7 +554,22 @@
     "MXSCWN",
     "NO25PLS",
     "TEA",
-    "OJUMPS"
+    "OJUMPS",
+    "FKMC",
+    "BOWLBALL",
+    "CHEFARRP",
+    "SRTARR",
+    "ICE_CREAM",
+    "PERMUT2",
+    "INCREAR",
+    "ASM120",
+    "FAIRSHARE",
+    "STICKCOMP",
+    "CHRBUY",
+    "CHEFBARBER",
+    "EVENPSUM",
+    "GMGM",
+    "STICKS"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -5547,6 +5562,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-04 20:52:54"
+    },
+    {
+      "code": "FKMC",
+      "name": "Fake Certificate",
+      "status": "Accepted",
+      "solution_id": "1386973236",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 22:56:24"
+    },
+    {
+      "code": "BOWLBALL",
+      "name": "Bowling Balls",
+      "status": "Accepted",
+      "solution_id": "1386973251",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 22:57:54"
+    },
+    {
+      "code": "CHEFARRP",
+      "name": "Chef and Subarrays",
+      "status": "Accepted",
+      "solution_id": "1386973303",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 22:58:45"
+    },
+    {
+      "code": "SRTARR",
+      "name": "Sort the String",
+      "status": "Accepted",
+      "solution_id": "1386973313",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 22:59:28"
+    },
+    {
+      "code": "ICE_CREAM",
+      "name": "ICE CREAM",
+      "status": "Accepted",
+      "solution_id": "1386973327",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:00:09"
+    },
+    {
+      "code": "PERMUT2",
+      "name": "Ambiguous Permutations",
+      "status": "Accepted",
+      "solution_id": "1386973344",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:01:00"
+    },
+    {
+      "code": "INCREAR",
+      "name": "Equal Integers",
+      "status": "Accepted",
+      "solution_id": "1386973377",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:01:58"
+    },
+    {
+      "code": "ASM120",
+      "name": "Sub or Swp",
+      "status": "Accepted",
+      "solution_id": "1386973386",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:02:30"
+    },
+    {
+      "code": "FAIRSHARE",
+      "name": "Fair Share Settlement",
+      "status": "Accepted",
+      "solution_id": "1386973408",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:03:22"
+    },
+    {
+      "code": "STICKCOMP",
+      "name": "Brick Comparisions",
+      "status": "Accepted",
+      "solution_id": "1386973436",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:04:10"
+    },
+    {
+      "code": "CHRBUY",
+      "name": "Buying Chairs",
+      "status": "Accepted",
+      "solution_id": "1386973458",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:05:51"
+    },
+    {
+      "code": "CHEFBARBER",
+      "name": "Chef and the Hair Salon",
+      "status": "Accepted",
+      "solution_id": "1386973492",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:06:43"
+    },
+    {
+      "code": "EVENPSUM",
+      "name": "Even Pair Sum",
+      "status": "Accepted",
+      "solution_id": "1386973506",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:07:33"
+    },
+    {
+      "code": "GMGM",
+      "name": "Gun Master",
+      "status": "Accepted",
+      "solution_id": "1386973523",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:09:24"
+    },
+    {
+      "code": "STICKS",
+      "name": "Sticks",
+      "status": "Accepted",
+      "solution_id": "1386973553",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 23:10:06"
     }
   ]
 }
