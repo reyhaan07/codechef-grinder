@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 502,
+  "total_solved": 519,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -504,7 +504,24 @@
     "CALLIM",
     "INDEPENDENCE",
     "QTOO_2523",
-    "TTENIS"
+    "TTENIS",
+    "SHOEFIT",
+    "EUREKA",
+    "MAXFUN",
+    "FIRSTANDLAST",
+    "TESTSERIES",
+    "REMOVEBAD",
+    "VACCINE2",
+    "TCG",
+    "LITRATE",
+    "ECHOECHO",
+    "PROC18A",
+    "MAX6",
+    "CNOTE",
+    "BOP2",
+    "LOOP",
+    "PSGRADE",
+    "RECTSQ"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -513,7 +530,8 @@
     "ICECONE",
     "QNOT",
     "INPL",
-    "STREAK"
+    "STREAK",
+    "AVOIDCONTACT"
   ],
   "pending": [],
   "history": [
@@ -5046,6 +5064,159 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-03 22:57:28"
+    },
+    {
+      "code": "SHOEFIT",
+      "name": "Shoe Fit",
+      "status": "Accepted",
+      "solution_id": "1386659668",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:37:35"
+    },
+    {
+      "code": "EUREKA",
+      "name": "N Queens Puzzle Solved !",
+      "status": "Accepted",
+      "solution_id": "1386660052",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:38:24"
+    },
+    {
+      "code": "MAXFUN",
+      "name": "Maximise Function",
+      "status": "Accepted",
+      "solution_id": "1386660506",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:39:19"
+    },
+    {
+      "code": "FIRSTANDLAST",
+      "name": "First and Last",
+      "status": "Accepted",
+      "solution_id": "1386660873",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:40:00"
+    },
+    {
+      "code": "TESTSERIES",
+      "name": "Test Match Series",
+      "status": "Accepted",
+      "solution_id": "1386661169",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:40:35"
+    },
+    {
+      "code": "REMOVEBAD",
+      "name": "Remove Bad elements",
+      "status": "Accepted",
+      "solution_id": "1386661766",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:41:49"
+    },
+    {
+      "code": "VACCINE2",
+      "name": "Vaccine Distribution",
+      "status": "Accepted",
+      "solution_id": "1386662133",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:42:32"
+    },
+    {
+      "code": "TCG",
+      "name": "Capital Gain Tax",
+      "status": "Accepted",
+      "solution_id": "1386662422",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:43:10"
+    },
+    {
+      "code": "LITRATE",
+      "name": "Literacy Rate",
+      "status": "Accepted",
+      "solution_id": "1386662802",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:43:52"
+    },
+    {
+      "code": "ECHOECHO",
+      "name": "Echo",
+      "status": "Accepted",
+      "solution_id": "1386663196",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:44:38"
+    },
+    {
+      "code": "PROC18A",
+      "name": "The Great Run",
+      "status": "Accepted",
+      "solution_id": "1386663576",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:45:19"
+    },
+    {
+      "code": "MAX6",
+      "name": "Max Sixers",
+      "status": "Accepted",
+      "solution_id": "1386664261",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:46:33"
+    },
+    {
+      "code": "CNOTE",
+      "name": "Chef and Notebooks",
+      "status": "Accepted",
+      "solution_id": "1386664735",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:47:29"
+    },
+    {
+      "code": "BOP2",
+      "name": "Color Festival",
+      "status": "Accepted",
+      "solution_id": "1386665142",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:48:13"
+    },
+    {
+      "code": "LOOP",
+      "name": "Circular Track",
+      "status": "Accepted",
+      "solution_id": "1386666486",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:50:45"
+    },
+    {
+      "code": "PSGRADE",
+      "name": "Passing Marks",
+      "status": "Accepted",
+      "solution_id": "1386666930",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:51:35"
+    },
+    {
+      "code": "RECTSQ",
+      "name": "Farmer And His Plot",
+      "status": "Accepted",
+      "solution_id": "1386667363",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 12:52:23"
     }
   ]
 }
