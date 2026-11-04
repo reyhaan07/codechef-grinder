@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 534,
+  "total_solved": 552,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -536,7 +536,25 @@
     "RETURNCHANGE",
     "CHEFWARS",
     "POTATOES",
-    "SELLCOIN"
+    "SELLCOIN",
+    "SUPINC",
+    "DICEGAME3",
+    "CHOCCUT",
+    "CHFPROFIT",
+    "MDGT",
+    "ALTSTR",
+    "SANDWICH7",
+    "MAXCOUNT",
+    "FRUITCHAAT",
+    "MASKPOL",
+    "BBWIN",
+    "PLAYPIAN",
+    "STRP",
+    "COUNTP",
+    "MXSCWN",
+    "NO25PLS",
+    "TEA",
+    "OJUMPS"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -5367,6 +5385,168 @@
       "attempts": 2,
       "account": "reyhaan_s",
       "time": "2026-11-04 17:12:42"
+    },
+    {
+      "code": "SUPINC",
+      "name": "Superincreasing",
+      "status": "Accepted",
+      "solution_id": "1386967558",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:34:44"
+    },
+    {
+      "code": "DICEGAME3",
+      "name": "Dice Game 3",
+      "status": "Accepted",
+      "solution_id": "1386967660",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:36:29"
+    },
+    {
+      "code": "CHOCCUT",
+      "name": "Chocolate Cutting",
+      "status": "Accepted",
+      "solution_id": "1386967734",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:37:13"
+    },
+    {
+      "code": "CHFPROFIT",
+      "name": "Chef and Profits",
+      "status": "Accepted",
+      "solution_id": "1386967783",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:37:48"
+    },
+    {
+      "code": "MDGT",
+      "name": "Lost in the Fest!!",
+      "status": "Accepted",
+      "solution_id": "1386967854",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:38:37"
+    },
+    {
+      "code": "ALTSTR",
+      "name": "Alternating String",
+      "status": "Accepted",
+      "solution_id": "1386967900",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:39:15"
+    },
+    {
+      "code": "SANDWICH7",
+      "name": "Sandwiches",
+      "status": "Accepted",
+      "solution_id": "1386967950",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:40:02"
+    },
+    {
+      "code": "MAXCOUNT",
+      "name": "Count of Maximum",
+      "status": "Accepted",
+      "solution_id": "1386968003",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:40:51"
+    },
+    {
+      "code": "FRUITCHAAT",
+      "name": "Chef and His Fruit Stand",
+      "status": "Accepted",
+      "solution_id": "1386968065",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:41:46"
+    },
+    {
+      "code": "MASKPOL",
+      "name": "Mask Policy",
+      "status": "Accepted",
+      "solution_id": "1386968185",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:43:48"
+    },
+    {
+      "code": "BBWIN",
+      "name": "Extreme Basketball",
+      "status": "Accepted",
+      "solution_id": "1386968244",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:45:34"
+    },
+    {
+      "code": "PLAYPIAN",
+      "name": "Play Piano",
+      "status": "Accepted",
+      "solution_id": "1386968339",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:47:08"
+    },
+    {
+      "code": "STRP",
+      "name": "String protocol",
+      "status": "Accepted",
+      "solution_id": "1386968499",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:48:05"
+    },
+    {
+      "code": "COUNTP",
+      "name": "Counting Problem",
+      "status": "Accepted",
+      "solution_id": "1386968525",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:48:46"
+    },
+    {
+      "code": "MXSCWN",
+      "name": "Maximum Score",
+      "status": "Accepted",
+      "solution_id": "1386968570",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:49:32"
+    },
+    {
+      "code": "NO25PLS",
+      "name": "Imperfect Numbers",
+      "status": "Accepted",
+      "solution_id": "1386968607",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:50:20"
+    },
+    {
+      "code": "TEA",
+      "name": "Chef Drinks Tea",
+      "status": "Accepted",
+      "solution_id": "1386968725",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:52:18"
+    },
+    {
+      "code": "OJUMPS",
+      "name": "Chef-jumping",
+      "status": "Accepted",
+      "solution_id": "1386968758",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-04 20:52:54"
     }
   ]
 }
