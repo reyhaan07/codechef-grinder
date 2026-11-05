@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 599,
+  "total_solved": 618,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -601,7 +601,26 @@
     "CALINTAKE",
     "MOOCHEF",
     "FARAWAY",
-    "CHFICRM"
+    "CHFICRM",
+    "MAGICHF",
+    "TWOROLL",
+    "DARLIG",
+    "PHONEYR",
+    "CHEFSTUD",
+    "POSSROLL",
+    "TREE2",
+    "EXISTENCE",
+    "TOURIST",
+    "INDIVISIBLE",
+    "PAINTCHRIS",
+    "CHEFVACATION",
+    "NEWPIECE",
+    "EQUALCOIN",
+    "EVENODDDIV",
+    "SEQCLAMP",
+    "BSCOST",
+    "TWORANGES",
+    "PASSEXAMS"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -6017,6 +6036,177 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-05 17:23:56"
+    },
+    {
+      "code": "MAGICHF",
+      "name": "Magician versus Chef",
+      "status": "Accepted",
+      "solution_id": "1387521692",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:50:36"
+    },
+    {
+      "code": "TWOROLL",
+      "name": "Two Rolls",
+      "status": "Accepted",
+      "solution_id": "1387521752",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:51:19"
+    },
+    {
+      "code": "DARLIG",
+      "name": "Dark Light",
+      "status": "Accepted",
+      "solution_id": "1387521821",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:52:07"
+    },
+    {
+      "code": "PHONEYR",
+      "name": "Yearly Phone",
+      "status": "Accepted",
+      "solution_id": "1387521843",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:52:41"
+    },
+    {
+      "code": "CHEFSTUD",
+      "name": "Chef and his Students",
+      "status": "Accepted",
+      "solution_id": "1387521877",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:53:32"
+    },
+    {
+      "code": "POSSROLL",
+      "name": "Possible Roll",
+      "status": "Accepted",
+      "solution_id": "1387521948",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:54:07"
+    },
+    {
+      "code": "TREE2",
+      "name": "A Problem on Sticks",
+      "status": "Accepted",
+      "solution_id": "1387521976",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:54:42"
+    },
+    {
+      "code": "EXISTENCE",
+      "name": "Existence",
+      "status": "Accepted",
+      "solution_id": "1387522068",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:55:32"
+    },
+    {
+      "code": "TOURIST",
+      "name": "Tourist",
+      "status": "Accepted",
+      "solution_id": "1387522160",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:57:24"
+    },
+    {
+      "code": "INDIVISIBLE",
+      "name": "Indivisible",
+      "status": "Accepted",
+      "solution_id": "1387522343",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:57:57"
+    },
+    {
+      "code": "PAINTCHRIS",
+      "name": "Painting Walls",
+      "status": "Accepted",
+      "solution_id": "1387522435",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:58:28"
+    },
+    {
+      "code": "CHEFVACATION",
+      "name": "Chef on Vacation",
+      "status": "Accepted",
+      "solution_id": "1387522566",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 20:59:02"
+    },
+    {
+      "code": "NEWPIECE",
+      "name": "New Piece",
+      "status": "Accepted",
+      "solution_id": "1387522710",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:00:52"
+    },
+    {
+      "code": "EQUALCOIN",
+      "name": "Equal Coins",
+      "status": "Accepted",
+      "solution_id": "1387523525",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:01:32"
+    },
+    {
+      "code": "EVENODDDIV",
+      "name": "Even vs Odd Divisors",
+      "status": "Accepted",
+      "solution_id": "1387523559",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:02:17"
+    },
+    {
+      "code": "SEQCLAMP",
+      "name": "Sequential Clamp",
+      "status": "Accepted",
+      "solution_id": "1387523583",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:02:59"
+    },
+    {
+      "code": "BSCOST",
+      "name": "Binary String Cost",
+      "status": "Accepted",
+      "solution_id": "1387523602",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:03:42"
+    },
+    {
+      "code": "TWORANGES",
+      "name": "Two Ranges",
+      "status": "Accepted",
+      "solution_id": "1387523621",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:04:37"
+    },
+    {
+      "code": "PASSEXAMS",
+      "name": "Passing Exams",
+      "status": "Accepted",
+      "solution_id": "1387523643",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 21:06:31"
     }
   ]
 }
