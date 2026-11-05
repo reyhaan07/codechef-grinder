@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 618,
+  "total_solved": 633,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -620,7 +620,22 @@
     "SEQCLAMP",
     "BSCOST",
     "TWORANGES",
-    "PASSEXAMS"
+    "PASSEXAMS",
+    "PROFIT",
+    "BOLT",
+    "CHFCLASS",
+    "MORNINGRUN",
+    "ENDSORTED",
+    "PR0BLEM",
+    "PROBDIFF",
+    "MIXINGLIQ",
+    "PIZZAC",
+    "DIVTHREE",
+    "BOOKPACK",
+    "PENALTY",
+    "CRDGAME3",
+    "INSTDUM",
+    "XYZ343"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -6207,6 +6222,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-05 21:06:31"
+    },
+    {
+      "code": "PROFIT",
+      "name": "Profits",
+      "status": "Accepted",
+      "solution_id": "1387525143",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 22:57:48"
+    },
+    {
+      "code": "BOLT",
+      "name": "World Record",
+      "status": "Accepted",
+      "solution_id": "1387525147",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 22:58:22"
+    },
+    {
+      "code": "CHFCLASS",
+      "name": "Akash and Missing Class",
+      "status": "Accepted",
+      "solution_id": "1387525158",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 22:59:14"
+    },
+    {
+      "code": "MORNINGRUN",
+      "name": "Morning Run",
+      "status": "Accepted",
+      "solution_id": "1387525161",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 22:59:48"
+    },
+    {
+      "code": "ENDSORTED",
+      "name": "End Sorted",
+      "status": "Accepted",
+      "solution_id": "1387525176",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:00:41"
+    },
+    {
+      "code": "PR0BLEM",
+      "name": "Problem",
+      "status": "Accepted",
+      "solution_id": "1387525187",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:01:30"
+    },
+    {
+      "code": "PROBDIFF",
+      "name": "Problem Difficulties",
+      "status": "Accepted",
+      "solution_id": "1387525190",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:02:03"
+    },
+    {
+      "code": "MIXINGLIQ",
+      "name": "Mixing Liquids",
+      "status": "Accepted",
+      "solution_id": "1387525196",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:02:46"
+    },
+    {
+      "code": "PIZZAC",
+      "name": "Pizza Cutting",
+      "status": "Accepted",
+      "solution_id": "1387525205",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:04:45"
+    },
+    {
+      "code": "DIVTHREE",
+      "name": "Chef and Division 3",
+      "status": "Accepted",
+      "solution_id": "1387525218",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:06:45"
+    },
+    {
+      "code": "BOOKPACK",
+      "name": "Packing Books",
+      "status": "Accepted",
+      "solution_id": "1387525234",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:07:31"
+    },
+    {
+      "code": "PENALTY",
+      "name": "Penalty Shots",
+      "status": "Accepted",
+      "solution_id": "1387525241",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:08:04"
+    },
+    {
+      "code": "CRDGAME3",
+      "name": "Another Card Game Problem",
+      "status": "Accepted",
+      "solution_id": "1387525250",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:08:56"
+    },
+    {
+      "code": "INSTDUM",
+      "name": "Inside The Stadium",
+      "status": "Accepted",
+      "solution_id": "1387525262",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:11:22"
+    },
+    {
+      "code": "XYZ343",
+      "name": "Savings Account",
+      "status": "Accepted",
+      "solution_id": "1387525278",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 23:11:58"
     }
   ]
 }
