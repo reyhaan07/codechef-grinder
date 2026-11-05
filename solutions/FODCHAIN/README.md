@@ -1,0 +1,6 @@
+# [Food Chain (FODCHAIN)](https://www.codechef.com/problems/FODCHAIN)
+
+- **Difficulty Rating**: 1062
+- **Solved in**: 1 attempt(s)
+
+_Explanation skipped (GENERATE_EXPLANATIONS=false) to save Gemini quota._

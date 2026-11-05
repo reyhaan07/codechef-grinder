@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 567,
+  "total_solved": 581,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -569,7 +569,21 @@
     "CHEFBARBER",
     "EVENPSUM",
     "GMGM",
-    "STICKS"
+    "STICKS",
+    "GROUPS",
+    "CANDYTYPE",
+    "ABSTRING",
+    "MARARUN",
+    "MELTGOLD",
+    "SPCP4",
+    "SALE2",
+    "FODCHAIN",
+    "SUBCOST7",
+    "APPENDOR",
+    "SSCRIPT",
+    "ADD1234",
+    "PGNATK",
+    "STONES"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -5697,6 +5711,132 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-04 23:10:06"
+    },
+    {
+      "code": "GROUPS",
+      "name": "Chef and Groups",
+      "status": "Accepted",
+      "solution_id": "1387313634",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:47:12"
+    },
+    {
+      "code": "CANDYTYPE",
+      "name": "Candy Types",
+      "status": "Accepted",
+      "solution_id": "1387313997",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:47:59"
+    },
+    {
+      "code": "ABSTRING",
+      "name": "String Game",
+      "status": "Accepted",
+      "solution_id": "1387314290",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:48:35"
+    },
+    {
+      "code": "MARARUN",
+      "name": "Marathon",
+      "status": "Accepted",
+      "solution_id": "1387314579",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:49:16"
+    },
+    {
+      "code": "MELTGOLD",
+      "name": "Melt Gold",
+      "status": "Accepted",
+      "solution_id": "1387314821",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:49:57"
+    },
+    {
+      "code": "SPCP4",
+      "name": " Am I Lucky!",
+      "status": "Accepted",
+      "solution_id": "1387315112",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:51:38"
+    },
+    {
+      "code": "SALE2",
+      "name": "Buy 2 Get 1 Free",
+      "status": "Accepted",
+      "solution_id": "1387316070",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:53:00"
+    },
+    {
+      "code": "FODCHAIN",
+      "name": "Food Chain",
+      "status": "Accepted",
+      "solution_id": "1387316530",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:54:00"
+    },
+    {
+      "code": "SUBCOST7",
+      "name": "Subscription Cost",
+      "status": "Accepted",
+      "solution_id": "1387316864",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:54:50"
+    },
+    {
+      "code": "APPENDOR",
+      "name": "Append for OR",
+      "status": "Accepted",
+      "solution_id": "1387317259",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:55:51"
+    },
+    {
+      "code": "SSCRIPT",
+      "name": "Strong Language",
+      "status": "Accepted",
+      "solution_id": "1387317675",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:56:49"
+    },
+    {
+      "code": "ADD1234",
+      "name": "Adding 123 to 4",
+      "status": "Accepted",
+      "solution_id": "1387317930",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:57:31"
+    },
+    {
+      "code": "PGNATK",
+      "name": "Pigeon Attack",
+      "status": "Accepted",
+      "solution_id": "1387318257",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:58:20"
+    },
+    {
+      "code": "STONES",
+      "name": "Jewels and Stones",
+      "status": "Accepted",
+      "solution_id": "1387318598",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 12:59:12"
     }
   ]
 }

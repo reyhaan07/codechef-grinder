@@ -1,0 +1,6 @@
+# [String Game (ABSTRING)](https://www.codechef.com/problems/ABSTRING)
+
+- **Difficulty Rating**: 1102
+- **Solved in**: 1 attempt(s)
+
+_Explanation skipped (GENERATE_EXPLANATIONS=false) to save Gemini quota._
