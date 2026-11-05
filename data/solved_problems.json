@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 581,
+  "total_solved": 599,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -583,7 +583,25 @@
     "SSCRIPT",
     "ADD1234",
     "PGNATK",
-    "STONES"
+    "STONES",
+    "ORANGES",
+    "BRUNCH",
+    "ECOCLASS",
+    "MOVIE7",
+    "CHOCDISTRIB",
+    "CCOOK",
+    "CHKEV",
+    "TRAVELPS",
+    "QUALPREL",
+    "CS2023_GYM",
+    "CHNGIT",
+    "AIRM",
+    "CLEANUP",
+    "FIFTYPE",
+    "CALINTAKE",
+    "MOOCHEF",
+    "FARAWAY",
+    "CHFICRM"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -5837,6 +5855,168 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-05 12:59:12"
+    },
+    {
+      "code": "ORANGES",
+      "name": "Too Many Oranges",
+      "status": "Accepted",
+      "solution_id": "1387461854",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:06:03"
+    },
+    {
+      "code": "BRUNCH",
+      "name": "Sunday Brunch",
+      "status": "Accepted",
+      "solution_id": "1387462258",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:06:38"
+    },
+    {
+      "code": "ECOCLASS",
+      "name": "Economics Class",
+      "status": "Accepted",
+      "solution_id": "1387462862",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:07:34"
+    },
+    {
+      "code": "MOVIE7",
+      "name": "Movie",
+      "status": "Accepted",
+      "solution_id": "1387463458",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:09:25"
+    },
+    {
+      "code": "CHOCDISTRIB",
+      "name": "Chocolate Distribution",
+      "status": "Accepted",
+      "solution_id": "1387464433",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:10:55"
+    },
+    {
+      "code": "CCOOK",
+      "name": "Chef and Cook-Off",
+      "status": "Accepted",
+      "solution_id": "1387465525",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:11:40"
+    },
+    {
+      "code": "CHKEV",
+      "name": "Check Even",
+      "status": "Accepted",
+      "solution_id": "1387466536",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:13:09"
+    },
+    {
+      "code": "TRAVELPS",
+      "name": "Travel Pass",
+      "status": "Accepted",
+      "solution_id": "1387466930",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:13:44"
+    },
+    {
+      "code": "QUALPREL",
+      "name": "Qualifying to Pre-Elimination",
+      "status": "Accepted",
+      "solution_id": "1387467375",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:14:29"
+    },
+    {
+      "code": "CS2023_GYM",
+      "name": "Gymkhana Election IIIT-A",
+      "status": "Accepted",
+      "solution_id": "1387468052",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:16:25"
+    },
+    {
+      "code": "CHNGIT",
+      "name": "Change It",
+      "status": "Accepted",
+      "solution_id": "1387469123",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:17:21"
+    },
+    {
+      "code": "AIRM",
+      "name": "Airport Management",
+      "status": "Accepted",
+      "solution_id": "1387469613",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:18:09"
+    },
+    {
+      "code": "CLEANUP",
+      "name": "Cleaning Up",
+      "status": "Accepted",
+      "solution_id": "1387470271",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:19:10"
+    },
+    {
+      "code": "FIFTYPE",
+      "name": "Chef and Battery ",
+      "status": "Accepted",
+      "solution_id": "1387470729",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:19:57"
+    },
+    {
+      "code": "CALINTAKE",
+      "name": "Calorie Intake",
+      "status": "Accepted",
+      "solution_id": "1387471075",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:21:27"
+    },
+    {
+      "code": "MOOCHEF",
+      "name": "Moody Chef",
+      "status": "Accepted",
+      "solution_id": "1387472102",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:22:07"
+    },
+    {
+      "code": "FARAWAY",
+      "name": "Far Away",
+      "status": "Accepted",
+      "solution_id": "1387472642",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:23:01"
+    },
+    {
+      "code": "CHFICRM",
+      "name": "Chef and Icecream",
+      "status": "Accepted",
+      "solution_id": "1387473161",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-05 17:23:56"
     }
   ]
 }
