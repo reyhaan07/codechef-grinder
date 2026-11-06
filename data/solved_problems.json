@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 645,
+  "total_solved": 659,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -647,7 +647,21 @@
     "BID",
     "GRIDBL",
     "BUYLAMP",
-    "DECDISC"
+    "DECDISC",
+    "MIRJMP",
+    "URCALC",
+    "CRICRANK",
+    "WFWIN",
+    "CHEFTRANS",
+    "MANCODE",
+    "QUEENATTACK",
+    "ENTERTAIN",
+    "COMP4",
+    "PRDEXC",
+    "FBMATCH",
+    "CHEGLOVE",
+    "BADMINTON",
+    "BUYTICK"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -6479,6 +6493,132 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-06 12:43:02"
+    },
+    {
+      "code": "MIRJMP",
+      "name": "Mirror Jump",
+      "status": "Accepted",
+      "solution_id": "1387926675",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:36:18"
+    },
+    {
+      "code": "URCALC",
+      "name": "Program Your Own CALCULATOR",
+      "status": "Accepted",
+      "solution_id": "1387927322",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:37:31"
+    },
+    {
+      "code": "CRICRANK",
+      "name": "Cricket Ranking",
+      "status": "Accepted",
+      "solution_id": "1387927749",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:38:21"
+    },
+    {
+      "code": "WFWIN",
+      "name": "Winning World Finals",
+      "status": "Accepted",
+      "solution_id": "1387928233",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:39:17"
+    },
+    {
+      "code": "CHEFTRANS",
+      "name": "Chef and Vacation Transportation ",
+      "status": "Accepted",
+      "solution_id": "1387928668",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:40:04"
+    },
+    {
+      "code": "MANCODE",
+      "name": "The Man Code",
+      "status": "Accepted",
+      "solution_id": "1387928990",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:40:42"
+    },
+    {
+      "code": "QUEENATTACK",
+      "name": "The Attack of Queen",
+      "status": "Accepted",
+      "solution_id": "1387929249",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:41:15"
+    },
+    {
+      "code": "ENTERTAIN",
+      "name": "Entertainments",
+      "status": "Accepted",
+      "solution_id": "1387929745",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:42:11"
+    },
+    {
+      "code": "COMP4",
+      "name": "Competition of 4",
+      "status": "Accepted",
+      "solution_id": "1387930149",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:43:01"
+    },
+    {
+      "code": "PRDEXC",
+      "name": "Product Exceed",
+      "status": "Accepted",
+      "solution_id": "1387930524",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:43:45"
+    },
+    {
+      "code": "FBMATCH",
+      "name": "Front-Back Matching",
+      "status": "Accepted",
+      "solution_id": "1387931191",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:45:07"
+    },
+    {
+      "code": "CHEGLOVE",
+      "name": "Chef and Glove",
+      "status": "Accepted",
+      "solution_id": "1387931546",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:45:57"
+    },
+    {
+      "code": "BADMINTON",
+      "name": "Badminton Serves",
+      "status": "Accepted",
+      "solution_id": "1387932017",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:46:51"
+    },
+    {
+      "code": "BUYTICK",
+      "name": "Buying Tickets",
+      "status": "Accepted",
+      "solution_id": "1387932281",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 16:47:26"
     }
   ]
 }
