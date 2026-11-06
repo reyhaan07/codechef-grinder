@@ -1,60 +1,66 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * An array is pseudo-sorted if it is already sorted or can be sorted by one swap.
- * 1. Find the first index i such that A[i] > A[i+1].
+ * An array is pseudo-sorted if it is already sorted or can be sorted by 
+ * swapping exactly one adjacent pair (A[i], A[i+1]).
+ * 
+ * Strategy:
+ * 1. Find the first index 'i' where A[i] > A[i+1].
  * 2. If no such index exists, the array is already sorted -> YES.
- * 3. If such an index exists, swap A[i] and A[i+1].
- * 4. Check if the array is now sorted. If yes -> YES, else -> NO.
+ * 3. If such an index exists, perform the swap A[i] and A[i+1].
+ * 4. After the swap, check if the entire array is sorted.
+ * 5. If it is sorted, output YES, otherwise output NO.
+ * 
+ * Complexity:
+ * Time: O(N) per test case.
+ * Space: O(N) to store the array.
  */
 
-bool is_sorted_array(const vector<long long>& a) {
-    for (size_t i = 0; i + 1 < a.size(); ++i) {
+bool isSorted(const vector<long long>& a, int n) {
+    for (int i = 0; i < n - 1; ++i) {
         if (a[i] > a[i + 1]) return false;
     }
     return true;
 }
 
 void solve() {
-    int N;
-    cin >> N;
-    vector<long long> A(N);
-    for (int i = 0; i < N; ++i) {
-        cin >> A[i];
+    int n;
+    cin >> n;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
     }
 
     // Find the first inversion
-    int first_inversion = -1;
-    for (int i = 0; i < N - 1; ++i) {
-        if (A[i] > A[i + 1]) {
-            first_inversion = i;
+    int idx = -1;
+    for (int i = 0; i < n - 1; ++i) {
+        if (a[i] > a[i + 1]) {
+            idx = i;
             break;
         }
     }
 
     // If already sorted
-    if (first_inversion == -1) {
-        cout << "YES" << endl;
+    if (idx == -1) {
+        cout << "YES" << "\n";
         return;
     }
 
-    // Perform the swap at the first inversion
-    swap(A[first_inversion], A[first_inversion + 1]);
+    // Perform the swap at the first inversion point
+    swap(a[idx], a[idx + 1]);
 
     // Check if sorted after swap
-    if (is_sorted_array(A)) {
-        cout << "YES" << endl;
+    if (isSorted(a, n)) {
+        cout << "YES" << "\n";
     } else {
-        cout << "NO" << endl;
+        cout << "NO" << "\n";
     }
 }
 
 int main() {
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

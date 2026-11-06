@@ -3,19 +3,18 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Chef can only walk in steps of length K.
- * A distance D_i is traversable if and only if D_i is divisible by K.
+ * Chef can only walk in steps of length exactly K.
+ * This means a distance D_i is traversable if and only if D_i is divisible by K.
  * Mathematically, D_i % K == 0.
  * 
  * Constraints:
- * T <= 1000, N <= 1000
- * K, D_i <= 10^9
- * Since K and D_i can be up to 10^9, we should use long long to prevent 
- * any potential overflow issues, although standard int is sufficient for 
- * 10^9, long long is safer practice in competitive programming.
+ * T <= 1000, N <= 1000, K <= 10^9, D_i <= 10^9.
+ * Since D_i and K fit within a standard 32-bit signed integer, 
+ * but using long long is safer for competitive programming to avoid any potential overflow 
+ * during intermediate calculations or if constraints were slightly larger.
  * 
  * Time Complexity: O(T * N)
- * Space Complexity: O(1) (excluding input storage)
+ * Space Complexity: O(1) (excluding the output string)
  */
 
 int main() {

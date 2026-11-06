@@ -6,9 +6,10 @@ using namespace std;
  * The bus has N rows, each with M seats.
  * Seat X is in row R.
  * To find R:
- * Since row i contains seats (i-1)*M + 1 to i*M,
- * we can calculate R using integer division:
- * R = (X - 1) / M + 1.
+ * Since row 1 contains 1 to M, row 2 contains M+1 to 2M, etc.,
+ * the row number R can be calculated as:
+ * R = ceil(X / M)
+ * Using integer division, R = (X - 1) / M + 1.
  * 
  * If we enter from the front, we walk through rows 1, 2, ..., R.
  * The number of rows walked is R.
@@ -16,8 +17,23 @@ using namespace std;
  * If we enter from the back, we walk through rows N, N-1, ..., R.
  * The number of rows walked is (N - R + 1).
  * 
- * We need the minimum of these two values: min(R, N - R + 1).
+ * We need to find the minimum of these two values: min(R, N - R + 1).
  */
+
+void solve() {
+    long long N, M, X;
+    if (!(cin >> N >> M >> X)) return;
+
+    // Calculate the row number R (1-indexed)
+    long long R = (X - 1) / M + 1;
+
+    // Distance from front: R
+    // Distance from back: N - R + 1
+    long long dist_front = R;
+    long long dist_back = N - R + 1;
+
+    cout << min(dist_front, dist_back) << "\n";
+}
 
 int main() {
     // Optimize I/O operations
@@ -27,22 +43,7 @@ int main() {
     int t;
     if (!(cin >> t)) return 0;
     while (t--) {
-        long long n, m, x;
-        cin >> n >> m >> x;
-
-        // Calculate the row number R (1-indexed)
-        // Using long long to prevent any potential overflow, 
-        // though constraints N, M <= 100 fit in int.
-        long long r = (x - 1) / m + 1;
-
-        // Distance from front: r
-        // Distance from back: n - r + 1
-        long long dist_front = r;
-        long long dist_back = n - r + 1;
-
-        // Output the minimum of the two distances
-        cout << min(dist_front, dist_back) << "\n";
+        solve();
     }
-
     return 0;
 }

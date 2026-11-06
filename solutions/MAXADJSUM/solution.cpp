@@ -1,22 +1,25 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <numeric>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
  * f(A) = (A_1 + A_2) + (A_2 + A_3) + ... + (A_{N-1} + A_N)
  * f(A) = A_1 + 2*A_2 + 2*A_3 + ... + 2*A_{N-1} + A_N
- * f(A) = 2 * sum(A) - (A_1 + A_N)
- * To maximize f(A), we must minimize (A_1 + A_N).
- * We sort the array and pick the two smallest elements as the ends.
+ * 
+ * To maximize this sum, we want the largest elements to have a coefficient of 2.
+ * The two smallest elements should be placed at the ends (A_1 and A_N) so that 
+ * they are only counted once. All other N-2 elements will be counted twice.
+ * 
+ * Let the sorted array be S_1 <= S_2 <= ... <= S_N.
+ * The maximum sum is:
+ * f(A) = S_1 + S_N + 2 * (S_2 + S_3 + ... + S_{N-1})
+ * Alternatively:
+ * f(A) = 2 * (Sum of all elements) - (S_1 + S_N)
  */
 
 void solve() {
     int N;
-    if (!(cin >> N)) return;
+    cin >> N;
     vector<long long> A(N);
     long long total_sum = 0;
     for (int i = 0; i < N; ++i) {
@@ -26,19 +29,27 @@ void solve() {
     
     sort(A.begin(), A.end());
     
-    // The two smallest elements are A[0] and A[1]
-    long long min_ends = A[0] + A[1];
-    long long result = 2 * total_sum - min_ends;
+    // The two smallest elements are A[0] and A[1].
+    // To maximize the sum, we place the two smallest elements at the ends.
+    // The sum is 2 * (sum of all) - (A[0] + A[1]).
+    // Wait, let's re-verify:
+    // The formula is: A_1 + A_N + 2 * (sum of all others)
+    // = A_1 + A_N + 2 * (total_sum - A_1 - A_N)
+    // = 2 * total_sum - A_1 - A_N
+    // To maximize this, we need to minimize (A_1 + A_N).
+    // So we pick the two smallest elements from the array to be at the ends.
     
-    cout << result << "\n";
+    long long ans = 2 * total_sum - A[0] - A[1];
+    cout << ans << "\n";
 }
 
 int main() {
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
     int T;
-    if (!(cin >> T)) return 0;
+    cin >> T;
     while (T--) {
         solve();
     }

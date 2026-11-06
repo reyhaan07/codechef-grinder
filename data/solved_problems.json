@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 659,
+  "total_solved": 678,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -661,7 +661,26 @@
     "FBMATCH",
     "CHEGLOVE",
     "BADMINTON",
-    "BUYTICK"
+    "BUYTICK",
+    "ABNOMAT",
+    "CHEFZOT",
+    "S10E",
+    "SBTG",
+    "MAKEMONEY",
+    "ATTENDU",
+    "FRUITS",
+    "PSEUDOSORT",
+    "AGENTCHEF",
+    "CHEFSTEP",
+    "BURGERS2",
+    "QBGI",
+    "BUSROW",
+    "DICENUM",
+    "MAYOR_PARTY",
+    "REACHWT",
+    "BOTTOM",
+    "AMMEAT",
+    "MAXADJSUM"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -6619,6 +6638,177 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-06 16:47:26"
+    },
+    {
+      "code": "ABNOMAT",
+      "name": "Non-matching Name",
+      "status": "Accepted",
+      "solution_id": "1387975722",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:07:04"
+    },
+    {
+      "code": "CHEFZOT",
+      "name": "Chef and Subarray",
+      "status": "Accepted",
+      "solution_id": "1387975899",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:07:58"
+    },
+    {
+      "code": "S10E",
+      "name": "Phone Prices",
+      "status": "Accepted",
+      "solution_id": "1387975984",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:08:42"
+    },
+    {
+      "code": "SBTG",
+      "name": "Sabotage",
+      "status": "Accepted",
+      "solution_id": "1387976086",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:09:35"
+    },
+    {
+      "code": "MAKEMONEY",
+      "name": "Make Money",
+      "status": "Accepted",
+      "solution_id": "1387976157",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:10:15"
+    },
+    {
+      "code": "ATTENDU",
+      "name": "Minimum Attendance Requirement",
+      "status": "Accepted",
+      "solution_id": "1387976247",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:11:14"
+    },
+    {
+      "code": "FRUITS",
+      "name": "Chef and Fruits",
+      "status": "Accepted",
+      "solution_id": "1387976287",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:11:53"
+    },
+    {
+      "code": "PSEUDOSORT",
+      "name": "Pseudo Sorted Array",
+      "status": "Accepted",
+      "solution_id": "1387976348",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:12:28"
+    },
+    {
+      "code": "AGENTCHEF",
+      "name": "Selling Insurance",
+      "status": "Accepted",
+      "solution_id": "1387976432",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:13:12"
+    },
+    {
+      "code": "CHEFSTEP",
+      "name": "Chef and Steps",
+      "status": "Accepted",
+      "solution_id": "1387976500",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:13:59"
+    },
+    {
+      "code": "BURGERS2",
+      "name": "Hungry Chef",
+      "status": "Accepted",
+      "solution_id": "1387976575",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:14:55"
+    },
+    {
+      "code": "QBGI",
+      "name": "Bar Queue",
+      "status": "Accepted",
+      "solution_id": "1387976611",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:15:37"
+    },
+    {
+      "code": "BUSROW",
+      "name": "Bus Rows",
+      "status": "Accepted",
+      "solution_id": "1387976694",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:17:22"
+    },
+    {
+      "code": "DICENUM",
+      "name": "Dice Number",
+      "status": "Accepted",
+      "solution_id": "1387976826",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:19:13"
+    },
+    {
+      "code": "MAYOR_PARTY",
+      "name": "Peaceful Party",
+      "status": "Accepted",
+      "solution_id": "1387976996",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:20:04"
+    },
+    {
+      "code": "REACHWT",
+      "name": "Reach Weight",
+      "status": "Accepted",
+      "solution_id": "1387977115",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:20:45"
+    },
+    {
+      "code": "BOTTOM",
+      "name": "Guess the bottom face",
+      "status": "Accepted",
+      "solution_id": "1387977235",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:21:23"
+    },
+    {
+      "code": "AMMEAT",
+      "name": "Andrew and the Meatballs",
+      "status": "Accepted",
+      "solution_id": "1387977327",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:22:57"
+    },
+    {
+      "code": "MAXADJSUM",
+      "name": "Maximise Adjacent Sum",
+      "status": "Accepted",
+      "solution_id": "1387977486",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 20:23:28"
     }
   ]
 }

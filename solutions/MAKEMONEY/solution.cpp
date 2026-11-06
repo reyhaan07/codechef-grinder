@@ -3,20 +3,16 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have N bags, each with A_i coins (A_i <= X).
- * We can change A_i to X at a cost of C.
- * We want to maximize (Sum of A_i) - (Total Cost).
+ * For each bag i, we have two choices:
+ * 1. Keep A_i as it is. Contribution to the total sum: A_i. Cost: 0.
+ * 2. Perform an operation to set A_i = X. Contribution to the total sum: X. Cost: C.
+ *    Net gain from this operation: (X - C) - A_i.
  * 
- * For each bag i, if we perform the operation, the net change to the total sum is:
- * (X - A_i) - C.
+ * We should perform the operation if and only if the net gain is positive.
+ * That is, if (X - C) > A_i, or equivalently, if (X - A_i) > C.
  * 
- * If (X - A_i) - C > 0, it is beneficial to perform the operation.
- * This is equivalent to X - C > A_i.
- * If X - C <= A_i, performing the operation either decreases the total or keeps it the same,
- * so we should not perform it.
- * 
- * Time Complexity: O(N) per test case.
- * Space Complexity: O(1) auxiliary space (or O(N) to store the array).
+ * Since we want to maximize the total value, we iterate through each bag and 
+ * check if replacing A_i with X and paying C results in a higher net value.
  */
 
 void solve() {
@@ -25,38 +21,25 @@ void solve() {
     cin >> N >> X >> C;
     
     vector<long long> A(N);
-    long long current_sum = 0;
+    long long total_sum = 0;
+    
     for (int i = 0; i < N; ++i) {
         cin >> A[i];
-        current_sum += A[i];
     }
     
-    long long total_profit = 0;
-    long long operations = 0;
-    
+    long long final_value = 0;
     for (int i = 0; i < N; ++i) {
-        // Check if performing the operation increases the net value
-        if (X - A[i] > C) {
-            operations++;
-        }
-    }
-    
-    // The final sum will be the original sum minus the sum of A_i for bags changed,
-    // plus (operations * X), minus (operations * C).
-    // Simplified: (Original Sum) + operations * (X - C) - (sum of A_i for changed bags)
-    // Actually, it's simpler:
-    // Final Value = Sum(A_i for unchanged) + Sum(X for changed) - (operations * C)
-    
-    long long final_sum = 0;
-    for (int i = 0; i < N; ++i) {
-        if (X - A[i] > C) {
-            final_sum += X;
+        // If we perform the operation, the net contribution of this bag is (X - C).
+        // If we don't, the contribution is A[i].
+        // We choose the maximum of the two.
+        if ((X - C) > A[i]) {
+            final_value += (X - C);
         } else {
-            final_sum += A[i];
+            final_value += A[i];
         }
     }
     
-    cout << final_sum - (operations * C) << "\n";
+    cout << final_value << "\n";
 }
 
 int main() {

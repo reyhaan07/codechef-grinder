@@ -4,7 +4,8 @@ using namespace std;
 /**
  * Problem Analysis:
  * The problem states that for a regular dice, the sum of opposite faces is 7.
- * Given the top face value X, the bottom face value Y must satisfy X + Y = 7.
+ * Given the top face value X, the bottom face value Y must satisfy:
+ * X + Y = 7
  * Therefore, Y = 7 - X.
  * 
  * Constraints:
