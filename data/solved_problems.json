@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 633,
+  "total_solved": 645,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -635,7 +635,19 @@
     "PENALTY",
     "CRDGAME3",
     "INSTDUM",
-    "XYZ343"
+    "XYZ343",
+    "NOWINNER",
+    "P2209",
+    "XLSL",
+    "SHUFFLIN",
+    "WHOMAKESP1",
+    "JOINING",
+    "TWTCLOSE",
+    "LAYERCAKE",
+    "BID",
+    "GRIDBL",
+    "BUYLAMP",
+    "DECDISC"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -645,7 +657,9 @@
     "QNOT",
     "INPL",
     "STREAK",
-    "AVOIDCONTACT"
+    "AVOIDCONTACT",
+    "ADD12GAME",
+    "LARGODDSTRIN"
   ],
   "pending": [],
   "history": [
@@ -6357,6 +6371,114 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-05 23:11:58"
+    },
+    {
+      "code": "NOWINNER",
+      "name": "No Winner",
+      "status": "Accepted",
+      "solution_id": "1387817331",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:32:11"
+    },
+    {
+      "code": "P2209",
+      "name": "Divisible Duel",
+      "status": "Accepted",
+      "solution_id": "1387817511",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:32:42"
+    },
+    {
+      "code": "XLSL",
+      "name": "Clothing Store",
+      "status": "Accepted",
+      "solution_id": "1387818586",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:35:46"
+    },
+    {
+      "code": "SHUFFLIN",
+      "name": "Shuffling Parities",
+      "status": "Accepted",
+      "solution_id": "1387818873",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:36:33"
+    },
+    {
+      "code": "WHOMAKESP1",
+      "name": "Who Makes P1",
+      "status": "Accepted",
+      "solution_id": "1387819131",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:37:25"
+    },
+    {
+      "code": "JOINING",
+      "name": "Joining Date",
+      "status": "Accepted",
+      "solution_id": "1387819417",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:38:09"
+    },
+    {
+      "code": "TWTCLOSE",
+      "name": "Closing the Tweets",
+      "status": "Accepted",
+      "solution_id": "1387819641",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:38:52"
+    },
+    {
+      "code": "LAYERCAKE",
+      "name": "Layered Cake",
+      "status": "Accepted",
+      "solution_id": "1387819964",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:39:47"
+    },
+    {
+      "code": "BID",
+      "name": "Pep Bidding",
+      "status": "Accepted",
+      "solution_id": "1387820268",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:40:35"
+    },
+    {
+      "code": "GRIDBL",
+      "name": "Fill The Grid",
+      "status": "Accepted",
+      "solution_id": "1387820506",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:41:21"
+    },
+    {
+      "code": "BUYLAMP",
+      "name": "Buy Lamps",
+      "status": "Accepted",
+      "solution_id": "1387820748",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:42:08"
+    },
+    {
+      "code": "DECDISC",
+      "name": "Decoration Discount",
+      "status": "Accepted",
+      "solution_id": "1387821041",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 12:43:02"
     }
   ]
 }
