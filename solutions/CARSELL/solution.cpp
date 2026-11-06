@@ -4,19 +4,18 @@ using namespace std;
 /**
  * Problem Analysis:
  * Chef has N cars with initial prices P_i.
- * Each year, the price of every unsold car decreases by 1 (minimum 0).
- * To maximize profit, we should sell the most expensive cars as early as possible.
+ * Each year, the price of every unsold car decreases by 1.
+ * To maximize profit, we should sell the most expensive cars first.
+ * If we sort the prices in descending order: P_1 >= P_2 >= ... >= P_N,
+ * in year 0 (first year), we sell the car with price P_1. Profit = P_1.
+ * In year 1, the remaining cars have depreciated by 1. We sell the car that was P_2.
+ * Its price is now max(0, P_2 - 1).
+ * In year i (0-indexed), we sell the car that was originally P_{i+1}.
+ * Its price is now max(0, P_{i+1} - i).
  * 
- * Strategy:
- * 1. Sort the car prices in descending order.
- * 2. In year 0, sell the most expensive car (price P_0).
- * 3. In year 1, sell the next most expensive car. Its price will be max(0, P_1 - 1).
- * 4. In year i, sell the car at index i. Its price will be max(0, P_i - i).
- * 5. Sum these values modulo 1,000,000,007.
- * 
- * Complexity:
- * Time: O(N log N) due to sorting.
- * Space: O(N) to store the prices.
+ * The total profit is the sum of max(0, P_{i+1} - i) for i = 0 to N-1.
+ * Since we need the result modulo 1,000,000,007, we perform the modulo operation
+ * at each addition step.
  */
 
 void solve() {
@@ -34,7 +33,7 @@ void solve() {
     long long MOD = 1000000007;
 
     for (int i = 0; i < N; ++i) {
-        // Price of the car at year i is max(0, P[i] - i)
+        // Price of the car sold in year i is max(0, P[i] - i)
         long long current_price = P[i] - i;
         if (current_price > 0) {
             total_profit = (total_profit + current_price) % MOD;

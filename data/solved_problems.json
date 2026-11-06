@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 678,
+  "total_solved": 693,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -680,7 +680,22 @@
     "REACHWT",
     "BOTTOM",
     "AMMEAT",
-    "MAXADJSUM"
+    "MAXADJSUM",
+    "CHEAPFUEL",
+    "CHEFCONTEST",
+    "P2BAR",
+    "CARSELL",
+    "AABBCCDD",
+    "SHARING",
+    "STRONGTABLE",
+    "ODDSEVENS",
+    "DIGSMPAR",
+    "KOL15A",
+    "COVIDLQ",
+    "CNTODDEVEN",
+    "THREEFR",
+    "THREEBOX",
+    "CHEFSUM"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -6809,6 +6824,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-06 20:23:28"
+    },
+    {
+      "code": "CHEAPFUEL",
+      "name": "Which Fuel is Cheaper",
+      "status": "Accepted",
+      "solution_id": "1387984146",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:27:07"
+    },
+    {
+      "code": "CHEFCONTEST",
+      "name": "Chef and Contest",
+      "status": "Accepted",
+      "solution_id": "1387984155",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:27:51"
+    },
+    {
+      "code": "P2BAR",
+      "name": "Signal",
+      "status": "Accepted",
+      "solution_id": "1387984173",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:28:47"
+    },
+    {
+      "code": "CARSELL",
+      "name": "Sell All the Cars",
+      "status": "Accepted",
+      "solution_id": "1387984183",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:29:36"
+    },
+    {
+      "code": "AABBCCDD",
+      "name": "AabBcCDd",
+      "status": "Accepted",
+      "solution_id": "1387984193",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:30:31"
+    },
+    {
+      "code": "SHARING",
+      "name": "Sharing Cookies",
+      "status": "Accepted",
+      "solution_id": "1387984202",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:31:37"
+    },
+    {
+      "code": "STRONGTABLE",
+      "name": "Table Strength",
+      "status": "Accepted",
+      "solution_id": "1387984209",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:32:27"
+    },
+    {
+      "code": "ODDSEVENS",
+      "name": "Odds and Evens",
+      "status": "Accepted",
+      "solution_id": "1387984225",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:33:17"
+    },
+    {
+      "code": "DIGSMPAR",
+      "name": "Digit Sum Parities",
+      "status": "Accepted",
+      "solution_id": "1387984242",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:34:08"
+    },
+    {
+      "code": "KOL15A",
+      "name": "Processing a string",
+      "status": "Accepted",
+      "solution_id": "1387984249",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:35:01"
+    },
+    {
+      "code": "COVIDLQ",
+      "name": "COVID Pandemic and Long Queue",
+      "status": "Accepted",
+      "solution_id": "1387984256",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:36:34"
+    },
+    {
+      "code": "CNTODDEVEN",
+      "name": "Count Odd Even Divisors",
+      "status": "Accepted",
+      "solution_id": "1387984273",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:38:13"
+    },
+    {
+      "code": "THREEFR",
+      "name": "Three Friends",
+      "status": "Accepted",
+      "solution_id": "1387984287",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:38:55"
+    },
+    {
+      "code": "THREEBOX",
+      "name": "Three Boxes",
+      "status": "Accepted",
+      "solution_id": "1387984299",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:39:46"
+    },
+    {
+      "code": "CHEFSUM",
+      "name": "Little Chef and Sums",
+      "status": "Accepted",
+      "solution_id": "1387984303",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-06 22:41:16"
     }
   ]
 }

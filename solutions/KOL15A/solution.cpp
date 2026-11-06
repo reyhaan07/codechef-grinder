@@ -2,13 +2,11 @@
 using namespace std;
 
 /**
- * Problem: Processing a string (KOL15A)
+ * Problem: Processing a string
  * Approach: Iterate through each character of the string. If the character is a digit
- * (checked using isdigit()), convert it to its integer value by subtracting '0'
- * and add it to a running sum.
- * 
+ * (between '0' and '9'), convert it to its integer value and add it to the running sum.
  * Time Complexity: O(T * |S|), where T is the number of test cases and |S| is the length of the string.
- * Space Complexity: O(|S|) to store the input string.
+ * Space Complexity: O(|S|) to store the string.
  */
 
 int main() {
@@ -25,8 +23,9 @@ int main() {
 
         long long sum = 0;
         for (char c : s) {
-            // Check if the character is a digit '0'-'9'
+            // Check if character is a digit
             if (c >= '0' && c <= '9') {
+                // Convert char digit to int and add to sum
                 sum += (c - '0');
             }
         }

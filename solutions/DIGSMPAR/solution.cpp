@@ -3,14 +3,18 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We need to find the smallest integer X > N such that digitSum(X) parity != digitSum(N) parity.
- * Since N < 10^9, the digit sum is relatively small (max digit sum for 999,999,999 is 81).
+ * We are given N and need to find the smallest X > N such that
+ * parity(digitSum(N)) != parity(digitSum(X)).
+ * 
+ * Since N < 10^9, the digit sum is at most 9 * 9 = 81.
  * The parity of the digit sum changes very frequently as we increment N.
- * In the worst case, we only need to check a few consecutive integers to find one with a different parity.
- * A simple loop incrementing N and checking the parity of the digit sum will be highly efficient.
+ * Specifically, incrementing N by 1 changes the digit sum parity unless
+ * the last digit is 9 (which causes a carry).
+ * Even with carries, the parity will flip within a very small range of N.
+ * A simple linear search starting from N + 1 will find the answer almost 
+ * instantaneously, well within the 1s time limit for 1000 test cases.
  */
 
-// Function to calculate the sum of digits of a number
 int getDigitSum(long long n) {
     int sum = 0;
     while (n > 0) {
@@ -27,26 +31,24 @@ void solve() {
     int targetParity = getDigitSum(n) % 2;
     long long x = n + 1;
     
-    // Increment x until the parity of its digit sum is different from n's digit sum
     while (true) {
         if ((getDigitSum(x) % 2) != targetParity) {
             cout << x << "\n";
-            break;
+            return;
         }
         x++;
     }
 }
 
 int main() {
-    // Fast I/O setup
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
         solve();
     }
-    
     return 0;
 }

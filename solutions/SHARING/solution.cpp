@@ -6,18 +6,19 @@ using namespace std;
  * Alice has A cookies, Bob has B cookies. A > B.
  * Let x be the number of cookies Alice gives to Bob.
  * After the transfer:
- * Alice has A - x cookies.
- * Bob has B + x cookies.
+ * Alice has A - x
+ * Bob has B + x
  * For them to be equal: A - x = B + x
- * A - B = 2x
+ * 2x = A - B
  * x = (A - B) / 2
  * 
  * For x to be a valid number of cookies (an integer), (A - B) must be even.
- * Also, since Alice must give cookies to Bob, x must be greater than 0.
- * Given A > B, A - B is always > 0.
+ * Also, x must be positive (since A > B, A - B > 0, so x > 0).
+ * Additionally, Alice must have enough cookies to give, i.e., A - x >= 0.
+ * Since x = (A - B) / 2, A - x = A - (A - B)/2 = (2A - A + B) / 2 = (A + B) / 2.
+ * Since A > B, (A + B) / 2 is always positive.
+ * 
  * Thus, the condition is simply: (A - B) % 2 == 0.
- * If true, output (A - B) / 2.
- * Otherwise, output -1.
  */
 
 int main() {
@@ -25,14 +26,17 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    // The problem description implies a single test case based on the format,
-    // but the instructions mention handling multiple test cases if applicable.
-    // Given the constraints and format, we read A and B.
     long long A, B;
+    // The problem description implies a single test case based on the format,
+    // but standard competitive programming practice often involves multiple test cases.
+    // Given the constraints and description, we read A and B.
     if (!(cin >> A >> B)) return 0;
 
-    if ((A - B) % 2 == 0) {
-        cout << (A - B) / 2 << "\n";
+    long long diff = A - B;
+
+    // Check if the difference is even
+    if (diff % 2 == 0) {
+        cout << (diff / 2) << "\n";
     } else {
         cout << -1 << "\n";
     }

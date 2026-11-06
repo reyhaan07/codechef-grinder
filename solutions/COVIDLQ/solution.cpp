@@ -4,36 +4,31 @@ using namespace std;
 /**
  * Problem Analysis:
  * We are given a sequence of 0s and 1s representing a queue.
- * We need to ensure that for any two people (1s), the distance between them 
- * is at least 6 feet.
+ * We need to ensure that for any two people (1s) in the queue, 
+ * the distance between them is at least 6 feet.
  * 
- * If the indices of two people are i and j (where i < j), the distance is (j - i).
- * The condition is (j - i) >= 6.
+ * If the index of the last person seen is 'last_pos', and the current 
+ * index is 'i', the distance is (i - last_pos).
+ * We need (i - last_pos) >= 6 for all pairs of consecutive people.
  * 
- * Algorithm:
- * 1. Iterate through the array and store the index of the last person seen.
- * 2. If we encounter another person, check if the current index minus the 
- *    last seen index is less than 6.
- * 3. If it is less than 6, social distancing is violated (return "NO").
- * 4. If we finish the loop without violations, return "YES".
+ * Complexity:
+ * Time: O(N) per test case, where N is the number of spots.
+ * Space: O(1) auxiliary space.
  */
 
 void solve() {
     int N;
     cin >> N;
     vector<int> A(N);
-    for (int i = 0; i < N; ++i) {
-        cin >> A[i];
-    }
-
-    int last_pos = -10; // Initialize with a value that won't trigger a false violation
+    int last_pos = -10; // Initialize with a value such that distance > 6
     bool possible = true;
 
     for (int i = 0; i < N; ++i) {
+        cin >> A[i];
         if (A[i] == 1) {
+            // If this is not the first person found, check distance
             if (i - last_pos < 6) {
                 possible = false;
-                break;
             }
             last_pos = i;
         }
@@ -51,9 +46,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    while (t--) {
+    int T;
+    if (!(cin >> T)) return 0;
+    while (T--) {
         solve();
     }
     return 0;

@@ -3,10 +3,19 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Chef's penalty = X + (P * 10)
- * Chefina's penalty = Y + (Q * 10)
- * We need to compare these two values and output the winner.
- * Constraints are small (X, Y, P, Q <= 100), so standard integer types are sufficient.
+ * Chef's total penalty = X + (P * 10)
+ * Chefina's total penalty = Y + (Q * 10)
+ * 
+ * We need to compare these two values:
+ * - If Chef's penalty < Chefina's penalty, output "Chef"
+ * - If Chef's penalty > Chefina's penalty, output "Chefina"
+ * - If they are equal, output "Draw"
+ * 
+ * Constraints:
+ * X, Y <= 100
+ * P, Q <= 100
+ * Max penalty = 100 + (100 * 10) = 1100.
+ * This fits well within a standard 32-bit integer, but using long long is safe practice.
  */
 
 void solve() {

@@ -12,11 +12,11 @@ using namespace std;
  * Price of petrol after K months: X + (A * K)
  * Price of diesel after K months: Y + (B * K)
  * 
- * We need to compare these two values and output the result.
+ * We need to compare these two values.
  * Constraints: X, Y, A, B, K <= 1000.
  * Maximum possible value: 1000 + (1000 * 1000) = 1,001,000.
  * This fits comfortably within a standard 32-bit signed integer, 
- * but using long long is good practice to prevent overflow in similar problems.
+ * but using long long is safer and good practice in competitive programming.
  */
 
 void solve() {
@@ -36,7 +36,7 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

@@ -3,35 +3,36 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have three boxes A, B, C and bags of size D.
+ * We have three boxes with sizes A, B, C and bags of size D.
  * Constraints: 1 <= A <= B <= C <= D <= 100.
  * 
  * Logic:
  * 1. If A + B + C <= D, we can fit all in 1 bag.
- * 2. If A + B + C > D, we check if we can fit two boxes in one bag.
- *    Since A <= B <= C, the largest possible pairs are (A+B) and C, or (A+C) and B.
- *    However, since A <= B <= C, the most efficient way to group is to check:
- *    - If A + B + C <= D: 1 bag
- *    - Else if A + B <= D or A + C <= D: 2 bags
- *    - Else: 3 bags
- * 
- * Actually, a simpler greedy approach:
- * - If (A + B + C <= D), return 1.
- * - If (A + B <= D) or (A + C <= D), return 2.
- * - Otherwise, return 3.
+ * 2. If A + B + C > D, we check if we can fit them in 2 bags:
+ *    - Can we fit (A + B) in one and C in another? (A + B <= D)
+ *    - Can we fit (A + C) in one and B in another? (A + C <= D)
+ *    - Can we fit (B + C) in one and A in another? (B + C <= D)
+ *    Since A <= B <= C, if any pair fits, it will be (A + B) <= D.
+ *    If (A + B) <= D, we need 2 bags.
+ * 3. If neither of the above works, we need 3 bags.
  */
 
 void solve() {
     int A, B, C, D;
     cin >> A >> B >> C >> D;
 
+    // Case 1: All three fit in one bag
     if (A + B + C <= D) {
         cout << 1 << "\n";
-    } else if (A + B <= D || A + C <= D) {
-        // We can fit at least two in one bag
+    }
+    // Case 2: Check if two bags are sufficient
+    // Since A <= B <= C, the smallest sum of two is A + B.
+    // If A + B <= D, we can put A and B in one bag, and C in another.
+    else if (A + B <= D) {
         cout << 2 << "\n";
-    } else {
-        // Must put each in its own bag
+    }
+    // Case 3: Otherwise, each box needs its own bag
+    else {
         cout << 3 << "\n";
     }
 }

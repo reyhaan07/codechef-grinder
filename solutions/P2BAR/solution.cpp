@@ -7,11 +7,11 @@ using namespace std;
  * 
  * Algorithm:
  * 1. Iterate through the string.
- * 2. Maintain a boolean flag `foundSilence` initialized to false.
- * 3. If we encounter a '0', set `foundSilence` to true.
- * 4. If we encounter a '1' and `foundSilence` is true, increment the counter.
+ * 2. Maintain a boolean flag `silence_found` initialized to false.
+ * 3. If we encounter a '0', set `silence_found` to true.
+ * 4. If we encounter a '1' and `silence_found` is true, increment the counter.
  * 
- * Time Complexity: O(N) per test case.
+ * Time Complexity: O(N) per test case, where N is the length of the string.
  * Space Complexity: O(N) to store the string.
  */
 
@@ -21,24 +21,24 @@ void solve() {
     string S;
     cin >> S;
 
-    long long count = 0;
-    bool foundSilence = false;
+    bool silence_found = false;
+    long long pulse_count = 0;
 
     for (int i = 0; i < N; ++i) {
         if (S[i] == '0') {
-            foundSilence = true;
+            silence_found = true;
         } else if (S[i] == '1') {
-            if (foundSilence) {
-                count++;
+            if (silence_found) {
+                pulse_count++;
             }
         }
     }
 
-    cout << count << "\n";
+    cout << pulse_count << "\n";
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

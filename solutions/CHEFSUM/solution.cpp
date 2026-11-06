@@ -8,17 +8,17 @@ using namespace std;
  * 
  * prefixSum(i) + suffixSum(i) = (A[1] + ... + A[i]) + (A[i] + ... + A[N])
  * Note that A[i] is included in both sums.
- * prefixSum(i) + suffixSum(i) = (A[1] + ... + A[N]) + A[i]
+ * prefixSum(i) + suffixSum(i) = (Sum of all elements in A) + A[i]
  * 
- * Since (A[1] + ... + A[N]) is a constant for a given array,
+ * Since (Sum of all elements in A) is a constant for a given array,
  * minimizing (prefixSum(i) + suffixSum(i)) is equivalent to minimizing A[i].
  * 
  * To find the minimum index i for which this value is minimum, we simply need
  * to find the index i (1-based) where A[i] is the smallest. If there are
  * multiple such indices, the problem asks for the least index i.
  * 
- * Time Complexity: O(N) per test case
- * Space Complexity: O(N) to store the array (or O(1) if processed on the fly)
+ * Time Complexity: O(N) per test case.
+ * Space Complexity: O(N) to store the array (or O(1) if processed on the fly).
  */
 
 void solve() {

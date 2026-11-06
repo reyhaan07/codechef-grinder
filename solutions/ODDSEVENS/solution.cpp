@@ -3,7 +3,7 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Alice and Bob play a game where they choose numbers a and b (1 <= a, b <= 5).
+ * Alice and Bob play a game where they pick numbers a and b (1 <= a, b <= 5).
  * Sum = a + b.
  * If Sum is odd, Alice wins.
  * If Sum is even, Bob wins.
@@ -11,9 +11,8 @@ using namespace std;
  * Constraints:
  * T <= 1000
  * 1 <= a, b <= 5
- * Time complexity per test case: O(1)
- * Total time complexity: O(T)
- * Space complexity: O(1)
+ * Time Complexity: O(T)
+ * Space Complexity: O(1)
  */
 
 int main() {
