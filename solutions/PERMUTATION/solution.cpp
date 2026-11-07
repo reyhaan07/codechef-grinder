@@ -1,56 +1,59 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * We need to transform array A into a permutation of {1, 2, ..., N} using only increments.
- * 1. Sort the array A.
- * 2. The smallest element must eventually become 1, the second smallest 2, ..., the N-th smallest N.
- * 3. If any element A[i] is already greater than its target (i + 1), it's impossible.
- * 4. Otherwise, the cost is the sum of (target - A[i]).
+ * We are given an array A of size N. We can only increase elements.
+ * We want to transform A into a permutation of {1, 2, ..., N}.
  * 
- * Complexity: O(T * N log N), which is efficient enough for N=1000, T=500.
+ * Strategy:
+ * 1. Sort the array A in non-decreasing order.
+ * 2. To minimize the total number of operations, we should map the smallest 
+ *    elements in the sorted array to the smallest values in the target 
+ *    permutation {1, 2, ..., N}.
+ * 3. After sorting, if A[i] > (i + 1), it is impossible to transform A[i] 
+ *    into (i + 1) because we can only increase values. In this case, output -1.
+ * 4. Otherwise, the cost to transform A[i] to (i + 1) is (i + 1) - A[i].
+ * 5. Sum these costs for all i from 0 to N-1.
  */
 
 void solve() {
     int N;
-    if (!(cin >> N)) return;
-    vector<int> A(N);
+    cin >> N;
+    vector<long long> A(N);
     for (int i = 0; i < N; ++i) {
         cin >> A[i];
     }
 
-    // Sort the array to match the smallest elements to the smallest targets
+    // Sort the array to greedily match the smallest elements to 1, 2, ..., N
     sort(A.begin(), A.end());
 
-    long long operations = 0;
+    long long total_ops = 0;
     for (int i = 0; i < N; ++i) {
-        int target = i + 1;
+        // The target value for the i-th element (0-indexed) is (i + 1)
+        long long target = i + 1;
         
         // If the current element is already greater than the target,
-        // we cannot decrease it to reach the target.
+        // we cannot decrease it, so it's impossible to form a permutation.
         if (A[i] > target) {
             cout << -1 << "\n";
             return;
         }
         
-        // Add the difference to operations
-        operations += (long long)(target - A[i]);
+        // Add the difference to the total operations
+        total_ops += (target - A[i]);
     }
 
-    cout << operations << "\n";
+    cout << total_ops << "\n";
 }
 
 int main() {
-    // Optimize standard I/O operations
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int T;
-    if (!(cin >> T)) return 0;
+    cin >> T;
     while (T--) {
         solve();
     }

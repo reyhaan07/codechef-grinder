@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 739,
+  "total_solved": 757,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -741,7 +741,25 @@
     "CHOCOCHEF",
     "WRAPGIFTS",
     "GEMBUND",
-    "MERRYXMAS"
+    "MERRYXMAS",
+    "ADDPOS",
+    "SNAPE",
+    "FARFROMO",
+    "PERMUTATION",
+    "DONUTSELL",
+    "SC31",
+    "SMARTER",
+    "VOTERS",
+    "TRUTHLIE",
+    "CHESSWIN",
+    "MAXTRI",
+    "FIZZBUZZ23_2",
+    "CFMM",
+    "PIZZAPARTY",
+    "CHESS_PAIR",
+    "ANADSW",
+    "TWODIFFPALIN",
+    "GCEA"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -7420,6 +7438,168 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-07 18:35:36"
+    },
+    {
+      "code": "ADDPOS",
+      "name": "Add to make Positive",
+      "status": "Accepted",
+      "solution_id": "1388294659",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:06:53"
+    },
+    {
+      "code": "SNAPE",
+      "name": "Snape and Ladder",
+      "status": "Accepted",
+      "solution_id": "1388294675",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:07:39"
+    },
+    {
+      "code": "FARFROMO",
+      "name": "Far from origin",
+      "status": "Accepted",
+      "solution_id": "1388294686",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:08:09"
+    },
+    {
+      "code": "PERMUTATION",
+      "name": "Convert to permutation",
+      "status": "Accepted",
+      "solution_id": "1388294709",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:08:58"
+    },
+    {
+      "code": "DONUTSELL",
+      "name": "Selling Donuts",
+      "status": "Accepted",
+      "solution_id": "1388294720",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:09:40"
+    },
+    {
+      "code": "SC31",
+      "name": "Weapon Value",
+      "status": "Accepted",
+      "solution_id": "1388294733",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:10:23"
+    },
+    {
+      "code": "SMARTER",
+      "name": "Work Smarter, Not Harder",
+      "status": "Accepted",
+      "solution_id": "1388294751",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:12:05"
+    },
+    {
+      "code": "VOTERS",
+      "name": "Discrepancies in the Voters List",
+      "status": "Accepted",
+      "solution_id": "1388294801",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:13:02"
+    },
+    {
+      "code": "TRUTHLIE",
+      "name": "Truth Teller And Liars 101",
+      "status": "Accepted",
+      "solution_id": "1388294816",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:13:50"
+    },
+    {
+      "code": "CHESSWIN",
+      "name": "Chess Win",
+      "status": "Accepted",
+      "solution_id": "1388294823",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:14:26"
+    },
+    {
+      "code": "MAXTRI",
+      "name": "Max Triangle",
+      "status": "Accepted",
+      "solution_id": "1388294833",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:15:19"
+    },
+    {
+      "code": "FIZZBUZZ23_2",
+      "name": "Survival Time",
+      "status": "Accepted",
+      "solution_id": "1388294846",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:17:08"
+    },
+    {
+      "code": "CFMM",
+      "name": "Making a Meal",
+      "status": "Accepted",
+      "solution_id": "1388294867",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:17:49"
+    },
+    {
+      "code": "PIZZAPARTY",
+      "name": "Pizza Party",
+      "status": "Accepted",
+      "solution_id": "1388294879",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:18:34"
+    },
+    {
+      "code": "CHESS_PAIR",
+      "name": "Chess Pairing",
+      "status": "Accepted",
+      "solution_id": "1388294885",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:19:05"
+    },
+    {
+      "code": "ANADSW",
+      "name": "Anti Adjacent Swaps",
+      "status": "Accepted",
+      "solution_id": "1388294900",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:21:05"
+    },
+    {
+      "code": "TWODIFFPALIN",
+      "name": "Two Different Palindromes",
+      "status": "Accepted",
+      "solution_id": "1388294925",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:21:50"
+    },
+    {
+      "code": "GCEA",
+      "name": "Gotta Catch Em All",
+      "status": "Accepted",
+      "solution_id": "1388294935",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 21:22:27"
     }
   ]
 }

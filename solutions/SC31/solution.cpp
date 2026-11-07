@@ -3,49 +3,41 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * The problem states that when two contestants battle, weapons of the same type
- * are destroyed (XOR operation). The winner collects the remaining weapons of the loser.
- * This implies that the final set of weapons held by the winner is the XOR sum
- * of the initial weapon sets of all N participants.
+ * The battle rule states: if two contestants have the same weapon type, 
+ * those weapons are destroyed. Otherwise, the winner collects the remaining weapons.
+ * This is equivalent to the XOR operation. 
+ * If a weapon type is present in an odd number of contestants, it will remain 
+ * with the final winner. If it is present in an even number of contestants, 
+ * it will be destroyed.
  * 
- * Let S_i be the binary string representing the weapons of participant i.
- * The final state is S_1 XOR S_2 XOR ... XOR S_N.
- * Since the XOR operation is associative and commutative, the order of battles
- * does not matter. The final result is always the same regardless of the tournament bracket.
+ * Since the XOR operation is associative and commutative, the final set of 
+ * weapons the winner has is simply the XOR sum of all initial weapon strings.
  * 
- * Complexity:
- * Time: O(T * N * L), where L = 10 (length of string).
- * Space: O(L) to store the current XOR sum.
+ * We can represent each string of length 10 as an integer or simply XOR the 
+ * bits at each position.
  */
 
 void solve() {
     int N;
     cin >> N;
     
-    // We can represent the 10 weapons as a bitmask or an integer array.
-    // Since the length is fixed at 10, an integer XOR sum is sufficient.
-    int result_mask = 0;
+    // We use an array of 10 integers to represent the count of each weapon type.
+    // Or more simply, just XOR the bits.
+    vector<int> result(10, 0);
     
     for (int i = 0; i < N; ++i) {
         string s;
         cin >> s;
-        
-        // Convert binary string to integer bitmask
-        int current_mask = 0;
         for (int j = 0; j < 10; ++j) {
             if (s[j] == '1') {
-                current_mask |= (1 << (9 - j));
+                result[j] ^= 1;
             }
         }
-        
-        // XOR the current participant's weapons into the total
-        result_mask ^= current_mask;
     }
     
-    // Count the number of set bits in the final mask
     int count = 0;
-    for (int i = 0; i < 10; ++i) {
-        if ((result_mask >> i) & 1) {
+    for (int j = 0; j < 10; ++j) {
+        if (result[j] == 1) {
             count++;
         }
     }
@@ -54,13 +46,13 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O
+    // Fast I/O setup
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int T;
-    if (!(cin >> T)) return 0;
-    while (T--) {
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
         solve();
     }
     return 0;

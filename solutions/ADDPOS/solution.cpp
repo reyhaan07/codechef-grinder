@@ -7,9 +7,8 @@ using namespace std;
  * We want to find the minimum non-negative integer X such that:
  * Sum(A_i + X) >= 0 for all i from 1 to N.
  * 
- * Expanding the sum:
- * Sum(A_i) + Sum(X) >= 0
- * Sum(A_i) + N * X >= 0
+ * Sum(A_i + X) = Sum(A_i) + N * X
+ * We need: Sum(A_i) + N * X >= 0
  * N * X >= -Sum(A_i)
  * X >= -Sum(A_i) / N
  * 
@@ -18,9 +17,9 @@ using namespace std;
  * If Sum(A_i) < 0, then X >= ceil(-Sum(A_i) / N).
  * 
  * Let S = Sum(A_i).
- * If S < 0, we need N * X >= -S.
- * X = ceil(-S / N).
- * In integer arithmetic, ceil(a / b) for positive a, b is (a + b - 1) / b.
+ * If S < 0, we need X >= (-S) / N.
+ * Since we want the minimum integer X, X = ceil((-S) / N).
+ * Using integer division, ceil(a / b) for positive a, b is (a + b - 1) / b.
  */
 
 void solve() {
@@ -38,7 +37,7 @@ void solve() {
     } else {
         // We need N * X >= -sum
         // X >= (-sum) / N
-        // Since we need the smallest integer X, we use ceiling division
+        // Since X must be an integer, X = ceil(-sum / N)
         long long target = -sum;
         long long x = (target + N - 1) / N;
         cout << x << "\n";

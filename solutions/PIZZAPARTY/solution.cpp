@@ -1,5 +1,4 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
@@ -11,28 +10,40 @@ using namespace std;
  * - Each pizza has 8 slices.
  * - Number of pizzas needed = ceil(Total slices / 8).
  * - Using integer arithmetic, ceil(x / y) = (x + y - 1) / y.
- * 
- * Input Format:
- * - The input contains exactly one line with two integers A and B.
  */
+
+void solve() {
+    long long A, B;
+    if (!(cin >> A >> B)) return;
+
+    long long total_boys = A + 1;
+    long long total_girls = B;
+    
+    long long total_slices = (total_boys * 4) + (total_girls * 3);
+    
+    // Calculate ceiling division: (total_slices + 8 - 1) / 8
+    long long pizzas_needed = (total_slices + 7) / 8;
+    
+    cout << pizzas_needed << "\n";
+}
 
 int main() {
     // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    long long A, B;
-    // Read A and B directly as there is only one test case
-    if (cin >> A >> B) {
-        long long total_boys = A + 1;
-        long long total_girls = B;
-        long long total_slices = (total_boys * 4) + (total_girls * 3);
-
-        // Calculate ceiling division: (total_slices + 8 - 1) / 8
-        long long pizzas_needed = (total_slices + 7) / 8;
-
-        cout << pizzas_needed << endl;
+    // The problem description implies a single test case per run based on the 
+    // input format description, but the instructions mention handling multiple 
+    // test cases. We will check if there's a test case count provided or just 
+    // handle the single input provided. Given the constraints and format:
+    
+    int t = 1; 
+    // If the input format were to include a test case count, we would use:
+    // cin >> t;
+    
+    while (t--) {
+        solve();
     }
-
+    
     return 0;
 }

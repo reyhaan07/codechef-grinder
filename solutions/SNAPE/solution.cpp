@@ -3,33 +3,33 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have a right-angled triangle formed by the ladder side, the base, and the height.
- * Let B be the base (separation), LS be the left side, and RS be the right side.
- * Let H be the height of the ladder.
+ * We have a right-angled triangle scenario where:
+ * - B is the base (distance between the two feet of the ladder).
+ * - LS is the length of one side (hypotenuse or leg).
+ * - RS is the length of the other side (hypotenuse or leg).
  * 
- * Case 1: Minimum RS
- * This occurs when the height H is minimized. The smallest possible height is when 
- * the LS is the hypotenuse and B is one leg.
- * H^2 + B^2 = LS^2 => H = sqrt(LS^2 - B^2)
- * Then, for the right side (RS), RS^2 = H^2 + B^2 (if we consider the triangle 
- * formed by RS, H, and B). Wait, the problem states the ladder is an inverted 'V'.
- * The two sides LS and RS meet at height H above the ground.
+ * Let H be the height of the ladder where the two sides meet.
+ * 1. If LS is the hypotenuse and B is a leg:
+ *    H^2 + B^2 = LS^2 => H = sqrt(LS^2 - B^2)
+ *    Then RS is the hypotenuse of a triangle with legs H and B:
+ *    RS^2 = H^2 + B^2 (Wait, this is not the right approach).
+ * 
+ * Let's re-evaluate:
+ * The ladder forms a triangle with sides LS, RS, and base B.
+ * Let H be the vertical height from the ground to the top of the ladder.
  * The base B is split into two segments x and y such that x + y = B.
  * LS^2 = H^2 + x^2
  * RS^2 = H^2 + y^2
  * 
- * To minimize RS:
- * RS is minimized when H is minimized. The smallest H occurs when the LS is 
- * perpendicular to the ground (H = LS). But wait, the problem says "at one extreme 
- * LS can be vertical". If LS is vertical, then H = LS.
- * Then RS^2 = H^2 + B^2 = LS^2 + B^2 (Maximum RS).
+ * Minimum RS: Occurs when the ladder is as "flat" as possible.
+ * This happens when the height H is minimized. 
+ * If LS > B, the smallest H is 0, but the triangle must exist.
+ * Actually, the minimum RS occurs when the triangle is right-angled with RS as a leg.
+ * RS^2 + B^2 = LS^2 => RS = sqrt(LS^2 - B^2)
  * 
- * If RS is vertical, then H = RS.
- * Then LS^2 = H^2 + B^2 => RS^2 = LS^2 - B^2 => RS = sqrt(LS^2 - B^2) (Minimum RS).
- * 
- * So:
- * Min RS = sqrt(LS^2 - B^2)
- * Max RS = sqrt(LS^2 + B^2)
+ * Maximum RS: Occurs when the ladder is as "steep" as possible.
+ * This happens when the other side (LS) is vertical.
+ * RS^2 = LS^2 + B^2 => RS = sqrt(LS^2 + B^2)
  */
 
 int main() {
@@ -39,18 +39,17 @@ int main() {
 
     int t;
     if (!(cin >> t)) return 0;
-    
     while (t--) {
-        double b, ls;
-        cin >> b >> ls;
-        
-        // Calculate minimum RS: sqrt(LS^2 - B^2)
-        // Calculate maximum RS: sqrt(LS^2 + B^2)
-        double min_rs = sqrt(max(0.0, ls * ls - b * b));
-        double max_rs = sqrt(ls * ls + b * b);
-        
+        double B, LS;
+        cin >> B >> LS;
+
+        // Minimum RS: sqrt(LS^2 - B^2)
+        // Maximum RS: sqrt(LS^2 + B^2)
+        double min_rs = sqrt(abs(LS * LS - B * B));
+        double max_rs = sqrt(LS * LS + B * B);
+
         cout << fixed << setprecision(5) << min_rs << " " << max_rs << "\n";
     }
-    
+
     return 0;
 }

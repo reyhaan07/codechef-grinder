@@ -3,31 +3,32 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * Total players = 2N
- * Rated players = X
- * Unrated players = 2N - X
+ * We have 2N total players, X of whom are rated.
+ * We want to minimize the number of rated players paired with other rated players.
  * 
- * We want to pair rated players with unrated players as much as possible to minimize
- * the number of rated-rated pairs.
+ * Let R = X (rated players)
+ * Let U = 2N - X (unrated players)
  * 
- * Each pair of (rated, unrated) uses 1 rated player and 1 unrated player.
- * We can form at most (2N - X) such pairs because there are only (2N - X) unrated players.
+ * We want to maximize the number of (Rated, Unrated) pairs.
+ * Each (Rated, Unrated) pair uses 1 rated player and 1 unrated player.
+ * The maximum number of such pairs is min(R, U).
  * 
- * After using all (2N - X) unrated players, we have used (2N - X) rated players.
- * The remaining rated players are: X - (2N - X) = 2X - 2N.
+ * After forming as many (Rated, Unrated) pairs as possible:
+ * 1. If R <= U: All rated players can be paired with unrated players. 
+ *    Number of rated players with rated opponents = 0.
+ * 2. If R > U: We use all U unrated players to pair with U rated players.
+ *    Remaining rated players = R - U.
+ *    These remaining players must be paired with each other.
+ *    Since each pair consists of 2 rated players, the number of rated players 
+ *    with rated opponents is (R - U).
  * 
- * If 2X - 2N <= 0, it means we can pair all rated players with unrated players 
- * (or there are no rated players left), so the answer is 0.
- * 
- * If 2X - 2N > 0, these remaining rated players must be paired with each other.
- * Each pair of (rated, rated) contributes 2 to the count of rated players with rated opponents.
- * Thus, the answer is 2X - 2N.
- * 
- * Combining these, the answer is max(0, 2X - 2N).
+ * General formula: max(0, R - U)
+ * Substituting U = 2N - X:
+ * max(0, X - (2N - X)) = max(0, 2X - 2N)
  */
 
 int main() {
-    // Fast I/O
+    // Optimize I/O operations
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -37,14 +38,16 @@ int main() {
         long long n, x;
         cin >> n >> x;
         
-        // Calculate remaining rated players after pairing with all unrated players
-        long long remaining_rated = x - (2 * n - x);
+        long long unrated = 2 * n - x;
         
-        if (remaining_rated <= 0) {
-            cout << 0 << "\n";
+        // If rated players are more than unrated, the excess must pair with each other.
+        if (x > unrated) {
+            cout << (x - unrated) << "\n";
         } else {
-            cout << remaining_rated << "\n";
+            // Otherwise, all rated players can be paired with unrated players.
+            cout << 0 << "\n";
         }
     }
+    
     return 0;
 }
