@@ -12,20 +12,18 @@ using namespace std;
  * ...
  * Group N: (N, N + 1)
  * 
- * Given Chef's roll number X, we need to find his partner Y.
- * From the pattern, for any roll number X, the partner Y satisfies:
+ * We observe that for any roll number X, the partner Y satisfies:
  * X + Y = 2N + 1
  * Therefore, Y = 2N + 1 - X.
  * 
  * Constraints:
  * N <= 10^8, so 2N + 1 can be up to 2*10^8 + 1.
  * This fits within a standard 32-bit signed integer, but using long long 
- * is safer and good practice for competitive programming to avoid overflow 
- * in intermediate calculations.
+ * is safer and good practice in competitive programming to avoid overflow.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O for performance
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -35,7 +33,7 @@ int main() {
         long long n, x;
         cin >> n >> x;
         
-        // Calculate partner using the derived formula
+        // Calculate partner's roll number using the derived formula
         long long partner = (2 * n + 1) - x;
         
         cout << partner << "\n";

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 724,
+  "total_solved": 739,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -726,7 +726,22 @@
     "HATTRICK",
     "MXON",
     "SEATING7",
-    "GOODSUB7"
+    "GOODSUB7",
+    "EQSUM",
+    "GROUPASSGN",
+    "DRAWCH",
+    "BLNDOR",
+    "SAMESAME",
+    "TYPWRL",
+    "ARYAGRID",
+    "ANUUND",
+    "CCHEAVEN",
+    "CHOCEAT",
+    "FLOWERBUY",
+    "CHOCOCHEF",
+    "WRAPGIFTS",
+    "GEMBUND",
+    "MERRYXMAS"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -738,7 +753,8 @@
     "STREAK",
     "AVOIDCONTACT",
     "ADD12GAME",
-    "LARGODDSTRIN"
+    "LARGODDSTRIN",
+    "EXPSTP"
   ],
   "pending": [],
   "history": [
@@ -7269,6 +7285,141 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-07 15:41:26"
+    },
+    {
+      "code": "EQSUM",
+      "name": "Equal Difference",
+      "status": "Accepted",
+      "solution_id": "1388281773",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:21:42"
+    },
+    {
+      "code": "GROUPASSGN",
+      "name": "Group Assignment",
+      "status": "Accepted",
+      "solution_id": "1388281906",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:22:23"
+    },
+    {
+      "code": "DRAWCH",
+      "name": "Drawing Chances",
+      "status": "Accepted",
+      "solution_id": "1388282051",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:23:10"
+    },
+    {
+      "code": "BLNDOR",
+      "name": "Ballon d Or",
+      "status": "Accepted",
+      "solution_id": "1388282239",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:24:21"
+    },
+    {
+      "code": "SAMESAME",
+      "name": "Nearly Equal",
+      "status": "Accepted",
+      "solution_id": "1388282416",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:25:30"
+    },
+    {
+      "code": "TYPWRL",
+      "name": "Typing World",
+      "status": "Accepted",
+      "solution_id": "1388282601",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:26:27"
+    },
+    {
+      "code": "ARYAGRID",
+      "name": "Arya In Grid",
+      "status": "Accepted",
+      "solution_id": "1388282736",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:27:00"
+    },
+    {
+      "code": "ANUUND",
+      "name": "Ups and Downs",
+      "status": "Accepted",
+      "solution_id": "1388282887",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:27:53"
+    },
+    {
+      "code": "CCHEAVEN",
+      "name": "Chef in Heaven ",
+      "status": "Accepted",
+      "solution_id": "1388283063",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:29:37"
+    },
+    {
+      "code": "CHOCEAT",
+      "name": "Chocolate Eating",
+      "status": "Accepted",
+      "solution_id": "1388283372",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:30:19"
+    },
+    {
+      "code": "FLOWERBUY",
+      "name": "Buying Flowers",
+      "status": "Accepted",
+      "solution_id": "1388283612",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:31:19"
+    },
+    {
+      "code": "CHOCOCHEF",
+      "name": "Chocolate Distribution",
+      "status": "Accepted",
+      "solution_id": "1388284155",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:33:29"
+    },
+    {
+      "code": "WRAPGIFTS",
+      "name": "Christmas Gifts",
+      "status": "Accepted",
+      "solution_id": "1388284275",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:34:10"
+    },
+    {
+      "code": "GEMBUND",
+      "name": "Gem Bundles",
+      "status": "Accepted",
+      "solution_id": "1388284361",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:34:45"
+    },
+    {
+      "code": "MERRYXMAS",
+      "name": "Merry Christmas!",
+      "status": "Accepted",
+      "solution_id": "1388284499",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 18:35:36"
     }
   ]
 }

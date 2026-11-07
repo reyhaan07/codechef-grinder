@@ -3,39 +3,36 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We want to represent N as 2*x + 3*y = N, where x, y >= 0 are integers.
- * We want to minimize the cost: 4*x + 5*y.
+ * We want to represent N as 2*x + 3*y = N, where x and y are non-negative integers.
+ * We want to minimize the cost C = 4*x + 5*y.
  * 
- * Since N is small (up to 100), we can use dynamic programming or a simple brute force.
- * Let dp[i] be the minimum cost to buy exactly i flowers.
- * dp[i] = min(dp[i-2] + 4, dp[i-3] + 5)
- * Base cases:
- * dp[0] = 0
- * dp[1] = infinity (impossible)
- * dp[2] = 4
- * dp[3] = 5
+ * Since N is small (up to 100), we can iterate through all possible values of y
+ * such that 3*y <= N. For each y, we check if (N - 3*y) is divisible by 2.
+ * If it is, we calculate the cost and keep track of the minimum.
  */
 
 void solve() {
     int N;
     cin >> N;
 
-    // dp[i] stores the minimum cost to get exactly i flowers.
-    // Initialize with a large value representing infinity.
-    vector<long long> dp(N + 1, 1e18);
-    
-    dp[0] = 0;
-    
-    for (int i = 1; i <= N; ++i) {
-        if (i >= 2 && dp[i - 2] != 1e18) {
-            dp[i] = min(dp[i], dp[i - 2] + 4);
-        }
-        if (i >= 3 && dp[i - 3] != 1e18) {
-            dp[i] = min(dp[i], dp[i - 3] + 5);
+    long long min_cost = -1;
+
+    // Iterate through possible number of 3-flower transactions (y)
+    for (int y = 0; y * 3 <= N; ++y) {
+        int remaining = N - (y * 3);
+        
+        // Check if the remaining flowers can be bought in 2-flower transactions
+        if (remaining % 2 == 0) {
+            int x = remaining / 2;
+            long long current_cost = (long long)x * 4 + (long long)y * 5;
+            
+            if (min_cost == -1 || current_cost < min_cost) {
+                min_cost = current_cost;
+            }
         }
     }
-    
-    cout << dp[N] << "\n";
+
+    cout << min_cost << "\n";
 }
 
 int main() {

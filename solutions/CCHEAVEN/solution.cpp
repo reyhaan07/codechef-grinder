@@ -1,26 +1,27 @@
-#include <iostream>
-#include <string>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
  * Problem Analysis:
- * We need to check if there exists any prefix of length L' (1 <= L' <= L)
- * such that the number of '1's in that prefix is >= 50% of L'.
+ * Chef lives for L years, represented by a string S of '0's and '1's.
+ * He goes to heaven if at any point L' (1 <= L' <= L), the number of '1's
+ * is at least 50% of L'.
  * 
- * Condition: good_years / L' >= 0.5  =>  2 * good_years >= L'
+ * Let 'good' be the count of '1's in the first i years (1-indexed).
+ * The condition is: good / i >= 0.5
+ * This is equivalent to: 2 * good >= i
  * 
- * Complexity:
- * Time: O(L) per test case, O(sum of L) total.
- * Space: O(L) to store the string.
- * This is optimal. The TLE might have been due to I/O overhead or 
- * specific environment constraints.
+ * We iterate through the string, maintaining a running count of '1's.
+ * For each year i, we check if 2 * good >= i. If true at any point,
+ * Chef can go to heaven.
+ * 
+ * Time Complexity: O(L) per test case, O(sum of L) total.
+ * Space Complexity: O(L) to store the string, or O(1) if processed character by character.
  */
 
 void solve() {
     int L;
-    if (!(cin >> L)) return;
+    cin >> L;
     string S;
     cin >> S;
 
@@ -32,9 +33,9 @@ void solve() {
             good_years++;
         }
         
-        // Current length is i + 1
-        // Check if good_years / (i + 1) >= 0.5
-        // Equivalent to 2 * good_years >= i + 1
+        // Current year is i + 1
+        // Condition: good_years / (i + 1) >= 0.5
+        // Which is: 2 * good_years >= i + 1
         if (2 * good_years >= (i + 1)) {
             possible = true;
             break;
@@ -42,20 +43,20 @@ void solve() {
     }
 
     if (possible) {
-        cout << "YES\n";
+        cout << "YES" << "\n";
     } else {
-        cout << "NO\n";
+        cout << "NO" << "\n";
     }
 }
 
 int main() {
-    // Optimize standard I/O operations for speed
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    if (!(cin >> T)) return 0;
-    while (T--) {
+    int t;
+    cin >> t;
+    while (t--) {
         solve();
     }
     return 0;
