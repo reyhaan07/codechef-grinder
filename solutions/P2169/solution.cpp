@@ -8,9 +8,10 @@ using namespace std;
  * Since S consists only of '0' and '1':
  * - If S[i] == '0', then T[i] must be '1'.
  * - If S[i] == '1', then T[i] must be '0'.
- * 
  * This is equivalent to flipping each bit of the string S.
- * Time Complexity: O(N) per test case, O(Sum of N) total.
+ * 
+ * Time Complexity: O(N) per test case, where N is the length of the string.
+ * Total time complexity: O(Sum of N), which is O(2 * 10^5), well within the 1s limit.
  * Space Complexity: O(N) to store the string.
  */
 
@@ -41,5 +42,6 @@ int main() {
     while (t--) {
         solve();
     }
+    
     return 0;
 }

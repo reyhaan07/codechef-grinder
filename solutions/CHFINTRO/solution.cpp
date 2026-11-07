@@ -5,8 +5,8 @@ using namespace std;
  * Problem Analysis:
  * We are given N contestants and a threshold rating r.
  * For each contestant with rating R:
- * - If R >= r, they are a "Good boi".
- * - If R < r, they are a "Bad boi".
+ * - If R >= r, they are "Good boi".
+ * - If R < r, they are "Bad boi".
  * 
  * Constraints:
  * N <= 1000

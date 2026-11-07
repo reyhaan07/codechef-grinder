@@ -7,10 +7,10 @@ using namespace std;
  * We can multiply exactly one element A[i] by X.
  * We want to maximize the length of the longest non-decreasing subarray.
  * 
- * Since N is small (sum of N <= 1000), we can iterate through every possible 
- * index i (0 to N-1) where we apply the operation A[i] *= X.
- * For each modified array, we calculate the streak value in O(N).
- * Total complexity: O(N^2), which is well within the limits (10^6 operations).
+ * Since N is small (sum of N <= 1000), we can iterate through every possible index i
+ * (from 0 to N-1) where we apply the operation A[i] = A[i] * X.
+ * For each modification, we calculate the streak value in O(N) time.
+ * Total complexity: O(N^2), which is well within the limits for N=1000.
  */
 
 int get_streak(const vector<long long>& arr) {

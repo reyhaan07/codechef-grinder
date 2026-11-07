@@ -4,18 +4,18 @@ using namespace std;
 /**
  * Problem Analysis:
  * John Jackson (A) wants to have strictly more votes than Jack Johnson (B).
- * We want to minimize the number of swaps.
- * To maximize John's total votes while minimizing swaps, we should always swap
- * the smallest pack from A with the largest pack from B, provided the smallest
- * pack from A is smaller than the largest pack from B.
+ * We want to minimize swaps. To maximize John's total, we should always swap
+ * the smallest pack from A with the largest pack from B, provided the pack
+ * from A is smaller than the pack from B.
  * 
- * Strategy:
- * 1. Calculate current sum of A and B.
+ * Algorithm:
+ * 1. Calculate sumA and sumB.
  * 2. If sumA > sumB, 0 swaps needed.
  * 3. Sort A in ascending order and B in descending order.
- * 4. Iterate through the sorted arrays, swapping A[i] and B[i] as long as
- *    sumA <= sumB and A[i] < B[i].
- * 5. If after all possible beneficial swaps sumA is still <= sumB, return -1.
+ * 4. Iterate through the sorted arrays, swapping A[i] and B[i] if A[i] < B[i].
+ * 5. Update sums and increment swap count.
+ * 6. If at any point sumA > sumB, return the count.
+ * 7. If we exhaust all possible beneficial swaps and sumA <= sumB, return -1.
  */
 
 void solve() {
@@ -33,32 +33,36 @@ void solve() {
     }
 
     sort(A.begin(), A.end());
-    sort(B.rbegin(), B.rend());
+    sort(B.begin(), B.end(), greater<long long>());
 
     int swaps = 0;
-    int i = 0;
-    while (sumA <= sumB) {
-        // If we run out of elements to swap or the smallest A is not smaller than largest B
-        if (i >= N || i >= M || A[i] >= B[i]) {
-            cout << -1 << "\n";
-            return;
-        }
+    int limit = min(N, M);
+    
+    for (int i = 0; i < limit; ++i) {
+        if (sumA > sumB) break;
         
-        // Perform swap
-        sumA = sumA - A[i] + B[i];
-        sumB = sumB - B[i] + A[i];
-        swaps++;
-        i++;
+        if (A[i] < B[i]) {
+            sumA = sumA - A[i] + B[i];
+            sumB = sumB - B[i] + A[i];
+            swaps++;
+        } else {
+            // Since A is sorted ascending and B descending, 
+            // if A[i] >= B[i], no further swaps will help.
+            break;
+        }
     }
 
-    cout << swaps << "\n";
+    if (sumA > sumB) {
+        cout << swaps << "\n";
+    } else {
+        cout << -1 << "\n";
+    }
 }
 
 int main() {
-    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
+    
     int t;
     cin >> t;
     while (t--) {

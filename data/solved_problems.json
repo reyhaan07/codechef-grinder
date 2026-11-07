@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 693,
+  "total_solved": 707,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -695,7 +695,21 @@
     "CNTODDEVEN",
     "THREEFR",
     "THREEBOX",
-    "CHEFSUM"
+    "CHEFSUM",
+    "BOP3",
+    "TEKKEN",
+    "STKSTR",
+    "P2169",
+    "MAKENZERO",
+    "EOEO",
+    "LARGESTK343",
+    "CHFINTRO",
+    "CABRIDE",
+    "FAIRELCT",
+    "WHICHDIV",
+    "SALARY",
+    "MAXSLAM",
+    "CODETOWN"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -6959,6 +6973,132 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-06 22:41:16"
+    },
+    {
+      "code": "BOP3",
+      "name": "Min And Operations",
+      "status": "Accepted",
+      "solution_id": "1388156231",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:27:48"
+    },
+    {
+      "code": "TEKKEN",
+      "name": "Tekken",
+      "status": "Accepted",
+      "solution_id": "1388157140",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:30:17"
+    },
+    {
+      "code": "STKSTR",
+      "name": "Streak Star",
+      "status": "Accepted",
+      "solution_id": "1388157346",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:31:07"
+    },
+    {
+      "code": "P2169",
+      "name": "Opposite Attract",
+      "status": "Accepted",
+      "solution_id": "1388157596",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:32:04"
+    },
+    {
+      "code": "MAKENZERO",
+      "name": "Make N Zero",
+      "status": "Accepted",
+      "solution_id": "1388158250",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:34:39"
+    },
+    {
+      "code": "EOEO",
+      "name": "The Tom and Jerry Game!",
+      "status": "Accepted",
+      "solution_id": "1388158453",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:35:35"
+    },
+    {
+      "code": "LARGESTK343",
+      "name": "Largest K",
+      "status": "Accepted",
+      "solution_id": "1388158704",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:36:31"
+    },
+    {
+      "code": "CHFINTRO",
+      "name": "Chef and Interactive Contests",
+      "status": "Accepted",
+      "solution_id": "1388158883",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:37:20"
+    },
+    {
+      "code": "CABRIDE",
+      "name": "Cab Rides",
+      "status": "Accepted",
+      "solution_id": "1388159015",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:38:00"
+    },
+    {
+      "code": "FAIRELCT",
+      "name": "Fair Elections",
+      "status": "Accepted",
+      "solution_id": "1388159240",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:39:59"
+    },
+    {
+      "code": "WHICHDIV",
+      "name": "Which Division",
+      "status": "Accepted",
+      "solution_id": "1388159630",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:40:51"
+    },
+    {
+      "code": "SALARY",
+      "name": "The Minimum Number Of Moves",
+      "status": "Accepted",
+      "solution_id": "1388159858",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:41:50"
+    },
+    {
+      "code": "MAXSLAM",
+      "name": "Maximum Slams",
+      "status": "Accepted",
+      "solution_id": "1388160231",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:43:17"
+    },
+    {
+      "code": "CODETOWN",
+      "name": "Reach Codetown",
+      "status": "Accepted",
+      "solution_id": "1388160360",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 11:43:56"
     }
   ]
 }
