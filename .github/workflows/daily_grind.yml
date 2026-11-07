@@ -69,6 +69,9 @@ jobs:
           MIN_DELAY_SECONDS: "25"
           MAX_DELAY_SECONDS: "50"
           LANGUAGE: "cpp"
+          # Test on sample cases locally before every submission; at most 2 judge attempts.
+          LOCAL_TEST: "true"
+          MAX_RETRIES: "2"
           MIN_DIFFICULTY: "200"
           MAX_DIFFICULTY: "2000"
         run: |

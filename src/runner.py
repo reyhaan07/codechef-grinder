@@ -10,6 +10,7 @@ from src.config import config
 from src.codechef_client import CodeChefAuthError, CodeChefClient, SubmissionsDisabled, VerdictTimeout
 from src.solver import CodeChefSolver
 from src import database as dbm
+from src.local_judge import check_cpp, extract_samples
 
 logging.basicConfig(
     level=logging.INFO,
@@ -249,6 +250,8 @@ def run():
         # Infrastructure errors (Gemini outage, network, auth) never blacklist a problem.
         judge_attempts = 0
         infra_errors = 0
+        local_failures = 0
+        samples = extract_samples(details)
         previous_code = ""
         diagnostic = ""
         outcome = "unresolved"   # accepted | rejected | pending | unresolved
@@ -283,6 +286,19 @@ def run():
                 continue
 
             logger.info(f"Generated solution ({len(sol_code)} chars). Preview:\n{sol_code[:160]}...\n")
+
+            if config.local_test and "cpp" in config.language.lower():
+                local_diag = check_cpp(sol_code, samples)
+                if local_diag:
+                    local_failures += 1
+                    logger.warning(f"Local sample test failed ({local_failures}/{config.max_local_attempts}); not submitting.\n{local_diag[:300]}")
+                    diagnostic, previous_code = local_diag, sol_code
+                    if local_failures >= config.max_local_attempts:
+                        outcome = "local_failed"
+                        break
+                    continue
+                if samples:
+                    logger.info(f"Passed {len(samples)} sample test(s) locally.")
 
             if config.dry_run:
                 logger.info("[DRY RUN] Skipping live submission; nothing is recorded as solved.")
@@ -353,7 +369,11 @@ def run():
             if judge_attempts >= config.max_retries:
                 outcome = "rejected"
 
-        if outcome == "rejected":
+        if outcome == "local_failed":
+            logger.warning(f"Problem {code} never passed its sample tests; skipped WITHOUT submitting.")
+            dbm.record_failed(db, code)
+            dbm.save_database(config.data_file, db)
+        elif outcome == "rejected":
             logger.warning(f"Problem {code} was rejected by the judge {judge_attempts} times. Adding to skip list.")
             dbm.record_failed(db, code)
             dbm.save_database(config.data_file, db)

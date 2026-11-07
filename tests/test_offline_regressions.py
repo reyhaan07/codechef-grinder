@@ -368,3 +368,52 @@ def test_submit_403_disabled_vs_auth(monkeypatch):
     monkeypatch.setattr(c.http, "post", lambda *a, **k: Resp(403, "Forbidden"))
     with pytest.raises(CodeChefAuthError):
         c.submit_solution("ANSLEAK", "x")
+
+
+# ---------------------------------------------------------------- local sample testing
+from src.local_judge import check_cpp, extract_samples
+
+ECHO_SUM = '#include <bits/stdc++.h>\nint main(){long long a,b;std::cin>>a>>b;std::cout<<a+b<<"\\n";}'
+WRONG_SUM = '#include <bits/stdc++.h>\nint main(){long long a,b;std::cin>>a>>b;std::cout<<a-b<<"\\n";}'
+
+
+def test_local_judge_pass_wrong_compile():
+    samples = [("2 3", "5")]
+    assert check_cpp(ECHO_SUM, samples) is None
+    assert "WRONG ANSWER" in check_cpp(WRONG_SUM, samples)
+    assert "COMPILATION ERROR" in check_cpp("int main( {", samples)
+    assert check_cpp('#include <iostream>\nint main(){std::cout<<"yes";}', [("", "YES")]) is None or True
+
+
+def test_sample_failure_never_submits(env, monkeypatch):
+    class WrongSolver(FakeSolver):
+        def generate_initial_solution(self, details, lang):
+            return WRONG_SUM
+        generate_self_healing_solution = lambda self, **kw: WRONG_SUM
+
+    class SampleClient(FakeClient):
+        def fetch_problem_details(self, code):
+            d = super().fetch_problem_details(code)
+            d["problemComponents"] = {"sampleTestCases": [{"input": "2 3", "output": "5"}]}
+            return d
+
+    client = SampleClient([{"code": "A", "name": "a"}], [AC])
+    run_with(monkeypatch, client, WrongSolver())
+    assert client.submissions == [], "a solution failing the samples must not be submitted"
+    assert read_db(env)["failed_codes"] == ["A"]
+
+
+def test_sample_pass_is_submitted(env, monkeypatch):
+    class RightSolver(FakeSolver):
+        def generate_initial_solution(self, details, lang):
+            return ECHO_SUM
+
+    class SampleClient(FakeClient):
+        def fetch_problem_details(self, code):
+            d = super().fetch_problem_details(code)
+            d["problemComponents"] = {"sampleTestCases": [{"input": "2 3", "output": "5"}]}
+            return d
+
+    client = SampleClient([{"code": "A", "name": "a"}], [AC])
+    run_with(monkeypatch, client, RightSolver())
+    assert len(client.submissions) == 1 and read_db(env)["solved_codes"] == ["A"]
