@@ -8,17 +8,17 @@ using namespace std;
  * between their values is minimized.
  * 
  * Approach:
- * 1. If we sort the array of coin values, the minimum difference between any 
- *    two elements must occur between two adjacent elements in the sorted array.
+ * 1. If we sort the array of coin values, the minimum difference between any two 
+ *    elements must occur between two adjacent elements in the sorted array.
  * 2. Proof: Suppose we have sorted values a_1 <= a_2 <= ... <= a_N.
  *    For any i < j, the difference a_j - a_i = (a_j - a_{j-1}) + (a_{j-1} - a_{j-2}) + ... + (a_{i+1} - a_i).
- *    Since all differences (a_{k+1} - a_k) are non-negative, the sum is at least 
- *    as large as any individual adjacent difference.
+ *    Since all terms are non-negative, the sum is at least as large as any individual 
+ *    adjacent difference (a_{k+1} - a_k).
  * 3. Algorithm:
- *    a. Sort the array of coin values.
- *    b. Iterate through the sorted array from index 0 to N-2.
- *    c. Calculate the difference between adjacent elements: v[i+1] - v[i].
- *    d. Keep track of the minimum difference found.
+ *    - Sort the array.
+ *    - Iterate through the sorted array from index 0 to N-2.
+ *    - Calculate the difference between adjacent elements: v[i+1] - v[i].
+ *    - Keep track of the minimum difference found.
  * 
  * Complexity:
  * - Time: O(N log N) due to sorting, where N is the number of coins.
@@ -27,11 +27,11 @@ using namespace std;
  */
 
 void solve() {
-    int N;
-    if (!(cin >> N)) return;
+    int n;
+    if (!(cin >> n)) return;
     
-    vector<long long> v(N);
-    for (int i = 0; i < N; ++i) {
+    vector<long long> v(n);
+    for (int i = 0; i < n; ++i) {
         cin >> v[i];
     }
     
@@ -39,15 +39,15 @@ void solve() {
     sort(v.begin(), v.end());
     
     // Initialize min_diff with a large value
-    long long min_diff = 2000000; // Since max v_i is 10^6, difference <= 10^6
+    long long min_diff = 2000000; // Since max v_i is 10^6, difference won't exceed 10^6
     
-    // Find the minimum difference between adjacent elements
-    for (int i = 0; i < N - 1; ++i) {
+    // Compare adjacent elements
+    for (int i = 0; i < n - 1; ++i) {
         long long diff = v[i + 1] - v[i];
         if (diff < min_diff) {
             min_diff = diff;
         }
-        // Optimization: if diff is 0, it's the smallest possible absolute difference
+        // Optimization: if diff is 0, it's the smallest possible difference
         if (min_diff == 0) break;
     }
     
@@ -59,9 +59,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int T;
-    if (!(cin >> T)) return 0;
-    while (T--) {
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
         solve();
     }
     return 0;

@@ -3,12 +3,12 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * - We are given a binary string of length 30.
- * - '1' represents a working day, '0' represents a leave day.
- * - Salary = (Total number of '1's * X) + (Length of longest consecutive '1's * Y).
+ * - We are given a string of length 30 representing 30 days.
+ * - '1' means working, '0' means leave.
+ * - Salary = (Total number of '1's * X) + (Length of longest streak of '1's * Y).
  * - Constraints: T <= 10^4, X, Y <= 999, |S| = 30.
  * - Since the string length is small (30), a simple linear scan is optimal.
- * - Time Complexity: O(T * |S|), which is ~3 * 10^5 operations, well within the 0.5s limit.
+ * - Time Complexity: O(T * |S|), where |S| = 30.
  * - Space Complexity: O(|S|) to store the string.
  */
 
@@ -19,8 +19,8 @@ void solve() {
     cin >> s;
 
     long long total_working_days = 0;
-    long long max_streak = 0;
-    long long current_streak = 0;
+    int max_streak = 0;
+    int current_streak = 0;
 
     for (char c : s) {
         if (c == '1') {
@@ -33,7 +33,7 @@ void solve() {
             current_streak = 0;
         }
     }
-    // Final check in case the string ends with a streak
+    // Final check for streak ending at the last character
     if (current_streak > max_streak) {
         max_streak = current_streak;
     }
@@ -43,12 +43,12 @@ void solve() {
 }
 
 int main() {
-    // Fast I/O setup
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
-    cin >> t;
+    if (!(cin >> t)) return 0;
     while (t--) {
         solve();
     }

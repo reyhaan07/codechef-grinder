@@ -15,21 +15,20 @@ using namespace std;
  * 
  * If K > N:
  * The first N people will each take one row (one seat per row).
- * After N people, all N rows are occupied by 1 person each.
+ * After N people, all N rows have exactly 1 person.
  * The remaining (K - N) people must sit in a row that already has 1 person.
  * When a person sits in a row that already has 1 person, both the person 
  * already there and the new person are now "sitting next to somebody".
  * 
- * So, for the (K - N) people who arrive after the first N:
- * Each of them sits next to the person already in that row.
- * This makes the (K - N) new people "sitting next to somebody".
- * Also, the (K - N) people who were already sitting in those rows 
- * now have a neighbor, so they also become "sitting next to somebody".
- * Total = (K - N) + (K - N) = 2 * (K - N).
+ * So, for the (K - N) people who arrive after the rows are filled:
+ * - Each of these (K - N) people sits next to someone.
+ * - Each of these (K - N) people also causes the person already in that row 
+ *   to be sitting next to someone.
+ * - Total people sitting next to someone = (K - N) * 2.
  */
 
 int main() {
-    // Optimize I/O operations
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -42,7 +41,10 @@ int main() {
         if (k <= n) {
             cout << 0 << "\n";
         } else {
-            // The number of people who end up sitting next to someone is 2 * (K - N)
+            // The number of people who arrive after all rows are occupied
+            // is (k - n). Each of these people joins a row with 1 person.
+            // This makes 2 people per row (the original + the new one).
+            // Thus, 2 * (k - n) people are sitting next to someone.
             cout << 2 * (k - n) << "\n";
         }
     }

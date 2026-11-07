@@ -3,33 +3,33 @@ using namespace std;
 
 /**
  * Problem Analysis:
- * We have two strings A and B of length N, consisting only of 'a' and 'b'.
- * We can shuffle A and B independently. We want to know if we can arrange them
- * such that A[i] != B[i] for all i.
+ * We have two strings A and B of length N, consisting of 'a' and 'b'.
+ * We can shuffle A and B independently. We want to know if there exists a 
+ * configuration such that A[i] != B[i] for all i.
  * 
  * Let countA_a, countA_b be the counts of 'a' and 'b' in A.
  * Let countB_a, countB_b be the counts of 'a' and 'b' in B.
  * 
- * To satisfy A[i] != B[i], at every index i:
- * If A[i] = 'a', then B[i] must be 'b'.
- * If A[i] = 'b', then B[i] must be 'a'.
+ * To satisfy A[i] != B[i], at each index i:
+ * - If A[i] = 'a', then B[i] must be 'b'.
+ * - If A[i] = 'b', then B[i] must be 'a'.
  * 
- * This implies that for every 'a' in A, we need a 'b' in B to pair with it.
- * And for every 'b' in A, we need an 'a' in B to pair with it.
+ * This implies that for every 'a' in A, we must pair it with a 'b' in B.
+ * For every 'b' in A, we must pair it with an 'a' in B.
  * 
- * Total 'a's in A must be equal to total 'b's in B.
- * Total 'b's in A must be equal to total 'a's in B.
+ * Therefore, the number of 'a's in A must equal the number of 'b's in B,
+ * and the number of 'b's in A must equal the number of 'a's in B.
  * 
- * Let's check:
- * countA_a = countB_b
- * countA_b = countB_a
+ * Let countA_a = x, countA_b = N - x.
+ * Let countB_a = y, countB_b = N - y.
  * 
- * Since countA_a + countA_b = N and countB_a + countB_b = N,
- * these two conditions are actually equivalent.
- * If countA_a == countB_b, then N - countA_a == N - countB_b,
- * which means countA_b == countB_a.
+ * Condition:
+ * x = N - y  => x + y = N
+ * (N - x) = y => x + y = N
  * 
- * So the condition is simply: countA_a == countB_b.
+ * Both conditions simplify to x + y = N.
+ * This means the total number of 'a's across both strings must be exactly N.
+ * (countA_a + countB_a = N).
  */
 
 void solve() {
@@ -43,12 +43,12 @@ void solve() {
         if (c == 'a') countA_a++;
     }
 
-    int countB_b = 0;
+    int countB_a = 0;
     for (char c : B) {
-        if (c == 'b') countB_b++;
+        if (c == 'a') countB_a++;
     }
 
-    if (countA_a == countB_b) {
+    if (countA_a + countB_a == N) {
         cout << "YES" << "\n";
     } else {
         cout << "NO" << "\n";

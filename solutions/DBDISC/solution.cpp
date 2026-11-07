@@ -5,45 +5,49 @@ using namespace std;
  * Problem Analysis:
  * We need to select exactly two items (i, j) where i != j.
  * Let the costs be A[i] and A[j].
- * Let the more expensive item be M = max(A[i], A[j]) and the cheaper be m = min(A[i], A[j]).
+ * Let the more expensive item be M = max(A[i], A[j]) and the other be S = min(A[i], A[j]).
  * The discount on M is min(M / 2, 100).
- * The final cost is m + (M - min(M / 2, 100)).
- * We need to maximize B[i] + B[j] such that final cost <= K.
+ * The final cost is S + (M - min(M / 2, 100)).
+ * We need to check if this final cost <= K.
+ * If valid, we track the maximum sum of tastiness (B[i] + B[j]).
  * 
  * Constraints:
- * N <= 100, A_i, B_i, K <= 400.
- * An O(N^2) approach per test case is perfectly fine (100 * 100^2 = 1,000,000 operations).
+ * N <= 100, T <= 100.
+ * O(N^2) per test case is perfectly fine (100^2 = 10,000 operations per test case).
+ * Total operations ~ 10^6, well within the 1s time limit.
  */
 
 void solve() {
-    int N, K;
+    int N;
+    long long K;
     cin >> N >> K;
-    vector<int> A(N), B(N);
+    vector<long long> A(N), B(N);
     for (int i = 0; i < N; ++i) cin >> A[i];
     for (int i = 0; i < N; ++i) cin >> B[i];
 
-    int max_tastiness = 0;
-    bool possible = false;
+    long long max_tastiness = 0;
+    bool found = false;
 
     for (int i = 0; i < N; ++i) {
         for (int j = i + 1; j < N; ++j) {
-            int cost1 = A[i];
-            int cost2 = A[j];
+            long long cost1 = A[i];
+            long long cost2 = A[j];
             
-            int M = max(cost1, cost2);
-            int m = min(cost1, cost2);
+            long long M = max(cost1, cost2);
+            long long S = min(cost1, cost2);
             
-            int discount = min(M / 2, 100);
-            int final_cost = m + (M - discount);
+            // Discount calculation
+            long long discount = min(M / 2, 100LL);
+            long long final_cost = S + (M - discount);
             
             if (final_cost <= K) {
-                possible = true;
+                found = true;
                 max_tastiness = max(max_tastiness, B[i] + B[j]);
             }
         }
     }
 
-    if (!possible) {
+    if (!found) {
         cout << 0 << "\n";
     } else {
         cout << max_tastiness << "\n";

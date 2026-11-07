@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "account": "reyhaan_s",
-  "total_solved": 707,
+  "total_solved": 724,
   "solved_codes": [
     "CHSERVE",
     "FINALSALE",
@@ -709,7 +709,24 @@
     "WHICHDIV",
     "SALARY",
     "MAXSLAM",
-    "CODETOWN"
+    "CODETOWN",
+    "TENPACKETS",
+    "BRLADDER",
+    "SUNNYDAY",
+    "BUSSEAT",
+    "LKDNGOLF",
+    "UNQSHF",
+    "SPC2025",
+    "MRSWAP",
+    "ADASCOOL",
+    "CHANGEONE7",
+    "DBDISC",
+    "EID",
+    "HCAGMAM1",
+    "HATTRICK",
+    "MXON",
+    "SEATING7",
+    "GOODSUB7"
   ],
   "failed_codes": [
     "SEARCHINARR",
@@ -7099,6 +7116,159 @@
       "attempts": 1,
       "account": "reyhaan_s",
       "time": "2026-11-07 11:43:56"
+    },
+    {
+      "code": "TENPACKETS",
+      "name": "Buy Ten Packets",
+      "status": "Accepted",
+      "solution_id": "1388229560",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:24:31"
+    },
+    {
+      "code": "BRLADDER",
+      "name": "Bear and Ladder",
+      "status": "Accepted",
+      "solution_id": "1388229799",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:25:15"
+    },
+    {
+      "code": "SUNNYDAY",
+      "name": "Sunny Day",
+      "status": "Accepted",
+      "solution_id": "1388230035",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:26:00"
+    },
+    {
+      "code": "BUSSEAT",
+      "name": "Bus Seating",
+      "status": "Accepted",
+      "solution_id": "1388230237",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:26:42"
+    },
+    {
+      "code": "LKDNGOLF",
+      "name": "Golf",
+      "status": "Accepted",
+      "solution_id": "1388230449",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:27:23"
+    },
+    {
+      "code": "UNQSHF",
+      "name": "Unequal Shuffle",
+      "status": "Accepted",
+      "solution_id": "1388230674",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:28:02"
+    },
+    {
+      "code": "SPC2025",
+      "name": "New-Pro Coder",
+      "status": "Accepted",
+      "solution_id": "1388231354",
+      "attempts": 2,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:30:04"
+    },
+    {
+      "code": "MRSWAP",
+      "name": "Mirror Swap",
+      "status": "Accepted",
+      "solution_id": "1388231523",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:30:37"
+    },
+    {
+      "code": "ADASCOOL",
+      "name": "Ada School",
+      "status": "Accepted",
+      "solution_id": "1388231762",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:32:17"
+    },
+    {
+      "code": "CHANGEONE7",
+      "name": "Change One",
+      "status": "Accepted",
+      "solution_id": "1388232207",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:32:49"
+    },
+    {
+      "code": "DBDISC",
+      "name": "Double Discount",
+      "status": "Accepted",
+      "solution_id": "1388232657",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:34:58"
+    },
+    {
+      "code": "EID",
+      "name": "Chef and Eid",
+      "status": "Accepted",
+      "solution_id": "1388233368",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:36:04"
+    },
+    {
+      "code": "HCAGMAM1",
+      "name": "Chef And Salary Pay",
+      "status": "Accepted",
+      "solution_id": "1388233552",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:37:32"
+    },
+    {
+      "code": "HATTRICK",
+      "name": "Hattrick",
+      "status": "Accepted",
+      "solution_id": "1388234023",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:38:16"
+    },
+    {
+      "code": "MXON",
+      "name": "Maximum Ones",
+      "status": "Accepted",
+      "solution_id": "1388234191",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:38:55"
+    },
+    {
+      "code": "SEATING7",
+      "name": "Seating",
+      "status": "Accepted",
+      "solution_id": "1388234560",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:40:00"
+    },
+    {
+      "code": "GOODSUB7",
+      "name": "Good Subsequence",
+      "status": "Accepted",
+      "solution_id": "1388235001",
+      "attempts": 1,
+      "account": "reyhaan_s",
+      "time": "2026-11-07 15:41:26"
     }
   ]
 }

@@ -4,17 +4,22 @@ using namespace std;
 /**
  * Problem Analysis:
  * The hallway has tiles 0 to N+1.
- * Forward journey: The ball lands on tiles 0, k, 2k, ..., mk such that mk <= N+1.
+ * Forward journey: The ball lands on tiles {0, k, 2k, ..., m*k} such that m*k <= N+1.
  * This means the ball lands on tile x if x % k == 0.
  * 
- * Backward journey: The ball starts at N+1 and lands on (N+1), (N+1)-k, (N+1)-2k, ...
- * This means the ball lands on tile x if (N+1 - x) % k == 0.
+ * Backward journey: The ball starts at N+1 and lands on tiles {(N+1), (N+1)-k, (N+1)-2k, ...}.
+ * This means the ball lands on tile x if (N+1 - x) is a multiple of k.
+ * Mathematically, (N+1 - x) % k == 0, which is equivalent to (N+1) % k == x % k.
  * 
- * We need to check if (x % k == 0) OR ((N + 1 - x) % k == 0).
+ * Combining these:
+ * The ball enters the hole if:
+ * 1. x % k == 0
+ * OR
+ * 2. (N + 1 - x) % k == 0
  * 
  * Constraints:
- * N, x, k up to 10^9. Use long long to prevent any potential overflow,
- * though standard int is sufficient for these specific operations.
+ * T <= 10^5, N <= 10^9.
+ * Using long long is safe, though int is sufficient for N <= 10^9.
  */
 
 int main() {
@@ -28,10 +33,10 @@ int main() {
         long long n, x, k;
         cin >> n >> x >> k;
 
-        // Check forward journey: x is a multiple of k
+        // Check forward condition: x is a multiple of k
         bool forward = (x % k == 0);
         
-        // Check backward journey: (N + 1 - x) is a multiple of k
+        // Check backward condition: (N + 1 - x) is a multiple of k
         bool backward = ((n + 1 - x) % k == 0);
 
         if (forward || backward) {

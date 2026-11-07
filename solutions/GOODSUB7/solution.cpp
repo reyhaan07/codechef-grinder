@@ -8,8 +8,11 @@ using namespace std;
  * To find the longest good subsequence, we simply need to pick elements
  * such that we alternate between odd and even.
  * 
- * We can greedily pick the first element, then look for the next element
- * with a different parity, and so on.
+ * We can greedily pick the first element we encounter, then look for the 
+ * next element with a different parity, and repeat.
+ * 
+ * Time Complexity: O(N) per test case.
+ * Space Complexity: O(1) auxiliary space (excluding input storage).
  */
 
 void solve() {
@@ -26,12 +29,12 @@ void solve() {
     }
 
     int count = 0;
-    int last_parity = -1; // -1 means no element picked yet
+    int last_parity = -1; // -1 indicates no element picked yet
 
     for (int i = 0; i < N; ++i) {
         int current_parity = A[i] % 2;
         
-        // If it's the first element or the parity is different from the last one
+        // If it's the first element or the parity is different from the last picked
         if (last_parity == -1 || current_parity != last_parity) {
             count++;
             last_parity = current_parity;
