@@ -49,24 +49,31 @@ jobs:
           CODECHEF_SESSION: ${{ secrets.CODECHEF_SESSION }}
           # CodeChef handle that owns CODECHEF_SESSION. The solved database is bound to it,
           # so a database copied from another account (e.g. via a fork) is archived, not reused.
-          # Override with a repository variable named CODECHEF_USERNAME if you fork this repo.
-          CODECHEF_USERNAME: ${{ vars.CODECHEF_USERNAME || 'reyhaan_s' }}
+          # Forks MUST set a repository variable named CODECHEF_USERNAME (their own handle).
+          # The 'reyhaan_s' fallback only applies in reyhaan07's repo.
+          CODECHEF_USERNAME: ${{ vars.CODECHEF_USERNAME || (github.repository_owner == 'reyhaan07' && 'reyhaan_s' || '') }}
           VERDICT_TIMEOUT_SECONDS: "120"
           # Stop starting new problems after 22 min so the run always finishes and commits.
           MAX_RUNTIME_MINUTES: "22"
           # Skip the Gemini-written README per problem (halves Gemini requests during the sprint).
           # Set back to "true" afterwards to get full explanations again.
           GENERATE_EXPLANATIONS: "false"
+          # SPRINT MODE switch: repository variable SPRINT_MODE = "true" -> up to 100 problems/day
+          # (about 25 per run). Anything else (or unset) -> 5 problems/day (1-2 per run).
+          MAX_DISCOVERY_PAGES: "100"   # scan up to 3000 practice problems (enough for 1000+)
           RANDOMIZE_BATCH: "true"
-          MIN_PROBLEMS_PER_RUN: "15"
-          MAX_PROBLEMS_PER_RUN: "20"
-          DAILY_TARGET_MIN: "60"
-          DAILY_TARGET_MAX: "80"
+          MIN_PROBLEMS_PER_RUN: ${{ vars.SPRINT_MODE == 'true' && '22' || '1' }}
+          MAX_PROBLEMS_PER_RUN: ${{ vars.SPRINT_MODE == 'true' && '25' || '2' }}
+          DAILY_TARGET_MIN: ${{ vars.SPRINT_MODE == 'true' && '100' || '5' }}
+          DAILY_TARGET_MAX: ${{ vars.SPRINT_MODE == 'true' && '100' || '5' }}
           MIN_DELAY_SECONDS: "25"
           MAX_DELAY_SECONDS: "50"
           LANGUAGE: "cpp"
+          # Test on sample cases locally before every submission; at most 2 judge attempts.
+          LOCAL_TEST: "true"
+          MAX_RETRIES: "2"
           MIN_DIFFICULTY: "200"
-          MAX_DIFFICULTY: "1400"
+          MAX_DIFFICULTY: "2000"
         run: |
           python -m src.runner
 

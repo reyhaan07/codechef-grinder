@@ -37,6 +37,14 @@ class BotConfig(BaseModel):
     # run well inside the workflow timeout so progress is always committed.
     max_runtime_minutes: int = Field(default_factory=lambda: int(os.getenv("MAX_RUNTIME_MINUTES", "0")))
 
+    # How many pages (x30 problems) of the practice list to scan for unsolved problems.
+    max_discovery_pages: int = Field(default_factory=lambda: int(os.getenv("MAX_DISCOVERY_PAGES", "50")))
+
+    # Test each C++ solution on the sample cases before submitting, and how many
+    # Gemini rewrites a problem gets when it fails them (then it is skipped unsubmitted).
+    local_test: bool = Field(default_factory=lambda: os.getenv("LOCAL_TEST", "true").lower() in ("true", "1", "yes"))
+    max_local_attempts: int = Field(default_factory=lambda: int(os.getenv("MAX_LOCAL_ATTEMPTS", "3")))
+
     # Difficulty Range (Ladder Progression)
     min_difficulty: int = Field(default_factory=lambda: int(os.getenv("MIN_DIFFICULTY", "200")))
     max_difficulty: int = Field(default_factory=lambda: int(os.getenv("MAX_DIFFICULTY", "1400")))
